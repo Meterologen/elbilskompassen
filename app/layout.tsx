@@ -1,0 +1,80 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Geist, Geist_Mono } from "next/font/google";
+import ChatWidget from "./components/ChatWidget";
+import "./globals.css";
+
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Elbilskompassen – Våga välja elbil",
+  description: "Funderat på elbil men inte vågat? Elbilskompassen hjälper dig hitta rätt bil, räkna på ekonomin och ta nästa steg – utan säljtryck.",
+};
+
+const bgStyle = {
+  background: `
+    radial-gradient(ellipse 120% 80% at 30% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse 100% 70% at 70% 5%, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #0c4a6e 0%, #0f172a 15%, #1e3a5f 35%, #1e40af 60%, #2563eb 80%, #3b82f6 100%)
+  `,
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="sv">
+      <body className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased text-slate-100`}>
+        <a href="#main-content" className="sr-only sr-only-focusable">Hoppa till innehåll</a>
+        <div className="fixed inset-0 -z-10" style={bgStyle} aria-hidden />
+
+        <header className="sticky top-0 z-10 border-b border-sky-200/60 bg-white/80 backdrop-blur-md">
+          <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
+            <Link href="/" className="flex items-center gap-2 rounded-md outline-none ring-sky-400 focus-visible:ring-2">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 text-xs font-bold text-white shadow-sm">EK</span>
+              <span className="font-semibold text-slate-900">Elbilskompassen</span>
+            </Link>
+            <nav className="flex items-center gap-3 text-sm sm:gap-5" aria-label="Huvudnavigering">
+              <Link href="/kompassen" className="text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
+                Elbilskompassen
+              </Link>
+              <Link href="/kalkyl" className="text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
+                Räkna på det
+              </Link>
+              <Link href="/modeller" className="text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
+                Modeller
+              </Link>
+              <Link href="/leasing" className="hidden text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 sm:block">
+                Leasing
+              </Link>
+              <Link href="/laddning" className="hidden text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 md:block">
+                Laddning
+              </Link>
+            </nav>
+          </div>
+        </header>
+
+        {children}
+        <ChatWidget />
+
+        <footer className="border-t border-sky-200/60 bg-white/80 py-8">
+          <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-gradient-to-r from-emerald-400 to-sky-500" />
+              <span className="font-semibold text-slate-900">Elbilskompassen</span>
+            </div>
+            <nav className="flex gap-4 text-sm text-slate-600">
+              <Link href="/varfor-elbil" className="hover:text-sky-600">Varför elbil?</Link>
+              <Link href="/leasing" className="hover:text-sky-600">Leasing</Link>
+              <Link href="/myter" className="hover:text-sky-600">Myter</Link>
+              <Link href="/berattelser" className="hover:text-sky-600">Berättelser</Link>
+              <Link href="/laddning" className="hover:text-sky-600">Laddning</Link>
+            </nav>
+            <p className="text-center text-sm text-slate-600 sm:text-left">
+              Vi säljer ingenting – vi hjälper dig våga ta steget
+            </p>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}

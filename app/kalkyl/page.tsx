@@ -98,21 +98,14 @@ function costBreakdown(v: VehicleTcoResult) {
   ];
 }
 
-function PieLabel({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-}: {
-  cx: number;
-  cy: number;
-  midAngle: number;
-  innerRadius: number;
-  outerRadius: number;
-  percent: number;
-}) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function PieLabel(props: any) {
+  const cx = Number(props.cx ?? 0);
+  const cy = Number(props.cy ?? 0);
+  const midAngle = Number(props.midAngle ?? 0);
+  const innerRadius = Number(props.innerRadius ?? 0);
+  const outerRadius = Number(props.outerRadius ?? 0);
+  const percent = Number(props.percent ?? 0);
   if (percent < 0.05) return null;
   const RADIAN = Math.PI / 180;
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -152,8 +145,8 @@ function Inner() {
   const pk = sp.get("evKwhPerMile") || "";
 
   const initVc: VehicleClass = "medium";
-  const [miles, setMiles] = useState(DEFAULTS.annualMiles);
-  const [years, setYears] = useState(DEFAULTS.ownershipYears);
+  const [miles, setMiles] = useState<number>(DEFAULTS.annualMiles);
+  const [years, setYears] = useState<number>(DEFAULTS.ownershipYears);
   const [vc, setVc] = useState<VehicleClass>(initVc);
 
   const [selectedEv, setSelectedEv] = useState<EvModel | null>(
@@ -161,14 +154,14 @@ function Inner() {
   );
   const [selectedFossil, setSelectedFossil] = useState<FossilModel | null>(null);
 
-  const [evPrice, setEvPrice] = useState(
+  const [evPrice, setEvPrice] = useState<number>(
     urlEvPrice ? Number(urlEvPrice) : classDefaults(initVc).ev.purchasePrice
   );
-  const [fossilPrice, setFossilPrice] = useState(classDefaults(initVc).fossil.purchasePrice);
+  const [fossilPrice, setFossilPrice] = useState<number>(classDefaults(initVc).fossil.purchasePrice);
   const [homeCharge, setHomeCharge] = useState(true);
-  const [homeShare, setHomeShare] = useState(DEFAULTS.electricity.homeChargingSharePct);
-  const [elPrice, setElPrice] = useState(DEFAULTS.electricity.homeOrePerKwh / 100);
-  const [gasPrice, setGasPrice] = useState(DEFAULTS.fossilFuel.petrolSekPerLiter);
+  const [homeShare, setHomeShare] = useState<number>(DEFAULTS.electricity.homeChargingSharePct);
+  const [elPrice, setElPrice] = useState<number>(DEFAULTS.electricity.homeOrePerKwh / 100);
+  const [gasPrice, setGasPrice] = useState<number>(DEFAULTS.fossilFuel.petrolSekPerLiter);
   const [fuel, setFuel] = useState<"petrol" | "diesel">("petrol");
 
   const handleVcChange = (newVc: VehicleClass) => {
@@ -555,7 +548,7 @@ function Inner() {
                       <Cell key={i} fill={PIE_COLORS_EV[i % PIE_COLORS_EV.length]} />
                     ))}
                   </Pie>
-                  <Tooltip formatter={(v: number) => fmt(v)} />
+                  <Tooltip formatter={(v) => fmt(Number(v))} />
                 </PieChart>
               </ResponsiveContainer>
             </div>
@@ -595,7 +588,7 @@ function Inner() {
                       <Cell key={i} fill={PIE_COLORS_FOSSIL[i % PIE_COLORS_FOSSIL.length]} />
                     ))}
                   </Pie>
-                  <Tooltip formatter={(v: number) => fmt(v)} />
+                  <Tooltip formatter={(v) => fmt(Number(v))} />
                 </PieChart>
               </ResponsiveContainer>
             </div>
@@ -621,7 +614,7 @@ function Inner() {
               <BarChart data={barData} margin={{ top: 5, right: 20, left: 20, bottom: 5 }}>
                 <XAxis dataKey="name" tick={{ fontSize: 11 }} />
                 <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
-                <Tooltip formatter={(v: number) => fmt(v)} />
+                <Tooltip formatter={(v) => fmt(Number(v))} />
                 <Legend />
                 <Bar dataKey="Elbil" fill="#10b981" radius={[4, 4, 0, 0]} />
                 <Bar dataKey="Fossil" fill="#ef4444" radius={[4, 4, 0, 0]} />

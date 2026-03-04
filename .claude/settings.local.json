@@ -5,7 +5,16 @@
       "Bash(git config:*)",
       "Bash(gh:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npx next build)",
+      "WebSearch",
+      "WebFetch(domain:www.volvocars.com)",
+      "WebFetch(domain:www.kia.com)",
+      "WebFetch(domain:www.polestar.com)",
+      "Bash(git push:*)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:www.volkswagen.se)",
+      "WebFetch(domain:privatleasing.volkswagen.se)"
     ]
   }
 }

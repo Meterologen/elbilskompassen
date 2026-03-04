@@ -1,5 +1,5 @@
 /**
- * Elbilskompassen – 10 frågor som kartlägger vad användaren behöver.
+ * Elbilskompassen – 15 frågor som kartlägger vad användaren behöver.
  * Varje svar ger poäng till storlek, användning och budget.
  * I slutet matchas mot bilmodeller i cars.ts.
  */
@@ -25,6 +25,11 @@ interface ScoreMap {
   rangeMin: number;
   fastChargeImportant: boolean;
   seatsMin: number;
+  preferEuropean: boolean;
+  openToUsed: boolean;
+  awdImportant: boolean;
+  towbarRequired: boolean;
+  trunkImportant: boolean;
 }
 
 export const COMPASS_QUESTIONS: CompassQuestion[] = [
@@ -42,39 +47,39 @@ export const COMPASS_QUESTIONS: CompassQuestion[] = [
   },
   {
     id: 3,
-    question: "Vad är viktigast för dig?",
-    optionA: { label: "Lågt pris", description: "Jag vill ha en bra elbil utan att det kostar skjortan." },
-    optionB: { label: "Premiumkänsla", description: "Komfort, design och teknik är värt att betala extra för." },
-  },
-  {
-    id: 4,
     question: "Hur långt kör du normalt på en dag?",
     optionA: { label: "Under 5 mil", description: "Sällan mer än 50 km per dag." },
     optionB: { label: "Ofta över 5 mil", description: "Jag kör regelbundet 50–150+ km per dag." },
   },
   {
-    id: 5,
+    id: 4,
     question: "Kan du ladda hemma?",
     optionA: { label: "Ja – villa/radhus/parkering med el", description: "Jag kan installera eller har redan en laddbox." },
     optionB: { label: "Nej – beroende av publik laddning", description: "Lägenhet eller parkering utan elmöjlighet." },
   },
   {
-    id: 6,
+    id: 5,
     question: "Planerar du långa resor (semesterkörning)?",
     optionA: { label: "Sällan – vi flyger/tågar", description: "Bilen används mest lokalt." },
     optionB: { label: "Ja – vi kör till fjällen/Europa", description: "Lång räckvidd och snabb laddning viktigt." },
   },
   {
+    id: 6,
+    question: "Behöver du fyrhjulsdrift?",
+    optionA: { label: "Nej, framhjuls-/bakhjulsdrift räcker", description: "Jag kör mest på asfalt, vinterdäck räcker." },
+    optionB: { label: "Ja, det känns tryggt på vintern", description: "Jag kör ofta i snö, grus eller kuperad terräng." },
+  },
+  {
     id: 7,
-    question: "Vad oroar dig mest med elbil?",
-    optionA: { label: "Att det blir för dyrt", description: "Inköpspris och totalekonomi väger tyngst." },
-    optionB: { label: "Att räckvidden inte räcker", description: "Jag vill inte behöva tänka på laddning hela tiden." },
+    question: "Behöver du kunna dra släp?",
+    optionA: { label: "Nej, ingen dragkrok", description: "Jag drar inte släpvagn, båt eller liknande." },
+    optionB: { label: "Ja, jag behöver dragkrok", description: "Jag drar cykelhållare, släpkärra eller båt ibland." },
   },
   {
     id: 8,
-    question: "Hur viktig är snabb laddning?",
-    optionA: { label: "Inte jätteviktigt", description: "Jag laddar mest hemma över natten." },
-    optionB: { label: "Mycket viktigt", description: "Jag vill kunna snabbladda på 20–30 min vid långresa." },
+    question: "Hur viktigt är bagageutrymmet?",
+    optionA: { label: "Normalt räcker fint", description: "Vardagssaker och en väska – inget speciellt." },
+    optionB: { label: "Stort bagageutrymme är viktigt", description: "Barnvagn, hundburslåda, semesterpackning – det ska få plats." },
   },
   {
     id: 9,
@@ -84,6 +89,36 @@ export const COMPASS_QUESTIONS: CompassQuestion[] = [
   },
   {
     id: 10,
+    question: "Vad är viktigast för dig?",
+    optionA: { label: "Lågt pris", description: "Jag vill ha en bra elbil utan att det kostar skjortan." },
+    optionB: { label: "Premiumkänsla", description: "Komfort, design och teknik är värt att betala extra för." },
+  },
+  {
+    id: 11,
+    question: "Hur tänker du kring bilmärke?",
+    optionA: { label: "Helst europeiskt", description: "Volvo, VW, BMW, Polestar – trygghet i kända märken." },
+    optionB: { label: "Bästa bil för pengarna", description: "Öppen för alla märken, inklusive BYD, MG och Kia." },
+  },
+  {
+    id: 12,
+    question: "Vad oroar dig mest med elbil?",
+    optionA: { label: "Att det blir för dyrt", description: "Inköpspris och totalekonomi väger tyngst." },
+    optionB: { label: "Att räckvidden inte räcker", description: "Jag vill inte behöva tänka på laddning hela tiden." },
+  },
+  {
+    id: 13,
+    question: "Hur viktig är snabb laddning?",
+    optionA: { label: "Inte jätteviktigt", description: "Jag laddar mest hemma över natten." },
+    optionB: { label: "Mycket viktigt", description: "Jag vill kunna snabbladda på 20–30 min vid långresa." },
+  },
+  {
+    id: 14,
+    question: "Vill du ha en helt ny elbil?",
+    optionA: { label: "Ja – ny bil", description: "Jag vill ha garanti, senaste teknik och inga överraskningar." },
+    optionB: { label: "Öppen för begagnad", description: "Om priset är rätt kan en 1–3 år gammal bil funka." },
+  },
+  {
+    id: 15,
     question: "Hur snart vill du byta?",
     optionA: { label: "Inom 6 månader", description: "Jag är redo att ta steget snart." },
     optionB: { label: "Kollar runt – kanske inom ett år", description: "Jag vill lära mig mer först." },
@@ -98,6 +133,11 @@ function buildScore(answers: CompassAnswer[]): ScoreMap {
     rangeMin: 300,
     fastChargeImportant: false,
     seatsMin: 5,
+    preferEuropean: false,
+    openToUsed: false,
+    awdImportant: false,
+    towbarRequired: false,
+    trunkImportant: false,
   };
 
   for (const a of answers) {
@@ -111,31 +151,46 @@ function buildScore(answers: CompassAnswer[]): ScoreMap {
         if (c === "A") { score.size.compact += 3; score.size.medium += 1; }
         else { score.size.suv += 3; score.useCase.family += 2; }
         break;
-      case 3: // Lågt pris vs premium
-        if (c === "A") { score.budgetMax = 400_000; score.size.compact += 1; }
-        else { score.size.premium += 3; score.useCase.premium += 3; score.budgetMax = 900_000; }
-        break;
-      case 4: // Under 5 mil vs över
+      case 3: // Under 5 mil vs över
         if (c === "A") { score.useCase.city += 2; }
         else { score.useCase.commuter += 2; score.rangeMin = Math.max(score.rangeMin, 480); }
         break;
-      case 5: // Ladda hemma vs publik
+      case 4: // Ladda hemma vs publik
         if (c === "B") { score.rangeMin = Math.max(score.rangeMin, 450); score.fastChargeImportant = true; }
         break;
-      case 6: // Sällan långresa vs ja
+      case 5: // Sällan långresa vs ja
         if (c === "B") { score.rangeMin = Math.max(score.rangeMin, 500); score.useCase.adventure += 3; score.fastChargeImportant = true; }
         break;
-      case 7: // Oro: pris vs räckvidd
-        if (c === "A") { score.budgetMax = Math.min(score.budgetMax, 450_000); }
-        else { score.rangeMin = Math.max(score.rangeMin, 500); }
+      case 6: // Fyrhjulsdrift
+        if (c === "B") { score.awdImportant = true; score.useCase.adventure += 1; }
         break;
-      case 8: // Snabb laddning
-        if (c === "B") { score.fastChargeImportant = true; }
+      case 7: // Dragkrok
+        if (c === "B") { score.towbarRequired = true; score.size.suv += 2; score.useCase.adventure += 1; }
+        break;
+      case 8: // Bagageutrymme
+        if (c === "B") { score.trunkImportant = true; score.size.suv += 1; score.useCase.family += 2; }
         break;
       case 9: // Fler än 4 personer
         if (c === "B") { score.seatsMin = 7; score.size.premium += 2; score.size.suv += 1; }
         break;
-      case 10: // Hur snart
+      case 10: // Lågt pris vs premium
+        if (c === "A") { score.budgetMax = 400_000; score.size.compact += 1; }
+        else { score.size.premium += 3; score.useCase.premium += 3; score.budgetMax = 900_000; }
+        break;
+      case 11: // Märkeslojalitet
+        if (c === "A") { score.preferEuropean = true; }
+        break;
+      case 12: // Oro: pris vs räckvidd
+        if (c === "A") { score.budgetMax = Math.min(score.budgetMax, 450_000); }
+        else { score.rangeMin = Math.max(score.rangeMin, 500); }
+        break;
+      case 13: // Snabb laddning
+        if (c === "B") { score.fastChargeImportant = true; }
+        break;
+      case 14: // Ny vs begagnad
+        if (c === "B") { score.openToUsed = true; score.budgetMax = Math.min(score.budgetMax, 500_000); }
+        break;
+      case 15: // Hur snart
         break;
     }
   }
@@ -143,14 +198,17 @@ function buildScore(answers: CompassAnswer[]): ScoreMap {
 }
 
 export interface CompassResult {
-  topPicks: EvModel[];
+  topPicks: { car: EvModel; matchPercent: number }[];
   profileSummary: string;
   readyToBuy: boolean;
 }
 
+const EUROPEAN_BRANDS = ["Volvo", "Polestar", "Volkswagen", "BMW", "Škoda", "CUPRA", "Ford", "Renault"];
+const CHINESE_BRANDS = ["BYD", "MG"];
+
 export function getCompassResult(answers: CompassAnswer[]): CompassResult {
   const score = buildScore(answers);
-  const readyToBuy = answers.find((a) => a.questionId === 10)?.choice === "A";
+  const readyToBuy = answers.find((a) => a.questionId === 15)?.choice === "A";
 
   const sizeRanking = Object.entries(score.size)
     .sort(([, a], [, b]) => b - a)
@@ -168,6 +226,8 @@ export function getCompassResult(answers: CompassAnswer[]): CompassResult {
     if (m.rangeKm < score.rangeMin) return false;
     if (m.seats < score.seatsMin) return false;
     if (score.fastChargeImportant && m.fastChargeMin > 30) return false;
+    if (score.towbarRequired && !m.towbar) return false;
+    if (score.preferEuropean && CHINESE_BRANDS.includes(m.brand)) return false;
     return true;
   });
 
@@ -185,11 +245,19 @@ export function getCompassResult(answers: CompassAnswer[]): CompassResult {
     }
     if (car.rangeKm >= score.rangeMin) pts += 3;
     if (score.fastChargeImportant && car.fastChargeMin <= 25) pts += 3;
+    if (score.trunkImportant && car.trunkLiters >= 500) pts += 3;
+    if (score.awdImportant && car.awd) pts += 5;
+    if (score.preferEuropean && EUROPEAN_BRANDS.includes(car.brand)) pts += 2;
     return { car, pts };
   });
 
   scored.sort((a, b) => b.pts - a.pts);
-  const topPicks = scored.slice(0, 3).map((s) => s.car);
+
+  const maxPts = 31;
+  const topPicks = scored.slice(0, 2).map((s) => ({
+    car: s.car,
+    matchPercent: Math.min(99, Math.max(60, Math.round((s.pts / maxPts) * 100))),
+  }));
 
   const profileParts: string[] = [];
   if (topUseCase === "city") profileParts.push("stadskörare");
@@ -201,8 +269,14 @@ export function getCompassResult(answers: CompassAnswer[]): CompassResult {
   else if (topSize === "suv") profileParts.push("som vill ha SUV");
   else if (topSize === "premium") profileParts.push("som vill ha premium");
   else profileParts.push("som vill ha mellanklass");
+  if (score.towbarRequired) profileParts.push("som behöver dragkrok");
+  if (score.trunkImportant) profileParts.push("med stort lastutrymme");
+  if (score.awdImportant) profileParts.push("med fyrhjulsdrift");
 
-  const profileSummary = `Du verkar vara en ${profileParts.join(" ")}. Här är våra rekommendationer:`;
+  let summary = `Du verkar vara en ${profileParts.join(" ")}. Här är våra rekommendationer:`;
+  if (score.openToUsed) {
+    summary += " Tips: Kolla även begagnatmarknaden – en 1–3 år gammal elbil kan ge mycket bil för pengarna.";
+  }
 
-  return { topPicks, profileSummary, readyToBuy };
+  return { topPicks, profileSummary: summary, readyToBuy };
 }

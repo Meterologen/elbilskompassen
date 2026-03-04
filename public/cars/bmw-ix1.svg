@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eff6ff"/>
+      <stop offset="100%" style="stop-color:#bfdbfe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="185" text-anchor="middle" fill="#1e3a8a" font-family="system-ui,-apple-system,sans-serif" font-size="72" font-weight="800" letter-spacing="8">BMW</text>
+  <text x="400" y="245" text-anchor="middle" fill="#2563eb" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" letter-spacing="2" opacity="0.7">iX1</text>
+</svg>

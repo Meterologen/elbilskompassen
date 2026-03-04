@@ -11,6 +11,7 @@ import {
   type VehicleTcoResult,
 } from "../lib/tco";
 import { EV_MODELS, FOSSIL_MODELS, type EvModel, type FossilModel } from "../lib/cars";
+import { LEASING_OFFERS, type LeasingOffer } from "../lib/leasing";
 import {
   PieChart,
   Pie,
@@ -138,6 +139,80 @@ function leasingMonthly(price: number, residualShare: number) {
   return depreciation + interest;
 }
 
+// ── Begagnad fossilbil: profil för 5 år gammal bil ──────────────────
+// Källa: KVD (mars 2025), M Sverige, Vi Bilägare / Sifo.
+// Underhåll inkluderar service, däck, bromsbyten OCH oväntade reparationer
+// (som M Sveriges kalkylator exkluderar).
+const USED_CAR_DEFAULTS: Record<VehicleClass, {
+  purchasePrice: number;           // Begagnatvärde (5 år, ~80 000 km)
+  residualShareAfter3y: number;    // Andel kvar efter ytterligare 3 år
+  insuranceAnnual: number;
+  taxAnnual: number;
+  maintenanceAnnual: number;       // Service + däck + oväntade reparationer
+}> = {
+  small: {
+    purchasePrice: 130_000,
+    residualShareAfter3y: 0.70,
+    insuranceAnnual: 4_200,
+    taxAnnual: 4_500,
+    maintenanceAnnual: 12_000,
+  },
+  medium: {
+    purchasePrice: 180_000,
+    residualShareAfter3y: 0.67,
+    insuranceAnnual: 5_200,
+    taxAnnual: 5_500,
+    maintenanceAnnual: 15_000,
+  },
+  large: {
+    purchasePrice: 220_000,
+    residualShareAfter3y: 0.65,
+    insuranceAnnual: 6_500,
+    taxAnnual: 6_500,
+    maintenanceAnnual: 18_000,
+  },
+};
+
+interface UsedCarMonthlyCosts {
+  depreciation: number;
+  capitalCost: number;
+  fuel: number;
+  insurance: number;
+  taxAndMaintenance: number;
+  total: number;
+}
+
+function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number): UsedCarMonthlyCosts {
+  const u = USED_CAR_DEFAULTS[vc];
+  const residual = u.purchasePrice * u.residualShareAfter3y;
+  const depreciationAnnual = (u.purchasePrice - residual) / 3;
+  const capitalCostAnnual = ((u.purchasePrice + residual) / 2) * DEFAULTS.capitalCostRate;
+  return {
+    depreciation: Math.round(depreciationAnnual / 12),
+    capitalCost: Math.round(capitalCostAnnual / 12),
+    fuel: Math.round(fossilEnergyAnnual / 12),
+    insurance: Math.round(u.insuranceAnnual / 12),
+    taxAndMaintenance: Math.round((u.taxAnnual + u.maintenanceAnnual) / 12),
+    total: Math.round((depreciationAnnual + capitalCostAnnual + fossilEnergyAnnual + u.insuranceAnnual + u.taxAnnual + u.maintenanceAnnual) / 12),
+  };
+}
+
+function findBestLeasingOffer(selectedEv: EvModel | null, vc: VehicleClass): LeasingOffer | null {
+  // 1. Brand-match → cheapest
+  if (selectedEv) {
+    const brandMatch = LEASING_OFFERS
+      .filter(o => o.brand.toLowerCase() === selectedEv.brand.toLowerCase())
+      .sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
+    if (brandMatch) return brandMatch;
+  }
+  // 2. Fallback: cheapest in same size class
+  const sizeMap: Record<string, string> = { small: "compact", medium: "medium", large: "suv" };
+  const sizeMatch = LEASING_OFFERS
+    .filter(o => o.size === (sizeMap[vc] || "compact"))
+    .sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
+  return sizeMatch || null;
+}
+
 function Inner() {
   const sp = useSearchParams();
   const urlEvPrice = sp.get("evPrice") || "";
@@ -217,7 +292,7 @@ function Inner() {
   const evPie = costBreakdown(r.ev);
   const fossilPie = costBreakdown(r.fossil);
   const barData = [
-    { name: "Värdeminskning", Elbil: r.ev.depreciationAnnual, Fossil: r.fossil.depreciationAnnual },
+    { name: "Värdeminsk.", Elbil: r.ev.depreciationAnnual, Fossil: r.fossil.depreciationAnnual },
     { name: "Kapital", Elbil: r.ev.capitalCostAnnual, Fossil: r.fossil.capitalCostAnnual },
     { name: "Försäkring", Elbil: r.ev.insuranceAnnual, Fossil: r.fossil.insuranceAnnual },
     { name: "Skatt", Elbil: r.ev.taxAnnual, Fossil: r.fossil.taxAnnual },
@@ -482,48 +557,202 @@ function Inner() {
           </div>
         </div>
 
-        {/* ── Leasing comparison ─────────────────────────────── */}
-        <div className="mt-8 rounded-2xl border border-sky-300/40 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-lg font-semibold text-slate-900">Privatleasing – uppskattad månadskostnad</h2>
-          <p className="mt-1 text-sm text-slate-500">
-            Beräknat på {LEASING_MONTHS} månader, {(LEASING_RATE * 100).toFixed(1)} % ränta. Exkl. serviceavtal.
-          </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border-2 border-emerald-200 bg-emerald-50 p-5">
-              <p className="text-xs font-medium uppercase tracking-wider text-emerald-700">
-                Elbil{selectedEv ? ` – ${selectedEv.brand} ${selectedEv.model}` : ""}
+        {/* ── Leasing comparison: "Byt din gamla bil mot en ny elbil" ── */}
+        {(() => {
+          const offer = findBestLeasingOffer(selectedEv, vc);
+          const used = calcUsedCarMonthly(vc, r.fossil.energyAnnual);
+
+          const evElMonthly = Math.round(r.ev.energyAnnual / 12);
+          const evInsuranceMonthly = offer?.insuranceIncluded ? 0 : 800;
+
+          const hasRealOffer = !!offer;
+          const leasingPrice = hasRealOffer
+            ? offer.monthlyPrice
+            : Math.round(leasingMonthly(evPrice, r.ev.residualValue / evPrice));
+          const evTotal = leasingPrice + evElMonthly + evInsuranceMonthly;
+          const saving = used.total - evTotal;
+          const savingAnnual = saving * 12;
+
+          return (
+            <div className="mt-8 rounded-2xl border border-sky-300/40 bg-white p-6 shadow-sm sm:p-8">
+              <h2 className="text-lg font-semibold text-slate-900">
+                Tänk om du leasade en ny elbil istället?
+              </h2>
+              <p className="mt-1 text-sm text-slate-500">
+                Du lägger redan uppskattningsvis <strong className="text-slate-700">{fmtShort(used.total)} kr/mån</strong> på din {fuel === "diesel" ? "diesel" : "bensin"}bil (5 år gammal, {fmtShort(miles)} mil/år).
+                Så här ser det ut jämfört med en ny elbil via privatleasing.
               </p>
-              <p className="mt-2 text-3xl font-bold text-emerald-700">
-                {fmtShort(Math.round(leasingMonthly(evPrice, r.ev.residualValue / evPrice)))} kr/mån
-              </p>
-              <div className="mt-3 space-y-1 text-xs text-emerald-800">
-                <p>+ Energi: ~{fmtShort(Math.round(r.ev.energyAnnual / 12))} kr/mån</p>
-                <p>+ Försäkring: ~{fmtShort(Math.round(r.ev.insuranceAnnual / 12))} kr/mån</p>
-                <p className="border-t border-emerald-200 pt-1 font-semibold">
-                  Totalt: ~{fmtShort(Math.round(leasingMonthly(evPrice, r.ev.residualValue / evPrice) + r.ev.energyAnnual / 12 + r.ev.insuranceAnnual / 12))} kr/mån
-                </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {/* Left card: Din nuvarande bil (begagnad) */}
+                <div className="rounded-xl border-2 border-red-200 bg-red-50 p-5">
+                  <p className="text-xs font-medium uppercase tracking-wider text-red-700">
+                    Din {fuel === "diesel" ? "diesel" : "bensin"}bil (5 år gammal)
+                  </p>
+                  <div className="mt-3 space-y-1.5 text-sm text-red-800">
+                    <div className="flex justify-between">
+                      <span>Värdeminskning</span>
+                      <span className="font-medium">{fmtShort(used.depreciation)} kr</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Kapitalkostnad</span>
+                      <span className="font-medium">{fmtShort(used.capitalCost)} kr</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Bränsle</span>
+                      <span className="font-medium">{fmtShort(used.fuel)} kr</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Försäkring</span>
+                      <span className="font-medium">{fmtShort(used.insurance)} kr</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Skatt + service &amp; reparation</span>
+                      <span className="font-medium">{fmtShort(used.taxAndMaintenance)} kr</span>
+                    </div>
+                    <div className="flex justify-between border-t border-red-200 pt-2">
+                      <span className="font-semibold">Totalt</span>
+                      <span className="text-xl font-bold text-red-700">{fmtShort(used.total)} kr/mån</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right card: Ny elbil via leasing */}
+                <div className="rounded-xl border-2 border-emerald-200 bg-emerald-50 p-5">
+                  <p className="text-xs font-medium uppercase tracking-wider text-emerald-700">
+                    Ny elbil via leasing
+                    {hasRealOffer ? ` – ${offer.brand} ${offer.model}` : selectedEv ? ` – ${selectedEv.brand} ${selectedEv.model}` : ""}
+                  </p>
+                  <div className="mt-3 space-y-1.5 text-sm text-emerald-800">
+                    <div className="flex justify-between">
+                      <span>Privatleasing{hasRealOffer && offer.serviceIncluded ? " (inkl. service)" : ""}</span>
+                      <span className="font-medium">{fmtShort(leasingPrice)} kr</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>El</span>
+                      <span className="font-medium">{fmtShort(evElMonthly)} kr</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Försäkring{offer?.insuranceIncluded ? " (ingår)" : ""}</span>
+                      <span className="font-medium">{offer?.insuranceIncluded ? "0" : fmtShort(evInsuranceMonthly)} kr</span>
+                    </div>
+                    <div className="flex justify-between border-t border-emerald-200 pt-2">
+                      <span className="font-semibold">Totalt</span>
+                      <span className="text-xl font-bold text-emerald-700">{fmtShort(evTotal)} kr/mån</span>
+                    </div>
+                  </div>
+                  {hasRealOffer && (
+                    <div className="mt-3 flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">
+                        {offer.trim}
+                      </span>
+                      {offer.downPayment > 0 && (
+                        <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
+                          Insats {fmtShort(offer.downPayment)} kr
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  {hasRealOffer && (
+                    <p className="mt-2 text-xs text-emerald-700">
+                      Källa:{" "}
+                      <a
+                        href={offer.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium underline hover:text-emerald-900"
+                      >
+                        {offer.source}
+                      </a>
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="rounded-xl border-2 border-red-200 bg-red-50 p-5">
-              <p className="text-xs font-medium uppercase tracking-wider text-red-700">
-                {fuel === "diesel" ? "Diesel" : "Bensin"}{selectedFossil ? ` – ${selectedFossil.brand} ${selectedFossil.model}` : ""}
-              </p>
-              <p className="mt-2 text-3xl font-bold text-red-700">
-                {fmtShort(Math.round(leasingMonthly(fossilPrice, r.fossil.residualValue / fossilPrice)))} kr/mån
-              </p>
-              <div className="mt-3 space-y-1 text-xs text-red-800">
-                <p>+ Bränsle: ~{fmtShort(Math.round(r.fossil.energyAnnual / 12))} kr/mån</p>
-                <p>+ Försäkring: ~{fmtShort(Math.round(r.fossil.insuranceAnnual / 12))} kr/mån</p>
-                <p className="border-t border-red-200 pt-1 font-semibold">
-                  Totalt: ~{fmtShort(Math.round(leasingMonthly(fossilPrice, r.fossil.residualValue / fossilPrice) + r.fossil.energyAnnual / 12 + r.fossil.insuranceAnnual / 12))} kr/mån
+
+              {/* Savings banner */}
+              {saving > 0 ? (
+                <div className="mt-5 rounded-xl bg-emerald-600 px-5 py-4 text-center text-white">
+                  <p className="text-lg font-bold">
+                    Du sparar ~{fmtShort(Math.round(saving))} kr/mån — och kör en helt ny bil
+                  </p>
+                  <p className="mt-1 text-sm text-emerald-100">
+                    = {fmtShort(Math.round(savingAnnual))} kr/år. Dessutom slipper du oväntade reparationer och kör fossilfritt.
+                  </p>
+                </div>
+              ) : saving > -300 ? (
+                <div className="mt-5 rounded-xl bg-sky-600 px-5 py-4 text-center text-white">
+                  <p className="text-lg font-bold">
+                    Ungefär samma kostnad — men du kör en ny bil med lägre risk
+                  </p>
+                  <p className="mt-1 text-sm text-sky-100">
+                    Ingen stor skillnad i plånboken, men du slipper oväntade reparationer och kör fossilfritt.
+                  </p>
+                </div>
+              ) : (
+                <div className="mt-5 rounded-xl bg-amber-500 px-5 py-4 text-center text-white">
+                  <p className="text-lg font-bold">
+                    Leasingen kostar ~{fmtShort(Math.round(Math.abs(saving)))} kr/mån mer
+                  </p>
+                  <p className="mt-1 text-sm text-amber-100">
+                    Men du kör en helt ny bil utan risk för dyra reparationer. Se fler erbjudanden nedan.
+                  </p>
+                </div>
+              )}
+
+              {/* Sifo/KVD info box */}
+              <div className="mt-5 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
+                <p className="text-sm font-semibold text-amber-900">
+                  Visste du? Svenskar underskattar sina bilkostnader med upp till 3 000 kr/mån
                 </p>
+                <p className="mt-1 text-xs text-amber-800">
+                  Enligt en Sifo-undersökning (1 775 svarande) beställd av KVD Bilpriser tror de flesta att bilen kostar
+                  betydligt mindre än den faktiskt gör. Den största blinda fläcken är värdeminskning, följt av service och
+                  reparationer — som ökar markant efter garantitidens slut. M Sveriges bilkostnadskalkylator{" "}
+                  <em>exkluderar</em> dessutom oväntade reparationer helt.
+                </p>
+                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-amber-700">
+                  <a href="https://www.vibilagare.se/nyheter/manga-tror-att-bilen-kostar-mindre-den-gor" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">Vi Bilägare / Sifo</a>
+                  <a href="https://www.kvd.se/artiklar/kopguider/billigaste-bilarna-att-aga-2025" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">KVD – Billigaste bilarna att äga 2025</a>
+                  <a href="https://msverige.se/allt-om-bilen/vad-kostar-det-att-ha-bil/sa-har-vi-raknat/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">M Sverige – Så har vi räknat</a>
+                </div>
               </div>
+
+              {/* CTA */}
+              <div className="mt-5 text-center">
+                <Link
+                  href="/leasing"
+                  className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 font-semibold text-white shadow hover:bg-emerald-700 transition"
+                >
+                  Se alla leasingerbjudanden &rarr;
+                </Link>
+              </div>
+
+              {/* How we calculated (used car) */}
+              <details className="mt-4 text-xs text-slate-500">
+                <summary className="cursor-pointer font-medium text-slate-600 hover:text-slate-800">
+                  Så har vi räknat — din nuvarande bil
+                </summary>
+                <div className="mt-2 space-y-1.5">
+                  <p>
+                    Vi utgår från en <strong>5 år gammal {fuel === "diesel" ? "diesel" : "bensin"}bil</strong> i {VCS.find(v => v.v === vc)?.l.toLowerCase()}klassen,
+                    köpt begagnad för ca {fmtShort(USED_CAR_DEFAULTS[vc].purchasePrice)} kr (marknadsvärde vid ~80 000 km).
+                    Bilen behålls i 3 år och säljs vid ~8 års ålder.
+                  </p>
+                  <ul className="list-inside list-disc space-y-0.5">
+                    <li><strong>Värdeminskning:</strong> ca {Math.round((1 - USED_CAR_DEFAULTS[vc].residualShareAfter3y) * 100)}% på 3 år — plattare kurva än nybil.</li>
+                    <li><strong>Kapitalkostnad:</strong> {(DEFAULTS.capitalCostRate * 100).toFixed(1)}% ränta på genomsnittligt bundet kapital.</li>
+                    <li><strong>Service &amp; reparation:</strong> {fmtShort(USED_CAR_DEFAULTS[vc].maintenanceAnnual)} kr/år inkl. service, däck och oväntade reparationer (som M Sveriges kalkyl exkluderar).</li>
+                    <li><strong>Bränsle:</strong> baserat på din körsträcka ({fmtShort(miles)} mil/år) och valt bränslepris.</li>
+                  </ul>
+                  <p>
+                    {!hasRealOffer && <>Leasingkostnaden för elbilen är uppskattad utifrån bilens pris, restvärde och {(LEASING_RATE * 100).toFixed(1)} % ränta ({LEASING_MONTHS} mån). </>}
+                    Källor: KVD (mars 2025), M Sverige, Vi Bilägare / Sifo.
+                  </p>
+                </div>
+              </details>
             </div>
-          </div>
-          <p className="mt-4 text-xs text-slate-500">
-            Uppskattningen baseras på bilens pris, beräknat restvärde och en antagen ränta. Faktiska leasingerbjudanden kan avvika – kontakta återförsäljare för skarpa offerter.
-          </p>
-        </div>
+          );
+        })()}
 
         {/* ── Charts ─────────────────────────────────────────── */}
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -552,11 +781,11 @@ function Inner() {
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            <div className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
               {evPie.map((item, i) => (
-                <span key={item.name} className="flex items-center gap-1">
+                <span key={item.name} className="flex items-center gap-1.5 text-slate-700">
                   <span
-                    className="inline-block h-2.5 w-2.5 rounded-full"
+                    className="inline-block h-3 w-3 shrink-0 rounded-full"
                     style={{ backgroundColor: PIE_COLORS_EV[i] }}
                   />
                   {item.name}
@@ -592,11 +821,11 @@ function Inner() {
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            <div className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
               {fossilPie.map((item, i) => (
-                <span key={item.name} className="flex items-center gap-1">
+                <span key={item.name} className="flex items-center gap-1.5 text-slate-700">
                   <span
-                    className="inline-block h-2.5 w-2.5 rounded-full"
+                    className="inline-block h-3 w-3 shrink-0 rounded-full"
                     style={{ backgroundColor: PIE_COLORS_FOSSIL[i] }}
                   />
                   {item.name}
@@ -610,12 +839,19 @@ function Inner() {
         <div className="mt-6 rounded-2xl border border-sky-300/40 bg-white p-6 shadow-sm">
           <h3 className="text-center text-sm font-semibold text-slate-900">Kostnadsjämförelse per kategori (kr/år)</h3>
           <div className="mt-4">
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={barData} margin={{ top: 5, right: 20, left: 20, bottom: 5 }}>
-                <XAxis dataKey="name" tick={{ fontSize: 11 }} />
-                <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
+            <ResponsiveContainer width="100%" height={320}>
+              <BarChart data={barData} margin={{ top: 5, right: 10, left: 10, bottom: 40 }}>
+                <XAxis
+                  dataKey="name"
+                  tick={{ fontSize: 12, fill: "#334155" }}
+                  angle={-35}
+                  textAnchor="end"
+                  interval={0}
+                  height={60}
+                />
+                <YAxis tick={{ fontSize: 11, fill: "#64748b" }} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
                 <Tooltip formatter={(v) => fmt(Number(v))} />
-                <Legend />
+                <Legend wrapperStyle={{ fontSize: 13, color: "#334155" }} />
                 <Bar dataKey="Elbil" fill="#10b981" radius={[4, 4, 0, 0]} />
                 <Bar dataKey="Fossil" fill="#ef4444" radius={[4, 4, 0, 0]} />
               </BarChart>

@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 const MYTHS = [
-  { myth: "Elbilar ar for dyra", fact: "Nypriset har sjunkit kraftigt. Raknar du in lagre driftskostnad blir totalkostnaden (TCO) ofta lagre an bensin redan efter 2-3 ar." },
-  { myth: "Batteriet dor efter 5 ar", fact: "De flesta tillverkare ger 8-15 ars garanti. Moderna batterier behaller 70-80 % kapacitet efter 200 000 km." },
-  { myth: "Det finns ingen laddinfrastruktur", fact: "Sverige har over 25 000 publika laddpunkter. 80 % laddar hemma, sa publik laddning behovs mest pa resor." },
-  { myth: "Elen racker inte", fact: "Om hela Sveriges bilflotta vore elektrisk okar elanvandningen med ca 10 %. Idag: ca 2 % av total elforbrukning." },
-  { myth: "Elbilar brinner latt", fact: "Statistik visar lagre brandrisk per kord km jamfort med fossildrivna bilar." },
-  { myth: "Elbilar ar daliga i kyla", fact: "Rackvidden kan minska 10-30 %, men med forvarmning fungerar bilen utmarkt. Tusentals agar i Norrland." },
-  { myth: "Elbilar tappar allt varde", fact: "Andrahandsvarden forbattras. Tesla Model 3 och Volvo EX30 haller vardet bra." },
-  { myth: "Det ar battre att vanta", fact: "Priserna sjunker, laddnatverket vaxer och besparingarna borjar dag 1." },
+  { myth: "Elbilar är för dyra", fact: "Nypriset har sjunkit kraftigt. Räknar du in lägre driftskostnad blir totalkostnaden (TCO) ofta lägre än bensin redan efter 2–3 år." },
+  { myth: "Batteriet dör efter 5 år", fact: "De flesta tillverkare ger 8–15 års garanti. Moderna batterier behåller 70–80 % kapacitet efter 200 000 km." },
+  { myth: "Det finns ingen laddinfrastruktur", fact: "Sverige har över 25 000 publika laddpunkter. 80 % laddar hemma, så publik laddning behövs mest på resor." },
+  { myth: "Elen räcker inte", fact: "Om hela Sveriges bilflotta vore elektrisk ökar elanvändningen med ca 10 %. Idag: ca 2 % av total elförbrukning." },
+  { myth: "Elbilar brinner lätt", fact: "Statistik visar lägre brandrisk per körd km jämfört med fossildrivna bilar." },
+  { myth: "Elbilar är dåliga i kyla", fact: "Räckvidden kan minska 10–30 %, men med förvärmning fungerar bilen utmärkt. Tusentals ägare i Norrland." },
+  { myth: "Elbilar tappar allt värde", fact: "Andrahandsvärdena förbättras. Tesla Model 3 och Volvo EX30 håller värdet bra." },
+  { myth: "Det är bättre att vänta", fact: "Priserna sjunker, laddnätverket växer och besparingarna börjar dag 1." },
 ];
 
 export default function MyterPage() {
@@ -17,7 +17,7 @@ export default function MyterPage() {
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
         <Link href="/" className="text-sm text-sky-300 hover:text-sky-200 hover:underline">Startsida</Link>
         <h1 className="mt-6 text-3xl font-bold text-white sm:text-4xl">Myter vs Fakta om elbilar</h1>
-        <p className="mt-2 text-lg text-slate-200">De vanligaste missforstanden - och sanningen.</p>
+        <p className="mt-2 text-lg text-slate-200">De vanligaste missförstånden – och sanningen.</p>
         <div className="mt-10 space-y-6">
           {MYTHS.map((m, i) => (
             <div key={i} className="overflow-hidden rounded-2xl border border-sky-300/40 bg-white/95 shadow-sm">
@@ -40,7 +40,7 @@ export default function MyterPage() {
         </div>
         <div className="mt-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-600 p-8 text-center shadow-xl">
           <h2 className="text-xl font-bold text-white">Redo att hitta din elbil?</h2>
-          <p className="mt-2 text-emerald-100">Svara pa 10 fragor - vi matchar dig med bilar som passar.</p>
+          <p className="mt-2 text-emerald-100">Svara på 15 frågor – vi matchar dig med bilar som passar.</p>
           <Link href="/kompassen" className="mt-6 inline-block rounded-full bg-white px-8 py-3 font-semibold text-emerald-700 shadow hover:bg-emerald-50">Starta Elbilskompassen</Link>
         </div>
       </div>

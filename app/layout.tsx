@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import ChatWidget from "./components/ChatWidget";
+import MobileNav from "./components/MobileNav";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -30,26 +31,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="sticky top-0 z-10 border-b border-sky-200/60 bg-white/80 backdrop-blur-md">
           <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
             <Link href="/" className="flex items-center gap-2 rounded-md outline-none ring-sky-400 focus-visible:ring-2">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 text-xs font-bold text-white shadow-sm">EK</span>
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 shadow-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  {/* Compass circle */}
+                  <circle cx="12" cy="12" r="11" stroke="white" strokeWidth="1.5" opacity="0.5" />
+                  {/* Lightning bolt shaped as compass needle pointing north */}
+                  <path d="M13.5 3.5 L10 11.5 L13 11.5 L10.5 20.5 L14 12.5 L11 12.5 Z" fill="white" />
+                  {/* Small compass ticks */}
+                  <circle cx="12" cy="2.5" r="0.8" fill="white" />
+                  <circle cx="12" cy="21.5" r="0.8" fill="white" opacity="0.4" />
+                  <circle cx="2.5" cy="12" r="0.8" fill="white" opacity="0.4" />
+                  <circle cx="21.5" cy="12" r="0.8" fill="white" opacity="0.4" />
+                </svg>
+              </span>
               <span className="font-semibold text-slate-900">Elbilskompassen</span>
             </Link>
-            <nav className="flex items-center gap-3 text-sm sm:gap-5" aria-label="Huvudnavigering">
-              <Link href="/kompassen" className="text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-                Elbilskompassen
-              </Link>
-              <Link href="/kalkyl" className="text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-                Räkna på det
-              </Link>
-              <Link href="/modeller" className="text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-                Modeller
-              </Link>
-              <Link href="/leasing" className="hidden text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 sm:block">
-                Leasing
-              </Link>
-              <Link href="/laddning" className="hidden text-slate-700 transition hover:text-sky-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 md:block">
-                Laddning
-              </Link>
-            </nav>
+            <MobileNav />
           </div>
         </header>
 
@@ -59,7 +56,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="border-t border-sky-200/60 bg-white/80 py-8">
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
             <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-gradient-to-r from-emerald-400 to-sky-500" />
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-sky-500">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="11" stroke="white" strokeWidth="1.5" opacity="0.5" />
+                  <path d="M13.5 3.5 L10 11.5 L13 11.5 L10.5 20.5 L14 12.5 L11 12.5 Z" fill="white" />
+                </svg>
+              </span>
               <span className="font-semibold text-slate-900">Elbilskompassen</span>
             </div>
             <nav className="flex gap-4 text-sm text-slate-600">

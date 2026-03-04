@@ -46,62 +46,75 @@ export default function KompassenPage() {
           <p className="mt-3 text-lg text-slate-200">{result.profileSummary}</p>
 
           <div className="mt-8 space-y-6">
-            {result.topPicks.map((car, i) => (
-              <div
-                key={car.id}
-                className={`overflow-hidden rounded-2xl border-2 bg-white shadow-sm text-slate-900 ${
-                  i === 0 ? "border-emerald-400 ring-2 ring-emerald-100" : "border-slate-200"
-                }`}
-              >
-                {i === 0 && (
-                  <div className="bg-emerald-500 px-4 py-1.5 text-center text-sm font-semibold text-white">
-                    Bästa matchning
+            {result.topPicks.map(({ car, matchPercent }, i) => {
+              const badgeColor =
+                matchPercent > 85
+                  ? "text-emerald-600 border-emerald-200 bg-emerald-50"
+                  : matchPercent >= 70
+                    ? "text-amber-600 border-amber-200 bg-amber-50"
+                    : "text-sky-600 border-sky-200 bg-sky-50";
+              const label = i === 0 ? "Bästa matchning" : "Alternativ";
+
+              return (
+                <div
+                  key={car.id}
+                  className={`overflow-hidden rounded-2xl border-2 bg-white shadow-sm text-slate-900 ${
+                    i === 0 ? "border-emerald-400 ring-2 ring-emerald-100" : "border-slate-200"
+                  }`}
+                >
+                  <div className={`px-4 py-1.5 text-center text-sm font-semibold text-white ${
+                    i === 0 ? "bg-emerald-500" : "bg-slate-400"
+                  }`}>
+                    {label}
                   </div>
-                )}
-                <div className="p-6">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{car.brand}</p>
-                      <h2 className="text-xl font-bold text-slate-900">{car.brand} {car.model}</h2>
+                  <div className="p-6">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{car.brand}</p>
+                        <h2 className="text-xl font-bold text-slate-900">{car.brand} {car.model}</h2>
+                      </div>
+                      <div className={`flex flex-col items-center rounded-full border-2 px-4 py-2 ${badgeColor}`}>
+                        <span className="text-2xl font-bold leading-none">{matchPercent}%</span>
+                        <span className="text-[10px] font-medium uppercase tracking-wide">matchning</span>
+                      </div>
                     </div>
-                    <span className="text-3xl">{car.emoji}</span>
-                  </div>
-                  <p className="mt-2 text-sm text-slate-600">{car.description}</p>
-                  <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                    <div className="rounded-lg bg-slate-50 p-3 text-center">
-                      <p className="text-xs text-slate-500">Pris från</p>
-                      <p className="font-semibold text-slate-800">{formatSek(car.priceSek)}</p>
+                    <p className="mt-2 text-sm text-slate-600">{car.description}</p>
+                    <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                      <div className="rounded-lg bg-slate-50 p-3 text-center">
+                        <p className="text-xs text-slate-500">Pris från</p>
+                        <p className="font-semibold text-slate-800">{formatSek(car.priceSek)}</p>
+                      </div>
+                      <div className="rounded-lg bg-slate-50 p-3 text-center">
+                        <p className="text-xs text-slate-500">Räckvidd</p>
+                        <p className="font-semibold text-slate-800">{car.rangeKm} km</p>
+                      </div>
+                      <div className="rounded-lg bg-slate-50 p-3 text-center">
+                        <p className="text-xs text-slate-500">Snabbladdning</p>
+                        <p className="font-semibold text-slate-800">{car.fastChargeMin} min</p>
+                      </div>
+                      <div className="rounded-lg bg-slate-50 p-3 text-center">
+                        <p className="text-xs text-slate-500">Bagage</p>
+                        <p className="font-semibold text-slate-800">{car.trunkLiters} L</p>
+                      </div>
                     </div>
-                    <div className="rounded-lg bg-slate-50 p-3 text-center">
-                      <p className="text-xs text-slate-500">Räckvidd</p>
-                      <p className="font-semibold text-slate-800">{car.rangeKm} km</p>
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      <Link
+                        href={`/modeller#${car.id}`}
+                        className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                      >
+                        Läs mer om {car.model}
+                      </Link>
+                      <Link
+                        href={`/kalkyl?evPrice=${car.priceSek}&evModel=${encodeURIComponent(car.brand + " " + car.model)}&evKwhPerMile=${car.kwhPerMile}`}
+                        className="rounded-full bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-500"
+                      >
+                        Räkna på {car.model}
+                      </Link>
                     </div>
-                    <div className="rounded-lg bg-slate-50 p-3 text-center">
-                      <p className="text-xs text-slate-500">Snabbladdning</p>
-                      <p className="font-semibold text-slate-800">{car.fastChargeMin} min</p>
-                    </div>
-                    <div className="rounded-lg bg-slate-50 p-3 text-center">
-                      <p className="text-xs text-slate-500">Bagage</p>
-                      <p className="font-semibold text-slate-800">{car.trunkLiters} L</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <Link
-                      href={`/modeller#${car.id}`}
-                      className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
-                    >
-                      Läs mer om {car.model}
-                    </Link>
-                    <Link
-                      href={`/kalkyl?evPrice=${car.priceSek}&evModel=${encodeURIComponent(car.brand + " " + car.model)}&evKwhPerMile=${car.kwhPerMile}`}
-                      className="rounded-full bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-500"
-                    >
-                      Räkna på {car.model}
-                    </Link>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* CTA */}

@@ -400,7 +400,7 @@ function Inner() {
           {/* Hero savings number */}
           {saving > 0 ? (
             <div className="text-center">
-              <p className="text-sm font-medium uppercase tracking-wider text-emerald-600">Du kan spara</p>
+              <p className="text-sm font-medium uppercase tracking-wider text-emerald-600">Enligt våra beräkningar kan du spara</p>
               <p className="mt-1 text-5xl font-extrabold text-emerald-600 sm:text-6xl">
                 {fmtShort(Math.round(saving))} kr/mån
               </p>
@@ -415,17 +415,17 @@ function Inner() {
                 ±{fmtShort(Math.round(Math.abs(saving)))} kr/mån
               </p>
               <p className="mt-2 text-slate-500">
-                Ingen stor skillnad i plånboken — men du kör en ny bil med lägre risk
+                Rent ekonomiskt går det ungefär jämnt ut. Du får däremot en ny bil med garanti, lägre miljöpåverkan och tystare körning.
               </p>
             </div>
           ) : (
             <div className="text-center">
-              <p className="text-sm font-medium uppercase tracking-wider text-amber-600">Leasingen kostar mer</p>
+              <p className="text-sm font-medium uppercase tracking-wider text-amber-600">Elbilen blir dyrare i din situation</p>
               <p className="mt-1 text-4xl font-extrabold text-amber-600 sm:text-5xl">
                 +{fmtShort(Math.round(Math.abs(saving)))} kr/mån
               </p>
               <p className="mt-2 text-slate-500">
-                Men du kör en helt ny bil utan risk för dyra reparationer
+                Ekonomiskt är din nuvarande bil ett bra val. En elbil ger lägre miljöpåverkan och tystare körning, men det kostar mer.
               </p>
             </div>
           )}
@@ -521,23 +521,49 @@ function Inner() {
             </div>
           </div>
 
-          {/* ── 4. Trygghetsargument ──────────────────────────── */}
-          <div className="mt-6 rounded-xl bg-slate-50 px-5 py-4">
-            <ul className="space-y-2 text-sm text-slate-700">
-              <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold">&#10003;</span>
-                <span><strong>Fast månadskostnad</strong> — inga överraskande verkstadsräkningar</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold">&#10003;</span>
-                <span><strong>Ny bil med garanti</strong> — du slipper oroa dig för att den inte startar</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold">&#10003;</span>
-                <span><strong>Service och underhåll</strong> ingår ofta i leasingen</span>
-              </li>
-            </ul>
-          </div>
+          {/* ── 4. Trygghetsargument / ärlig bedömning ─────────── */}
+          {saving > 0 ? (
+            <div className="mt-6 rounded-xl bg-slate-50 px-5 py-4">
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold">&#10003;</span>
+                  <span><strong>Fast månadskostnad</strong> — inga överraskande verkstadsräkningar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold">&#10003;</span>
+                  <span><strong>Ny bil med garanti</strong> — du slipper oroa dig för att den inte startar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold">&#10003;</span>
+                  <span><strong>Service och underhåll</strong> ingår ofta i leasingen</span>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <div className="mt-6 rounded-xl bg-amber-50 border border-amber-200 px-5 py-4">
+              <p className="text-sm font-semibold text-amber-900">Ärligt talat</p>
+              <p className="mt-1 text-sm text-amber-800">
+                Med dina förutsättningar är din nuvarande bil billigare att köra. Ett elbilsbyte handlar i ditt fall mer om andra värden:
+              </p>
+              <ul className="mt-3 space-y-2 text-sm text-amber-800">
+                <li className="flex items-start gap-3">
+                  <span className="mt-0.5 text-amber-500">•</span>
+                  <span><strong>Lägre klimatpåverkan</strong> — en elbil släpper ut ca 70 % mindre CO₂ över sin livstid</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-0.5 text-amber-500">•</span>
+                  <span><strong>Tystare och skönare körning</strong> — ingen motor som vibrerar och bullrar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-0.5 text-amber-500">•</span>
+                  <span><strong>Förutsägbar kostnad</strong> — leasing ger fast månadskostnad utan överraskningar</span>
+                </li>
+              </ul>
+              <p className="mt-3 text-xs text-amber-700">
+                Tips: Testa att justera körsträcka eller bilklass — det kan förändra kalkylen.
+              </p>
+            </div>
+          )}
 
           {/* ── 5. CTA ────────────────────────────────────────── */}
           <div className="mt-6 text-center">

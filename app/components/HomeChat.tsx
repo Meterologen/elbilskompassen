@@ -68,14 +68,14 @@ export default function HomeChat() {
               Elbilskompassen
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Funderat på elbil?
+              Lönar sig elbil
               <br />
               <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
-                Fråga oss.
+                för dig?
               </span>
             </h1>
             <p className="mx-auto max-w-xl text-lg text-slate-200">
-              Ställ en fråga, så hjälper vi dig räkna, jämföra och hitta rätt bil.
+              Jämför kostnader, hitta rätt bil och se om du faktiskt sparar pengar — med riktig data.
             </p>
           </>
         )}

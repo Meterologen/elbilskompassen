@@ -145,21 +145,21 @@ function buildScore(answers: CompassAnswer[]): ScoreMap {
     switch (a.questionId) {
       case 1: // Stadskörning vs landsväg
         if (c === "A") { score.useCase.city += 3; score.size.compact += 2; }
-        else { score.useCase.commuter += 3; score.rangeMin = Math.max(score.rangeMin, 450); }
+        else { score.useCase.commuter += 3; score.rangeMin = Math.max(score.rangeMin, 400); }
         break;
       case 2: // Liten vs rymlig
         if (c === "A") { score.size.compact += 3; score.size.medium += 1; }
         else { score.size.suv += 3; score.useCase.family += 2; }
         break;
       case 3: // Under 5 mil vs över
-        if (c === "A") { score.useCase.city += 2; }
-        else { score.useCase.commuter += 2; score.rangeMin = Math.max(score.rangeMin, 480); }
+        if (c === "A") { score.useCase.city += 2; score.rangeMin = Math.min(score.rangeMin, 250); }
+        else { score.useCase.commuter += 2; score.rangeMin = Math.max(score.rangeMin, 420); }
         break;
       case 4: // Ladda hemma vs publik
-        if (c === "B") { score.rangeMin = Math.max(score.rangeMin, 450); score.fastChargeImportant = true; }
+        if (c === "B") { score.rangeMin = Math.max(score.rangeMin, 400); score.fastChargeImportant = true; }
         break;
       case 5: // Sällan långresa vs ja
-        if (c === "B") { score.rangeMin = Math.max(score.rangeMin, 500); score.useCase.adventure += 3; score.fastChargeImportant = true; }
+        if (c === "B") { score.rangeMin = Math.max(score.rangeMin, 450); score.useCase.adventure += 3; score.fastChargeImportant = true; }
         break;
       case 6: // Fyrhjulsdrift
         if (c === "B") { score.awdImportant = true; score.useCase.adventure += 1; }
@@ -174,15 +174,15 @@ function buildScore(answers: CompassAnswer[]): ScoreMap {
         if (c === "B") { score.seatsMin = 7; score.size.premium += 2; score.size.suv += 1; }
         break;
       case 10: // Lågt pris vs premium
-        if (c === "A") { score.budgetMax = 400_000; score.size.compact += 1; }
+        if (c === "A") { score.budgetMax = 550_000; score.size.compact += 1; }
         else { score.size.premium += 3; score.useCase.premium += 3; score.budgetMax = 900_000; }
         break;
       case 11: // Märkeslojalitet
         if (c === "A") { score.preferEuropean = true; }
         break;
       case 12: // Oro: pris vs räckvidd
-        if (c === "A") { score.budgetMax = Math.min(score.budgetMax, 450_000); }
-        else { score.rangeMin = Math.max(score.rangeMin, 500); }
+        if (c === "A") { score.budgetMax = Math.min(score.budgetMax, 550_000); }
+        else { score.rangeMin = Math.max(score.rangeMin, 450); }
         break;
       case 13: // Snabb laddning
         if (c === "B") { score.fastChargeImportant = true; }
@@ -252,6 +252,14 @@ export function getCompassResult(answers: CompassAnswer[]): CompassResult {
   });
 
   scored.sort((a, b) => b.pts - a.pts);
+
+  // Ensure variety: if top 2 are same brand, swap #2 for the next different brand
+  if (scored.length >= 3 && scored[0].car.brand === scored[1].car.brand) {
+    const altIdx = scored.findIndex((s, i) => i >= 2 && s.car.brand !== scored[0].car.brand);
+    if (altIdx >= 0) {
+      [scored[1], scored[altIdx]] = [scored[altIdx], scored[1]];
+    }
+  }
 
   const maxPts = 31;
   const topPicks = scored.slice(0, 2).map((s) => ({

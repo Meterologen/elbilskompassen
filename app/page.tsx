@@ -42,7 +42,13 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <Link
+            href="/kompassen"
+            className="inline-block rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-emerald-400"
+          >
+            Hitta din elbil – gör kompassen
+          </Link>
           <Link href="/myter" className="text-sm font-medium text-sky-300 hover:text-sky-200 hover:underline">
             Läs fler myter vs fakta →
           </Link>
@@ -87,7 +93,13 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <Link
+            href="/kompassen"
+            className="inline-block rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-emerald-400"
+          >
+            Vilken elbil passar dig? Ta reda på det
+          </Link>
           <Link href="/berattelser" className="text-sm font-medium text-sky-300 hover:text-sky-200 hover:underline">
             Läs fler berättelser →
           </Link>
@@ -113,7 +125,7 @@ export default function Home() {
         <div className="rounded-2xl border border-sky-300/40 bg-white/95 p-8 shadow-sm text-slate-900">
           <h2 className="text-xl font-semibold text-slate-800">Byggt för förtroende – inte försäljning</h2>
           <p className="mt-4 text-slate-700">
-            <strong>Vi säljer inga bilar.</strong> Vi hjälper dig fatta ett klokt beslut med tydliga siffror och ärliga jämförelser. Tänk oss som en kompis som redan gjort bytet och delar med sig – utan baktanke.
+            <strong>Vi säljer inga bilar.</strong> Vi hjälper dig fatta ett klokt beslut med tydliga siffror och ärliga jämförelser. Tänk oss som en kompis som redan gjort bytet och delar med sig.
           </p>
         </div>
       </section>

@@ -244,10 +244,12 @@ function Inner() {
   const [gasPrice, setGasPrice] = useState<number>(DEFAULTS.fossilFuel.petrolSekPerLiter);
   const [fuel, setFuel] = useState<"petrol" | "diesel">("petrol");
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const [maintenanceOverride, setMaintenanceOverride] = useState<number | null>(null);
 
   const handleVcChange = (newVc: VehicleClass) => {
     setVc(newVc);
     setSelectedFossil(null);
+    setMaintenanceOverride(null);
     const cd = classDefaults(newVc);
     setFossilPrice(cd.fossil.purchasePrice);
     const ev = defaultEvForClass(newVc);
@@ -298,7 +300,10 @@ function Inner() {
 
   // Leasing comparison values
   const offer = findBestLeasingOffer(selectedEv, vc);
-  const used = calcUsedCarMonthly(vc, r.fossil.energyAnnual);
+  const usedBase = calcUsedCarMonthly(vc, r.fossil.energyAnnual);
+  const effectiveMaintenance = maintenanceOverride ?? usedBase.maintenance;
+  const usedTotal = usedBase.total - usedBase.maintenance + effectiveMaintenance;
+  const used = { ...usedBase, maintenance: effectiveMaintenance, total: usedTotal };
   const evElMonthly = Math.round(r.ev.energyAnnual / 12);
   const evInsuranceMonthly = offer?.insuranceIncluded ? 0 : 800;
   const hasRealOffer = !!offer;
@@ -487,21 +492,30 @@ function Inner() {
                   <span className="text-xl font-bold text-red-700">{fmtShort(used.total)} kr/mån</span>
                 </div>
               </div>
-              {/* Osäkerhetsspann */}
+              {/* Osäkerhetsspann — interaktiv */}
               <div className="mt-3 rounded-lg bg-red-100/60 px-4 py-3">
-                <p className="text-xs font-semibold text-red-800">Osäkerhet: service &amp; reparation</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-semibold text-red-800">Dra för att simulera tur/otur med reparationer</p>
+                  <span className="rounded-full bg-red-200 px-2 py-0.5 text-xs font-bold text-red-800">{fmtShort(used.maintenance)} kr/mån</span>
+                </div>
                 <div className="mt-2 flex items-center gap-2">
-                  <span className="text-xs text-red-700 whitespace-nowrap">{fmtShort(used.maintenanceLow)} kr</span>
-                  <div className="relative h-2 flex-1 rounded-full bg-gradient-to-r from-amber-300 via-red-400 to-red-600">
-                    <div
-                      className="absolute top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full border-2 border-white bg-red-500 shadow"
-                      style={{ left: `${((used.maintenance - used.maintenanceLow) / (used.maintenanceHigh - used.maintenanceLow)) * 100}%` }}
+                  <span className="text-[11px] text-red-700 whitespace-nowrap">Tur</span>
+                  <div className="relative flex-1">
+                    <div className="absolute inset-0 top-1/2 h-2 -translate-y-1/2 rounded-full bg-gradient-to-r from-amber-300 via-red-400 to-red-600" />
+                    <input
+                      type="range"
+                      min={usedBase.maintenanceLow}
+                      max={usedBase.maintenanceHigh}
+                      step={50}
+                      value={used.maintenance}
+                      onChange={(e) => setMaintenanceOverride(Number(e.target.value))}
+                      className="relative z-10 w-full cursor-pointer appearance-none bg-transparent [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:bg-red-500 [&::-webkit-slider-thumb]:shadow"
                     />
                   </div>
-                  <span className="text-xs text-red-700 whitespace-nowrap">{fmtShort(used.maintenanceHigh)} kr</span>
+                  <span className="text-[11px] text-red-700 whitespace-nowrap">Otur</span>
                 </div>
                 <p className="mt-1.5 text-[11px] text-red-700">
-                  En bra månad kostar bara grundservice. Ett oturligt år kan innebära kamrem, koppling eller AC-kompressor — tusenlappar extra.
+                  En bra månad kostar bara grundservice ({fmtShort(usedBase.maintenanceLow)} kr). Ett oturligt år kan innebära kamrem, koppling eller AC-kompressor — upp till {fmtShort(usedBase.maintenanceHigh)} kr/mån.
                 </p>
               </div>
             </div>

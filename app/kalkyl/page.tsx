@@ -37,7 +37,7 @@ function fmtShort(n: number) {
 const VCS: { v: VehicleClass; l: string; icon: string }[] = [
   { v: "small", l: "Kompakt", icon: "🚗" },
   { v: "medium", l: "Mellanklass", icon: "🚙" },
-  { v: "large", l: "Stor / SUV", icon: "🚐" },
+  { v: "large", l: "SUV", icon: "🚐" },
 ];
 
 interface SliderProps {
@@ -167,6 +167,22 @@ function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number): UsedC
   };
 }
 
+function defaultEvForClass(vc: VehicleClass): EvModel | null {
+  if (vc === "small") {
+    // Billigaste leasingbilen
+    const cheapest = [...LEASING_OFFERS].sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
+    if (cheapest) {
+      return EV_MODELS.find(m => m.brand.toLowerCase() === cheapest.brand.toLowerCase()) ?? null;
+    }
+    return null;
+  }
+  if (vc === "medium") {
+    return EV_MODELS.find(m => m.id === "volvo-ex30") ?? null;
+  }
+  // large / SUV
+  return EV_MODELS.find(m => m.id === "bmw-ix1") ?? EV_MODELS.find(m => m.brand === "BMW") ?? null;
+}
+
 function findBestLeasingOffer(selectedEv: EvModel | null, vc: VehicleClass): LeasingOffer | null {
   if (selectedEv) {
     const brandMatch = LEASING_OFFERS
@@ -196,13 +212,14 @@ function Inner() {
   const [years, setYears] = useState<number>(DEFAULTS.ownershipYears);
   const [vc, setVc] = useState<VehicleClass>(initVc);
 
-  const [selectedEv, setSelectedEv] = useState<EvModel | null>(
-    urlEvModel ? EV_MODELS.find(m => `${m.brand} ${m.model}` === urlEvModel) ?? null : null
-  );
+  const initEv = urlEvModel
+    ? EV_MODELS.find(m => `${m.brand} ${m.model}` === urlEvModel) ?? null
+    : defaultEvForClass(initVc);
+  const [selectedEv, setSelectedEv] = useState<EvModel | null>(initEv);
   const [selectedFossil, setSelectedFossil] = useState<FossilModel | null>(null);
 
   const [evPrice, setEvPrice] = useState<number>(
-    urlEvPrice ? Number(urlEvPrice) : classDefaults(initVc).ev.purchasePrice
+    urlEvPrice ? Number(urlEvPrice) : initEv ? initEv.priceSek : classDefaults(initVc).ev.purchasePrice
   );
   const [fossilPrice, setFossilPrice] = useState<number>(classDefaults(initVc).fossil.purchasePrice);
   const [homeCharge, setHomeCharge] = useState(true);
@@ -214,11 +231,12 @@ function Inner() {
 
   const handleVcChange = (newVc: VehicleClass) => {
     setVc(newVc);
-    setSelectedEv(null);
     setSelectedFossil(null);
     const cd = classDefaults(newVc);
-    setEvPrice(cd.ev.purchasePrice);
     setFossilPrice(cd.fossil.purchasePrice);
+    const ev = defaultEvForClass(newVc);
+    setSelectedEv(ev);
+    setEvPrice(ev ? ev.priceSek : cd.ev.purchasePrice);
   };
 
   const handleEvSelect = (id: string) => {

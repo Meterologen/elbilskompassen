@@ -276,29 +276,21 @@ function Inner() {
   const savingAnnual = saving * 12;
 
   // Stacked bar data: monthly costs broken into categories
-  const fossilOwnership = used.depreciation + used.capitalCost + used.insurance + used.taxAndMaintenance;
-  const fossilFuel = used.fuel;
-  const evLeasingCost = leasingPrice;
-  const evElCost = evElMonthly;
-  const evInsurance = evInsuranceMonthly;
-
   const stackedBarData = [
     {
       name: `${fuel === "diesel" ? "Diesel" : "Bensin"}bil`,
-      "Ägande": fossilOwnership,
-      "Bränsle": fossilFuel,
-      "El": 0,
-      "Leasing": 0,
-      "Försäkring": 0,
+      "Värdeminskning": used.depreciation + used.capitalCost,
+      "Bränsle/El": used.fuel,
+      "Försäkring": used.insurance,
+      "Skatt & service": used.taxAndMaintenance,
       total: used.total,
     },
     {
       name: "Elbil (leasing)",
-      "Ägande": 0,
-      "Bränsle": 0,
-      "El": evElCost,
-      "Leasing": evLeasingCost,
-      "Försäkring": evInsurance,
+      "Värdeminskning": leasingPrice,
+      "Bränsle/El": evElMonthly,
+      "Försäkring": evInsuranceMonthly,
+      "Skatt & service": 0,
       total: evTotal,
     },
   ];
@@ -569,11 +561,10 @@ function Inner() {
                 />
                 <Tooltip formatter={(v) => `${fmtShort(Number(v))} kr/mån`} />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
-                <Bar dataKey="Ägande" stackId="a" fill="#f87171" radius={[0, 0, 0, 0]} />
-                <Bar dataKey="Bränsle" stackId="a" fill="#fb923c" />
-                <Bar dataKey="Leasing" stackId="a" fill="#34d399" />
-                <Bar dataKey="El" stackId="a" fill="#38bdf8" />
-                <Bar dataKey="Försäkring" stackId="a" fill="#a78bfa" radius={[0, 4, 4, 0]} />
+                <Bar dataKey="Värdeminskning" stackId="a" fill="#f87171" radius={[0, 0, 0, 0]} />
+                <Bar dataKey="Bränsle/El" stackId="a" fill="#fb923c" />
+                <Bar dataKey="Försäkring" stackId="a" fill="#a78bfa" />
+                <Bar dataKey="Skatt & service" stackId="a" fill="#fbbf24" radius={[0, 4, 4, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

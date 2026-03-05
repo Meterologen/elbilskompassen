@@ -148,8 +148,13 @@ interface UsedCarMonthlyCosts {
   capitalCost: number;
   fuel: number;
   insurance: number;
-  taxAndMaintenance: number;
+  tax: number;
+  maintenance: number;
+  maintenanceLow: number;
+  maintenanceHigh: number;
   total: number;
+  totalLow: number;
+  totalHigh: number;
 }
 
 function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number): UsedCarMonthlyCosts {
@@ -157,13 +162,24 @@ function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number): UsedC
   const residual = u.purchasePrice * u.residualShareAfter3y;
   const depreciationAnnual = (u.purchasePrice - residual) / 3;
   const capitalCostAnnual = ((u.purchasePrice + residual) / 2) * DEFAULTS.capitalCostRate;
+  const fixedMonthly = Math.round(depreciationAnnual / 12) + Math.round(capitalCostAnnual / 12)
+    + Math.round(fossilEnergyAnnual / 12) + Math.round(u.insuranceAnnual / 12) + Math.round(u.taxAnnual / 12);
+  const maintenanceMonthly = Math.round(u.maintenanceAnnual / 12);
+  // Best case: bara grundservice. Worst case: oturligt år med stor reparation.
+  const maintenanceLow = Math.round(maintenanceMonthly * 0.3);
+  const maintenanceHigh = Math.round(maintenanceMonthly * 2.5);
   return {
     depreciation: Math.round(depreciationAnnual / 12),
     capitalCost: Math.round(capitalCostAnnual / 12),
     fuel: Math.round(fossilEnergyAnnual / 12),
     insurance: Math.round(u.insuranceAnnual / 12),
-    taxAndMaintenance: Math.round((u.taxAnnual + u.maintenanceAnnual) / 12),
-    total: Math.round((depreciationAnnual + capitalCostAnnual + fossilEnergyAnnual + u.insuranceAnnual + u.taxAnnual + u.maintenanceAnnual) / 12),
+    tax: Math.round(u.taxAnnual / 12),
+    maintenance: maintenanceMonthly,
+    maintenanceLow,
+    maintenanceHigh,
+    total: fixedMonthly + maintenanceMonthly,
+    totalLow: fixedMonthly + maintenanceLow,
+    totalHigh: fixedMonthly + maintenanceHigh,
   };
 }
 
@@ -300,7 +316,7 @@ function Inner() {
       "Värdeminskning": used.depreciation + used.capitalCost,
       "Bränsle/El": used.fuel,
       "Försäkring": used.insurance,
-      "Skatt & service": used.taxAndMaintenance,
+      "Skatt & service": used.tax + used.maintenance,
       total: used.total,
     },
     {
@@ -431,7 +447,7 @@ function Inner() {
           )}
 
           <p className="mt-4 text-center text-sm text-slate-500">
-            Du lägger redan uppskattningsvis <strong className="text-slate-700">{fmtShort(used.total)} kr/mån</strong> på din {fuel === "diesel" ? "diesel" : "bensin"}bil (5 år gammal, {fmtShort(miles)} mil/år).
+            Du lägger redan uppskattningsvis <strong className="text-slate-700">{fmtShort(used.total)} kr/mån</strong> på din {fuel === "diesel" ? "diesel" : "bensin"}bil — men beroende på reparationer kan det variera mellan {fmtShort(used.totalLow)} och {fmtShort(used.totalHigh)} kr/mån.
           </p>
 
           {/* Side-by-side cards */}
@@ -459,13 +475,34 @@ function Inner() {
                   <span className="font-medium">{fmtShort(used.insurance)} kr</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Skatt + service &amp; reparation</span>
-                  <span className="font-medium">{fmtShort(used.taxAndMaintenance)} kr</span>
+                  <span>Fordonsskatt</span>
+                  <span className="font-medium">{fmtShort(used.tax)} kr</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Service &amp; reparation</span>
+                  <span className="font-medium">{fmtShort(used.maintenance)} kr</span>
                 </div>
                 <div className="flex justify-between border-t border-red-200 pt-2">
                   <span className="font-semibold">Totalt</span>
                   <span className="text-xl font-bold text-red-700">{fmtShort(used.total)} kr/mån</span>
                 </div>
+              </div>
+              {/* Osäkerhetsspann */}
+              <div className="mt-3 rounded-lg bg-red-100/60 px-4 py-3">
+                <p className="text-xs font-semibold text-red-800">Osäkerhet: service &amp; reparation</p>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="text-xs text-red-700 whitespace-nowrap">{fmtShort(used.maintenanceLow)} kr</span>
+                  <div className="relative h-2 flex-1 rounded-full bg-gradient-to-r from-amber-300 via-red-400 to-red-600">
+                    <div
+                      className="absolute top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full border-2 border-white bg-red-500 shadow"
+                      style={{ left: `${((used.maintenance - used.maintenanceLow) / (used.maintenanceHigh - used.maintenanceLow)) * 100}%` }}
+                    />
+                  </div>
+                  <span className="text-xs text-red-700 whitespace-nowrap">{fmtShort(used.maintenanceHigh)} kr</span>
+                </div>
+                <p className="mt-1.5 text-[11px] text-red-700">
+                  En bra månad kostar bara grundservice. Ett oturligt år kan innebära kamrem, koppling eller AC-kompressor — tusenlappar extra.
+                </p>
               </div>
             </div>
 
@@ -518,6 +555,16 @@ function Inner() {
                   </a>
                 </p>
               )}
+              {/* Förutsägbarhet */}
+              <div className="mt-3 rounded-lg bg-emerald-100/60 px-4 py-3">
+                <p className="text-xs font-semibold text-emerald-800">Fast kostnad — inga överraskningar</p>
+                <div className="mt-2 flex items-center gap-2">
+                  <div className="h-2 flex-1 rounded-full bg-emerald-400" />
+                </div>
+                <p className="mt-1.5 text-[11px] text-emerald-700">
+                  Med leasing vet du exakt vad du betalar varje månad. Service ingår ofta, och garantin täcker reparationer.
+                </p>
+              </div>
             </div>
           </div>
 

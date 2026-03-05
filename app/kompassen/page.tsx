@@ -3,7 +3,16 @@
 import Link from "next/link";
 import { useState } from "react";
 import { COMPASS_QUESTIONS, getCompassResult, type CompassAnswer, type CompassResult } from "../lib/compass";
-import { formatSek } from "../lib/cars";
+import { formatSek, type EvModel } from "../lib/cars";
+import { LEASING_OFFERS, type LeasingOffer } from "../lib/leasing";
+
+function findLeasingForCar(car: EvModel): LeasingOffer | null {
+  const matches = LEASING_OFFERS.filter(
+    (o) => o.brand.toLowerCase() === car.brand.toLowerCase()
+  );
+  if (matches.length === 0) return null;
+  return matches.reduce((best, o) => (o.monthlyPrice < best.monthlyPrice ? o : best));
+}
 
 export default function KompassenPage() {
   const [answers, setAnswers] = useState<CompassAnswer[]>([]);
@@ -54,6 +63,7 @@ export default function KompassenPage() {
                     ? "text-amber-600 border-amber-200 bg-amber-50"
                     : "text-sky-600 border-sky-200 bg-sky-50";
               const label = i === 0 ? "Bästa matchning" : "Alternativ";
+              const leasing = findLeasingForCar(car);
 
               return (
                 <div
@@ -79,7 +89,7 @@ export default function KompassenPage() {
                       </div>
                     </div>
                     <p className="mt-2 text-sm text-slate-600">{car.description}</p>
-                    <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    <div className={`mt-4 grid grid-cols-2 gap-3 ${leasing ? "sm:grid-cols-5" : "sm:grid-cols-4"}`}>
                       <div className="rounded-lg bg-slate-50 p-3 text-center">
                         <p className="text-xs text-slate-500">Pris från</p>
                         <p className="font-semibold text-slate-800">{formatSek(car.priceSek)}</p>
@@ -96,6 +106,15 @@ export default function KompassenPage() {
                         <p className="text-xs text-slate-500">Bagage</p>
                         <p className="font-semibold text-slate-800">{car.trunkLiters} L</p>
                       </div>
+                      {leasing && (
+                        <div className="rounded-lg bg-emerald-50 p-3 text-center">
+                          <p className="text-xs text-emerald-600">Leasing från</p>
+                          <p className="font-semibold text-emerald-700">{leasing.monthlyPrice.toLocaleString("sv-SE")} kr/mån</p>
+                          {leasing.downPayment > 0 && (
+                            <p className="mt-0.5 text-[10px] text-emerald-500">{leasing.downPayment.toLocaleString("sv-SE")} kr insats</p>
+                          )}
+                        </div>
+                      )}
                     </div>
                     <div className="mt-4 flex flex-wrap gap-3">
                       <Link
@@ -110,6 +129,14 @@ export default function KompassenPage() {
                       >
                         Räkna på {car.model}
                       </Link>
+                      {leasing && (
+                        <Link
+                          href="/leasing"
+                          className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-500"
+                        >
+                          Se leasingerbjudande →
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

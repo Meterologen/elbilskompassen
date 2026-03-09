@@ -29,44 +29,68 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 //   emoji:    valfri visuell markör
 // ────────────────────────────────────────────────────────────────────────────
 const CARS = [
-  // ── Kompakt ─────────────────────────────────────────────────────────────── (priser uppdaterade 2026-03-04)
-  { url: "https://ev-database.org/car/1909/Volvo-EX30-Single-Motor", id: "volvo-ex30", priceSek: 429_000, size: "compact", useCases: ["city", "commuter"], emoji: "🇸🇪" },
-  { url: "https://ev-database.org/car/1708/MG-MG4-Electric-64-kWh", id: "mg4", priceSek: 369_990, size: "compact", useCases: ["city", "commuter"], emoji: "💰" },
-  { url: "https://ev-database.org/car/1782/BYD-ATTO-3", id: "byd-atto3", priceSek: 484_900, size: "compact", useCases: ["city", "commuter"], emoji: "💰" },
-  { url: "https://ev-database.org/car/3263/CUPRA-Born-170-kW---79-kWh", id: "cupra-born", priceSek: 485_900, size: "compact", useCases: ["city", "commuter"], emoji: "🏎️" },
-  { url: "https://ev-database.org/car/1701/BMW-iX1-xDrive30", id: "bmw-ix1", priceSek: 563_900, size: "compact", useCases: ["commuter", "premium"], emoji: "✨" },
-  { url: "https://ev-database.org/car/2212/Kia-EV3-Long-Range", id: "kia-ev3", priceSek: 508_300, size: "compact", useCases: ["city", "commuter"], emoji: "🔋" },
-  { url: "https://ev-database.org/car/3033/Skoda-Elroq-85", id: "skoda-elroq", priceSek: 569_900, size: "compact", useCases: ["city", "commuter", "family"], emoji: "🚗" },
-  { url: "https://ev-database.org/car/3300/Kia-EV5-814-kWh", id: "kia-ev5", priceSek: 553_900, size: "suv", useCases: ["family", "commuter"], emoji: "🔋" },
+  // ── Kompakt ─────────────────────────────────────────────────────────────── (priser uppdaterade 2026-03)
+  //   towbar: kan dragkrok monteras?  awd: har den fyrhjulsdrift?
+  { url: "https://ev-database.org/car/1909/Volvo-EX30-Single-Motor", id: "volvo-ex30", priceSek: 429_000, size: "compact", useCases: ["city", "commuter"], emoji: "🇸🇪", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1708/MG-MG4-Electric-64-kWh", id: "mg4", priceSek: 369_990, size: "compact", useCases: ["city", "commuter"], emoji: "💰", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1782/BYD-ATTO-3", id: "byd-atto3", priceSek: 484_900, size: "compact", useCases: ["city", "commuter"], emoji: "💰", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3263/CUPRA-Born-170-kW---79-kWh", id: "cupra-born", priceSek: 485_900, size: "compact", useCases: ["city", "commuter"], emoji: "🏎️", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1701/BMW-iX1-xDrive30", id: "bmw-ix1", priceSek: 563_900, size: "compact", useCases: ["commuter", "premium"], emoji: "✨", towbar: true, awd: true },
+  { url: "https://ev-database.org/car/2212/Kia-EV3-Long-Range", id: "kia-ev3", priceSek: 508_300, size: "compact", useCases: ["city", "commuter"], emoji: "🔋", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3033/Skoda-Elroq-85", id: "skoda-elroq", priceSek: 569_900, size: "compact", useCases: ["city", "commuter", "family"], emoji: "🚗", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3334/Volkswagen-ID3-Pro-S", id: "vw-id3", priceSek: 488_900, size: "compact", useCases: ["city", "commuter"], emoji: "🚗", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3223/Peugeot-e-208-54-kWh", id: "peugeot-e208", priceSek: 359_900, size: "compact", useCases: ["city", "commuter"], emoji: "🇫🇷", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1285/Fiat-500e-Hatchback-42-kWh", id: "fiat-500e", priceSek: 326_900, size: "compact", useCases: ["city"], emoji: "🇮🇹", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3221/Opel-Corsa-Electric-54-kWh", id: "opel-corsa-e", priceSek: 369_900, size: "compact", useCases: ["city", "commuter"], emoji: "🚗", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1998/Mini-Cooper-SE", id: "mini-cooper-se", priceSek: 431_900, size: "compact", useCases: ["city", "commuter"], emoji: "🇬🇧", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/2041/Smart-1-Pro", id: "smart-1", priceSek: 419_900, size: "compact", useCases: ["city", "commuter"], emoji: "🚗", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/2052/Smart-3-Pro", id: "smart-3", priceSek: 429_900, size: "compact", useCases: ["city", "commuter"], emoji: "🏎️", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3047/Citroen-e-C4", id: "citroen-ec4", priceSek: 399_900, size: "compact", useCases: ["city", "commuter"], emoji: "🇫🇷", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3366/Nissan-LEAF-Extended-Range-75-kWh", id: "nissan-leaf", priceSek: 429_900, size: "compact", useCases: ["city", "commuter"], emoji: "🍃", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3051/Opel-Mokka-Electric", id: "opel-mokka-e", priceSek: 399_900, size: "compact", useCases: ["city", "commuter"], emoji: "🚗", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1947/Peugeot-e-2008-54-kWh", id: "peugeot-e2008", priceSek: 519_900, size: "compact", useCases: ["city", "commuter", "family"], emoji: "🇫🇷", towbar: false, awd: false },
 
   // ── Mellanklass / Sedan ───────────────────────────────────────────────────
-  { url: "https://ev-database.org/car/3404/Tesla-Model-3-Premium-RWD", id: "tesla-model-3", priceSek: 519_990, size: "medium", useCases: ["commuter", "family"], emoji: "⚡" },
-  { url: "https://ev-database.org/car/2001/BYD-SEAL-825-kWh-RWD-Design", id: "byd-seal", priceSek: 589_900, size: "medium", useCases: ["commuter", "family"], emoji: "🦭" },
-  { url: "https://ev-database.org/car/3151/Polestar-2-Long-Range-Single-Motor", id: "polestar-2", priceSek: 489_000, size: "medium", useCases: ["commuter", "premium"], emoji: "✨" },
-  { url: "https://ev-database.org/car/3439/Hyundai-IONIQ-6-84-kWh-RWD", id: "hyundai-ioniq6", priceSek: 589_900, size: "medium", useCases: ["commuter", "premium"], emoji: "💨" },
-  { url: "https://ev-database.org/car/3334/Volkswagen-ID3-Pro-S", id: "vw-id3", priceSek: 488_900, size: "compact", useCases: ["city", "commuter"], emoji: "🚗" },
-  { url: "https://ev-database.org/car/3257/Volkswagen-ID7-Pro-S", id: "vw-id7", priceSek: 664_900, size: "medium", useCases: ["commuter", "family"], emoji: "🚗" },
-  { url: "https://ev-database.org/car/3260/Volkswagen-ID7-Tourer-Pro-S", id: "vw-id7-tourer", priceSek: 690_000, size: "medium", useCases: ["family", "commuter"], emoji: "🚗" },
+  { url: "https://ev-database.org/car/3404/Tesla-Model-3-Premium-RWD", id: "tesla-model-3", priceSek: 519_990, size: "medium", useCases: ["commuter", "family"], emoji: "⚡", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2001/BYD-SEAL-825-kWh-RWD-Design", id: "byd-seal", priceSek: 589_900, size: "medium", useCases: ["commuter", "family"], emoji: "🦭", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3151/Polestar-2-Long-Range-Single-Motor", id: "polestar-2", priceSek: 489_000, size: "medium", useCases: ["commuter", "premium"], emoji: "✨", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3439/Hyundai-IONIQ-6-84-kWh-RWD", id: "hyundai-ioniq6", priceSek: 589_900, size: "medium", useCases: ["commuter", "premium"], emoji: "💨", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3257/Volkswagen-ID7-Pro-S", id: "vw-id7", priceSek: 664_900, size: "medium", useCases: ["commuter", "family"], emoji: "🚗", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3260/Volkswagen-ID7-Tourer-Pro-S", id: "vw-id7-tourer", priceSek: 690_000, size: "medium", useCases: ["family", "commuter"], emoji: "🚗", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3028/Kia-EV6-Long-Range-2WD", id: "kia-ev6", priceSek: 599_900, size: "medium", useCases: ["commuter", "family", "adventure"], emoji: "🔋", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/1521/Renault-Megane-E-Tech-EV60-220hp", id: "renault-megane", priceSek: 449_900, size: "medium", useCases: ["commuter", "family"], emoji: "🇫🇷", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3205/BMW-i4-eDrive40", id: "bmw-i4", priceSek: 599_900, size: "medium", useCases: ["commuter", "premium"], emoji: "✨", towbar: true, awd: false },
 
   // ── SUV / Familj ──────────────────────────────────────────────────────────
-  { url: "https://ev-database.org/car/3417/Tesla-Model-Y-Long-Range-RWD", id: "tesla-model-y", priceSek: 574_990, size: "suv", useCases: ["family", "adventure"], emoji: "🚙" },
-  { url: "https://ev-database.org/car/3159/Volvo-EX40-Single-Motor-ER", id: "volvo-ex40", priceSek: 607_000, size: "suv", useCases: ["family", "commuter"], emoji: "🇸🇪" },
-  { url: "https://ev-database.org/car/3441/Volvo-EX60-P6", id: "volvo-ex60", priceSek: 689_000, size: "suv", useCases: ["family", "premium"], emoji: "🇸🇪" },
-  { url: "https://ev-database.org/car/3250/Volkswagen-ID4-Pro", id: "vw-id4", priceSek: 586_900, size: "suv", useCases: ["family", "commuter"], emoji: "🚗" },
-  { url: "https://ev-database.org/car/3254/Volkswagen-ID5-Pro", id: "vw-id5", priceSek: 613_900, size: "suv", useCases: ["family", "commuter"], emoji: "🚗" },
-  { url: "https://ev-database.org/car/3028/Kia-EV6-Long-Range-2WD", id: "kia-ev6", priceSek: 599_900, size: "medium", useCases: ["commuter", "family", "adventure"], emoji: "🔋" },
-  { url: "https://ev-database.org/car/2236/Hyundai-IONIQ-5-84-kWh-RWD", id: "hyundai-ioniq5", priceSek: 519_900, size: "suv", useCases: ["family", "commuter"], emoji: "⚡" },
-  { url: "https://ev-database.org/car/3097/Skoda-Enyaq-85", id: "skoda-enyaq", priceSek: 569_900, size: "suv", useCases: ["family", "adventure"], emoji: "🧳" },
-  { url: "https://ev-database.org/car/2067/BYD-SEAL-U-87-kWh-Design", id: "byd-seal-u", priceSek: 469_900, size: "suv", useCases: ["family", "commuter"], emoji: "💰" },
-  { url: "https://ev-database.org/car/3070/BYD-SEALION-7-825-kWh-RWD-Comfort", id: "byd-sealion7", priceSek: 569_900, size: "suv", useCases: ["family", "adventure"], emoji: "🦁" },
-  { url: "https://ev-database.org/car/3454/Ford-Explorer-Extended-Range-RWD", id: "ford-explorer", priceSek: 489_900, size: "suv", useCases: ["family", "commuter"], emoji: "🚙" },
-  { url: "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp", id: "renault-scenic", priceSek: 549_900, size: "suv", useCases: ["family", "commuter"], emoji: "🇫🇷" },
+  { url: "https://ev-database.org/car/3417/Tesla-Model-Y-Long-Range-RWD", id: "tesla-model-y", priceSek: 574_990, size: "suv", useCases: ["family", "adventure"], emoji: "🚙", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3159/Volvo-EX40-Single-Motor-ER", id: "volvo-ex40", priceSek: 607_000, size: "suv", useCases: ["family", "commuter"], emoji: "🇸🇪", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3441/Volvo-EX60-P6", id: "volvo-ex60", priceSek: 689_000, size: "suv", useCases: ["family", "premium"], emoji: "🇸🇪", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3250/Volkswagen-ID4-Pro", id: "vw-id4", priceSek: 586_900, size: "suv", useCases: ["family", "commuter"], emoji: "🚗", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3254/Volkswagen-ID5-Pro", id: "vw-id5", priceSek: 613_900, size: "suv", useCases: ["family", "commuter"], emoji: "🚗", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3300/Kia-EV5-814-kWh", id: "kia-ev5", priceSek: 553_900, size: "suv", useCases: ["family", "commuter"], emoji: "🔋", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2236/Hyundai-IONIQ-5-84-kWh-RWD", id: "hyundai-ioniq5", priceSek: 519_900, size: "suv", useCases: ["family", "commuter"], emoji: "⚡", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3097/Skoda-Enyaq-85", id: "skoda-enyaq", priceSek: 569_900, size: "suv", useCases: ["family", "adventure"], emoji: "🧳", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2067/BYD-SEAL-U-87-kWh-Design", id: "byd-seal-u", priceSek: 469_900, size: "suv", useCases: ["family", "commuter"], emoji: "💰", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3070/BYD-SEALION-7-825-kWh-RWD-Comfort", id: "byd-sealion7", priceSek: 569_900, size: "suv", useCases: ["family", "adventure"], emoji: "🦁", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/3454/Ford-Explorer-Extended-Range-RWD", id: "ford-explorer", priceSek: 489_900, size: "suv", useCases: ["family", "commuter"], emoji: "🚙", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp", id: "renault-scenic", priceSek: 549_900, size: "suv", useCases: ["family", "commuter"], emoji: "🇫🇷", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/1302/Nissan-Ariya-87kWh", id: "nissan-ariya", priceSek: 513_500, size: "suv", useCases: ["family", "commuter"], emoji: "🚙", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2003/Peugeot-e-3008-73-kWh", id: "peugeot-e3008", priceSek: 499_900, size: "suv", useCases: ["family", "commuter"], emoji: "🇫🇷", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3401/Toyota-bZ4X-Touring-AWD-747-kWh", id: "toyota-bz4x", priceSek: 479_900, size: "suv", useCases: ["family", "adventure"], emoji: "🚙", towbar: true, awd: true },
+  { url: "https://ev-database.org/car/3275/XPENG-G6-RWD-Long-Range", id: "xpeng-g6", priceSek: 579_900, size: "suv", useCases: ["commuter", "family"], emoji: "🇨🇳", towbar: false, awd: false },
+  { url: "https://ev-database.org/car/1984/Mercedes-Benz-EQA-250", id: "mercedes-eqa", priceSek: 615_000, size: "suv", useCases: ["commuter", "premium"], emoji: "✨", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/1988/Mercedes-Benz-EQB-250plus", id: "mercedes-eqb", priceSek: 592_900, size: "suv", useCases: ["family", "premium"], emoji: "✨", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2013/Audi-Q4-e-tron-45", id: "audi-q4-etron", priceSek: 625_200, size: "suv", useCases: ["commuter", "premium"], emoji: "✨", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2281/Audi-Q6-SUV-e-tron", id: "audi-q6-etron", priceSek: 789_900, size: "suv", useCases: ["family", "premium"], emoji: "✨", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3290/BMW-iX3-50-xDrive", id: "bmw-ix3", priceSek: 749_000, size: "suv", useCases: ["family", "premium"], emoji: "✨", towbar: true, awd: true },
 
   // ── Stor / Premium ────────────────────────────────────────────────────────
-  { url: "https://ev-database.org/car/3323/Volvo-EX90-Single-Motor", id: "volvo-ex90", priceSek: 899_000, size: "premium", useCases: ["family", "premium", "adventure"], emoji: "👑" },
-  { url: "https://ev-database.org/car/1834/Kia-EV9-998-kWh-RWD", id: "kia-ev9", priceSek: 701_900, size: "premium", useCases: ["family", "adventure"], emoji: "🏔️" },
-  { url: "https://ev-database.org/car/2154/Volkswagen-ID-Buzz-LWB-Pro", id: "vw-id-buzz", priceSek: 646_900, size: "premium", useCases: ["family", "adventure"], emoji: "🚌" },
-  { url: "https://ev-database.org/car/3326/Polestar-3-Rear-Motor", id: "polestar-3", priceSek: 924_000, size: "premium", useCases: ["premium", "adventure"], emoji: "✨" },
+  { url: "https://ev-database.org/car/3323/Volvo-EX90-Single-Motor", id: "volvo-ex90", priceSek: 899_000, size: "premium", useCases: ["family", "premium", "adventure"], emoji: "👑", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/1834/Kia-EV9-998-kWh-RWD", id: "kia-ev9", priceSek: 701_900, size: "premium", useCases: ["family", "adventure"], emoji: "🏔️", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/2154/Volkswagen-ID-Buzz-LWB-Pro", id: "vw-id-buzz", priceSek: 646_900, size: "premium", useCases: ["family", "adventure"], emoji: "🚌", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/3326/Polestar-3-Rear-Motor", id: "polestar-3", priceSek: 924_000, size: "premium", useCases: ["premium", "adventure"], emoji: "✨", towbar: true, awd: false },
+  { url: "https://ev-database.org/car/1472/BMW-iX-xDrive40", id: "bmw-ix", priceSek: 940_000, size: "premium", useCases: ["premium", "adventure"], emoji: "👑", towbar: true, awd: true },
+  { url: "https://ev-database.org/car/2098/Porsche-Taycan", id: "porsche-taycan", priceSek: 1_170_000, size: "premium", useCases: ["premium", "commuter"], emoji: "🏎️", towbar: false, awd: false },
 ];
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -211,6 +235,8 @@ async function scrapeCar(carCfg) {
     year,
     description: `${bodyText || "Elbil"}${segmentText ? ` (${segmentText})` : ""}. Rackvidd ${rangeKm} km, batteri ${batteryKwh} kWh.`,
     emoji: carCfg.emoji,
+    towbar: carCfg.towbar ?? false,
+    awd: carCfg.awd ?? false,
     _source: carCfg.url,
   };
 }
@@ -242,6 +268,8 @@ function generateTS(cars) {
     `  year: number;`,
     `  description: string;`,
     `  emoji: string;`,
+    `  towbar: boolean;`,
+    `  awd: boolean;`,
     `}`,
     ``,
     `export const EV_MODELS: EvModel[] = [`,
@@ -264,6 +292,8 @@ function generateTS(cars) {
     lines.push(`    year: ${c.year},`);
     lines.push(`    description: ${JSON.stringify(c.description)},`);
     lines.push(`    emoji: ${JSON.stringify(c.emoji)},`);
+    lines.push(`    towbar: ${c.towbar},`);
+    lines.push(`    awd: ${c.awd},`);
     lines.push(`  },`);
   }
 
@@ -288,6 +318,40 @@ function generateTS(cars) {
   lines.push(`export function formatSek(amount: number): string {`);
   lines.push(`  return new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK", maximumFractionDigits: 0 }).format(amount);`);
   lines.push(`}`);
+  lines.push(``);
+
+  // ── Fossila referensbilar (manuellt underhållna) ──────────────────────────
+  lines.push(`// ── Fossila referensbilar ────────────────────────────────────────────────────`);
+  lines.push(``);
+  lines.push(`export interface FossilModel {`);
+  lines.push(`  id: string;`);
+  lines.push(`  brand: string;`);
+  lines.push(`  model: string;`);
+  lines.push(`  priceSek: number;`);
+  lines.push(`  fuelType: "petrol" | "diesel";`);
+  lines.push(`  litersPerMile: number;`);
+  lines.push(`  size: CarSize;`);
+  lines.push(`  taxAnnual: number;`);
+  lines.push(`  insuranceAnnual: number;`);
+  lines.push(`}`);
+  lines.push(``);
+  lines.push(`export const FOSSIL_MODELS: FossilModel[] = [`);
+  lines.push(`  // Kompakt`);
+  lines.push(`  { id: "vw-golf", brand: "VW", model: "Golf 1.5 TSI", priceSek: 310_000, fuelType: "petrol", litersPerMile: 0.55, size: "compact", taxAnnual: 4_200, insuranceAnnual: 4_000 },`);
+  lines.push(`  { id: "toyota-corolla", brand: "Toyota", model: "Corolla 1.8 Hybrid", priceSek: 295_000, fuelType: "petrol", litersPerMile: 0.43, size: "compact", taxAnnual: 3_800, insuranceAnnual: 3_800 },`);
+  lines.push(`  { id: "skoda-octavia", brand: "Skoda", model: "Octavia 1.5 TSI", priceSek: 285_000, fuelType: "petrol", litersPerMile: 0.54, size: "compact", taxAnnual: 4_100, insuranceAnnual: 3_700 },`);
+  lines.push(`  { id: "kia-ceed", brand: "Kia", model: "Ceed 1.5 T-GDI", priceSek: 265_000, fuelType: "petrol", litersPerMile: 0.56, size: "compact", taxAnnual: 4_300, insuranceAnnual: 3_500 },`);
+  lines.push(`  // Mellanklass`);
+  lines.push(`  { id: "volvo-v60", brand: "Volvo", model: "V60 B3 Bensin", priceSek: 380_000, fuelType: "petrol", litersPerMile: 0.62, size: "medium", taxAnnual: 5_200, insuranceAnnual: 5_200 },`);
+  lines.push(`  { id: "toyota-camry", brand: "Toyota", model: "Camry 2.5 Hybrid", priceSek: 370_000, fuelType: "petrol", litersPerMile: 0.45, size: "medium", taxAnnual: 4_000, insuranceAnnual: 4_800 },`);
+  lines.push(`  { id: "vw-passat", brand: "VW", model: "Passat 1.5 TSI", priceSek: 365_000, fuelType: "petrol", litersPerMile: 0.58, size: "medium", taxAnnual: 5_000, insuranceAnnual: 4_900 },`);
+  lines.push(`  { id: "skoda-superb", brand: "Skoda", model: "Superb 1.5 TSI", priceSek: 355_000, fuelType: "petrol", litersPerMile: 0.57, size: "medium", taxAnnual: 4_800, insuranceAnnual: 4_500 },`);
+  lines.push(`  // SUV`);
+  lines.push(`  { id: "volvo-xc60", brand: "Volvo", model: "XC60 B5 Bensin", priceSek: 490_000, fuelType: "petrol", litersPerMile: 0.75, size: "suv", taxAnnual: 6_500, insuranceAnnual: 6_200 },`);
+  lines.push(`  { id: "toyota-rav4", brand: "Toyota", model: "RAV4 2.5 Hybrid", priceSek: 420_000, fuelType: "petrol", litersPerMile: 0.52, size: "suv", taxAnnual: 4_500, insuranceAnnual: 5_500 },`);
+  lines.push(`  { id: "vw-tiguan", brand: "VW", model: "Tiguan 1.5 TSI", priceSek: 400_000, fuelType: "petrol", litersPerMile: 0.65, size: "suv", taxAnnual: 5_500, insuranceAnnual: 5_200 },`);
+  lines.push(`  { id: "kia-sportage", brand: "Kia", model: "Sportage 1.6 T-GDI", priceSek: 385_000, fuelType: "petrol", litersPerMile: 0.68, size: "suv", taxAnnual: 5_800, insuranceAnnual: 4_800 },`);
+  lines.push(`];`);
   lines.push(``);
 
   return lines.join("\n");

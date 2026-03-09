@@ -21,9 +21,10 @@ export default function GoogleAnalytics() {
           gtag('consent', 'default', {
             analytics_storage: 'denied',
             ad_storage: 'denied',
+            wait_for_update: 500,
           });
           gtag('config', '${GA_ID}', {
-            send_page_view: true,
+            send_page_view: false,
           });
           window.gtag = gtag;
         `}

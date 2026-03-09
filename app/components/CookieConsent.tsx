@@ -21,6 +21,9 @@ export default function CookieConsent() {
       window.gtag("consent", "update", {
         analytics_storage: value,
       });
+      if (value === "granted") {
+        window.gtag("event", "page_view");
+      }
     }
   }
 

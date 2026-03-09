@@ -89,7 +89,7 @@ function costBreakdown(v: VehicleTcoResult) {
     { name: "Försäkring", value: v.insuranceAnnual },
     { name: "Skatt", value: v.taxAnnual },
     { name: "Underhåll", value: v.maintenanceFundAnnual },
-    { name: "Bränsle/El", value: v.energyAnnual },
+    { name: "Energi (bränsle/el)", value: v.energyAnnual },
   ];
 }
 
@@ -319,7 +319,7 @@ function Inner() {
     {
       name: `${fuel === "diesel" ? "Diesel" : "Bensin"}bil`,
       "Värdeminskning": used.depreciation + used.capitalCost,
-      "Bränsle/El": used.fuel,
+      "Energi (bränsle/el)": used.fuel,
       "Försäkring": used.insurance,
       "Skatt & service": used.tax + used.maintenance,
       total: used.total,
@@ -327,7 +327,7 @@ function Inner() {
     {
       name: "Elbil (leasing)",
       "Värdeminskning": leasingPrice,
-      "Bränsle/El": evElMonthly,
+      "Energi (bränsle/el)": evElMonthly,
       "Försäkring": evInsuranceMonthly,
       "Skatt & service": 0,
       total: evTotal,
@@ -667,7 +667,7 @@ function Inner() {
                 <Tooltip formatter={(v) => `${fmtShort(Number(v))} kr/mån`} />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
                 <Bar dataKey="Värdeminskning" stackId="a" fill="#f87171" radius={[0, 0, 0, 0]} />
-                <Bar dataKey="Bränsle/El" stackId="a" fill="#fb923c" />
+                <Bar dataKey="Energi (bränsle/el)" stackId="a" fill="#fb923c" />
                 <Bar dataKey="Försäkring" stackId="a" fill="#a78bfa" />
                 <Bar dataKey="Skatt & service" stackId="a" fill="#fbbf24" radius={[0, 4, 4, 0]} />
               </BarChart>

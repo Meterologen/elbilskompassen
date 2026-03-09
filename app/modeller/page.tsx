@@ -42,9 +42,9 @@ export default function ModellerPage() {
   // Sort
   const [sortKey, setSortKey] = useState<SortKey>("price");
 
-  // Filters
-  const [sizeFilter, setSizeFilter] = useState<CarSize | "all">("all");
-  const [brandFilter, setBrandFilter] = useState<string>("all");
+  // Filters (multi-select)
+  const [sizeFilter, setSizeFilter] = useState<Set<CarSize>>(new Set());
+  const [brandFilter, setBrandFilter] = useState<Set<string>>(new Set());
   const [maxPrice, setMaxPrice] = useState<number>(Infinity);
   const [minRange, setMinRange] = useState<number>(0);
   const [minSeats, setMinSeats] = useState<number>(0);
@@ -57,8 +57,8 @@ export default function ModellerPage() {
 
   const filtered = useMemo(() => {
     let list = EV_MODELS.filter((c) => {
-      if (sizeFilter !== "all" && c.size !== sizeFilter) return false;
-      if (brandFilter !== "all" && c.brand !== brandFilter) return false;
+      if (sizeFilter.size > 0 && !sizeFilter.has(c.size)) return false;
+      if (brandFilter.size > 0 && !brandFilter.has(c.brand)) return false;
       if (c.priceSek > maxPrice) return false;
       if (c.rangeKm < minRange) return false;
       if (minSeats > 0 && c.seats < minSeats) return false;
@@ -77,8 +77,8 @@ export default function ModellerPage() {
   }, [sizeFilter, brandFilter, maxPrice, minRange, minSeats, towbarOnly, awdOnly, sortKey]);
 
   const activeFilterCount = [
-    sizeFilter !== "all",
-    brandFilter !== "all",
+    sizeFilter.size > 0,
+    brandFilter.size > 0,
     maxPrice < Infinity,
     minRange > 0,
     minSeats > 0,
@@ -86,9 +86,25 @@ export default function ModellerPage() {
     awdOnly,
   ].filter(Boolean).length;
 
+  const toggleSize = (v: CarSize) => {
+    setSizeFilter((prev) => {
+      const next = new Set(prev);
+      if (next.has(v)) next.delete(v); else next.add(v);
+      return next;
+    });
+  };
+
+  const toggleBrand = (b: string) => {
+    setBrandFilter((prev) => {
+      const next = new Set(prev);
+      if (next.has(b)) next.delete(b); else next.add(b);
+      return next;
+    });
+  };
+
   const resetFilters = () => {
-    setSizeFilter("all");
-    setBrandFilter("all");
+    setSizeFilter(new Set());
+    setBrandFilter(new Set());
     setMaxPrice(Infinity);
     setMinRange(0);
     setMinSeats(0);
@@ -142,8 +158,8 @@ export default function ModellerPage() {
             <div>
               <p className="mb-2 text-sm font-medium text-slate-300">Storlek</p>
               <div className="flex flex-wrap gap-2">
-                {SIZE_LABELS.map((s) => (
-                  <button key={s.value} type="button" onClick={() => setSizeFilter(s.value)} className={chip(sizeFilter === s.value)}>{s.label}</button>
+                {SIZE_LABELS.filter((s) => s.value !== "all").map((s) => (
+                  <button key={s.value} type="button" onClick={() => toggleSize(s.value as CarSize)} className={chip(sizeFilter.has(s.value as CarSize))}>{s.label}</button>
                 ))}
               </div>
             </div>
@@ -152,9 +168,8 @@ export default function ModellerPage() {
             <div>
               <p className="mb-2 text-sm font-medium text-slate-300">Märke</p>
               <div className="flex flex-wrap gap-2">
-                <button type="button" onClick={() => setBrandFilter("all")} className={chip(brandFilter === "all")}>Alla</button>
                 {ALL_BRANDS.map((b) => (
-                  <button key={b} type="button" onClick={() => setBrandFilter(b)} className={chip(brandFilter === b)}>{b}</button>
+                  <button key={b} type="button" onClick={() => toggleBrand(b)} className={chip(brandFilter.has(b))}>{b}</button>
                 ))}
               </div>
             </div>

@@ -272,6 +272,19 @@ export default function FaqPage() {
                   </div>
                 )}
 
+                {/* Laddning guide link */}
+                {cat.value === "laddning" && (
+                  <div className="mt-3 rounded-2xl border border-sky-400/30 bg-gradient-to-br from-sky-500/15 to-emerald-500/15 p-5">
+                    <p className="text-sm text-slate-200">Vill du veta mer om kostnader, laddboxar och snabbladdning?</p>
+                    <Link
+                      href="/laddning"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-sky-400 transition"
+                    >
+                      Läs vår laddningsguide
+                    </Link>
+                  </div>
+                )}
+
                 <div className="mt-3 space-y-3">
                   {items.map((item, i) => (
                     <Accordion key={i} item={item} />

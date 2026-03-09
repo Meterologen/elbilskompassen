@@ -14,10 +14,10 @@ interface FaqItem {
 }
 
 const CATEGORY_META: { value: FaqCategory; label: string; icon: string }[] = [
+  { value: "premie", label: "Elbilspremien 2026", icon: "\uD83C\uDFF7\uFE0F" },
   { value: "myter", label: "Myter & fakta", icon: "?" },
   { value: "ekonomi", label: "Ekonomi & kostnad", icon: "$" },
   { value: "laddning", label: "Laddning", icon: "\u26A1" },
-  { value: "premie", label: "Elbilspremien 2026", icon: "\uD83C\uDFF7\uFE0F" },
   { value: "ovrigt", label: "Övrigt", icon: "\u2139\uFE0F" },
 ];
 

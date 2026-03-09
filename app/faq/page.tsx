@@ -13,13 +13,17 @@ interface FaqItem {
   category: FaqCategory;
 }
 
-const CATEGORIES: { value: FaqCategory | "all"; label: string }[] = [
+const CATEGORY_META: { value: FaqCategory; label: string; icon: string }[] = [
+  { value: "myter", label: "Myter & fakta", icon: "?" },
+  { value: "ekonomi", label: "Ekonomi & kostnad", icon: "$" },
+  { value: "laddning", label: "Laddning", icon: "\u26A1" },
+  { value: "premie", label: "Elbilspremien 2026", icon: "\uD83C\uDFF7\uFE0F" },
+  { value: "ovrigt", label: "Övrigt", icon: "\u2139\uFE0F" },
+];
+
+const FILTER_OPTIONS: { value: FaqCategory | "all"; label: string }[] = [
   { value: "all", label: "Alla" },
-  { value: "myter", label: "Myter & fakta" },
-  { value: "ekonomi", label: "Ekonomi" },
-  { value: "laddning", label: "Laddning" },
-  { value: "premie", label: "Elbilspremien" },
-  { value: "ovrigt", label: "Övrigt" },
+  ...CATEGORY_META.map((c) => ({ value: c.value, label: c.label })),
 ];
 
 const FAQS: FaqItem[] = [
@@ -200,6 +204,7 @@ export default function FaqPage() {
   const [category, setCategory] = useState<FaqCategory | "all">("all");
 
   const filtered = category === "all" ? FAQS : FAQS.filter((f) => f.category === category);
+  const visibleCategories = category === "all" ? CATEGORY_META : CATEGORY_META.filter((c) => c.value === category);
 
   return (
     <main id="main-content" className="min-h-screen" role="main">
@@ -213,7 +218,7 @@ export default function FaqPage() {
 
         {/* Category filter */}
         <div className="mt-8 flex flex-wrap gap-2">
-          {CATEGORIES.map((c) => (
+          {FILTER_OPTIONS.map((c) => (
             <button
               key={c.value}
               type="button"
@@ -231,37 +236,50 @@ export default function FaqPage() {
 
         <p className="mt-4 text-sm text-slate-400">Visar {filtered.length} frågor</p>
 
-        {/* Elbilspremien highlight */}
-        {(category === "all" || category === "premie") && (
-          <div className="mt-6 rounded-2xl border border-emerald-400/30 bg-gradient-to-br from-emerald-500/15 to-sky-500/15 p-6">
-            <h2 className="text-lg font-bold text-emerald-300">Elbilspremien 2026</h2>
-            <p className="mt-2 text-sm leading-relaxed text-slate-200">
-              Från 18 mars 2026 kan hushåll i landsbygdskommuner och områden med begränsad kollektivtrafik söka elbilspremien.
-              Stödet ger <strong className="text-white">1 300 kr/månad i upp till 3 år</strong> (totalt 46 800 kr).
-              Hushåll med lägre inkomst kan även få ett starttillägg på 18 000 kr.
-            </p>
-            <p className="mt-3 text-sm text-slate-300">
-              Premien gäller rena elbilar med ett pris på max 450 000 kr – både nya, begagnade, köp och leasing.
-            </p>
-            <a
-              href="https://www.naturvardsverket.se/amnesomraden/klimatomstallningen/elbilspremien/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-400 transition"
-            >
-              Läs mer på Naturvårdsverket
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-              </svg>
-            </a>
-          </div>
-        )}
+        {/* FAQ grouped by category */}
+        <div className="mt-6 space-y-10">
+          {visibleCategories.map((cat) => {
+            const items = filtered.filter((f) => f.category === cat.value);
+            if (items.length === 0) return null;
+            return (
+              <section key={cat.value}>
+                <h2 className="flex items-center gap-2 text-lg font-bold text-white">
+                  <span>{cat.icon}</span> {cat.label}
+                </h2>
 
-        {/* FAQ list */}
-        <div className="mt-6 space-y-3">
-          {filtered.map((item, i) => (
-            <Accordion key={i} item={item} />
-          ))}
+                {/* Elbilspremien highlight */}
+                {cat.value === "premie" && (
+                  <div className="mt-3 rounded-2xl border border-emerald-400/30 bg-gradient-to-br from-emerald-500/15 to-sky-500/15 p-6">
+                    <p className="text-sm leading-relaxed text-slate-200">
+                      Från 18 mars 2026 kan hushåll i landsbygdskommuner och områden med begränsad kollektivtrafik söka elbilspremien.
+                      Stödet ger <strong className="text-white">1 300 kr/månad i upp till 3 år</strong> (totalt 46 800 kr).
+                      Hushåll med lägre inkomst kan även få ett starttillägg på 18 000 kr.
+                    </p>
+                    <p className="mt-3 text-sm text-slate-300">
+                      Premien gäller rena elbilar med ett pris på max 450 000 kr – både nya, begagnade, köp och leasing.
+                    </p>
+                    <a
+                      href="https://www.naturvardsverket.se/amnesomraden/klimatomstallningen/elbilspremien/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-400 transition"
+                    >
+                      Läs mer på Naturvårdsverket
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                    </a>
+                  </div>
+                )}
+
+                <div className="mt-3 space-y-3">
+                  {items.map((item, i) => (
+                    <Accordion key={i} item={item} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
 
         {/* CTA */}

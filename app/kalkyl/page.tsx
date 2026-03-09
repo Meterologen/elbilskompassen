@@ -732,9 +732,9 @@ function Inner() {
 
               {/* TCO methodology */}
               <div className="text-sm text-slate-700 space-y-3">
-                <h3 className="text-sm font-semibold text-slate-800">Så har vi räknat — TCO-jämförelsen</h3>
+                <h3 className="text-sm font-semibold text-slate-800">Så har vi räknat — totalkostnadsjämförelsen</h3>
                 <p>
-                  Vi jämför den totala ägandekostnaden (TCO) för en elbil och en fossildriven bil i
+                  Vi jämför den totala ägandekostnaden för en elbil och en fossildriven bil i
                   samma storleksklass. Strukturen följer samma modell som Teknikens Värld.
                 </p>
                 <ul className="list-inside list-disc space-y-1">
@@ -765,7 +765,7 @@ function Inner() {
           >
             <div>
               <h2 className="text-lg font-semibold text-slate-900">Visa fullständig analys</h2>
-              <p className="mt-1 text-sm text-slate-500">TCO-jämförelse (ny elbil vs ny fossilbil), detaljerad tabell och finjustering.</p>
+              <p className="mt-1 text-sm text-slate-500">Totalkostnadsjämförelse (ny elbil vs ny fossilbil), detaljerad tabell och finjustering.</p>
             </div>
             <span className={`text-2xl text-slate-400 transition-transform duration-200 ${detailsOpen ? "rotate-180" : ""}`}>
               &#9660;
@@ -782,7 +782,7 @@ function Inner() {
                     : "bg-gradient-to-br from-amber-500 to-orange-600"
                 }`}
               >
-                <p className="text-xs font-medium uppercase tracking-wider text-white/70">Ny elbil vs ny {fuel === "diesel" ? "diesel" : "bensin"}bil — TCO-jämförelse</p>
+                <p className="text-xs font-medium uppercase tracking-wider text-white/70">Ny elbil vs ny {fuel === "diesel" ? "diesel" : "bensin"}bil — totalkostnadsjämförelse</p>
                 {pos ? (
                   <>
                     <p className="mt-2 text-base font-medium text-emerald-100">Med elbil sparar du</p>

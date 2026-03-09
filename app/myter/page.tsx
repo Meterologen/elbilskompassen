@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const MYTHS = [
-  { myth: "Elbilar är för dyra", fact: "Nypriset har sjunkit kraftigt. Räknar du in lägre driftskostnad blir totalkostnaden (TCO) ofta lägre än bensin redan efter 2–3 år." },
+  { myth: "Elbilar är för dyra", fact: "Nypriset har sjunkit kraftigt. Räknar du in lägre driftskostnad blir totalkostnaden ofta lägre än bensin redan efter 2–3 år." },
   { myth: "Batteriet dör efter 5 år", fact: "De flesta tillverkare ger 8–15 års garanti. Moderna batterier behåller 70–80 % kapacitet efter 200 000 km." },
   { myth: "Det finns ingen laddinfrastruktur", fact: "Sverige har över 25 000 publika laddpunkter. 80 % laddar hemma, så publik laddning behövs mest på resor." },
   { myth: "Elen räcker inte", fact: "Om hela Sveriges bilflotta vore elektrisk ökar elanvändningen med ca 10 %. Idag: ca 2 % av total elförbrukning." },

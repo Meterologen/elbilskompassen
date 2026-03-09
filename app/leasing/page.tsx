@@ -317,7 +317,7 @@ export default function LeasingPage() {
         {/* CTA */}
         <div className="mt-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-600 p-8 text-center shadow-xl">
           <h2 className="text-xl font-bold text-white">Vill du jämföra med att köpa?</h2>
-          <p className="mt-2 text-emerald-100">Vår TCO-kalkylator visar vad det faktiskt kostar att äga en elbil vs fossilbil.</p>
+          <p className="mt-2 text-emerald-100">Vår kostnadskalkylator visar vad det faktiskt kostar att äga en elbil vs fossilbil.</p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link href="/kalkyl" className="rounded-full bg-white px-6 py-3 font-semibold text-emerald-700 shadow hover:bg-emerald-50">
               Räkna på ekonomin

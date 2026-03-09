@@ -253,16 +253,25 @@ export function getCompassResult(answers: CompassAnswer[]): CompassResult {
 
   scored.sort((a, b) => b.pts - a.pts);
 
-  // Ensure variety: if top 2 are same brand, swap #2 for the next different brand
+  // Ensure variety: all 3 picks should have different brands if possible
   if (scored.length >= 3 && scored[0].car.brand === scored[1].car.brand) {
     const altIdx = scored.findIndex((s, i) => i >= 2 && s.car.brand !== scored[0].car.brand);
     if (altIdx >= 0) {
       [scored[1], scored[altIdx]] = [scored[altIdx], scored[1]];
     }
   }
+  if (scored.length >= 4) {
+    const usedBrands = [scored[0].car.brand, scored[1].car.brand];
+    if (usedBrands.includes(scored[2].car.brand)) {
+      const altIdx = scored.findIndex((s, i) => i >= 3 && !usedBrands.includes(s.car.brand));
+      if (altIdx >= 0) {
+        [scored[2], scored[altIdx]] = [scored[altIdx], scored[2]];
+      }
+    }
+  }
 
   const maxPts = 31;
-  const topPicks = scored.slice(0, 2).map((s) => ({
+  const topPicks = scored.slice(0, 3).map((s) => ({
     car: s.car,
     matchPercent: Math.min(99, Math.max(60, Math.round((s.pts / maxPts) * 100))),
   }));

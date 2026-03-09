@@ -11,7 +11,7 @@ REGLER:
 - Du säljer ingenting. Du hjälper människor fatta kloka beslut.
 - Länka proaktivt till relevanta sidor på sajten med markdown-länkar:
   - Elbilskompassen (quiz): [Starta Elbilskompassen](/kompassen)
-  - TCO-kalkylatorn: [Räkna på ekonomin](/kalkyl)
+  - Kostnadskalkylator: [Räkna på ekonomin](/kalkyl)
   - Modellöversikt: [Se alla modeller](/modeller)
   - Laddningsguide: [Läs om laddning](/laddning)
   - Varför elbil: [Läs mer här](/varfor-elbil)

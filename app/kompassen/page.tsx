@@ -62,7 +62,7 @@ export default function KompassenPage() {
                   : matchPercent >= 70
                     ? "text-amber-600 border-amber-200 bg-amber-50"
                     : "text-sky-600 border-sky-200 bg-sky-50";
-              const label = i === 0 ? "Bästa matchning" : "Alternativ";
+              const label = i === 0 ? "Bästa matchning" : `Alternativ ${i}`;
               const leasing = findLeasingForCar(car);
 
               return (
@@ -157,9 +157,9 @@ export default function KompassenPage() {
             <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               {result.readyToBuy ? (
                 <>
-                  <button className="rounded-full bg-white px-6 py-3 font-semibold text-emerald-700 shadow hover:bg-emerald-50">
-                    Begär offert (kommer snart)
-                  </button>
+                  <Link href="/offert" className="rounded-full bg-white px-6 py-3 font-semibold text-emerald-700 shadow hover:bg-emerald-50">
+                    Begär offert
+                  </Link>
                   <Link href="/kalkyl" className="rounded-full border-2 border-white/80 px-6 py-3 font-semibold text-white hover:bg-white/10">
                     Räkna på ekonomin
                   </Link>

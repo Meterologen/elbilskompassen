@@ -6,13 +6,13 @@ export const DEFAULTS = {
   annualMiles: 1500,
   capitalCostRate: 0.045,
   electricity: {
-    homeOrePerKwh: 180,
+    homeOrePerKwh: 100,
     publicOrePerKwh: 500,
     homeChargingSharePct: 80,
   },
   fossilFuel: {
     defaultType: "petrol" as FossilFuelType,
-    petrolSekPerLiter: 18,
+    petrolSekPerLiter: 20,
     dieselSekPerLiter: 19,
   },
   // Kalibrerat mot KVD (mars 2025), Teknikens Värld, omev.se, Transportstyrelsen.

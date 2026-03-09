@@ -984,7 +984,7 @@ function Inner() {
                   <Slider
                     label="Elpris (hemma)"
                     value={elPrice}
-                    min={0.5}
+                    min={0}
                     max={5}
                     step={0.1}
                     unit="kr/kWh"

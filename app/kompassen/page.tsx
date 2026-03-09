@@ -80,7 +80,12 @@ export default function KompassenPage() {
                   <div className="p-6">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{brandFlag(car.brand)} {car.brand}</p>
+                        <p className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-slate-500">
+                          {brandFlag(car.brand) && (
+                            <img src={`https://flagcdn.com/w40/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandFlag(car.brand)} className="h-3.5 w-auto rounded-sm" />
+                          )}
+                          {car.brand}
+                        </p>
                         <h2 className="text-xl font-bold text-slate-900">{car.brand} {car.model}</h2>
                       </div>
                       <div className={`flex flex-col items-center rounded-full border-2 px-4 py-2 ${badgeColor}`}>

@@ -37,7 +37,9 @@ export default function ModellerPage() {
                     <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{car.brand}</p>
                     <h2 className="text-lg font-bold text-slate-900">{car.brand} {car.model}</h2>
                   </div>
-                  <span className="text-3xl">{brandFlag(car.brand)}</span>
+                  {brandFlag(car.brand) && (
+                    <img src={`https://flagcdn.com/w80/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandFlag(car.brand)} className="h-8 w-auto rounded-sm shadow-sm" />
+                  )}
                 </div>
                 <p className="mt-2 text-sm text-slate-600">{car.description}</p>
                 <div className="mt-4 grid grid-cols-2 gap-2 text-sm">

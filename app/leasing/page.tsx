@@ -324,7 +324,9 @@ function OfferCard({ offer: o }: { offer: LeasingOffer }) {
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg hover:border-sky-300">
       {/* Flag + badges area */}
       <div className="relative flex h-32 w-full items-center justify-center bg-slate-50">
-        <span className="text-7xl">{brandFlag(o.brand)}</span>
+        {brandFlag(o.brand) && (
+          <img src={`https://flagcdn.com/w160/${brandFlag(o.brand).toLowerCase()}.png`} alt={brandFlag(o.brand)} className="h-16 w-auto rounded shadow" />
+        )}
         {/* Down payment badge */}
         <div className="absolute left-3 top-3">
           <span className={`rounded-full px-2.5 py-1 text-xs font-semibold shadow-sm ${

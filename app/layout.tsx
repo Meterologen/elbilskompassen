@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import ChatWidget from "./components/ChatWidget";
 import MobileNav from "./components/MobileNav";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import CookieConsent from "./components/CookieConsent";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -50,6 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
         </header>
 
+        <GoogleAnalytics />
         {children}
         <ChatWidget />
 
@@ -76,6 +79,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </p>
           </div>
         </footer>
+        <CookieConsent />
       </body>
     </html>
   );

@@ -43,7 +43,6 @@ export default function CookieConsent() {
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 sm:flex-row sm:justify-between">
         <p className="text-sm text-slate-600">
           Vi använder cookies för att förstå hur sajten används och göra den bättre.
-          Ingen data säljs vidare.
         </p>
         <div className="flex shrink-0 gap-3">
           <button

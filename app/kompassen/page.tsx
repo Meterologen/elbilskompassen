@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { COMPASS_QUESTIONS, getCompassResult, type CompassAnswer, type CompassResult } from "../lib/compass";
-import { formatSek, type EvModel } from "../lib/cars";
+import { formatSek, brandFlag, type EvModel } from "../lib/cars";
 import { LEASING_OFFERS, type LeasingOffer } from "../lib/leasing";
 
 function findLeasingForCar(car: EvModel): LeasingOffer | null {
@@ -80,7 +80,7 @@ export default function KompassenPage() {
                   <div className="p-6">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{car.brand}</p>
+                        <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{brandFlag(car.brand)} {car.brand}</p>
                         <h2 className="text-xl font-bold text-slate-900">{car.brand} {car.model}</h2>
                       </div>
                       <div className={`flex flex-col items-center rounded-full border-2 px-4 py-2 ${badgeColor}`}>

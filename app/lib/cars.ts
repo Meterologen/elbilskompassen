@@ -1072,6 +1072,40 @@ export function formatSek(amount: number): string {
   return new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK", maximumFractionDigits: 0 }).format(amount);
 }
 
+const BRAND_FLAGS: Record<string, string> = {
+  Volvo: "\uD83C\uDDF8\uD83C\uDDEA",
+  Polestar: "\uD83C\uDDF8\uD83C\uDDEA",
+  Volkswagen: "\uD83C\uDDE9\uD83C\uDDEA",
+  VW: "\uD83C\uDDE9\uD83C\uDDEA",
+  BMW: "\uD83C\uDDE9\uD83C\uDDEA",
+  "Mercedes-Benz": "\uD83C\uDDE9\uD83C\uDDEA",
+  Audi: "\uD83C\uDDE9\uD83C\uDDEA",
+  Porsche: "\uD83C\uDDE9\uD83C\uDDEA",
+  Opel: "\uD83C\uDDE9\uD83C\uDDEA",
+  Smart: "\uD83C\uDDE9\uD83C\uDDEA",
+  Mini: "\uD83C\uDDEC\uD83C\uDDE7",
+  CUPRA: "\uD83C\uDDEA\uD83C\uDDF8",
+  "\u0160koda": "\uD83C\uDDE8\uD83C\uDDFF",
+  Skoda: "\uD83C\uDDE8\uD83C\uDDFF",
+  Kia: "\uD83C\uDDF0\uD83C\uDDF7",
+  Hyundai: "\uD83C\uDDF0\uD83C\uDDF7",
+  BYD: "\uD83C\uDDE8\uD83C\uDDF3",
+  MG: "\uD83C\uDDE8\uD83C\uDDF3",
+  XPENG: "\uD83C\uDDE8\uD83C\uDDF3",
+  Tesla: "\uD83C\uDDFA\uD83C\uDDF8",
+  Ford: "\uD83C\uDDFA\uD83C\uDDF8",
+  Peugeot: "\uD83C\uDDEB\uD83C\uDDF7",
+  "Citro\u00ebn": "\uD83C\uDDEB\uD83C\uDDF7",
+  Renault: "\uD83C\uDDEB\uD83C\uDDF7",
+  Fiat: "\uD83C\uDDEE\uD83C\uDDF9",
+  Nissan: "\uD83C\uDDEF\uD83C\uDDF5",
+  Toyota: "\uD83C\uDDEF\uD83C\uDDF5",
+};
+
+export function brandFlag(brand: string): string {
+  return BRAND_FLAGS[brand] ?? "\uD83C\uDFF3\uFE0F";
+}
+
 // ── Fossila referensbilar ────────────────────────────────────────────────────
 
 export interface FossilModel {

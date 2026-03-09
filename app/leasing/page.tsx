@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useMemo } from "react";
 import { LEASING_OFFERS, getLeasingPeriod, LEASING_SOURCE_NOTE, type LeasingOffer } from "../lib/leasing";
+import { brandFlag } from "../lib/cars";
 
 function fmtSek(n: number) {
   return new Intl.NumberFormat("sv-SE", { maximumFractionDigits: 0 }).format(n);
@@ -28,19 +28,6 @@ const SIZE_LABELS: Record<string, string> = {
   medium: "Mellanklass",
   suv: "SUV",
   premium: "Premium",
-};
-
-const BRAND_COLORS: Record<string, string> = {
-  MG: "from-red-500 to-red-700",
-  Volkswagen: "from-blue-600 to-blue-800",
-  CUPRA: "from-amber-600 to-amber-800",
-  Volvo: "from-slate-600 to-slate-800",
-  "Mercedes-Benz": "from-gray-600 to-gray-800",
-  Kia: "from-red-600 to-red-800",
-  BMW: "from-blue-500 to-blue-700",
-  Skoda: "from-green-600 to-green-800",
-  Polestar: "from-yellow-500 to-yellow-700",
-  Hyundai: "from-sky-600 to-sky-800",
 };
 
 function includedBadge(yes: boolean, label: string) {
@@ -332,41 +319,13 @@ export default function LeasingPage() {
   );
 }
 
-function CarImagePlaceholder({ brand, model }: { brand: string; model: string }) {
-  const gradient = BRAND_COLORS[brand] || "from-slate-500 to-slate-700";
-  return (
-    <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${gradient}`}>
-      <div className="text-center">
-        <svg className="mx-auto h-12 w-12 text-white/30" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-        </svg>
-        <p className="mt-1 text-sm font-semibold text-white/60">{brand}</p>
-        <p className="text-xs text-white/40">{model}</p>
-      </div>
-    </div>
-  );
-}
-
 function OfferCard({ offer: o }: { offer: LeasingOffer }) {
-  const [imgError, setImgError] = useState(false);
-
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg hover:border-sky-300">
-      {/* Image area */}
-      <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-        {o.imageUrl && !imgError ? (
-          <Image
-            src={o.imageUrl}
-            alt={`${o.brand} ${o.model}`}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <CarImagePlaceholder brand={o.brand} model={o.model} />
-        )}
-        {/* Down payment badge overlay */}
+      {/* Flag + badges area */}
+      <div className="relative flex h-32 w-full items-center justify-center bg-slate-50">
+        <span className="text-7xl">{brandFlag(o.brand)}</span>
+        {/* Down payment badge */}
         <div className="absolute left-3 top-3">
           <span className={`rounded-full px-2.5 py-1 text-xs font-semibold shadow-sm ${
             o.downPayment === 0

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { EV_MODELS, formatSek, type CarSize } from "../lib/cars";
+import { EV_MODELS, formatSek, brandFlag, type CarSize } from "../lib/cars";
 
 const SIZE_LABELS: { value: CarSize | "all"; label: string }[] = [
   { value: "all", label: "Alla" },
@@ -37,7 +37,7 @@ export default function ModellerPage() {
                     <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{car.brand}</p>
                     <h2 className="text-lg font-bold text-slate-900">{car.brand} {car.model}</h2>
                   </div>
-                  <span className="text-3xl">{car.emoji}</span>
+                  <span className="text-3xl">{brandFlag(car.brand)}</span>
                 </div>
                 <p className="mt-2 text-sm text-slate-600">{car.description}</p>
                 <div className="mt-4 grid grid-cols-2 gap-2 text-sm">

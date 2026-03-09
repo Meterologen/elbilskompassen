@@ -73,6 +73,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/myter" className="hover:text-sky-600">Myter</Link>
               <Link href="/berattelser" className="hover:text-sky-600">Berättelser</Link>
               <Link href="/laddning" className="hover:text-sky-600">Laddning</Link>
+              <Link href="/om-oss" className="hover:text-sky-600">Om oss</Link>
             </nav>
             <p className="text-center text-sm text-slate-600 sm:text-left">
               Vi säljer ingenting – vi hjälper dig våga ta steget

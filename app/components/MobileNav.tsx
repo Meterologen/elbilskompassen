@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/modeller", label: "Modeller" },
   { href: "/leasing", label: "Leasing" },
   { href: "/laddning", label: "Laddning" },
+  { href: "/om-oss", label: "Om oss" },
 ];
 
 export default function MobileNav() {

@@ -70,7 +70,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="flex gap-4 text-sm text-slate-600">
               <Link href="/varfor-elbil" className="hover:text-sky-600">Varför elbil?</Link>
               <Link href="/leasing" className="hover:text-sky-600">Leasing</Link>
-              <Link href="/myter" className="hover:text-sky-600">Myter</Link>
+              <Link href="/faq" className="hover:text-sky-600">FAQ</Link>
               <Link href="/berattelser" className="hover:text-sky-600">Berättelser</Link>
               <Link href="/laddning" className="hover:text-sky-600">Laddning</Link>
               <Link href="/om-oss" className="hover:text-sky-600">Om oss</Link>

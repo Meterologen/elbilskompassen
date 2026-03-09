@@ -49,8 +49,8 @@ export default function Home() {
           >
             Hitta din elbil – gör kompassen
           </Link>
-          <Link href="/myter" className="text-sm font-medium text-sky-300 hover:text-sky-200 hover:underline">
-            Läs fler myter vs fakta →
+          <Link href="/faq" className="text-sm font-medium text-sky-300 hover:text-sky-200 hover:underline">
+            Vanliga frågor om elbil →
           </Link>
         </div>
       </section>

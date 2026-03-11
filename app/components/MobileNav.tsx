@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/modeller", label: "Modeller" },
   { href: "/leasing", label: "Leasing" },
   { href: "/faq", label: "FAQ" },
+  { href: "/aktuellt", label: "Aktuellt" },
   { href: "/om-oss", label: "Om oss" },
 ];
 

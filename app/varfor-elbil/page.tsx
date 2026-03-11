@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Varför välja elbil? Sex skäl att byta",
+  description:
+    "Billigare drift, lägre skatt, bättre för miljön – sex anledningar att välja elbil. Läs mer på Elbilskompassen.",
+  alternates: { canonical: "https://elbilskompassen.se/varfor-elbil" },
+};
 
 const REASONS = [
   { icon: "\u{1F4B0}", title: "Billigare i drift", text: "El kostar 1-2 kr/mil, bensin 10-12 kr/mil. Pa 1 500 mil/ar sparar du 10 000-30 000 kr." },

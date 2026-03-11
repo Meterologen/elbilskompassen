@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Ladda elbil – Guide till hemmaladdning och snabbladdning",
+  description:
+    "Allt om laddning av elbil: hemmaladdning, snabbladdning, kostnader och tips. Jämför hemma-el, snabbladdare och bensin.",
+  alternates: { canonical: "https://elbilskompassen.se/laddning" },
+};
 
 const SECTIONS = [
   { icon: "\u{1F3E0}", title: "Hemmaladdning", desc: "80 % av alla elbilsagare laddar hemma via en laddbox (Typ 2).", details: ["Totalkostnad: ca 1,5\u20132,5 kr/kWh (inkl. nat och skatt)", "Laddbox installation: 15 000\u201325 000 kr", "Full varje morgon", "10 mil for ca 25\u201340 kr"] },

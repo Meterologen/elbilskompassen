@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import HomeChat from "./components/HomeChat";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://elbilskompassen.se" },
+};
 
 const WORRIES = [
   { icon: "💰", title: "Blir det dyrare?", text: "De flesta sparar 10 000–30 000 kr/år i driftskostnad jämfört med bensin/diesel." },
@@ -11,8 +16,30 @@ const WORRIES = [
 ];
 
 export default function Home() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Elbilskompassen",
+      url: "https://elbilskompassen.se",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Elbilskompassen",
+      url: "https://elbilskompassen.se",
+      logo: "https://elbilskompassen.se/icon.png",
+      description:
+        "Oberoende elbilsguide som hjälper dig hitta rätt elbil, räkna på ekonomin och ta nästa steg – utan säljtryck.",
+    },
+  ];
+
   return (
     <main id="main-content" className="relative overflow-hidden text-slate-100" role="main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero with AI Chat */}
       <HomeChat />
 

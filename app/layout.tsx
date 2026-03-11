@@ -11,8 +11,18 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Elbilskompassen – Våga välja elbil",
-  description: "Funderat på elbil men inte vågat? Elbilskompassen hjälper dig hitta rätt bil, räkna på ekonomin och ta nästa steg – utan säljtryck.",
+  metadataBase: new URL("https://elbilskompassen.se"),
+  title: {
+    default: "Elbilskompassen – Våga välja elbil",
+    template: "%s | Elbilskompassen",
+  },
+  description:
+    "Funderat på elbil men inte vågat? Elbilskompassen hjälper dig hitta rätt bil, räkna på ekonomin och ta nästa steg – utan säljtryck.",
+  openGraph: {
+    locale: "sv_SE",
+    siteName: "Elbilskompassen",
+    type: "website",
+  },
 };
 
 const bgStyle = {
@@ -72,6 +82,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/leasing" className="hover:text-sky-600">Leasing</Link>
               <Link href="/faq" className="hover:text-sky-600">FAQ</Link>
               <Link href="/berattelser" className="hover:text-sky-600">Berättelser</Link>
+              <Link href="/aktuellt" className="hover:text-sky-600">Aktuellt</Link>
               <Link href="/om-oss" className="hover:text-sky-600">Om oss</Link>
             </nav>
             <p className="text-center text-sm text-slate-600 sm:text-left">

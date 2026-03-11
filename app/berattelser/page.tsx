@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Elbilsberättelser – Riktiga ägare delar erfarenheter",
+  description:
+    "Läs hur Lisa, Anders och Birgitta bytte till elbil – och vad de sparar varje år. Verkliga berättelser utan säljtryck.",
+  alternates: { canonical: "https://elbilskompassen.se/berattelser" },
+};
 
 const PERSONAS = [
   { name: "Lisa & Erik", location: "Göteborg", who: "Småbarnsfamilj med 2 barn", previousCar: "Volvo V60 diesel", newCar: "Tesla Model Y", worry: "Vi var oroliga för värdeminskningen och hur det skulle funka att ladda på längre resor med barnen.", quote: "Vi var livrädda för värdeminskningen. Nu sparar vi 22 000 kr om året och barnen älskar hur tyst det är.", result: "Familjen sparar 22 000 kr/år i driftskostnad. De laddar hemma varje natt via sin laddbox och har gjort roadtrip till Norge utan problem tack vare Teslas Supercharger-nätverk.", emoji: "👨‍👩‍👧‍👦", savings: "22 000 kr/år" },

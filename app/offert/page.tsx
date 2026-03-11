@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Begär offert – Kommer snart",
+  robots: { index: false, follow: false },
+};
 
 export default function OffertPage() {
   return (

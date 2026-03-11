@@ -1075,7 +1075,7 @@ export function formatSek(amount: number): string {
 const BRAND_COUNTRY: Record<string, string> = {
   Volvo: "SE", Polestar: "SE",
   Volkswagen: "DE", VW: "DE", BMW: "DE", "Mercedes-Benz": "DE", Audi: "DE", Porsche: "DE", Opel: "DE", Smart: "DE",
-  Mini: "GB", CUPRA: "ES",
+  Mini: "GB", MINI: "GB", CUPRA: "ES",
   "\u0160koda": "CZ", Skoda: "CZ",
   Kia: "KR", Hyundai: "KR",
   BYD: "CN", MG: "CN", XPENG: "CN",

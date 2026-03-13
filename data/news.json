@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-13",
+    "title": "Honda mot historisk förlust efter elbilsfiasko",
+    "summary": "Honda står inför sin första helårsförlust i sin nästan 70-åriga börshistoria. Den japanska biltillverkaren drabbas av en massiv kostnadssmäll på närmare 150 miljarder kronor, vilket är direkt kopplat till skrotade elbilsmodeller, rapporterar Dagens Industri.\n\nFiaskot illustrerar de stora utmaningar som traditionella biltillverkare möter i omställningen till eldrift. Honda har tydligen satsat stort på elbilsmodeller som inte fått den förväntade mottagningen på marknaden, vilket nu resulterar i omfattande nedskrivningar.\n\nDen historiska förlusten markerar en vändpunkt för Honda och visar hur kostsamt det kan vara att misslyckas med elektrifieringen. För en biltillverkare med Hondas anrika historia är detta en ovanlig och allvarlig situation som speglar de turbulenta tiderna inom bilindustrin.",
+    "sources": [
+      {
+        "title": "Biltillverkaren mot historisk förlust efter elbilsfiasko",
+        "url": "https://www.di.se/live/biltillverkaren-mot-historisk-forlust-efter-elbilsfiasko/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-03-13T06:38:36.023Z"
+  },
+  {
     "date": "2026-03-12",
     "title": "Northvolts ingenjörer har fått nya jobb – 'exceptionellt' snabb återhämtning",
     "summary": "Ett år efter Northvolts konkurs har de flesta av de drabbade ingenjörerna i Västerbotten fått nya jobb. Arbetslösheten bland ingenjörer i regionen steg kraftigt efter konkursen, från den lägsta till den högsta i landet. Men återhämtningen har gått mycket snabbare än väntat.\n\nJohan Kreicbergs vid fackförbundet Sveriges Ingenjörer beskriver utvecklingen som 'exceptionell'. Att det skulle gå så fort trodde varken facket eller de drabbade själva när konkursen var ett faktum, enligt SVT Nyheter.\n\nDen snabba återhämtningen visar på en fortsatt stark efterfrågan på ingenjörskompetens i Sverige, trots batteritillverkarens kollaps. Northvolts konkurs blev en stor smäll för den svenska elbilsindustrin, men arbetsmarknaden för kvalificerad teknisk personal verkar ha kunnat absorbera de uppsagda relativt snabbt.",
@@ -890,38 +903,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:53:05.042Z"
-  },
-  {
-    "date": "2025-12-04",
-    "title": "Northvolt ökar produktionen – svenska laddnätet når ny milstolpe",
-    "summary": "Northvolt meddelar idag att produktionen vid anläggningen i Skellefteå ökar markant efter den turbulenta hösten. Batterifabriken rapporterar att man nu producerar celler i en takt som motsvarar 30 GWh årligen, en betydande ökning från tidigare kvartal. Företaget har också säkrat nya leveransavtal med europeiska biltillverkare.\n\nSveriges laddinfrastruktur passerade en viktig milstolpe när antalet publika snabbladdare översteg 5000 stycken. Enligt Power Circle, branschorganisationen för laddoperatörer, har utbyggnadstakten ökat kraftigt under 2025, särskilt längs landets huvudvägar. Regeringens stöd för laddinfrastruktur pekas ut som en viktig faktor.\n\nVolvo Cars presenterar uppdaterade batteripaket för EX30 och EX90 som lovar 15 procent längre räckvidd tack vare förbättrad cellkemi. De nya batterierna börjar rullas ut i produktionen under första kvartalet 2026. Samtidigt fortsätter den svenska elbilsförsäljningen att vara stark – november månads siffror visar att eldrivna bilar står för 64 procent av nyregistreringarna.\n\nBYD inviger sin tredje serviceanläggning i Sverige, denna gång i Malmö. Den kinesiska elbilstillverkaren, som etablerade sig på den svenska marknaden 2024, utökar nu snabbt sitt servicenätverk för att möta den ökande efterfrågan på sina elbilar och laddhybrider.",
-    "sources": [
-      {
-        "title": "Northvolt ökar produktionen kraftigt – nya avtal klara",
-        "url": "https://www.di.se/nyheter/northvolt-okar-produktionen-2025",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Sverige passerar 5000 snabbladdare",
-        "url": "https://www.nyteknik.se/energi/sverige-5000-snabbladdare",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Volvo Cars presenterar batteriuppgradering",
-        "url": "https://www.teknikensvarld.se/volvo-nya-batterier-2025",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Elbilsförsäljningen fortsätter rekordfart",
-        "url": "https://www.svt.se/nyheter/elbilsforsaljning-november-2025",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "BYD expanderar i Sverige med ny serviceanläggning",
-        "url": "https://www.dn.se/ekonomi/byd-malmo-service-2025",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:53:26.443Z"
   }
 ]

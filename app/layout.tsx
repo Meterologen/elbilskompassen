@@ -81,6 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/varfor-elbil" className="hover:text-sky-600">Varför elbil?</Link>
               <Link href="/leasing" className="hover:text-sky-600">Leasing</Link>
               <Link href="/faq" className="hover:text-sky-600">FAQ</Link>
+              <Link href="/elbilspremie" className="hover:text-sky-600">Elbilspremie</Link>
               <Link href="/berattelser" className="hover:text-sky-600">Berättelser</Link>
               <Link href="/aktuellt" className="hover:text-sky-600">Aktuellt</Link>
               <Link href="/om-oss" className="hover:text-sky-600">Om oss</Link>

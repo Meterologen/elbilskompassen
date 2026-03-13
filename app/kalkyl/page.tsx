@@ -8,9 +8,8 @@ import {
   DEFAULTS,
   type VehicleClass,
   type CalculationResults,
-  type VehicleTcoResult,
 } from "../lib/tco";
-import { EV_MODELS, FOSSIL_MODELS, type EvModel, type FossilModel } from "../lib/cars";
+import { EV_MODELS, type EvModel } from "../lib/cars";
 import { LEASING_OFFERS, type LeasingOffer } from "../lib/leasing";
 import {
   BarChart,
@@ -82,25 +81,8 @@ function Slider({ label, value, min, max, step, unit, onChange, formatValue }: S
   );
 }
 
-function costBreakdown(v: VehicleTcoResult) {
-  return [
-    { name: "Värdeminskning", value: v.depreciationAnnual },
-    { name: "Kapitalkostnad", value: v.capitalCostAnnual },
-    { name: "Försäkring", value: v.insuranceAnnual },
-    { name: "Skatt", value: v.taxAnnual },
-    { name: "Underhåll", value: v.maintenanceFundAnnual },
-    { name: "Energi (bränsle/el)", value: v.energyAnnual },
-  ];
-}
-
 function classDefaults(v: VehicleClass) {
   return DEFAULTS.vehicleClasses[v];
-}
-
-function sizeToVc(size: string): VehicleClass {
-  if (size === "compact") return "small";
-  if (size === "medium") return "medium";
-  return "large";
 }
 
 const LEASING_RATE = 0.039;
@@ -157,13 +139,41 @@ interface UsedCarMonthlyCosts {
   totalHigh: number;
 }
 
-function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number): UsedCarMonthlyCosts {
+function interpolateResidualShare(price: number): number {
+  // Billigare (äldre) bilar tappar procentuellt mindre, dyrare (nyare) tappar mer
+  const points = [
+    { price: 50_000, share: 0.80 },
+    { price: 200_000, share: 0.67 },
+    { price: 400_000, share: 0.52 },
+    { price: 600_000, share: 0.45 },
+  ];
+  if (price <= points[0].price) return points[0].share;
+  if (price >= points[points.length - 1].price) return points[points.length - 1].share;
+  for (let i = 0; i < points.length - 1; i++) {
+    if (price <= points[i + 1].price) {
+      const t = (price - points[i].price) / (points[i + 1].price - points[i].price);
+      return points[i].share + t * (points[i + 1].share - points[i].share);
+    }
+  }
+  return points[points.length - 1].share;
+}
+
+function interpolateInsurance(price: number): number {
+  // Skalas proportionellt med pris, clampat 3 000 – 10 000 kr/år
+  const raw = 3_000 + ((price - 50_000) / (600_000 - 50_000)) * (10_000 - 3_000);
+  return Math.round(Math.max(3_000, Math.min(10_000, raw)));
+}
+
+function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number, customPrice?: number): UsedCarMonthlyCosts {
   const u = USED_CAR_DEFAULTS[vc];
-  const residual = u.purchasePrice * u.residualShareAfter3y;
-  const depreciationAnnual = (u.purchasePrice - residual) / 3;
-  const capitalCostAnnual = ((u.purchasePrice + residual) / 2) * DEFAULTS.capitalCostRate;
+  const price = customPrice ?? u.purchasePrice;
+  const residualShare = interpolateResidualShare(price);
+  const insuranceAnnual = interpolateInsurance(price);
+  const residual = price * residualShare;
+  const depreciationAnnual = (price - residual) / 3;
+  const capitalCostAnnual = ((price + residual) / 2) * DEFAULTS.capitalCostRate;
   const fixedMonthly = Math.round(depreciationAnnual / 12) + Math.round(capitalCostAnnual / 12)
-    + Math.round(fossilEnergyAnnual / 12) + Math.round(u.insuranceAnnual / 12) + Math.round(u.taxAnnual / 12);
+    + Math.round(fossilEnergyAnnual / 12) + Math.round(insuranceAnnual / 12) + Math.round(u.taxAnnual / 12);
   const maintenanceMonthly = Math.round(u.maintenanceAnnual / 12);
   // Best case: bara grundservice. Worst case: oturligt år med stor reparation.
   const maintenanceLow = Math.round(maintenanceMonthly * 0.3);
@@ -172,7 +182,7 @@ function calcUsedCarMonthly(vc: VehicleClass, fossilEnergyAnnual: number): UsedC
     depreciation: Math.round(depreciationAnnual / 12),
     capitalCost: Math.round(capitalCostAnnual / 12),
     fuel: Math.round(fossilEnergyAnnual / 12),
-    insurance: Math.round(u.insuranceAnnual / 12),
+    insurance: Math.round(insuranceAnnual / 12),
     tax: Math.round(u.taxAnnual / 12),
     maintenance: maintenanceMonthly,
     maintenanceLow,
@@ -232,8 +242,6 @@ function Inner() {
     ? EV_MODELS.find(m => `${m.brand} ${m.model}` === urlEvModel) ?? null
     : defaultEvForClass(initVc);
   const [selectedEv, setSelectedEv] = useState<EvModel | null>(initEv);
-  const [selectedFossil, setSelectedFossil] = useState<FossilModel | null>(null);
-
   const [evPrice, setEvPrice] = useState<number>(
     urlEvPrice ? Number(urlEvPrice) : initEv ? initEv.priceSek : classDefaults(initVc).ev.purchasePrice
   );
@@ -243,13 +251,13 @@ function Inner() {
   const [elPrice, setElPrice] = useState<number>(DEFAULTS.electricity.homeOrePerKwh / 100);
   const [gasPrice, setGasPrice] = useState<number>(DEFAULTS.fossilFuel.petrolSekPerLiter);
   const [fuel, setFuel] = useState<"petrol" | "diesel">("petrol");
-  const [detailsOpen, setDetailsOpen] = useState(false);
   const [maintenanceOverride, setMaintenanceOverride] = useState<number | null>(null);
+  const [usedCarPrice, setUsedCarPrice] = useState<number>(USED_CAR_DEFAULTS[initVc].purchasePrice);
 
   const handleVcChange = (newVc: VehicleClass) => {
     setVc(newVc);
-    setSelectedFossil(null);
     setMaintenanceOverride(null);
+    setUsedCarPrice(USED_CAR_DEFAULTS[newVc].purchasePrice);
     const cd = classDefaults(newVc);
     setFossilPrice(cd.fossil.purchasePrice);
     const ev = defaultEvForClass(newVc);
@@ -257,20 +265,8 @@ function Inner() {
     setEvPrice(ev ? ev.priceSek : cd.ev.purchasePrice);
   };
 
-  const handleEvSelect = (id: string) => {
-    if (!id) { setSelectedEv(null); setEvPrice(classDefaults(vc).ev.purchasePrice); return; }
-    const m = EV_MODELS.find(x => x.id === id);
-    if (m) { setSelectedEv(m); setEvPrice(m.priceSek); setVc(sizeToVc(m.size)); }
-  };
-
-  const handleFossilSelect = (id: string) => {
-    if (!id) { setSelectedFossil(null); setFossilPrice(classDefaults(vc).fossil.purchasePrice); return; }
-    const m = FOSSIL_MODELS.find(x => x.id === id);
-    if (m) { setSelectedFossil(m); setFossilPrice(m.priceSek); setFuel(m.fuelType); setGasPrice(m.fuelType === "diesel" ? DEFAULTS.fossilFuel.dieselSekPerLiter : DEFAULTS.fossilFuel.petrolSekPerLiter); }
-  };
-
   const evKwh = selectedEv ? String(selectedEv.kwhPerMile) : pk || "";
-  const fossilLpm = selectedFossil ? String(selectedFossil.litersPerMile) : "";
+  const fossilLpm = "";
 
   const compute = useCallback(() => {
     const d = getDefaultFormData();
@@ -291,16 +287,14 @@ function Inner() {
       evKwhPerMileHighway: evKwh,
       fossilLitersPerMileCity: fossilLpm,
       fossilLitersPerMileHighway: fossilLpm,
-      ...(selectedFossil ? { fossilAnnualInsurance: String(selectedFossil.insuranceAnnual), fossilAnnualTax: String(selectedFossil.taxAnnual) } : {}),
     });
-  }, [miles, vc, years, homeCharge, homeShare, elPrice, gasPrice, fuel, selectedEv, urlEvModel, evPrice, fossilPrice, evKwh, fossilLpm, selectedFossil]);
+  }, [miles, vc, years, homeCharge, homeShare, elPrice, gasPrice, fuel, selectedEv, urlEvModel, evPrice, fossilPrice, evKwh, fossilLpm]);
 
   const r: CalculationResults = useMemo(compute, [compute]);
-  const pos = r.savings.annual > 0;
 
   // Leasing comparison values
   const offer = findBestLeasingOffer(selectedEv, vc);
-  const usedBase = calcUsedCarMonthly(vc, r.fossil.energyAnnual);
+  const usedBase = calcUsedCarMonthly(vc, r.fossil.energyAnnual, usedCarPrice);
   const effectiveMaintenance = maintenanceOverride ?? usedBase.maintenance;
   const usedTotal = usedBase.total - usedBase.maintenance + effectiveMaintenance;
   const used = { ...usedBase, maintenance: effectiveMaintenance, total: usedTotal };
@@ -313,6 +307,7 @@ function Inner() {
   const evTotal = leasingPrice + evElMonthly + evInsuranceMonthly;
   const saving = used.total - evTotal;
   const savingAnnual = saving * 12;
+  const pos = saving > 0;
 
   // Stacked bar data: monthly costs broken into categories
   const stackedBarData = [
@@ -462,6 +457,29 @@ function Inner() {
               <p className="text-xs font-medium uppercase tracking-wider text-red-700">
                 Din {fuel === "diesel" ? "diesel" : "bensin"}bil idag
               </p>
+              <div className="mt-3">
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-red-800">Vad är din bil värd idag?</span>
+                    <span className="rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-semibold text-red-800">
+                      {fmtShort(usedCarPrice)} kr
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min={50_000}
+                    max={600_000}
+                    step={10_000}
+                    value={usedCarPrice}
+                    onChange={(e) => setUsedCarPrice(Number(e.target.value))}
+                    className="w-full cursor-pointer appearance-none rounded-full h-2 bg-gradient-to-r from-red-200 to-red-400 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:bg-red-500 [&::-webkit-slider-thumb]:shadow"
+                  />
+                  <div className="flex justify-between text-[10px] text-red-400">
+                    <span>50 000 kr</span>
+                    <span>600 000 kr</span>
+                  </div>
+                </div>
+              </div>
               <div className="mt-3 space-y-1.5 text-sm text-red-800">
                 <div className="flex justify-between">
                   <span>Värdeminskning</span>
@@ -714,13 +732,13 @@ function Inner() {
               <div className="text-xs text-slate-600 space-y-2">
                 <h3 className="text-sm font-semibold text-slate-800">Så har vi räknat — din nuvarande bil</h3>
                 <p>
-                  Vi utgår från en <strong>5 år gammal {fuel === "diesel" ? "diesel" : "bensin"}bil</strong> i {VCS.find(v => v.v === vc)?.l.toLowerCase()}klassen,
-                  köpt begagnad för ca {fmtShort(USED_CAR_DEFAULTS[vc].purchasePrice)} kr (marknadsvärde vid ~80 000 km).
-                  Bilen behålls i 3 år och säljs vid ~8 års ålder.
+                  Du anger själv din bils ungefärliga värde ({fmtShort(usedCarPrice)} kr).
+                  Vi antar att bilen behålls i 3 år och att den tappar i värde beroende på nuvarande pris — en billigare (äldre) bil tappar procentuellt mindre, en dyrare (nyare) bil tappar mer.
                 </p>
                 <ul className="list-inside list-disc space-y-0.5">
-                  <li><strong>Värdeminskning:</strong> ca {Math.round((1 - USED_CAR_DEFAULTS[vc].residualShareAfter3y) * 100)}% på 3 år — plattare kurva än nybil.</li>
+                  <li><strong>Värdeminskning:</strong> ca {Math.round((1 - interpolateResidualShare(usedCarPrice)) * 100)}% på 3 år, baserat på bilens värde.</li>
                   <li><strong>Kapitalkostnad:</strong> {(DEFAULTS.capitalCostRate * 100).toFixed(1)}% ränta på genomsnittligt bundet kapital.</li>
+                  <li><strong>Försäkring:</strong> {fmtShort(interpolateInsurance(usedCarPrice))} kr/år, skalas med bilens värde.</li>
                   <li><strong>Service &amp; reparation:</strong> {fmtShort(USED_CAR_DEFAULTS[vc].maintenanceAnnual)} kr/år inkl. service, däck och oväntade reparationer (som M Sveriges kalkyl exkluderar).</li>
                   <li><strong>Bränsle:</strong> baserat på din körsträcka ({fmtShort(miles)} mil/år) och valt bränslepris.</li>
                 </ul>
@@ -728,27 +746,7 @@ function Inner() {
                   {!hasRealOffer && <>Leasingkostnaden för elbilen är uppskattad utifrån bilens pris, restvärde och {(LEASING_RATE * 100).toFixed(1)} % ränta ({LEASING_MONTHS} mån). </>}
                   Källor: KVD (mars 2025), M Sverige, Vi Bilägare / Sifo.
                 </p>
-              </div>
-
-              {/* TCO methodology */}
-              <div className="text-sm text-slate-700 space-y-3">
-                <h3 className="text-sm font-semibold text-slate-800">Så har vi räknat — totalkostnadsjämförelsen</h3>
                 <p>
-                  Vi jämför den totala ägandekostnaden för en elbil och en fossildriven bil i
-                  samma storleksklass. Strukturen följer samma modell som Teknikens Värld.
-                </p>
-                <ul className="list-inside list-disc space-y-1">
-                  <li><strong>Värdeminskning</strong> — inköpspris minus uppskattat restvärde, fördelat per år.</li>
-                  <li><strong>Kapitalkostnad</strong> — ränta på genomsnittligt bundet kapital ({(DEFAULTS.capitalCostRate * 100).toFixed(1)} %).</li>
-                  <li><strong>Försäkring</strong> — typisk helförsäkring. Elbil kan vara något dyrare pga högre reparationskostnad.</li>
-                  <li><strong>Fordonsskatt</strong> — elbilar saknar koldioxidkomponent och betalar ofta 360 kr/år.</li>
-                  <li><strong>Service/underhåll</strong> — färre rörliga delar ger lägre servicekostnad för elbil.</li>
-                  <li><strong>Energikostnad</strong> — el (hem + publikt) respektive bensin/diesel baserat på din körsträcka.</li>
-                </ul>
-                <p className="text-xs text-slate-500">
-                  Källa för standardvärden: KVD (mars 2025), Teknikens Värld, Mobility Sweden, Transportstyrelsen. Alla belopp är genomsnitt per år under ägandeperioden.
-                </p>
-                <p className="text-xs text-slate-500">
                   Se även <a href="https://publikationer.konsumentverket.se/produkter-och-tjanster/bil-bat-och-motorcykel/jamforelse-av-drivmedelskostnader" target="_blank" rel="noopener noreferrer" className="font-medium text-sky-600 underline hover:text-sky-500">Konsumentverkets officiella jämförelse av drivmedelskostnader</a> (uppdateras kvartalsvis).
                 </p>
               </div>
@@ -756,281 +754,7 @@ function Inner() {
           </details>
         </div>
 
-        {/* ── 8. Visa fullständig analys (expanderbar) ────────── */}
-        <div className="mt-8 rounded-2xl border border-sky-300/40 bg-white shadow-sm">
-          <button
-            type="button"
-            onClick={() => setDetailsOpen(!detailsOpen)}
-            className="flex w-full items-center justify-between p-6 text-left sm:p-8"
-          >
-            <div>
-              <h2 className="text-lg font-semibold text-slate-900">Visa fullständig analys</h2>
-              <p className="mt-1 text-sm text-slate-500">Totalkostnadsjämförelse (ny elbil vs ny fossilbil), detaljerad tabell och finjustering.</p>
-            </div>
-            <span className={`text-2xl text-slate-400 transition-transform duration-200 ${detailsOpen ? "rotate-180" : ""}`}>
-              &#9660;
-            </span>
-          </button>
-          {detailsOpen && (
-            <div className="border-t border-slate-200 p-6 sm:p-8 space-y-8">
-
-              {/* TCO savings banner */}
-              <div
-                className={`rounded-2xl p-6 text-center shadow-lg ${
-                  pos
-                    ? "bg-gradient-to-br from-emerald-500 to-sky-600"
-                    : "bg-gradient-to-br from-amber-500 to-orange-600"
-                }`}
-              >
-                <p className="text-xs font-medium uppercase tracking-wider text-white/70">Ny elbil vs ny {fuel === "diesel" ? "diesel" : "bensin"}bil — totalkostnadsjämförelse</p>
-                {pos ? (
-                  <>
-                    <p className="mt-2 text-base font-medium text-emerald-100">Med elbil sparar du</p>
-                    <p className="mt-1 text-4xl font-extrabold text-white sm:text-5xl">{fmt(r.savings.annual)}/år</p>
-                    <p className="mt-2 text-emerald-100">
-                      Det blir <strong className="text-white">{fmt(r.savings.period)}</strong> på {r.ownershipYears} år
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <p className="mt-2 text-base font-medium text-amber-100">Elbilen blir</p>
-                    <p className="mt-1 text-4xl font-extrabold text-white sm:text-5xl">
-                      {fmt(Math.abs(r.savings.annual))}/år dyrare
-                    </p>
-                    <p className="mt-2 text-amber-100">
-                      Testa andra värden — kanske ändrar det bilden?
-                    </p>
-                  </>
-                )}
-              </div>
-
-              {/* Quick stats cards */}
-              <div className="grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl border border-sky-300/40 bg-white p-5 text-center shadow-sm">
-                  <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Kostnad per månad</p>
-                  <div className="mt-2 flex items-center justify-center gap-4">
-                    <div>
-                      <p className="text-2xl font-bold text-emerald-600">{fmtShort(r.ev.monthlyTotal)}</p>
-                      <p className="text-xs text-slate-500">Elbil</p>
-                    </div>
-                    <span className="text-slate-300">vs</span>
-                    <div>
-                      <p className="text-2xl font-bold text-red-500">{fmtShort(r.fossil.monthlyTotal)}</p>
-                      <p className="text-xs text-slate-500">{fuel === "diesel" ? "Diesel" : "Bensin"}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-xl border border-sky-300/40 bg-white p-5 text-center shadow-sm">
-                  <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Kostnad per mil</p>
-                  <div className="mt-2 flex items-center justify-center gap-4">
-                    <div>
-                      <p className="text-2xl font-bold text-emerald-600">{r.ev.costPerMile.toFixed(1)}</p>
-                      <p className="text-xs text-slate-500">kr/mil</p>
-                    </div>
-                    <span className="text-slate-300">vs</span>
-                    <div>
-                      <p className="text-2xl font-bold text-red-500">{r.fossil.costPerMile.toFixed(1)}</p>
-                      <p className="text-xs text-slate-500">kr/mil</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-xl border border-sky-300/40 bg-white p-5 text-center shadow-sm">
-                  <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Total besparing</p>
-                  <p className={`mt-2 text-2xl font-bold ${pos ? "text-emerald-600" : "text-red-500"}`}>
-                    {fmt(r.savings.period)}
-                  </p>
-                  <p className="text-xs text-slate-500">på {r.ownershipYears} år</p>
-                </div>
-              </div>
-
-              {/* Detailed table */}
-              <div className="overflow-hidden rounded-2xl border border-sky-300/40">
-                <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
-                  <h3 className="text-lg font-semibold text-slate-900">Detaljerad kostnadsjämförelse</h3>
-                  <p className="mt-1 text-xs text-slate-500">
-                    Genomsnitt baserat på {r.ownershipYears} års ägande, {fmtShort(miles)} mil/år
-                  </p>
-                </div>
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200 text-left text-xs font-medium uppercase text-slate-500">
-                      <th className="px-6 py-3"></th>
-                      <th className="px-6 py-3 text-right">Elbil</th>
-                      <th className="px-6 py-3 text-right">{fuel === "diesel" ? "Diesel" : "Bensin"}</th>
-                      <th className="hidden px-6 py-3 text-right sm:table-cell">Skillnad</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-slate-700">
-                    <tr className="border-b border-slate-100 bg-slate-50/50">
-                      <td className="px-6 py-3 font-medium text-slate-900">Inköpspris</td>
-                      <td className="px-6 py-3 text-right">{fmt(r.ev.purchasePrice)}</td>
-                      <td className="px-6 py-3 text-right">{fmt(r.fossil.purchasePrice)}</td>
-                      <td className="hidden px-6 py-3 text-right sm:table-cell">{fmt(r.ev.purchasePrice - r.fossil.purchasePrice)}</td>
-                    </tr>
-                    {[
-                      { l: "Värdeminskning per år", ev: r.ev.depreciationAnnual, fo: r.fossil.depreciationAnnual },
-                      { l: "Kapitalkostnad per år", ev: r.ev.capitalCostAnnual, fo: r.fossil.capitalCostAnnual },
-                      { l: "Försäkring per år", ev: r.ev.insuranceAnnual, fo: r.fossil.insuranceAnnual },
-                      { l: "Fordonsskatt per år", ev: r.ev.taxAnnual, fo: r.fossil.taxAnnual },
-                      { l: "Service/underhåll per år", ev: r.ev.maintenanceFundAnnual, fo: r.fossil.maintenanceFundAnnual },
-                      { l: "Energikostnad per år", ev: r.ev.energyAnnual, fo: r.fossil.energyAnnual },
-                    ].map((x) => {
-                      const diff = x.ev - x.fo;
-                      return (
-                        <tr key={x.l} className="border-b border-slate-100">
-                          <td className="px-6 py-3 text-slate-700">{x.l}</td>
-                          <td className="px-6 py-3 text-right">{fmt(x.ev)}</td>
-                          <td className="px-6 py-3 text-right">{fmt(x.fo)}</td>
-                          <td className={`hidden px-6 py-3 text-right font-medium sm:table-cell ${diff < 0 ? "text-emerald-600" : diff > 0 ? "text-red-500" : ""}`}>
-                            {diff < 0 ? "−" : "+"}{fmt(Math.abs(diff))}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                    <tr className="border-t-2 border-slate-300 bg-slate-50 font-semibold text-slate-900">
-                      <td className="px-6 py-3">Totalkostnad per år</td>
-                      <td className="px-6 py-3 text-right">{fmt(r.ev.annualTotal)}</td>
-                      <td className="px-6 py-3 text-right">{fmt(r.fossil.annualTotal)}</td>
-                      <td className={`hidden px-6 py-3 text-right sm:table-cell ${pos ? "text-emerald-600" : "text-red-500"}`}>
-                        {pos ? "−" : "+"}{fmt(Math.abs(r.savings.annual))}
-                      </td>
-                    </tr>
-                    <tr className="border-t border-slate-200 bg-slate-50 font-semibold text-slate-900">
-                      <td className="px-6 py-3">Kostnad per månad</td>
-                      <td className="px-6 py-3 text-right">{fmt(r.ev.monthlyTotal)}</td>
-                      <td className="px-6 py-3 text-right">{fmt(r.fossil.monthlyTotal)}</td>
-                      <td className={`hidden px-6 py-3 text-right sm:table-cell ${pos ? "text-emerald-600" : "text-red-500"}`}>
-                        {pos ? "−" : "+"}{fmt(Math.abs(r.savings.annual / 12))}
-                      </td>
-                    </tr>
-                    <tr className="border-t border-slate-200 bg-slate-50 font-semibold text-slate-900">
-                      <td className="px-6 py-3">Kostnad per mil</td>
-                      <td className="px-6 py-3 text-right">{r.ev.costPerMile.toFixed(2)} kr</td>
-                      <td className="px-6 py-3 text-right">{r.fossil.costPerMile.toFixed(2)} kr</td>
-                      <td className={`hidden px-6 py-3 text-right sm:table-cell ${pos ? "text-emerald-600" : "text-red-500"}`}>
-                        {pos ? "−" : "+"}{Math.abs(r.savings.perMile).toFixed(2)} kr
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Finetune section */}
-              <div>
-                <h3 className="text-base font-semibold text-slate-900">Finjustera beräkningen</h3>
-                <p className="mt-1 text-sm text-slate-500">Välj specifika bilmodeller, justera priser och energikostnader.</p>
-
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label className="text-sm font-medium text-slate-700">Välj elbil</label>
-                    <select
-                      value={selectedEv?.id ?? ""}
-                      onChange={(e) => handleEvSelect(e.target.value)}
-                      className="mt-1.5 block w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
-                    >
-                      <option value="">Generisk elbil ({VCS.find(v => v.v === vc)?.l})</option>
-                      {EV_MODELS.map(m => (
-                        <option key={m.id} value={m.id}>
-                          {m.brand} {m.model} – {fmtShort(m.priceSek)} kr
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-slate-700">Jämför med fossilbil</label>
-                    <select
-                      value={selectedFossil?.id ?? ""}
-                      onChange={(e) => handleFossilSelect(e.target.value)}
-                      className="mt-1.5 block w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
-                    >
-                      <option value="">Generisk {fuel === "diesel" ? "diesel" : "bensin"}bil ({VCS.find(v => v.v === vc)?.l})</option>
-                      {FOSSIL_MODELS.map(m => (
-                        <option key={m.id} value={m.id}>
-                          {m.brand} {m.model} – {fmtShort(m.priceSek)} kr
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div className="mt-6 grid gap-6 sm:grid-cols-2">
-                  <Slider
-                    label="Ägandeperiod"
-                    value={years}
-                    min={1}
-                    max={8}
-                    step={1}
-                    unit="år"
-                    onChange={setYears}
-                  />
-                  <Slider
-                    label={selectedEv ? `Pris ${selectedEv.brand} ${selectedEv.model}` : "Inköpspris elbil"}
-                    value={evPrice}
-                    min={150_000}
-                    max={900_000}
-                    step={10_000}
-                    unit="kr"
-                    onChange={setEvPrice}
-                  />
-                  <Slider
-                    label={selectedFossil ? `Pris ${selectedFossil.brand} ${selectedFossil.model}` : `Inköpspris ${fuel === "diesel" ? "diesel" : "bensin"}bil`}
-                    value={fossilPrice}
-                    min={100_000}
-                    max={700_000}
-                    step={10_000}
-                    unit="kr"
-                    onChange={setFossilPrice}
-                  />
-                  <Slider
-                    label="Elpris (hemma)"
-                    value={elPrice}
-                    min={0}
-                    max={5}
-                    step={0.1}
-                    unit="kr/kWh"
-                    onChange={setElPrice}
-                    formatValue={(v) => v.toFixed(1)}
-                  />
-                  <Slider
-                    label={fuel === "diesel" ? "Dieselpris" : "Bensinpris"}
-                    value={gasPrice}
-                    min={12}
-                    max={28}
-                    step={0.5}
-                    unit="kr/L"
-                    onChange={setGasPrice}
-                    formatValue={(v) => v.toFixed(1)}
-                  />
-                  {homeCharge && (
-                    <Slider
-                      label="Andel hemmaladdning"
-                      value={homeShare}
-                      min={0}
-                      max={100}
-                      step={5}
-                      unit="%"
-                      onChange={setHomeShare}
-                    />
-                  )}
-                </div>
-
-                <div className="mt-6">
-                  <label className="flex items-center gap-2 text-sm text-slate-700">
-                    <input
-                      type="checkbox"
-                      checked={homeCharge}
-                      onChange={(e) => setHomeCharge(e.target.checked)}
-                      className="h-4 w-4 rounded border-slate-300 accent-sky-600"
-                    />
-                    Jag kan ladda hemma
-                  </label>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* ── 9. Avslutande CTA ───────────────────────────────── */}
+        {/* ── 8. Avslutande CTA ───────────────────────────────── */}
         <div className="mt-8 rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-600 p-8 text-center shadow-xl">
           <h2 className="text-xl font-bold text-white">
             {pos ? "Redo för nästa steg?" : "Utforska fler alternativ"}

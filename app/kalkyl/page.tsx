@@ -313,7 +313,7 @@ function Inner() {
   const stackedBarData = [
     {
       name: `${fuel === "diesel" ? "Diesel" : "Bensin"}bil`,
-      "Värdeminskning": used.depreciation + used.capitalCost,
+      "Bil & finansiering": used.depreciation + used.capitalCost,
       "Energi (bränsle/el)": used.fuel,
       "Försäkring": used.insurance,
       "Skatt & service": used.tax + used.maintenance,
@@ -321,7 +321,7 @@ function Inner() {
     },
     {
       name: "Elbil (leasing)",
-      "Värdeminskning": leasingPrice,
+      "Bil & finansiering": leasingPrice,
       "Energi (bränsle/el)": evElMonthly,
       "Försäkring": evInsuranceMonthly,
       "Skatt & service": 0,
@@ -344,6 +344,51 @@ function Inner() {
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-slate-200">
             De flesta underskattar sina bilkostnader. Med en leasad elbil vet du exakt vad du betalar varje månad — inga överraskningar.
+          </p>
+        </div>
+
+        {/* ── Konsumentverkets drivmedelsjämförelse ─────────── */}
+        <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6 sm:p-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wider text-sky-300">Enligt Konsumentverket (Q1 2026)</p>
+              <p className="mt-1 text-lg font-semibold text-white sm:text-xl">
+                El kostar <span className="text-emerald-400">63 % mindre</span> per mil än bensin
+              </p>
+            </div>
+            <a
+              href="https://publikationer.konsumentverket.se/produkter-och-tjanster/bil-bat-och-motorcykel/jamforelse-av-drivmedelskostnader"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 self-start rounded-full border border-white/30 px-4 py-1.5 text-xs font-medium text-white/80 hover:bg-white/10 hover:text-white transition"
+            >
+              Källa &rarr;
+            </a>
+          </div>
+          <div className="mt-5 space-y-3">
+            {[
+              { label: "El", cost: 34.58, color: "bg-emerald-400" },
+              { label: "Bensin", cost: 93.39, color: "bg-orange-400" },
+              { label: "Diesel", cost: 105.03, color: "bg-red-400" },
+            ].map((d) => (
+              <div key={d.label} className="flex items-center gap-3">
+                <span className="w-14 text-right text-sm font-medium text-slate-200">{d.label}</span>
+                <div className="flex-1">
+                  <div
+                    className={`${d.color} h-7 rounded-md flex items-center transition-all duration-500`}
+                    style={{ width: `${(d.cost / 110) * 100}%` }}
+                  >
+                    <span className="pl-3 text-xs font-bold text-white drop-shadow">
+                      {d.cost.toFixed(0)} kr
+                    </span>
+                  </div>
+                </div>
+                <span className="w-20 text-right text-xs text-slate-400">/100 km</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-xs text-slate-400">
+            Genomsnittlig drivmedelskostnad per 100 km baserat på de mest sålda bilmodellerna i Sverige. Uppdateras kvartalsvis.
           </p>
         </div>
 
@@ -663,37 +708,56 @@ function Inner() {
           <p className="mt-1 text-center text-sm text-slate-500">
             Staplarna visar att totalbeloppet ofta hamnar nära varandra, men elbilen har en enklare uppdelning.
           </p>
-          <div className="mt-4">
-            <ResponsiveContainer width="100%" height={200}>
+          <div className="mt-6">
+            <ResponsiveContainer width="100%" height={220}>
               <BarChart
                 data={stackedBarData}
                 layout="vertical"
-                margin={{ top: 5, right: 40, left: 10, bottom: 5 }}
+                margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
+                barCategoryGap="25%"
               >
                 <XAxis
                   type="number"
-                  tick={{ fontSize: 11, fill: "#64748b" }}
+                  tick={{ fontSize: 11, fill: "#94a3b8" }}
                   tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`}
                   domain={[0, "auto"]}
+                  axisLine={false}
+                  tickLine={false}
                 />
                 <YAxis
                   type="category"
                   dataKey="name"
-                  tick={{ fontSize: 13, fill: "#334155" }}
-                  width={120}
+                  tick={{ fontSize: 13, fontWeight: 500, fill: "#334155" }}
+                  width={130}
+                  axisLine={false}
+                  tickLine={false}
                 />
-                <Tooltip formatter={(v) => `${fmtShort(Number(v))} kr/mån`} />
-                <Legend wrapperStyle={{ fontSize: 12 }} />
-                <Bar dataKey="Värdeminskning" stackId="a" fill="#f87171" radius={[0, 0, 0, 0]} />
-                <Bar dataKey="Energi (bränsle/el)" stackId="a" fill="#fb923c" />
+                <Tooltip
+                  formatter={(v) => `${fmtShort(Number(v))} kr/mån`}
+                  contentStyle={{
+                    borderRadius: "12px",
+                    border: "1px solid #e2e8f0",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                    fontSize: "13px",
+                    padding: "8px 14px",
+                  }}
+                  cursor={{ fill: "rgba(148, 163, 184, 0.08)" }}
+                />
+                <Legend
+                  wrapperStyle={{ fontSize: 12, paddingTop: 12 }}
+                  iconType="circle"
+                  iconSize={8}
+                />
+                <Bar dataKey="Bil & finansiering" stackId="a" fill="#f97316" radius={[0, 0, 0, 0]} />
+                <Bar dataKey="Energi (bränsle/el)" stackId="a" fill="#38bdf8" />
                 <Bar dataKey="Försäkring" stackId="a" fill="#a78bfa" />
-                <Bar dataKey="Skatt & service" stackId="a" fill="#fbbf24" radius={[0, 4, 4, 0]} />
+                <Bar dataKey="Skatt & service" stackId="a" fill="#94a3b8" radius={[0, 6, 6, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div className="mt-2 flex justify-center gap-8 text-sm text-slate-600">
-            <span>{fuel === "diesel" ? "Diesel" : "Bensin"}bil: <strong className="text-red-600">{fmtShort(used.total)} kr/mån</strong></span>
-            <span>Elbil: <strong className="text-emerald-600">{fmtShort(evTotal)} kr/mån</strong></span>
+          <div className="mt-3 flex justify-center gap-8 text-sm">
+            <span className="text-slate-500">{fuel === "diesel" ? "Diesel" : "Bensin"}bil: <strong className="text-slate-800">{fmtShort(used.total)} kr/mån</strong></span>
+            <span className="text-slate-500">Elbil: <strong className="text-emerald-600">{fmtShort(evTotal)} kr/mån</strong></span>
           </div>
         </div>
 

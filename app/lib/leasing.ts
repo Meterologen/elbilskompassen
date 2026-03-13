@@ -365,27 +365,6 @@ export const LEASING_OFFERS: LeasingOffer[] = [
     sourceUrl: "https://www.fiat.se/erbjudanden",
     note: "Kampanjpris. Servicepaket ingår.",
   },
-  {
-    id: "fiat-500e",
-    brand: "Fiat",
-    model: "500",
-    trim: "Electric 42 kWh",
-    monthlyPrice: 2795,
-    downPayment: 0,
-    contractMonths: 36,
-    annualMileage: 1000,
-    serviceIncluded: true,
-    winterTiresIncluded: false,
-    insuranceIncluded: false,
-    rangeKm: 310,
-    batteryKwh: 42,
-    motorKw: 87,
-    size: "compact",
-    source: "Fiat Sverige",
-    sourceUrl: "https://www.fiat.se/aktuella-erbjudanden/erbjudande_500_electric",
-    note: "Kampanjpris.",
-  },
-
   // ── Citroën ─────────────────────────────────────────────────────────
   {
     id: "citroen-ec3-aircross",

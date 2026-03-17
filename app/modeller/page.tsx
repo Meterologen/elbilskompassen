@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useMemo } from "react";
-import { EV_MODELS, formatSek, brandFlag, type CarSize } from "../lib/cars";
+import { EV_MODELS, formatSek, brandFlag, brandCountryName, type CarSize } from "../lib/cars";
 
 // ── Sort ────────────────────────────────────────────────────────────────────────
 type SortKey = "price" | "range" | "trunk";
@@ -112,8 +112,31 @@ export default function ModellerPage() {
     setAwdOnly(false);
   };
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Startsida", item: "https://elbilskompassen.se" },
+        { "@type": "ListItem", position: 2, name: "Elbilar i Sverige", item: "https://elbilskompassen.se/modeller" },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Elbilar i Sverige",
+      numberOfItems: EV_MODELS.length,
+      itemListElement: EV_MODELS.slice(0, 10).map((car, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${car.brand} ${car.model}`,
+      })),
+    },
+  ];
+
   return (
     <main id="main-content" className="min-h-screen" role="main">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
         <Link href="/" className="text-sm text-sky-300 hover:text-sky-200 hover:underline">← Startsida</Link>
         <h1 className="mt-6 text-3xl font-bold text-white sm:text-4xl">Elbilar i Sverige</h1>
@@ -253,7 +276,7 @@ export default function ModellerPage() {
                     <h2 className="text-lg font-bold text-white">{car.brand} {car.model}</h2>
                   </div>
                   {brandFlag(car.brand) && (
-                    <img src={`https://flagcdn.com/w80/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandFlag(car.brand)} className="h-8 w-auto rounded-sm shadow-sm" />
+                    <img src={`https://flagcdn.com/w80/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandCountryName(car.brand)} className="h-8 w-auto rounded-sm shadow-sm" />
                   )}
                 </div>
                 <p className="mt-2 text-sm text-slate-300">{car.description}</p>

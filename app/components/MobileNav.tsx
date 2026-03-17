@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "/kalkyl", label: "Räkna på det" },
   { href: "/modeller", label: "Modeller" },
   { href: "/leasing", label: "Leasing" },
+  { href: "/laddning", label: "Laddning" },
   { href: "/faq", label: "FAQ" },
   { href: "/elbilspremie", label: "Elbilspremie" },
   { href: "/aktuellt", label: "Aktuellt" },

@@ -1081,11 +1081,24 @@ const BRAND_COUNTRY: Record<string, string> = {
   BYD: "CN", MG: "CN", XPENG: "CN",
   Tesla: "US", Ford: "US",
   Peugeot: "FR", "Citro\u00ebn": "FR", Renault: "FR",
-  Fiat: "IT", Nissan: "JP", Toyota: "JP",
+  Fiat: "IT", "Alfa Romeo": "IT", Abarth: "IT",
+  Nissan: "JP", Toyota: "JP", Lexus: "JP", Honda: "JP", Mazda: "JP", Subaru: "JP",
+  Xpeng: "CN", Jeep: "US",
 };
 
 export function brandFlag(brand: string): string {
   return BRAND_COUNTRY[brand] ?? "";
+}
+
+const COUNTRY_NAMES: Record<string, string> = {
+  SE: "Sverige", DE: "Tyskland", GB: "Storbritannien", ES: "Spanien",
+  CZ: "Tjeckien", KR: "Sydkorea", CN: "Kina", US: "USA",
+  FR: "Frankrike", IT: "Italien", JP: "Japan",
+};
+
+export function brandCountryName(brand: string): string {
+  const code = BRAND_COUNTRY[brand];
+  return code ? COUNTRY_NAMES[code] ?? code : "";
 }
 
 // ── Fossila referensbilar ────────────────────────────────────────────────────

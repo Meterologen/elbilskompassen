@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { COMPASS_QUESTIONS, getCompassResult, type CompassAnswer, type CompassResult } from "../lib/compass";
-import { formatSek, brandFlag, type EvModel } from "../lib/cars";
+import { formatSek, brandFlag, brandCountryName, type EvModel } from "../lib/cars";
 import { LEASING_OFFERS, type LeasingOffer } from "../lib/leasing";
 
 function findLeasingForCar(car: EvModel): LeasingOffer | null {
@@ -82,7 +82,7 @@ export default function KompassenPage() {
                       <div>
                         <p className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-slate-400">
                           {brandFlag(car.brand) && (
-                            <img src={`https://flagcdn.com/w40/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandFlag(car.brand)} className="h-3.5 w-auto rounded-sm" />
+                            <img src={`https://flagcdn.com/w40/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandCountryName(car.brand)} className="h-3.5 w-auto rounded-sm" />
                           )}
                           {car.brand}
                         </p>

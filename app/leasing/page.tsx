@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useMemo } from "react";
 import { LEASING_OFFERS, getLeasingPeriod, LEASING_SOURCE_NOTE, type LeasingOffer } from "../lib/leasing";
-import { brandFlag } from "../lib/cars";
+import { brandFlag, brandCountryName } from "../lib/cars";
 
 function fmtSek(n: number) {
   return new Intl.NumberFormat("sv-SE", { maximumFractionDigits: 0 }).format(n);
@@ -84,8 +84,32 @@ export default function LeasingPage() {
   const minPct = ((minPrice - 2000) / (15000 - 2000)) * 100;
   const maxPct = ((maxPrice - 2000) / (15000 - 2000)) * 100;
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Startsida", item: "https://elbilskompassen.se" },
+        { "@type": "ListItem", position: 2, name: "Privatleasing elbil", item: "https://elbilskompassen.se/leasing" },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Privatleasing elbilar i Sverige",
+      numberOfItems: LEASING_OFFERS.length,
+      itemListElement: LEASING_OFFERS.slice(0, 10).map((o, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${o.brand} ${o.model} ${o.trim}`,
+        url: o.sourceUrl,
+      })),
+    },
+  ];
+
   return (
     <main id="main-content" className="min-h-screen" role="main">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <nav className="flex items-center gap-4 text-sm">
           <Link href="/" className="text-sky-300 hover:text-sky-200 hover:underline">Startsida</Link>
@@ -504,7 +528,7 @@ function OfferCard({ offer: o }: { offer: LeasingOffer }) {
         <div className="mt-4">
           <div className="flex items-center gap-2">
             {brandFlag(o.brand) && (
-              <img src={`https://flagcdn.com/w40/${brandFlag(o.brand).toLowerCase()}.png`} alt="" className="h-4 w-auto rounded-sm" />
+              <img src={`https://flagcdn.com/w40/${brandFlag(o.brand).toLowerCase()}.png`} alt={brandCountryName(o.brand)} className="h-4 w-auto rounded-sm" />
             )}
             <p className="text-xs font-semibold uppercase tracking-wider text-sky-400">{o.brand}</p>
           </div>

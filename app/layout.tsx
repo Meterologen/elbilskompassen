@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     locale: "sv_SE",
     siteName: "Elbilskompassen",
     type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Elbilskompassen – Våga välja elbil" }],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -80,6 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="flex gap-4 text-sm text-slate-600">
               <Link href="/varfor-elbil" className="hover:text-sky-600">Varför elbil?</Link>
               <Link href="/leasing" className="hover:text-sky-600">Leasing</Link>
+              <Link href="/laddning" className="hover:text-sky-600">Laddning</Link>
               <Link href="/faq" className="hover:text-sky-600">FAQ</Link>
               <Link href="/elbilspremie" className="hover:text-sky-600">Elbilspremie</Link>
               <Link href="/berattelser" className="hover:text-sky-600">Berättelser</Link>

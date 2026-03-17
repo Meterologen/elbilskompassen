@@ -124,10 +124,7 @@ async function main() {
   const relevant = filterRelevant(allArticles);
   console.log(`${relevant.length} relevanta elbilsartiklar efter filtrering.`);
 
-  if (relevant.length === 0) {
-    console.log("Inga relevanta artiklar idag – avslutar utan att skapa post.");
-    process.exit(0);
-  }
+  const hasArticles = relevant.length > 0;
 
   // 4. Deduplicera på URL
   const seen = new Set();
@@ -141,15 +138,16 @@ async function main() {
   const forPrompt = unique.slice(0, 20);
 
   // 6. Skicka till Claude
-  console.log(`Skickar ${forPrompt.length} artiklar till Claude för sammanfattning...`);
+  let prompt;
 
-  const articleList = forPrompt
-    .map((a, i) => `${i + 1}. [${a.source}] ${a.title}\n   ${a.description}\n   ${a.link}`)
-    .join("\n\n");
+  if (hasArticles) {
+    console.log(`Skickar ${forPrompt.length} artiklar till Claude för sammanfattning...`);
 
-  const { text } = await generateText({
-    model: anthropic("claude-sonnet-4-5-20250929"),
-    prompt: `Du är en elbilsjournalist som skriver för svenska läsare. Nedan följer dagens elbilsrelaterade nyhetsartiklar från svenska medier.
+    const articleList = forPrompt
+      .map((a, i) => `${i + 1}. [${a.source}] ${a.title}\n   ${a.description}\n   ${a.link}`)
+      .join("\n\n");
+
+    prompt = `Du är en elbilsjournalist som skriver för svenska läsare. Nedan följer dagens elbilsrelaterade nyhetsartiklar från svenska medier.
 
 Skriv en nyhetssammanfattning för dagen. Svara ENBART med giltig JSON (ingen markdown, inga kodblock).
 
@@ -171,7 +169,39 @@ Regler:
 
 Artiklar:
 
-${articleList}`,
+${articleList}`;
+  } else {
+    console.log("Inga relevanta RSS-artiklar — ber Claude skriva en omvärldsbevakning.");
+
+    prompt = `Du är en elbilsjournalist som skriver för svenska läsare. Idag hittades inga nya elbilsartiklar i svenska RSS-flöden, men du ska ändå skriva en kort och intressant nyhetsuppdatering.
+
+Dagens datum: ${today}
+
+Skriv en nyhetssammanfattning som bevakar elbilsläget i Sverige och världen just nu. Du kan ta upp:
+- Aktuella trender på den svenska elbilsmarknaden (priser, försäljning, laddinfrastruktur)
+- Kommande modeller eller leasingerbjudanden
+- Politiska beslut som påverkar elbilsägare (bonus, skatt, subventioner)
+- Tips för den som funderar på elbil
+
+Svara ENBART med giltig JSON (ingen markdown, inga kodblock).
+
+JSON-format:
+{
+  "title": "En engagerande rubrik (max 80 tecken)",
+  "summary": "2-4 stycken om aktuellt elbilsläge. Separera stycken med \\n\\n. Skriv informativt och neutralt på svenska.",
+  "sources": []
+}
+
+Regler:
+- Skriv på korrekt svenska
+- Var informativ och objektiv
+- Nämn inte att du är en AI
+- sources ska vara en tom array eftersom det inte finns specifika artiklar att hänvisa till`;
+  }
+
+  const { text } = await generateText({
+    model: anthropic("claude-sonnet-4-5-20250929"),
+    prompt,
     maxTokens: 2000,
   });
 

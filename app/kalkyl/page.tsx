@@ -33,10 +33,10 @@ function fmtShort(n: number) {
   return new Intl.NumberFormat("sv-SE", { maximumFractionDigits: 0 }).format(n);
 }
 
-const VCS: { v: VehicleClass; l: string; icon: string }[] = [
-  { v: "small", l: "Kompakt", icon: "🚗" },
-  { v: "medium", l: "Mellanklass", icon: "🚙" },
-  { v: "large", l: "SUV", icon: "🚐" },
+const VCS: { v: VehicleClass; l: string }[] = [
+  { v: "small", l: "Kompakt" },
+  { v: "medium", l: "Mellanklass" },
+  { v: "large", l: "SUV" },
 ];
 
 interface SliderProps {
@@ -401,21 +401,20 @@ function Inner() {
         {/* ── 2. Snabbval ─────────────────────────────────────── */}
         <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6 sm:p-8">
           <div>
-            <span className="text-sm font-medium text-slate-200">Vilken typ av bil kör du?</span>
-            <div className="mt-2 grid grid-cols-3 gap-2">
+            <span className="text-base font-medium text-slate-200">Vilken typ av bil kör du?</span>
+            <div className="mt-3 grid grid-cols-3 gap-3">
               {VCS.map((o) => (
                 <button
                   key={o.v}
                   type="button"
                   onClick={() => handleVcChange(o.v)}
-                  className={`rounded-xl border-2 px-3 py-3 text-center text-sm font-medium transition ${
+                  className={`rounded-xl border-2 px-4 py-4 text-center text-base font-semibold transition ${
                     vc === o.v
                       ? "border-sky-400 bg-white/15 text-white"
                       : "border-white/20 bg-white/5 text-slate-300 hover:border-white/40"
                   }`}
                 >
-                  <span className="text-xl">{o.icon}</span>
-                  <span className="mt-1 block">{o.l}</span>
+                  {o.l}
                 </button>
               ))}
             </div>

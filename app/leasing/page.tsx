@@ -351,9 +351,9 @@ export default function LeasingPage() {
                 onChange={(e) => setBrandFilter(e.target.value)}
                 className="block w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
               >
-                <option value="all">Alla märken</option>
+                <option value="all" className="bg-slate-800 text-white">Alla märken</option>
                 {brands.filter((b) => b !== "all").map((b) => (
-                  <option key={b} value={b}>{b}</option>
+                  <option key={b} value={b} className="bg-slate-800 text-white">{b}</option>
                 ))}
               </select>
             </div>
@@ -366,9 +366,9 @@ export default function LeasingPage() {
                 onChange={(e) => setSort(e.target.value as SortKey)}
                 className="block w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
               >
-                <option value="price">Lägst pris</option>
-                <option value="range">Längst räckvidd</option>
-                <option value="brand">Märke (A-Ö)</option>
+                <option value="price" className="bg-slate-800 text-white">Lägst pris</option>
+                <option value="range" className="bg-slate-800 text-white">Längst räckvidd</option>
+                <option value="brand" className="bg-slate-800 text-white">Märke (A-Ö)</option>
               </select>
             </div>
 

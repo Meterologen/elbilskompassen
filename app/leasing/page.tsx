@@ -54,6 +54,9 @@ export default function LeasingPage() {
   const [minPrice, setMinPrice] = useState(2_000);
   const [maxPrice, setMaxPrice] = useState(10_000);
   const [zeroDownOnly, setZeroDownOnly] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
+  const [trustOpen, setTrustOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const leasingPeriod = useMemo(() => getLeasingPeriod(), []);
 
   const brands = useMemo(() => {
@@ -96,24 +99,181 @@ export default function LeasingPage() {
           </p>
         </div>
 
+        {/* Så funkar leasing */}
+        <section className="mt-10 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm">
+          <button
+            type="button"
+            onClick={() => setGuideOpen(!guideOpen)}
+            className="flex w-full items-center justify-between gap-4 p-6 text-left sm:px-8"
+          >
+            <div>
+              <h2 className="text-xl font-bold text-white">Så funkar privatleasing</h2>
+              <p className="mt-1 text-sm text-slate-400">Lär dig skillnaden mellan operationell och finansiell leasing, och vad som ingår.</p>
+            </div>
+            <svg
+              className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${guideOpen ? "rotate-180" : ""}`}
+              fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+
+          {guideOpen && (
+          <div className="border-t border-white/10 px-6 pb-6 pt-5 sm:px-8 sm:pb-8">
+            <p className="text-sm leading-relaxed text-slate-300">
+              Vid privatleasing hyr du bilen under en bestämd period (vanligtvis 24–36 månader) och lämnar sedan tillbaka den. Du äger aldrig bilen – istället betalar du en fast månadskostnad som täcker värdeminskning, ränta och ofta service.
+            </p>
+
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
+              {/* Operationell leasing */}
+            <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+              <h3 className="font-semibold text-emerald-300">Operationell leasing</h3>
+              <p className="mt-1 text-xs font-medium text-emerald-400">Vanligast vid privatleasing</p>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                  Du hyr bilen – leasingbolaget äger den
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                  Fast månadskostnad, ofta inklusive service och vägassistans
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                  Lämnar tillbaka bilen efter avtalsperioden
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                  Ingen risk för värdeminskning – det är leasingbolagets problem
+                </li>
+              </ul>
+            </div>
+
+            {/* Finansiell leasing */}
+            <div className="rounded-xl border border-sky-500/30 bg-sky-500/10 p-5">
+              <h3 className="font-semibold text-sky-300">Finansiell leasing</h3>
+              <p className="mt-1 text-xs font-medium text-sky-400">Vanligast bland företag</p>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                  Mer som ett avbetalningsköp – du tar restvärdesrisken
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                  Oftast lägre månadskostnad, men fler kostnader tillkommer
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                  Du kan köpa ut bilen när avtalet löper ut
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                  Service och försäkring ingår sällan
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Vad ingår / ingår inte */}
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+              <h3 className="font-semibold text-white">Brukar ingå</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Service och underhåll
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Fabriksgaranti (ofta hela leasingperioden)
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Vägassistans
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Fordonsskatt (360 kr/år för elbilar)
+                </li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+              <h3 className="font-semibold text-white">Brukar inte ingå</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  Försäkring (+500–1 000 kr/mån)
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  Vinterdäck (+200–600 kr/mån)
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  Hemmaladdning / laddbox
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  Övermilsavgift (5–20 kr/mil utöver avtalad miltal)
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+          )}
+        </section>
+
         {/* Transparency note */}
-        <div className="mt-6 rounded-xl border border-sky-300/30 bg-white/5 px-5 py-4 backdrop-blur-sm">
-          <div className="flex items-start gap-3">
-            <span className="mt-0.5 text-lg">&#9432;</span>
-            <div className="text-sm text-slate-300">
-              <p className="font-medium text-white">Trovärdig och transparent</p>
-              <p className="mt-1">{LEASING_SOURCE_NOTE}</p>
+        <div className="mt-6 rounded-xl border border-sky-300/30 bg-white/5 backdrop-blur-sm">
+          <button
+            type="button"
+            onClick={() => setTrustOpen(!trustOpen)}
+            className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-lg">&#9432;</span>
+              <span className="text-sm font-medium text-white">Trovärdig och transparent</span>
+            </div>
+            <svg
+              className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${trustOpen ? "rotate-180" : ""}`}
+              fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+          {trustOpen && (
+            <div className="border-t border-white/10 px-5 pb-4 pt-3 text-sm text-slate-300">
+              <p>{LEASING_SOURCE_NOTE}</p>
               <p className="mt-1">
                 Varje erbjudande har en källhänvisning du kan klicka på för att verifiera priset.
               </p>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Filters */}
-        <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6">
-          <h2 className="text-sm font-semibold text-white">Filtrera och sortera</h2>
-          <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm">
+          <button
+            type="button"
+            onClick={() => setFiltersOpen(!filtersOpen)}
+            className="flex w-full items-center justify-between gap-4 p-6 text-left"
+          >
+            <div className="flex items-center gap-3">
+              <h2 className="text-sm font-semibold text-white">Filtrera och sortera</h2>
+              <span className="rounded-full bg-sky-500/20 px-3 py-0.5 text-xs font-medium text-sky-300">
+                {filtered.length} av {LEASING_OFFERS.length}
+              </span>
+            </div>
+            <svg
+              className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${filtersOpen ? "rotate-180" : ""}`}
+              fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+          {filtersOpen && (
+          <div className="border-t border-white/10 px-6 pb-6 pt-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {/* Price range */}
             <div className="space-y-3 sm:col-span-2 lg:col-span-1">
               <div className="flex items-center justify-between">
@@ -238,6 +398,8 @@ export default function LeasingPage() {
           <p className="mt-4 text-xs text-slate-400">
             Visar {filtered.length} av {LEASING_OFFERS.length} erbjudanden
           </p>
+          </div>
+          )}
         </div>
 
         {/* Offers grid */}

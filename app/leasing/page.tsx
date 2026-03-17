@@ -52,7 +52,7 @@ export default function LeasingPage() {
   const [sizeFilter, setSizeFilter] = useState<SizeFilter>("all");
   const [brandFilter, setBrandFilter] = useState<string>("all");
   const [minPrice, setMinPrice] = useState(2_000);
-  const [maxPrice, setMaxPrice] = useState(10_000);
+  const [maxPrice, setMaxPrice] = useState(15_000);
   const [zeroDownOnly, setZeroDownOnly] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const [trustOpen, setTrustOpen] = useState(false);
@@ -81,8 +81,8 @@ export default function LeasingPage() {
     return list;
   }, [sort, sizeFilter, brandFilter, minPrice, maxPrice, zeroDownOnly]);
 
-  const minPct = ((minPrice - 2000) / (10000 - 2000)) * 100;
-  const maxPct = ((maxPrice - 2000) / (10000 - 2000)) * 100;
+  const minPct = ((minPrice - 2000) / (15000 - 2000)) * 100;
+  const maxPct = ((maxPrice - 2000) / (15000 - 2000)) * 100;
 
   return (
     <main id="main-content" className="min-h-screen" role="main">
@@ -288,7 +288,7 @@ export default function LeasingPage() {
                   <input
                     type="range"
                     min={2000}
-                    max={10000}
+                    max={15000}
                     step={100}
                     value={minPrice}
                     onChange={(e) => {
@@ -306,7 +306,7 @@ export default function LeasingPage() {
                   <input
                     type="range"
                     min={2000}
-                    max={10000}
+                    max={15000}
                     step={100}
                     value={maxPrice}
                     onChange={(e) => {

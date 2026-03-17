@@ -32,7 +32,7 @@ const KEYWORDS = [
   "laddstation", "laddstolpe", "snabbladdare", "laddinfrastruktur", "laddhybrid",
   "elbilspremie", "elbilsbonus", "klimatbonus",
   "tesla", "volvo ex30", "volvo ex40", "volvo ex60", "volvo ex90",
-  "polestar", "byd", "northvolt",
+  "polestar", "byd",
   "kia ev", "hyundai ioniq", "volkswagen id",
   "batterifordon", "eldriven", "eldrivna",
   "räckvidd", "räckvidden",

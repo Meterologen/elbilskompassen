@@ -92,7 +92,10 @@
       "Bash(git checkout:*)",
       "Bash(git rebase:*)",
       "Bash(GIT_EDITOR=true git rebase:*)",
-      "Bash(git -c core.editor=true rebase --continue)"
+      "Bash(git -c core.editor=true rebase --continue)",
+      "WebFetch(domain:stpubshop.blob.core.windows.net)",
+      "Bash(pip install:*)",
+      "Bash(python -c:*)"
     ]
   }
 }

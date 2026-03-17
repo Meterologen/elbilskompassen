@@ -23,23 +23,23 @@ export default function BerattelserPage() {
         <p className="mt-2 text-lg text-slate-200">Tre vanliga svenskar som bytte till elbil. Så gick det.</p>
         <div className="mt-10 space-y-8">
           {PERSONAS.map((p) => (
-            <div key={p.name} className="overflow-hidden rounded-2xl border border-sky-300/40 bg-white/95 shadow-sm">
-              <div className="flex items-center gap-4 border-b border-slate-100 bg-slate-50 px-6 py-4">
+            <div key={p.name} className="overflow-hidden rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm">
+              <div className="flex items-center gap-4 border-b border-white/10 bg-white/5 px-6 py-4">
                 <span className="text-4xl">{p.emoji}</span>
                 <div>
-                  <h2 className="text-lg font-bold text-slate-900">{p.name}, {p.location}</h2>
-                  <p className="text-sm text-slate-600">{p.who}</p>
+                  <h2 className="text-lg font-bold text-white">{p.name}, {p.location}</h2>
+                  <p className="text-sm text-slate-400">{p.who}</p>
                 </div>
-                <div className="ml-auto rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700">Sparar {p.savings}</div>
+                <div className="ml-auto rounded-full bg-emerald-500/20 px-4 py-1.5 text-sm font-semibold text-emerald-300">Sparar {p.savings}</div>
               </div>
               <div className="p-6">
-                <blockquote className="rounded-xl bg-sky-50 p-4 text-sm italic text-slate-700">&ldquo;{p.quote}&rdquo;</blockquote>
+                <blockquote className="rounded-xl bg-sky-500/10 p-4 text-sm italic text-slate-300">&ldquo;{p.quote}&rdquo;</blockquote>
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl bg-slate-50 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Hade innan</p><p className="mt-1 font-medium text-slate-800">{p.previousCar}</p></div>
-                  <div className="rounded-xl bg-emerald-50 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-emerald-500">Bytte till</p><p className="mt-1 font-medium text-emerald-800">{p.newCar}</p></div>
+                  <div className="rounded-xl bg-white/5 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Hade innan</p><p className="mt-1 font-medium text-slate-200">{p.previousCar}</p></div>
+                  <div className="rounded-xl bg-emerald-500/10 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-emerald-500">Bytte till</p><p className="mt-1 font-medium text-emerald-300">{p.newCar}</p></div>
                 </div>
-                <div className="mt-4 rounded-xl bg-amber-50 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-amber-500">Oron innan</p><p className="mt-1 text-sm text-amber-800">{p.worry}</p></div>
-                <div className="mt-4 rounded-xl bg-emerald-50 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-emerald-500">Resultat</p><p className="mt-1 text-sm text-emerald-800">{p.result}</p></div>
+                <div className="mt-4 rounded-xl bg-amber-500/10 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-amber-500">Oron innan</p><p className="mt-1 text-sm text-amber-300">{p.worry}</p></div>
+                <div className="mt-4 rounded-xl bg-emerald-500/10 p-4"><p className="text-xs font-semibold uppercase tracking-wider text-emerald-500">Resultat</p><p className="mt-1 text-sm text-emerald-300">{p.result}</p></div>
               </div>
             </div>
           ))}

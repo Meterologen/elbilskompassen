@@ -26,10 +26,10 @@ export default function VarforElbilPage() {
         <p className="mt-2 text-lg text-slate-200">Sex anledningar som gor det svart att saga nej.</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {REASONS.map((r) => (
-            <div key={r.title} className="rounded-2xl border border-sky-300/40 bg-white/95 p-6 shadow-sm">
+            <div key={r.title} className="rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm p-6">
               <span className="text-3xl">{r.icon}</span>
-              <h2 className="mt-3 text-lg font-bold text-slate-900">{r.title}</h2>
-              <p className="mt-2 text-sm text-slate-600">{r.text}</p>
+              <h2 className="mt-3 text-lg font-bold text-white">{r.title}</h2>
+              <p className="mt-2 text-sm text-slate-300">{r.text}</p>
             </div>
           ))}
         </div>

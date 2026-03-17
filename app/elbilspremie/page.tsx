@@ -123,37 +123,37 @@ export default function ElbilspremiePage() {
           </h1>
 
           {result.eligible ? (
-            <div className="mt-8 rounded-2xl border-2 border-emerald-400 bg-white/95 p-6 shadow-sm sm:p-8">
+            <div className="mt-8 rounded-2xl border-2 border-emerald-400 bg-white/10 backdrop-blur-sm p-6 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-xl">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-xl">
                   &#10003;
                 </span>
-                <h2 className="text-xl font-bold text-emerald-700 sm:text-2xl">
+                <h2 className="text-xl font-bold text-emerald-300 sm:text-2xl">
                   Du verkar ha rätt till elbilspremien!
                 </h2>
               </div>
-              <div className="mt-6 rounded-xl bg-emerald-50 p-4">
-                <p className="text-sm font-medium text-emerald-800">
+              <div className="mt-6 rounded-xl bg-emerald-500/10 p-4">
+                <p className="text-sm font-medium text-emerald-300">
                   Beräknat premiebelopp
                 </p>
-                <p className="mt-1 text-3xl font-bold text-emerald-700">
+                <p className="mt-1 text-3xl font-bold text-emerald-300">
                   {fmt(result.amount)} kr
                 </p>
                 {result.hasStartBonus && (
-                  <p className="mt-2 text-sm text-emerald-700">
+                  <p className="mt-2 text-sm text-emerald-300">
                     Inkluderar starttillägg på{" "}
                     {fmt(PREMIUM_AMOUNTS.startBonus)} kr (lägre inkomst ger
                     extra stöd).
                   </p>
                 )}
                 {!result.hasStartBonus && (
-                  <p className="mt-2 text-sm text-emerald-700">
+                  <p className="mt-2 text-sm text-emerald-300">
                     Grundpremie: {fmt(PREMIUM_AMOUNTS.base)} kr (1 300 kr/mån i
                     upp till 36 månader).
                   </p>
                 )}
               </div>
-              <div className="mt-6 space-y-3 text-sm text-slate-600">
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <p>
                   <strong>Kommun:</strong> {municipality}{" "}
                   {munStatus === "partial" && "(delvis kvalificerande)"}
@@ -174,12 +174,12 @@ export default function ElbilspremiePage() {
               </div>
             </div>
           ) : (
-            <div className="mt-8 rounded-2xl border-2 border-red-300 bg-white/95 p-6 shadow-sm sm:p-8">
+            <div className="mt-8 rounded-2xl border-2 border-red-400/50 bg-white/10 backdrop-blur-sm p-6 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-xl">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/20 text-xl">
                   &#10007;
                 </span>
-                <h2 className="text-xl font-bold text-red-700 sm:text-2xl">
+                <h2 className="text-xl font-bold text-red-300 sm:text-2xl">
                   Tyvärr uppfyller du inte kraven
                 </h2>
               </div>
@@ -187,7 +187,7 @@ export default function ElbilspremiePage() {
                 {result.reasons.map((r, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-800"
+                    className="flex items-start gap-2 rounded-lg bg-red-500/10 p-3 text-sm text-red-300"
                   >
                     <span className="mt-0.5 shrink-0">&#8226;</span>
                     <span>{r}</span>
@@ -198,7 +198,7 @@ export default function ElbilspremiePage() {
           )}
 
           {/* Disclaimer */}
-          <div className="mt-6 rounded-xl border border-sky-300/40 bg-white/80 p-4 text-xs text-slate-500">
+          <div className="mt-6 rounded-xl border border-sky-300/40 bg-white/5 p-4 text-xs text-slate-400">
             <strong>Observera:</strong> Detta verktyg ger en uppskattning baserad
             på de regler som presenteras av Naturvårdsverket. Det slutgiltiga
             beslutet fattas av Naturvårdsverket vid ansökan. Ytterligare villkor
@@ -209,7 +209,7 @@ export default function ElbilspremiePage() {
               href="https://www.naturvardsverket.se/elbilspremie"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 inline-block font-medium text-sky-600 hover:underline"
+              className="mt-1 inline-block font-medium text-sky-400 hover:underline"
             >
               Läs mer och ansök hos Naturvårdsverket &rarr;
             </a>
@@ -285,14 +285,14 @@ export default function ElbilspremiePage() {
         </div>
 
         {/* Step card */}
-        <div className="mt-6 rounded-2xl border border-sky-300/40 bg-white/95 p-6 shadow-sm sm:p-8">
+        <div className="mt-6 rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm p-6 sm:p-8">
           {/* ─── Step 1: Municipality ─── */}
           {step === 1 && (
             <div>
-              <h2 className="text-lg font-bold text-slate-900">
+              <h2 className="text-lg font-bold text-white">
                 Vilken kommun bor du i?
               </h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Elbilspremien gäller främst i landsbygdskommuner och kommuner
                 med begränsad kollektivtrafik.
               </p>
@@ -307,10 +307,10 @@ export default function ElbilspremiePage() {
                   }}
                   onFocus={() => setShowDropdown(true)}
                   placeholder="Sök kommun..."
-                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200"
+                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400/30"
                 />
                 {showDropdown && !municipality && (
-                  <ul className="absolute z-10 mt-1 max-h-48 w-full overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-lg">
+                  <ul className="absolute z-10 mt-1 max-h-48 w-full overflow-y-auto rounded-lg border border-white/20 bg-slate-800 shadow-lg">
                     {filteredMunicipalities.length === 0 ? (
                       <li className="px-4 py-2 text-sm text-slate-400">
                         Ingen kommun hittades
@@ -325,7 +325,7 @@ export default function ElbilspremiePage() {
                               setMunicipalitySearch("");
                               setShowDropdown(false);
                             }}
-                            className="w-full px-4 py-2 text-left text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-700"
+                            className="w-full px-4 py-2 text-left text-sm text-slate-300 hover:bg-white/10 hover:text-sky-300"
                           >
                             {m}
                             <span className="ml-2 text-xs text-slate-400">
@@ -345,18 +345,18 @@ export default function ElbilspremiePage() {
 
               {/* Feedback for selected municipality */}
               {municipality && munStatus === "excluded" && (
-                <div className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                <div className="mt-4 rounded-lg bg-red-500/10 p-3 text-sm text-red-300">
                   Tyvärr ingår {municipality} inte bland de kommuner som
                   omfattas av elbilspremien.
                 </div>
               )}
               {municipality && munStatus === "eligible" && (
-                <div className="mt-4 rounded-lg bg-emerald-50 p-3 text-sm text-emerald-700">
+                <div className="mt-4 rounded-lg bg-emerald-500/10 p-3 text-sm text-emerald-300">
                   {municipality} är en landsbygdskommun som kvalificerar.
                 </div>
               )}
               {municipality && munStatus === "partial" && (
-                <div className="mt-4 rounded-lg bg-amber-50 p-3 text-sm text-amber-700">
+                <div className="mt-4 rounded-lg bg-amber-500/10 p-3 text-sm text-amber-300">
                   {municipality} har delar med begränsad kollektivtrafik som kan
                   kvalificera. Exakt behörighet beror på var i kommunen du bor.
                 </div>
@@ -367,10 +367,10 @@ export default function ElbilspremiePage() {
           {/* ─── Step 2: Household type ─── */}
           {step === 2 && (
             <div>
-              <h2 className="text-lg font-bold text-slate-900">
+              <h2 className="text-lg font-bold text-white">
                 Hur ser ditt hushåll ut?
               </h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Inkomstgränsen beror på om du bor ensam eller med sambo/partner.
               </p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -379,15 +379,15 @@ export default function ElbilspremiePage() {
                   onClick={() => setHouseholdType("single")}
                   className={`rounded-xl border-2 p-4 text-left transition ${
                     householdType === "single"
-                      ? "border-sky-500 bg-sky-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-sky-500 bg-sky-500/10"
+                      : "border-white/20 bg-white/5 hover:border-white/30"
                   }`}
                 >
                   <span className="text-2xl">&#128100;</span>
-                  <p className="mt-2 font-semibold text-slate-900">
+                  <p className="mt-2 font-semibold text-white">
                     Ensamboende
                   </p>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-slate-400">
                     Inkomstgräns: {fmt(INCOME_LIMITS.singleMax)} kr/år
                   </p>
                 </button>
@@ -396,15 +396,15 @@ export default function ElbilspremiePage() {
                   onClick={() => setHouseholdType("couple")}
                   className={`rounded-xl border-2 p-4 text-left transition ${
                     householdType === "couple"
-                      ? "border-sky-500 bg-sky-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-sky-500 bg-sky-500/10"
+                      : "border-white/20 bg-white/5 hover:border-white/30"
                   }`}
                 >
                   <span className="text-2xl">&#128101;</span>
-                  <p className="mt-2 font-semibold text-slate-900">
+                  <p className="mt-2 font-semibold text-white">
                     Sambo / gift
                   </p>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-slate-400">
                     Inkomstgräns: {fmt(INCOME_LIMITS.coupleMax)} kr/år
                   </p>
                 </button>
@@ -415,10 +415,10 @@ export default function ElbilspremiePage() {
           {/* ─── Step 3: Income ─── */}
           {step === 3 && (
             <div>
-              <h2 className="text-lg font-bold text-slate-900">
+              <h2 className="text-lg font-bold text-white">
                 Hushållets totala årsinkomst?
               </h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Ange hushållets samlade inkomst före skatt.
                 {householdType === "single"
                   ? ` Gränsen för ensamboende är ${fmt(INCOME_LIMITS.singleMax)} kr/år.`
@@ -426,10 +426,10 @@ export default function ElbilspremiePage() {
               </p>
               <div className="mt-6">
                 <div className="text-center">
-                  <span className="text-3xl font-bold text-slate-900">
+                  <span className="text-3xl font-bold text-white">
                     {fmt(income)} kr
                   </span>
-                  <span className="ml-1 text-sm text-slate-500">/år</span>
+                  <span className="ml-1 text-sm text-slate-400">/år</span>
                 </div>
                 <input
                   type="range"
@@ -440,7 +440,7 @@ export default function ElbilspremiePage() {
                   onChange={(e) => setIncome(Number(e.target.value))}
                   className="slider-input mt-4 w-full"
                   style={{
-                    background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${(income / 800_000) * 100}%, #cbd5e1 ${(income / 800_000) * 100}%, #cbd5e1 100%)`,
+                    background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${(income / 800_000) * 100}%, #334155 ${(income / 800_000) * 100}%, #334155 100%)`,
                   }}
                 />
                 <div className="mt-2 flex justify-between text-xs text-slate-400">
@@ -455,7 +455,7 @@ export default function ElbilspremiePage() {
                   (householdType === "single"
                     ? INCOME_LIMITS.singleStartBonus
                     : INCOME_LIMITS.coupleStartBonus) ? (
-                    <div className="rounded-lg bg-emerald-50 p-3 text-sm text-emerald-700">
+                    <div className="rounded-lg bg-emerald-500/10 p-3 text-sm text-emerald-300">
                       Din inkomst kvalificerar för både grundpremie och
                       starttillägg (totalt {fmt(PREMIUM_AMOUNTS.max)} kr).
                     </div>
@@ -463,12 +463,12 @@ export default function ElbilspremiePage() {
                     (householdType === "single"
                       ? INCOME_LIMITS.singleMax
                       : INCOME_LIMITS.coupleMax) ? (
-                    <div className="rounded-lg bg-emerald-50 p-3 text-sm text-emerald-700">
+                    <div className="rounded-lg bg-emerald-500/10 p-3 text-sm text-emerald-300">
                       Din inkomst kvalificerar för grundpremien (
                       {fmt(PREMIUM_AMOUNTS.base)} kr).
                     </div>
                   ) : (
-                    <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                    <div className="rounded-lg bg-red-500/10 p-3 text-sm text-red-300">
                       Inkomsten överstiger gränsen.
                     </div>
                   )}
@@ -480,10 +480,10 @@ export default function ElbilspremiePage() {
           {/* ─── Step 4: Previous EV ─── */}
           {step === 4 && (
             <div>
-              <h2 className="text-lg font-bold text-slate-900">
+              <h2 className="text-lg font-bold text-white">
                 Har du ägt eller leasat en elbil/laddhybrid?
               </h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Ingen i hushållet får ha ägt eller leasat en elbil eller
                 laddhybrid de senaste 12 månaderna.
               </p>
@@ -493,11 +493,11 @@ export default function ElbilspremiePage() {
                   onClick={() => setHadEvBefore(false)}
                   className={`rounded-xl border-2 p-4 text-center transition ${
                     hadEvBefore === false
-                      ? "border-sky-500 bg-sky-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-sky-500 bg-sky-500/10"
+                      : "border-white/20 bg-white/5 hover:border-white/30"
                   }`}
                 >
-                  <p className="font-semibold text-slate-900">
+                  <p className="font-semibold text-white">
                     Nej, inte senaste 12 månaderna
                   </p>
                 </button>
@@ -506,17 +506,17 @@ export default function ElbilspremiePage() {
                   onClick={() => setHadEvBefore(true)}
                   className={`rounded-xl border-2 p-4 text-center transition ${
                     hadEvBefore === true
-                      ? "border-red-400 bg-red-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-red-400 bg-red-500/10"
+                      : "border-white/20 bg-white/5 hover:border-white/30"
                   }`}
                 >
-                  <p className="font-semibold text-slate-900">
+                  <p className="font-semibold text-white">
                     Ja, de senaste 12 månaderna
                   </p>
                 </button>
               </div>
               {hadEvBefore === true && (
-                <div className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                <div className="mt-4 rounded-lg bg-red-500/10 p-3 text-sm text-red-300">
                   Tyvärr, detta diskvalificerar från elbilspremien.
                 </div>
               )}
@@ -526,10 +526,10 @@ export default function ElbilspremiePage() {
           {/* ─── Step 5: Price ─── */}
           {step === 5 && (
             <div>
-              <h2 className="text-lg font-bold text-slate-900">
+              <h2 className="text-lg font-bold text-white">
                 Bilens pris
               </h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Elbilspremien gäller rena elbilar (ej laddhybrider).
               </p>
 
@@ -543,12 +543,12 @@ export default function ElbilspremiePage() {
                   }}
                   className={`rounded-xl border-2 p-4 text-center transition ${
                     purchaseType === "buy"
-                      ? "border-sky-500 bg-sky-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-sky-500 bg-sky-500/10"
+                      : "border-white/20 bg-white/5 hover:border-white/30"
                   }`}
                 >
-                  <p className="font-semibold text-slate-900">Köpa</p>
-                  <p className="text-sm text-slate-500">
+                  <p className="font-semibold text-white">Köpa</p>
+                  <p className="text-sm text-slate-400">
                     {fmt(PRICE_LIMITS.purchaseMin)}–
                     {fmt(PRICE_LIMITS.purchaseMax)} kr
                   </p>
@@ -561,12 +561,12 @@ export default function ElbilspremiePage() {
                   }}
                   className={`rounded-xl border-2 p-4 text-center transition ${
                     purchaseType === "lease"
-                      ? "border-sky-500 bg-sky-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-sky-500 bg-sky-500/10"
+                      : "border-white/20 bg-white/5 hover:border-white/30"
                   }`}
                 >
-                  <p className="font-semibold text-slate-900">Leasa</p>
-                  <p className="text-sm text-slate-500">
+                  <p className="font-semibold text-white">Leasa</p>
+                  <p className="text-sm text-slate-400">
                     {fmt(PRICE_LIMITS.leaseMin)}–{fmt(PRICE_LIMITS.leaseMax)}{" "}
                     kr/mån
                   </p>
@@ -577,7 +577,7 @@ export default function ElbilspremiePage() {
               {purchaseType === "buy" && (
                 <div className="mt-6">
                   <div className="text-center">
-                    <span className="text-3xl font-bold text-slate-900">
+                    <span className="text-3xl font-bold text-white">
                       {fmt(price)} kr
                     </span>
                   </div>
@@ -590,7 +590,7 @@ export default function ElbilspremiePage() {
                     onChange={(e) => setPrice(Number(e.target.value))}
                     className="slider-input mt-4 w-full"
                     style={{
-                      background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${(price / 600_000) * 100}%, #cbd5e1 ${(price / 600_000) * 100}%, #cbd5e1 100%)`,
+                      background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${(price / 600_000) * 100}%, #334155 ${(price / 600_000) * 100}%, #334155 100%)`,
                     }}
                   />
                   <div className="mt-2 flex justify-between text-xs text-slate-400">
@@ -600,14 +600,14 @@ export default function ElbilspremiePage() {
                   {price > 0 &&
                     (price < PRICE_LIMITS.purchaseMin ||
                       price > PRICE_LIMITS.purchaseMax) && (
-                      <div className="mt-3 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                      <div className="mt-3 rounded-lg bg-red-500/10 p-3 text-sm text-red-300">
                         Priset ska vara mellan {fmt(PRICE_LIMITS.purchaseMin)}{" "}
                         och {fmt(PRICE_LIMITS.purchaseMax)} kr.
                       </div>
                     )}
                   {price >= PRICE_LIMITS.purchaseMin &&
                     price <= PRICE_LIMITS.purchaseMax && (
-                      <div className="mt-3 rounded-lg bg-emerald-50 p-3 text-sm text-emerald-700">
+                      <div className="mt-3 rounded-lg bg-emerald-500/10 p-3 text-sm text-emerald-300">
                         Priset uppfyller kraven.
                       </div>
                     )}
@@ -617,10 +617,10 @@ export default function ElbilspremiePage() {
               {purchaseType === "lease" && (
                 <div className="mt-6">
                   <div className="text-center">
-                    <span className="text-3xl font-bold text-slate-900">
+                    <span className="text-3xl font-bold text-white">
                       {fmt(price)} kr
                     </span>
-                    <span className="ml-1 text-sm text-slate-500">/mån</span>
+                    <span className="ml-1 text-sm text-slate-400">/mån</span>
                   </div>
                   <input
                     type="range"
@@ -631,7 +631,7 @@ export default function ElbilspremiePage() {
                     onChange={(e) => setPrice(Number(e.target.value))}
                     className="slider-input mt-4 w-full"
                     style={{
-                      background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${(price / 8_000) * 100}%, #cbd5e1 ${(price / 8_000) * 100}%, #cbd5e1 100%)`,
+                      background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${(price / 8_000) * 100}%, #334155 ${(price / 8_000) * 100}%, #334155 100%)`,
                     }}
                   />
                   <div className="mt-2 flex justify-between text-xs text-slate-400">
@@ -641,7 +641,7 @@ export default function ElbilspremiePage() {
                   {price > 0 &&
                     (price < PRICE_LIMITS.leaseMin ||
                       price > PRICE_LIMITS.leaseMax) && (
-                      <div className="mt-3 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                      <div className="mt-3 rounded-lg bg-red-500/10 p-3 text-sm text-red-300">
                         Leasingkostnaden ska vara mellan{" "}
                         {fmt(PRICE_LIMITS.leaseMin)} och{" "}
                         {fmt(PRICE_LIMITS.leaseMax)} kr/mån.
@@ -649,7 +649,7 @@ export default function ElbilspremiePage() {
                     )}
                   {price >= PRICE_LIMITS.leaseMin &&
                     price <= PRICE_LIMITS.leaseMax && (
-                      <div className="mt-3 rounded-lg bg-emerald-50 p-3 text-sm text-emerald-700">
+                      <div className="mt-3 rounded-lg bg-emerald-500/10 p-3 text-sm text-emerald-300">
                         Leasingkostnaden uppfyller kraven.
                       </div>
                     )}
@@ -664,7 +664,7 @@ export default function ElbilspremiePage() {
               <button
                 type="button"
                 onClick={handleBack}
-                className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+                className="rounded-lg px-4 py-2 text-sm font-medium text-slate-400 hover:bg-white/10"
               >
                 &larr; Tillbaka
               </button>

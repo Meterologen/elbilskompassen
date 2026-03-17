@@ -245,33 +245,33 @@ export default function ModellerPage() {
         {/* Grid */}
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((car) => (
-            <div key={car.id} id={car.id} className="flex flex-col rounded-2xl border border-sky-300/40 bg-white/95 shadow-sm">
+            <div key={car.id} id={car.id} className="flex flex-col rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm">
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{car.brand}</p>
-                    <h2 className="text-lg font-bold text-slate-900">{car.brand} {car.model}</h2>
+                    <p className="text-xs font-medium uppercase tracking-wider text-slate-400">{car.brand}</p>
+                    <h2 className="text-lg font-bold text-white">{car.brand} {car.model}</h2>
                   </div>
                   {brandFlag(car.brand) && (
                     <img src={`https://flagcdn.com/w80/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandFlag(car.brand)} className="h-8 w-auto rounded-sm shadow-sm" />
                   )}
                 </div>
-                <p className="mt-2 text-sm text-slate-600">{car.description}</p>
+                <p className="mt-2 text-sm text-slate-300">{car.description}</p>
                 <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
-                  <div className="rounded-lg bg-slate-50 px-3 py-2 text-center"><p className="text-[11px] text-slate-500">Pris</p><p className="font-semibold text-slate-800">{formatSek(car.priceSek)}</p></div>
-                  <div className="rounded-lg bg-slate-50 px-3 py-2 text-center"><p className="text-[11px] text-slate-500">Räckvidd</p><p className="font-semibold text-slate-800">{car.rangeKm} km</p></div>
-                  <div className="rounded-lg bg-slate-50 px-3 py-2 text-center"><p className="text-[11px] text-slate-500">Batteri</p><p className="font-semibold text-slate-800">{car.batteryKwh} kWh</p></div>
-                  <div className="rounded-lg bg-slate-50 px-3 py-2 text-center"><p className="text-[11px] text-slate-500">Snabbladdning</p><p className="font-semibold text-slate-800">{car.fastChargeMin} min</p></div>
-                  <div className="rounded-lg bg-slate-50 px-3 py-2 text-center"><p className="text-[11px] text-slate-500">Bagage</p><p className="font-semibold text-slate-800">{car.trunkLiters} L</p></div>
-                  <div className="rounded-lg bg-slate-50 px-3 py-2 text-center"><p className="text-[11px] text-slate-500">Platser</p><p className="font-semibold text-slate-800">{car.seats} st</p></div>
+                  <div className="rounded-lg bg-white/5 px-3 py-2 text-center"><p className="text-[11px] text-slate-400">Pris</p><p className="font-semibold text-slate-200">{formatSek(car.priceSek)}</p></div>
+                  <div className="rounded-lg bg-white/5 px-3 py-2 text-center"><p className="text-[11px] text-slate-400">Räckvidd</p><p className="font-semibold text-slate-200">{car.rangeKm} km</p></div>
+                  <div className="rounded-lg bg-white/5 px-3 py-2 text-center"><p className="text-[11px] text-slate-400">Batteri</p><p className="font-semibold text-slate-200">{car.batteryKwh} kWh</p></div>
+                  <div className="rounded-lg bg-white/5 px-3 py-2 text-center"><p className="text-[11px] text-slate-400">Snabbladdning</p><p className="font-semibold text-slate-200">{car.fastChargeMin} min</p></div>
+                  <div className="rounded-lg bg-white/5 px-3 py-2 text-center"><p className="text-[11px] text-slate-400">Bagage</p><p className="font-semibold text-slate-200">{car.trunkLiters} L</p></div>
+                  <div className="rounded-lg bg-white/5 px-3 py-2 text-center"><p className="text-[11px] text-slate-400">Platser</p><p className="font-semibold text-slate-200">{car.seats} st</p></div>
                 </div>
                 {/* Tags */}
                 <div className="mt-3 flex flex-wrap gap-1.5">
-                  {car.towbar && <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-emerald-200">Dragkrok</span>}
-                  {car.awd && <span className="rounded-full bg-sky-50 px-2.5 py-0.5 text-xs font-medium text-sky-700 ring-1 ring-sky-200">4WD</span>}
+                  {car.towbar && <span className="rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/30">Dragkrok</span>}
+                  {car.awd && <span className="rounded-full bg-sky-500/20 px-2.5 py-0.5 text-xs font-medium text-sky-300 ring-1 ring-sky-500/30">4WD</span>}
                 </div>
               </div>
-              <div className="border-t border-slate-100 px-6 py-4">
+              <div className="border-t border-white/10 px-6 py-4">
                 <Link href={`/kalkyl?evPrice=${car.priceSek}&evModel=${encodeURIComponent(car.brand + " " + car.model)}&evKwhPerMile=${car.kwhPerMile}`} className="block rounded-full bg-sky-600 px-4 py-2 text-center text-sm font-medium text-white hover:bg-sky-500">Räkna på {car.model}</Link>
               </div>
             </div>

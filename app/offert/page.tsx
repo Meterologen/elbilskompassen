@@ -14,12 +14,12 @@ export default function OffertPage() {
           ← Tillbaka till Elbilskompassen
         </Link>
 
-        <div className="mt-10 rounded-2xl border border-sky-300/40 bg-white p-8 shadow-sm sm:p-10">
-          <h1 className="text-3xl font-bold text-slate-900">Lanseras inom kort</h1>
-          <p className="mt-4 text-lg text-slate-600">
+        <div className="mt-10 rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm p-8 sm:p-10">
+          <h1 className="text-3xl font-bold text-white">Lanseras inom kort</h1>
+          <p className="mt-4 text-lg text-slate-300">
             Elbilskompassen är nylanserad och vi jobbar på att kunna erbjuda personliga offerter direkt på sajten.
           </p>
-          <p className="mt-4 text-slate-600">
+          <p className="mt-4 text-slate-300">
             Under tiden — skicka ett mejl till oss så hjälper vi dig med personliga tips och rekommendationer!
           </p>
           <a

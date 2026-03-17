@@ -58,18 +58,18 @@ export default function KompassenPage() {
             {result.topPicks.map(({ car, matchPercent }, i) => {
               const badgeColor =
                 matchPercent > 85
-                  ? "text-emerald-600 border-emerald-200 bg-emerald-50"
+                  ? "text-emerald-300 border-emerald-500/30 bg-emerald-500/10"
                   : matchPercent >= 70
-                    ? "text-amber-600 border-amber-200 bg-amber-50"
-                    : "text-sky-600 border-sky-200 bg-sky-50";
+                    ? "text-amber-300 border-amber-500/30 bg-amber-500/10"
+                    : "text-sky-300 border-sky-500/30 bg-sky-500/10";
               const label = i === 0 ? "Bästa matchning" : `Alternativ ${i}`;
               const leasing = findLeasingForCar(car);
 
               return (
                 <div
                   key={car.id}
-                  className={`overflow-hidden rounded-2xl border-2 bg-white shadow-sm text-slate-900 ${
-                    i === 0 ? "border-emerald-400 ring-2 ring-emerald-100" : "border-slate-200"
+                  className={`overflow-hidden rounded-2xl border-2 bg-white/10 backdrop-blur-sm text-white ${
+                    i === 0 ? "border-emerald-400 ring-2 ring-emerald-400/20" : "border-white/20"
                   }`}
                 >
                   <div className={`px-4 py-1.5 text-center text-sm font-semibold text-white ${
@@ -80,43 +80,43 @@ export default function KompassenPage() {
                   <div className="p-6">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-slate-500">
+                        <p className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-slate-400">
                           {brandFlag(car.brand) && (
                             <img src={`https://flagcdn.com/w40/${brandFlag(car.brand).toLowerCase()}.png`} alt={brandFlag(car.brand)} className="h-3.5 w-auto rounded-sm" />
                           )}
                           {car.brand}
                         </p>
-                        <h2 className="text-xl font-bold text-slate-900">{car.brand} {car.model}</h2>
+                        <h2 className="text-xl font-bold text-white">{car.brand} {car.model}</h2>
                       </div>
                       <div className={`flex flex-col items-center rounded-full border-2 px-4 py-2 ${badgeColor}`}>
                         <span className="text-2xl font-bold leading-none">{matchPercent}%</span>
                         <span className="text-[10px] font-medium uppercase tracking-wide">matchning</span>
                       </div>
                     </div>
-                    <p className="mt-2 text-sm text-slate-600">{car.description}</p>
+                    <p className="mt-2 text-sm text-slate-300">{car.description}</p>
                     <div className={`mt-4 grid grid-cols-2 gap-3 ${leasing ? "sm:grid-cols-5" : "sm:grid-cols-4"}`}>
-                      <div className="rounded-lg bg-slate-50 p-3 text-center">
-                        <p className="text-xs text-slate-500">Pris från</p>
-                        <p className="font-semibold text-slate-800">{formatSek(car.priceSek)}</p>
+                      <div className="rounded-lg bg-white/5 p-3 text-center">
+                        <p className="text-xs text-slate-400">Pris från</p>
+                        <p className="font-semibold text-slate-200">{formatSek(car.priceSek)}</p>
                       </div>
-                      <div className="rounded-lg bg-slate-50 p-3 text-center">
-                        <p className="text-xs text-slate-500">Räckvidd</p>
-                        <p className="font-semibold text-slate-800">{car.rangeKm} km</p>
+                      <div className="rounded-lg bg-white/5 p-3 text-center">
+                        <p className="text-xs text-slate-400">Räckvidd</p>
+                        <p className="font-semibold text-slate-200">{car.rangeKm} km</p>
                       </div>
-                      <div className="rounded-lg bg-slate-50 p-3 text-center">
-                        <p className="text-xs text-slate-500">Snabbladdning</p>
-                        <p className="font-semibold text-slate-800">{car.fastChargeMin} min</p>
+                      <div className="rounded-lg bg-white/5 p-3 text-center">
+                        <p className="text-xs text-slate-400">Snabbladdning</p>
+                        <p className="font-semibold text-slate-200">{car.fastChargeMin} min</p>
                       </div>
-                      <div className="rounded-lg bg-slate-50 p-3 text-center">
-                        <p className="text-xs text-slate-500">Bagage</p>
-                        <p className="font-semibold text-slate-800">{car.trunkLiters} L</p>
+                      <div className="rounded-lg bg-white/5 p-3 text-center">
+                        <p className="text-xs text-slate-400">Bagage</p>
+                        <p className="font-semibold text-slate-200">{car.trunkLiters} L</p>
                       </div>
                       {leasing && (
-                        <div className="rounded-lg bg-emerald-50 p-3 text-center">
-                          <p className="text-xs text-emerald-600">Leasing från</p>
-                          <p className="font-semibold text-emerald-700">{leasing.monthlyPrice.toLocaleString("sv-SE")} kr/mån</p>
+                        <div className="rounded-lg bg-emerald-500/10 p-3 text-center">
+                          <p className="text-xs text-emerald-400">Leasing från</p>
+                          <p className="font-semibold text-emerald-300">{leasing.monthlyPrice.toLocaleString("sv-SE")} kr/mån</p>
                           {leasing.downPayment > 0 && (
-                            <p className="mt-0.5 text-[10px] text-emerald-500">{leasing.downPayment.toLocaleString("sv-SE")} kr insats</p>
+                            <p className="mt-0.5 text-[10px] text-emerald-400">{leasing.downPayment.toLocaleString("sv-SE")} kr insats</p>
                           )}
                         </div>
                       )}
@@ -124,7 +124,7 @@ export default function KompassenPage() {
                     <div className="mt-4 flex flex-wrap gap-3">
                       <Link
                         href={`/modeller#${car.id}`}
-                        className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                        className="rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10"
                       >
                         Läs mer om {car.model}
                       </Link>
@@ -217,18 +217,18 @@ export default function KompassenPage() {
             <button
               type="button"
               onClick={() => handleChoice("A")}
-              className="group rounded-2xl border-2 border-sky-300/50 bg-white p-6 text-left shadow-sm transition hover:border-emerald-400 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              className="group rounded-2xl border-2 border-sky-300/30 bg-white/10 backdrop-blur-sm p-6 text-left transition hover:border-emerald-400/50 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             >
-              <p className="font-semibold text-slate-900 group-hover:text-emerald-700">{q.optionA.label}</p>
-              <p className="mt-2 text-sm text-slate-600">{q.optionA.description}</p>
+              <p className="font-semibold text-white group-hover:text-emerald-300">{q.optionA.label}</p>
+              <p className="mt-2 text-sm text-slate-300">{q.optionA.description}</p>
             </button>
             <button
               type="button"
               onClick={() => handleChoice("B")}
-              className="group rounded-2xl border-2 border-sky-300/50 bg-white p-6 text-left shadow-sm transition hover:border-emerald-400 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              className="group rounded-2xl border-2 border-sky-300/30 bg-white/10 backdrop-blur-sm p-6 text-left transition hover:border-emerald-400/50 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             >
-              <p className="font-semibold text-slate-900 group-hover:text-emerald-700">{q.optionB.label}</p>
-              <p className="mt-2 text-sm text-slate-600">{q.optionB.description}</p>
+              <p className="font-semibold text-white group-hover:text-emerald-300">{q.optionB.label}</p>
+              <p className="mt-2 text-sm text-slate-300">{q.optionB.description}</p>
             </button>
           </div>
         </div>

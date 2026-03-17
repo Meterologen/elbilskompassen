@@ -34,7 +34,7 @@ function includedBadge(yes: boolean, label: string) {
   return (
     <span
       className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ${
-        yes ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200" : "bg-slate-50 text-slate-400 ring-1 ring-slate-200"
+        yes ? "bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500/30" : "bg-white/5 text-slate-500 ring-1 ring-white/10"
       }`}
     >
       {yes ? (
@@ -111,20 +111,20 @@ export default function LeasingPage() {
         </div>
 
         {/* Filters */}
-        <div className="mt-8 rounded-2xl border border-sky-300/40 bg-white p-6 shadow-sm">
-          <h2 className="text-sm font-semibold text-slate-900">Filtrera och sortera</h2>
+        <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6">
+          <h2 className="text-sm font-semibold text-white">Filtrera och sortera</h2>
           <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {/* Price range */}
             <div className="space-y-3 sm:col-span-2 lg:col-span-1">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-slate-700">Prisintervall</span>
-                <span className="rounded-full bg-sky-100 px-3 py-0.5 text-sm font-semibold text-sky-800">
+                <span className="text-sm text-slate-300">Prisintervall</span>
+                <span className="rounded-full bg-sky-500/20 px-3 py-0.5 text-sm font-semibold text-sky-300">
                   {fmtSek(minPrice)} – {fmtSek(maxPrice)} kr/mån
                 </span>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="w-8 text-xs text-slate-500">Min</span>
+                  <span className="w-8 text-xs text-slate-400">Min</span>
                   <input
                     type="range"
                     min={2000}
@@ -137,12 +137,12 @@ export default function LeasingPage() {
                     }}
                     className="slider-input w-full"
                     style={{
-                      background: `linear-gradient(to right, #e2e8f0 0%, #e2e8f0 ${minPct}%, #0ea5e9 ${minPct}%, #0ea5e9 ${maxPct}%, #e2e8f0 ${maxPct}%, #e2e8f0 100%)`,
+                      background: `linear-gradient(to right, #334155 0%, #334155 ${minPct}%, #0ea5e9 ${minPct}%, #0ea5e9 ${maxPct}%, #334155 ${maxPct}%, #334155 100%)`,
                     }}
                   />
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-8 text-xs text-slate-500">Max</span>
+                  <span className="w-8 text-xs text-slate-400">Max</span>
                   <input
                     type="range"
                     min={2000}
@@ -155,7 +155,7 @@ export default function LeasingPage() {
                     }}
                     className="slider-input w-full"
                     style={{
-                      background: `linear-gradient(to right, #e2e8f0 0%, #e2e8f0 ${minPct}%, #0ea5e9 ${minPct}%, #0ea5e9 ${maxPct}%, #e2e8f0 ${maxPct}%, #e2e8f0 100%)`,
+                      background: `linear-gradient(to right, #334155 0%, #334155 ${minPct}%, #0ea5e9 ${minPct}%, #0ea5e9 ${maxPct}%, #334155 ${maxPct}%, #334155 100%)`,
                     }}
                   />
                 </div>
@@ -164,7 +164,7 @@ export default function LeasingPage() {
 
             {/* Size filter */}
             <div className="space-y-2">
-              <span className="text-sm text-slate-700">Storlek</span>
+              <span className="text-sm text-slate-300">Storlek</span>
               <div className="flex flex-wrap gap-1.5">
                 {(Object.keys(SIZE_LABELS) as SizeFilter[]).map((s) => (
                   <button
@@ -174,7 +174,7 @@ export default function LeasingPage() {
                     className={`rounded-full px-3 py-1 text-xs font-medium transition ${
                       sizeFilter === s
                         ? "bg-sky-600 text-white"
-                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                        : "bg-white/10 text-slate-300 hover:bg-white/20"
                     }`}
                   >
                     {SIZE_LABELS[s]}
@@ -185,11 +185,11 @@ export default function LeasingPage() {
 
             {/* Brand filter */}
             <div className="space-y-2">
-              <span className="text-sm text-slate-700">Märke</span>
+              <span className="text-sm text-slate-300">Märke</span>
               <select
                 value={brandFilter}
                 onChange={(e) => setBrandFilter(e.target.value)}
-                className="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
+                className="block w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
               >
                 <option value="all">Alla märken</option>
                 {brands.filter((b) => b !== "all").map((b) => (
@@ -200,11 +200,11 @@ export default function LeasingPage() {
 
             {/* Sort */}
             <div className="space-y-2">
-              <span className="text-sm text-slate-700">Sortera efter</span>
+              <span className="text-sm text-slate-300">Sortera efter</span>
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value as SortKey)}
-                className="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
+                className="block w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
               >
                 <option value="price">Lägst pris</option>
                 <option value="range">Längst räckvidd</option>
@@ -214,7 +214,7 @@ export default function LeasingPage() {
 
             {/* Zero down payment toggle */}
             <div className="space-y-2">
-              <span className="text-sm text-slate-700">Insats</span>
+              <span className="text-sm text-slate-300">Insats</span>
               <label className="flex cursor-pointer items-center gap-2.5">
                 <button
                   type="button"
@@ -222,7 +222,7 @@ export default function LeasingPage() {
                   aria-checked={zeroDownOnly}
                   onClick={() => setZeroDownOnly(!zeroDownOnly)}
                   className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors ${
-                    zeroDownOnly ? "bg-sky-600" : "bg-slate-300"
+                    zeroDownOnly ? "bg-sky-600" : "bg-slate-600"
                   }`}
                 >
                   <span
@@ -231,11 +231,11 @@ export default function LeasingPage() {
                     }`}
                   />
                 </button>
-                <span className="text-sm text-slate-700">Bara 0 kr insats</span>
+                <span className="text-sm text-slate-300">Bara 0 kr insats</span>
               </label>
             </div>
           </div>
-          <p className="mt-4 text-xs text-slate-500">
+          <p className="mt-4 text-xs text-slate-400">
             Visar {filtered.length} av {LEASING_OFFERS.length} erbjudanden
           </p>
         </div>
@@ -246,18 +246,18 @@ export default function LeasingPage() {
             <OfferCard key={o.id} offer={o} />
           ))}
           {filtered.length === 0 && (
-            <div className="col-span-full rounded-2xl border border-sky-300/40 bg-white/95 p-8 text-center">
-              <p className="text-slate-600">Inga erbjudanden matchar dina filter. Prova att höja maxpriset.</p>
+            <div className="col-span-full rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-8 text-center">
+              <p className="text-slate-300">Inga erbjudanden matchar dina filter. Prova att höja maxpriset.</p>
             </div>
           )}
         </div>
 
         {/* Tips section */}
-        <div className="mt-12 rounded-2xl border border-sky-300/40 bg-white/95 p-8 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-900">Tips vid privatleasing</h2>
-          <div className="mt-4 grid gap-4 text-sm text-slate-700 sm:grid-cols-2">
+        <div className="mt-12 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-8">
+          <h2 className="text-xl font-bold text-white">Tips vid privatleasing</h2>
+          <div className="mt-4 grid gap-4 text-sm text-slate-300 sm:grid-cols-2">
             <div>
-              <h3 className="font-semibold text-slate-800">Vad ingår?</h3>
+              <h3 className="font-semibold text-slate-200">Vad ingår?</h3>
               <ul className="mt-2 space-y-1.5">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
@@ -278,7 +278,7 @@ export default function LeasingPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-slate-800">Tänk på</h3>
+              <h3 className="font-semibold text-slate-200">Tänk på</h3>
               <ul className="mt-2 space-y-1.5">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
@@ -321,14 +321,11 @@ export default function LeasingPage() {
 
 function OfferCard({ offer: o }: { offer: LeasingOffer }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg hover:border-sky-300">
-      {/* Flag + badges area */}
-      <div className="relative flex h-32 w-full items-center justify-center bg-slate-50">
-        {brandFlag(o.brand) && (
-          <img src={`https://flagcdn.com/w160/${brandFlag(o.brand).toLowerCase()}.png`} alt={brandFlag(o.brand)} className="h-16 w-auto rounded shadow" />
-        )}
-        {/* Down payment badge */}
-        <div className="absolute left-3 top-3">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm transition hover:bg-white/15 hover:border-sky-400/50">
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-5">
+        {/* Badges row */}
+        <div className="flex items-center justify-between">
           <span className={`rounded-full px-2.5 py-1 text-xs font-semibold shadow-sm ${
             o.downPayment === 0
               ? "bg-emerald-500 text-white"
@@ -336,45 +333,44 @@ function OfferCard({ offer: o }: { offer: LeasingOffer }) {
           }`}>
             {o.downPayment === 0 ? "0 kr insats" : `${fmtSek(o.downPayment)} kr insats`}
           </span>
-        </div>
-        {/* Size badge */}
-        <div className="absolute right-3 top-3">
-          <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm backdrop-blur-sm">
+          <span className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-slate-300 shadow-sm">
             {SIZE_LABELS[o.size]}
           </span>
         </div>
-      </div>
 
-      {/* Content */}
-      <div className="flex flex-1 flex-col p-5">
         {/* Brand & Model */}
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">{o.brand}</p>
-          <h3 className="mt-0.5 text-lg font-bold leading-tight text-slate-900">{o.model}</h3>
-          <p className="text-sm text-slate-500">{o.trim}</p>
+        <div className="mt-4">
+          <div className="flex items-center gap-2">
+            {brandFlag(o.brand) && (
+              <img src={`https://flagcdn.com/w40/${brandFlag(o.brand).toLowerCase()}.png`} alt="" className="h-4 w-auto rounded-sm" />
+            )}
+            <p className="text-xs font-semibold uppercase tracking-wider text-sky-400">{o.brand}</p>
+          </div>
+          <h3 className="mt-0.5 text-lg font-bold leading-tight text-white">{o.model}</h3>
+          <p className="text-sm text-slate-400">{o.trim}</p>
         </div>
 
         {/* Price */}
-        <div className="mt-3 flex items-baseline gap-1.5 rounded-xl bg-slate-50 px-4 py-3">
-          <span className="text-3xl font-extrabold text-slate-900">{fmtSek(o.monthlyPrice)}</span>
-          <span className="text-sm font-medium text-slate-500">kr/mån</span>
+        <div className="mt-3 flex items-baseline gap-1.5 rounded-xl bg-white/5 px-4 py-3">
+          <span className="text-3xl font-extrabold text-white">{fmtSek(o.monthlyPrice)}</span>
+          <span className="text-sm font-medium text-slate-400">kr/mån</span>
         </div>
 
         {/* Specs grid */}
         <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
-          <div className="flex items-center gap-2 text-sm text-slate-600">
+          <div className="flex items-center gap-2 text-sm text-slate-300">
             <svg className="h-4 w-4 shrink-0 text-sky-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
             {o.rangeKm} km
           </div>
-          <div className="flex items-center gap-2 text-sm text-slate-600">
+          <div className="flex items-center gap-2 text-sm text-slate-300">
             <svg className="h-4 w-4 shrink-0 text-sky-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z" /></svg>
             {o.batteryKwh} kWh
           </div>
-          <div className="flex items-center gap-2 text-sm text-slate-600">
+          <div className="flex items-center gap-2 text-sm text-slate-300">
             <svg className="h-4 w-4 shrink-0 text-sky-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
             {o.contractMonths} mån
           </div>
-          <div className="flex items-center gap-2 text-sm text-slate-600">
+          <div className="flex items-center gap-2 text-sm text-slate-300">
             <svg className="h-4 w-4 shrink-0 text-sky-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" /></svg>
             {fmtSek(o.annualMileage)} mil/år
           </div>
@@ -388,7 +384,7 @@ function OfferCard({ offer: o }: { offer: LeasingOffer }) {
         </div>
 
         {o.note && (
-          <p className="mt-3 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">{o.note}</p>
+          <p className="mt-3 rounded-lg bg-amber-500/10 px-3 py-2 text-xs text-amber-300">{o.note}</p>
         )}
 
         {/* Source link */}
@@ -397,7 +393,7 @@ function OfferCard({ offer: o }: { offer: LeasingOffer }) {
             href={o.sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-sky-50 px-4 py-2.5 text-sm font-medium text-sky-700 transition hover:bg-sky-100"
+            className="inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-sky-500/10 px-4 py-2.5 text-sm font-medium text-sky-300 transition hover:bg-sky-500/20"
           >
             Till {o.source}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5">

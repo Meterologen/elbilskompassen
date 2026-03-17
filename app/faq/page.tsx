@@ -11,24 +11,24 @@ function Accordion({ item }: { item: FaqItem }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-xl border border-sky-300/30 bg-white/95 shadow-sm">
+    <div className="overflow-hidden rounded-xl border border-sky-300/30 bg-white/10 backdrop-blur-sm">
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition hover:bg-slate-50"
+        className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition hover:bg-white/10"
         aria-expanded={open}
       >
-        <span className="font-semibold text-slate-900">{item.q}</span>
+        <span className="font-semibold text-white">{item.q}</span>
         <svg
-          className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
           fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
         </svg>
       </button>
       {open && (
-        <div className="border-t border-slate-100 px-6 py-4">
-          <p className="text-sm leading-relaxed text-slate-700">{item.a}</p>
+        <div className="border-t border-white/10 px-6 py-4">
+          <p className="text-sm leading-relaxed text-slate-300">{item.a}</p>
         </div>
       )}
     </div>

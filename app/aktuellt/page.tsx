@@ -53,11 +53,11 @@ export default function AktuelltPage() {
         </p>
 
         {news.length === 0 ? (
-          <div className="mt-10 rounded-2xl border border-sky-300/40 bg-white/95 p-8 text-center shadow-sm">
-            <p className="text-lg font-medium text-slate-700">
+          <div className="mt-10 rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm p-8 text-center">
+            <p className="text-lg font-medium text-slate-200">
               Inga nyheter just nu
             </p>
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-400">
               Nyhetssammanfattningar publiceras dagligen. Kom tillbaka snart!
             </p>
           </div>
@@ -66,28 +66,28 @@ export default function AktuelltPage() {
             {news.map((post) => (
               <article
                 key={post.date}
-                className="overflow-hidden rounded-2xl border border-sky-300/40 bg-white/95 shadow-sm"
+                className="overflow-hidden rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm"
               >
-                <div className="border-b border-slate-100 bg-slate-50 px-6 py-4">
+                <div className="border-b border-white/10 bg-white/5 px-6 py-4">
                   <time
                     dateTime={post.date}
-                    className="text-sm font-medium text-slate-500"
+                    className="text-sm font-medium text-slate-400"
                   >
                     {formatDate(post.date)}
                   </time>
-                  <h2 className="mt-1 text-lg font-bold text-slate-900">
+                  <h2 className="mt-1 text-lg font-bold text-white">
                     {post.title}
                   </h2>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-4 text-sm leading-relaxed text-slate-700">
+                  <div className="space-y-4 text-sm leading-relaxed text-slate-300">
                     {post.summary.split("\n\n").map((paragraph, i) => (
                       <p key={i}>{paragraph}</p>
                     ))}
                   </div>
 
                   {post.sources.length > 0 && (
-                    <div className="mt-6 border-t border-slate-100 pt-4">
+                    <div className="mt-6 border-t border-white/10 pt-4">
                       <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                         Källor
                       </p>
@@ -98,7 +98,7 @@ export default function AktuelltPage() {
                               href={src.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-sm text-sky-600 hover:text-sky-800 hover:underline"
+                              className="text-sm text-sky-400 hover:text-sky-300 hover:underline"
                             >
                               {src.title}
                               <span className="ml-1 text-slate-400">

@@ -62,10 +62,10 @@ export default function Home() {
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {WORRIES.map((w) => (
-            <div key={w.title} className="rounded-2xl border border-sky-300/40 bg-white/95 p-6 shadow-sm text-slate-900">
+            <div key={w.title} className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6">
               <span className="text-2xl">{w.icon}</span>
-              <h3 className="mt-3 font-semibold text-slate-800">{w.title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{w.text}</p>
+              <h3 className="mt-3 font-semibold text-white">{w.title}</h3>
+              <p className="mt-2 text-sm text-slate-300">{w.text}</p>
             </div>
           ))}
         </div>
@@ -93,10 +93,10 @@ export default function Home() {
             { n: 2, title: "Räkna på ekonomin", desc: "Se exakt vad du sparar (eller betalar extra) jämfört med din nuvarande bil." },
             { n: 3, title: "Ta nästa steg", desc: "Boka provkörning, begär offert eller jämför priser – vi kopplar dig rätt." },
           ].map(({ n, title, desc }) => (
-            <li key={n} className="relative rounded-2xl border border-sky-300/50 bg-white p-6 shadow-sm text-slate-900">
+            <li key={n} className="relative rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 text-sm font-bold text-white shadow">{n}</span>
-              <h3 className="mt-4 font-semibold text-slate-800">{title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{desc}</p>
+              <h3 className="mt-4 font-semibold text-white">{title}</h3>
+              <p className="mt-2 text-sm text-slate-300">{desc}</p>
             </li>
           ))}
         </ol>
@@ -113,10 +113,10 @@ export default function Home() {
             { name: "Anders, Västerås", who: "Pendlare, 8 mil/dag", quote: "Jag trodde det skulle bli krångligt att ladda. Men jag pluggar in hemma varje kväll – enklare än att tanka." },
             { name: "Birgitta, Lund", who: "Pensionär", quote: "Min Volvo EX30 är den smidigaste bilen jag ägt. Och billigaste att köra." },
           ].map((p) => (
-            <div key={p.name} className="rounded-2xl border border-sky-300/40 bg-white/95 p-6 shadow-sm text-slate-900">
-              <p className="text-sm italic text-slate-600">&ldquo;{p.quote}&rdquo;</p>
-              <p className="mt-4 font-semibold text-slate-800">{p.name}</p>
-              <p className="text-xs text-slate-500">{p.who}</p>
+            <div key={p.name} className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-6">
+              <p className="text-sm italic text-slate-300">&ldquo;{p.quote}&rdquo;</p>
+              <p className="mt-4 font-semibold text-white">{p.name}</p>
+              <p className="text-xs text-slate-400">{p.who}</p>
             </div>
           ))}
         </div>
@@ -149,10 +149,10 @@ export default function Home() {
 
       {/* Förtroende */}
       <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
-        <div className="rounded-2xl border border-sky-300/40 bg-white/95 p-8 shadow-sm text-slate-900">
-          <h2 className="text-xl font-semibold text-slate-800">Byggt för förtroende – inte försäljning</h2>
-          <p className="mt-4 text-slate-700">
-            <strong>Vi säljer inga bilar.</strong> Vi hjälper dig fatta ett klokt beslut med tydliga siffror och ärliga jämförelser. Tänk oss som en kompis som redan gjort bytet och delar med sig.
+        <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-8">
+          <h2 className="text-xl font-semibold text-white">Byggt för förtroende – inte försäljning</h2>
+          <p className="mt-4 text-slate-300">
+            <strong className="text-white">Vi säljer inga bilar.</strong> Vi hjälper dig fatta ett klokt beslut med tydliga siffror och ärliga jämförelser. Tänk oss som en kompis som redan gjort bytet och delar med sig.
           </p>
         </div>
       </section>

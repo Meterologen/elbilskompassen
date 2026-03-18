@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-18",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden befinner sig i en intressant fas våren 2026. Efter flera år av stark tillväxt har försäljningstakten stabiliserats, och allt fler svenska hushåll överväger att göra bytet från bensin och diesel till eldrift. Priserna på begagnade elbilar har sjunkit markant det senaste året, vilket gör att elbil numera är ett realistiskt alternativ för fler köpare.\n\nLaddinfrastrukturen fortsätter att byggas ut över hela landet, med särskilt fokus på snabbladdare längs större vägar och i mindre orter som tidigare haft begränsat utbud. Energibolagen rapporterar ökade investeringar i laddstationer, och väntetiderna vid populära laddplatser har minskat jämfört med förra året.\n\nPolitiskt pågår fortsatta diskussioner om framtida stöd för elbilar. Även om de mest generösa subventionerna fasas ut i takt med att marknaden mognar, finns fortfarande förmånliga villkor för elbilar i form av lägre förmånsvärde och befrielse från trängselskatt i storstäderna. För den som funderar på elbil just nu kan det vara värt att jämföra leasingalternativ, då konkurrensen mellan aktörerna är hög och erbjudandena ofta förmånliga.",
+    "sources": [],
+    "generatedAt": "2026-03-18T06:49:58.072Z"
+  },
+  {
     "date": "2026-03-17",
     "title": "Elbilspremien öppnar imorgon – upp till 46 800 kronor i stöd",
     "summary": "Den nya elbilspremien öppnar för ansökan den 18 mars 2026. Stödet riktar sig till hushåll på landsbygden med inkomster lägre än medelinkomsten och ger 1 300 kronor per månad i upp till 36 månader, totalt upp till 46 800 kronor. Ett extra starttillägg på 18 000 kronor kan beviljas för hushåll med inkomster under 50 procent av medelinkomsten. Premien finansieras till 75 procent av EU:s sociala klimatfond.\n\nPremien gäller både nya och begagnade elbilar som kostar mellan 64 800 och 450 000 kronor. Ingen i hushållet får ha ägt eller leasat en elbil eller laddhybrid under de senaste 12 månaderna. Budgeten beräknas räcka till ungefär 115 000 fordon, rapporterar Naturvårdsverket.\n\nSamtidigt fortsätter Sveriges laddinfrastruktur att växa. Landet har nu över 9 000 publika laddstationer med nästan 60 000 laddpunkter, varav drygt 10 500 erbjuder snabbladdning. Under 2025 ökade antalet laddstationer med 38 procent. OKQ8 och Skellefteå Kraft siktar på att etablera 800 supersnabbladdpunkter på över 300 stationer under 2026.\n\nPå elbilsmarknaden väntas flera nya modeller under året, bland annat Volvo EX60 med längre räckvidd, en uppgraderad Volvo EX90 med 800-voltssystem samt Mercedes helt eldrivna CLA kombi med räckvidd upp till 761 kilometer.",
@@ -875,38 +882,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:52:25.065Z"
-  },
-  {
-    "date": "2025-12-11",
-    "title": "Northvolt begär konkurs – Svenska elbilsdrömmen i kris",
-    "summary": "Northvolt meddelade idag att bolaget ansöker om konkursskydd enligt Chapter 11 i USA efter månader av finansiella problem. Beslutet kommer efter att flera stora kunder, däribland BMW, sagt upp sina order och bolagets försök att säkra ny finansiering misslyckats. VD Peter Carlsson avgår i samband med rekonstruktionen. Beskedet skakar den svenska fordonsindustrin där Northvolt setts som en hörnsten i den gröna omställningen.\n\nVolvo Cars meddelar att man nu måste se över sina batteristrategier efter Northvolts kollaps. Biltillverkaren hade planerat att köpa stora volymer batterier från den svenska jättens fabrik i Skellefteå. Även Scania och andra svenska fordonstillverkare påverkas av osäkerheten kring Northvolts framtid.\n\nParallellt visar ny statistik från Bil Sweden att elbilsförsäljningen i Sverige fortsätter att bromsa in. Under november 2025 minskade andelen nyregistrerade elbilar jämfört med föregående år, trots att bonus malus-systemet justerats. Branschen pekar på höga elpriser och osäkerhet kring laddinfrastrukturen som viktiga förklaringar.\n\nInternationellt meddelar Tesla att man sänker priserna på Model 3 och Model Y i Europa inför årsskiftet, vilket kan ge viss stimulans till den svenska marknaden. BYD fortsätter samtidigt sin expansion i Norden med nya återförsäljare i Mellansverige.",
-    "sources": [
-      {
-        "title": "Northvolt ansöker om konkursskydd i USA",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-ansoker-konkurs",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Peter Carlsson lämnar Northvolt efter konkursen",
-        "url": "https://www.dn.se/ekonomi/northvolt-vd-avgaar",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Volvo Cars ser över batteristrategi efter Northvolt-kris",
-        "url": "https://www.di.se/nyheter/volvo-cars-northvolt-batteri",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Elbilsförsäljningen fortsätter att minska i Sverige",
-        "url": "https://www.nyteknik.se/fordon/elbilsstatistik-november-2025",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Tesla sänker priserna inför årsskiftet",
-        "url": "https://www.teknikensvarld.se/tesla-prissankningar-europa",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:52:45.484Z"
   }
 ]

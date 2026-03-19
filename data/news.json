@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-19",
+    "title": "Elbilsmarknaden i Sverige – läget i mars 2026",
+    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter de kraftiga svängningarna under föregående år, vilket gör det mer överkomligt för fler att ta steget över till eldrift. Samtidigt ser vi en fortsatt utbyggnad av snabbladdningsnätet längs svenska vägar, med allt fler operatörer som investerar i högeffektsladdare.\n\nLaddinfrastrukturen i bostadsområden är fortfarande en utmaning för många som bor i lägenhet, men alltfler bostadsrättsföreningar och fastighetsägare tar nu beslut om att installera laddboxar. För den som funderar på elbil just nu kan det vara värt att jämföra både leasing- och köpalternativ, eftersom marknaden erbjuder ett brett utbud av modeller i olika prisklasser.\n\nInför sommarsäsongen rekommenderas elbilsägare att planera längre resor i förväg och kolla upp laddningsmöjligheter längs rutten. De flesta moderna elbilar klarar numera över 40 mil på en laddning, vilket gör semesterresor allt mer bekväma.",
+    "sources": [],
+    "generatedAt": "2026-03-19T06:44:06.498Z"
+  },
+  {
     "date": "2026-03-18",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden befinner sig i en intressant fas våren 2026. Efter flera år av stark tillväxt har försäljningstakten stabiliserats, och allt fler svenska hushåll överväger att göra bytet från bensin och diesel till eldrift. Priserna på begagnade elbilar har sjunkit markant det senaste året, vilket gör att elbil numera är ett realistiskt alternativ för fler köpare.\n\nLaddinfrastrukturen fortsätter att byggas ut över hela landet, med särskilt fokus på snabbladdare längs större vägar och i mindre orter som tidigare haft begränsat utbud. Energibolagen rapporterar ökade investeringar i laddstationer, och väntetiderna vid populära laddplatser har minskat jämfört med förra året.\n\nPolitiskt pågår fortsatta diskussioner om framtida stöd för elbilar. Även om de mest generösa subventionerna fasas ut i takt med att marknaden mognar, finns fortfarande förmånliga villkor för elbilar i form av lägre förmånsvärde och befrielse från trängselskatt i storstäderna. För den som funderar på elbil just nu kan det vara värt att jämföra leasingalternativ, då konkurrensen mellan aktörerna är hög och erbjudandena ofta förmånliga.",
@@ -849,38 +856,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:52:00.668Z"
-  },
-  {
-    "date": "2025-12-15",
-    "title": "Northvolt skrotar batterifabrik i Sverige – anställda i chock",
-    "summary": "Northvolt meddelade idag att företaget lägger ner delar av sin batteritillverkning i Skellefteå och säger upp 1600 anställda. Beslutet kommer efter månader av finansiella problem och minskad orderstock från europeiska biltillverkare. Regeringen kallar beskedet \"en tung dag för svensk industri\" och lovar stödåtgärder för drabbade regioner.\n\nVolvo Cars presenterade samtidigt sin nya elbilsstrategi där man nu öppnar för hybridmodeller även efter 2030. VD Jim Rowan säger att beslutet är en anpassning till marknadens verklighet där elbilsförsäljningen inte ökat i den takt man förväntat sig. Volvo bekräftar dock att man fortsätter utveckla sina eldrivna plattformar.\n\nNya siffror från Trafikanalys visar att laddinfrastrukturen i Sverige fortsätter att byggas ut, men i långsammare takt än 2024. Antalet publika laddpunkter uppgår nu till cirka 38 000, en ökning med 12 procent sedan årsskiftet. Särskilt glesbygdsområden halkar efter i utbyggnaden.\n\nTesla sänkte idag priserna på Model 3 och Model Y med upp till 25 000 kronor på den svenska marknaden. Prissänkningen ses som ett svar på hårdnande konkurrens från kinesiska tillverkare som BYD och Xpeng, som tagit stora marknadsandelar under hösten 2025.",
-    "sources": [
-      {
-        "title": "Northvolt lägger ner produktion – 1600 anställda varslas",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-varslar-skelleftea",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo backar från ren elsatsning – hybriderna stannar",
-        "url": "https://www.di.se/nyheter/volvo-andrar-elbilsstrategi-2025/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Laddutbyggnaden bromsar in kraftigt i Sverige",
-        "url": "https://www.nyteknik.se/fordon/laddinfrastruktur-sverige-2025/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Tesla sänker priserna med 25 000 kronor",
-        "url": "https://teknikensvarld.se/tesla-prissankning-december-2025/",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Regeringen lovar krispaket efter Northvolts besked",
-        "url": "https://www.dn.se/ekonomi/regeringen-northvolt-krispaket/",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:52:25.065Z"
   }
 ]

@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-20",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att utvecklas under våren 2026. Laddinfrastrukturen expanderar stadigt med allt fler snabbladdare längs huvudvägarna, vilket gör långresor mer praktiska för fler bilägare. Samtidigt ser vi en ökad konkurrens mellan tillverkare som pressar priserna nedåt, särskilt i mellanklassegmentet.\n\nPolitiskt befinner vi oss i en intressant fas där tidigare beslut om bonus- och subventionssystem nu börjar få genomslag på marknaden. För den som funderar på att skaffa elbil är det värt att hålla koll på både kommande modelländringar och eventuella regionala stödprogram som kan variera mellan olika kommuner.\n\nLeasingmarknaden är fortsatt stark och många väljer denna väg för att hålla nere månadskostnaden. Med tanke på den snabba tekniska utvecklingen kan leasing vara ett smart alternativ för den som vill kunna byta till nyare teknik om några år. Experternas råd är att noga räkna på den totala kostnaden och jämföra olika finansieringsalternativ innan beslut.",
+    "sources": [],
+    "generatedAt": "2026-03-20T06:40:41.925Z"
+  },
+  {
     "date": "2026-03-19",
     "title": "Elbilsmarknaden i Sverige – läget i mars 2026",
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter de kraftiga svängningarna under föregående år, vilket gör det mer överkomligt för fler att ta steget över till eldrift. Samtidigt ser vi en fortsatt utbyggnad av snabbladdningsnätet längs svenska vägar, med allt fler operatörer som investerar i högeffektsladdare.\n\nLaddinfrastrukturen i bostadsområden är fortfarande en utmaning för många som bor i lägenhet, men alltfler bostadsrättsföreningar och fastighetsägare tar nu beslut om att installera laddboxar. För den som funderar på elbil just nu kan det vara värt att jämföra både leasing- och köpalternativ, eftersom marknaden erbjuder ett brett utbud av modeller i olika prisklasser.\n\nInför sommarsäsongen rekommenderas elbilsägare att planera längre resor i förväg och kolla upp laddningsmöjligheter längs rutten. De flesta moderna elbilar klarar numera över 40 mil på en laddning, vilket gör semesterresor allt mer bekväma.",
@@ -823,38 +830,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:51:39.443Z"
-  },
-  {
-    "date": "2025-12-18",
-    "title": "Northvolt skär ytterligare i personalen – konkurrensen från Asien hårdnar",
-    "summary": "Northvolt meddelade idag att ytterligare 300 tjänster försvinner från anläggningen i Skellefteå, vilket är en direkt följd av det pågående rekonstruktionsprogrammet. Företaget kämpar fortfarande med att hitta rätt balans mellan produktion och kostnadskontroll efter konkursen i höstas. Facken varnar för att kompetensflykten riskerar att permanent skada Sveriges batterisatsning.\n\nVolvo Cars rapporterade starkt elbilsintresse inför julhelgen, med XC40 Recharge och den nya EX30 som toppade registreringslistan för veckan. Samtidigt meddelade Volvo att de pausar leveranserna av EX90 till Sverige på grund av programvaruproblem som kräver uppdateringar.\n\nLaddoperatören Ionity höjde priserna med 15 öre per kWh från och med idag, vilket innebär att snabbladdning nu kostar i genomsnitt 6,45 kronor per kWh på deras stationer längs de svenska motorvägarna. Branschen pekar på höga elnätskostnader som huvudorsak till prishöjningarna.\n\nKinesiska BYD öppnade sin fjärde återförsäljare i Sverige, denna gång i Göteborg. Företaget uppger att de ligger bättre till än förväntat på den svenska marknaden trots tullar och hårdnande konkurrens, med Seal och Dolphin som särskilt populära modeller.",
-    "sources": [
-      {
-        "title": "Northvolt varslar ytterligare 300 anställda i Skellefteå",
-        "url": "https://www.svt.se/nyheter/inrikes/northvolt-varslar-ytterligare-300",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo pausar leveranser av EX90 på grund av mjukvaruproblem",
-        "url": "https://www.di.se/nyheter/volvo-pauser-ex90-leveranser/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Ionity höjer priserna inför julen – snabbladdning dyrare än någonsin",
-        "url": "https://www.nyteknik.se/energi/ionity-hojer-priserna-snabbladdning/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "BYD öppnar ny anläggning i Göteborg – fjärde återförsäljaren i Sverige",
-        "url": "https://www.teknikensvarld.se/nyheter/byd-goteborg-aterforsaljare/",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Elbilsförsäljningen i Sverige når rekordnivåer inför årsskiftet",
-        "url": "https://www.dn.se/ekonomi/elbilsforsaljning-rekord-december/",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:52:00.668Z"
   }
 ]

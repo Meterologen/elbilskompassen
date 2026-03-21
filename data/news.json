@@ -1,5 +1,38 @@
 [
   {
+    "date": "2026-03-21",
+    "title": "Hyundai återkallar över 100 000 Kona Electric – brandrisk i batterisystemet",
+    "summary": "Hyundai meddelade igår den 20 mars att man återkallar över 104 000 Kona Electric-bilar globalt, tillverkade mellan januari 2018 och juli 2023. Problemet gäller mjukvaran som övervakar högvoltsbatteriet, där systemet i vissa fall kan missa tecken på termisk instabilitet, vilket i värsta fall kan öka risken för brand. I Sverige berörs uppskattningsvis över 3 000 fordon. Åtgärden är i första hand en mjukvaruuppdatering som installeras på auktoriserad verkstad för att upptäcka avvikelser i battericellernas spänning tidigare. I sällsynta fall kan hela batteriet behöva bytas ut som en försiktighetsåtgärd.\n\nSveriges nya elbilspremie, som öppnade för ansökan den 18 mars, fortsätter att generera stort intresse. Premien på upp till 46 800 kronor riktar sig till hushåll på landsbygden med lägre inkomster och gäller både nya och begagnade elbilar med pris mellan 64 800 och 450 000 kronor. Hushåll med inkomster under 50 procent av medelinkomsten kan även få ett starttillägg på 18 000 kronor. Naturvårdsverket uppmanar intresserade att ansöka tidigt eftersom budgeten är begränsad till cirka 115 000 hushåll.\n\nPå modellsidan fortsätter Volvo Cars att öka produktionen av EX60 vid Torslandafabriken efter att europeiska beställningar kraftigt överträffat prognoserna, med över 3 000 ordrar enbart i Sverige. BMW:s nya i3 i Neue Klasse-familjen, som avtäcktes den 18 mars, har väckt uppmärksamhet med sin 800-voltarsarkitektur och räckvidd på upp till 900 kilometer enligt WLTP. Samtidigt stärker koreanska tillverkare sin ställning på den svenska marknaden, där Kia EV3 har blivit en storsäljare bland privatköpare.",
+    "sources": [
+      {
+        "title": "Hyundai massåterkallar Kona Electric globalt – även svenska bilar berörs",
+        "url": "https://elbilen.se/nyheter/hyundai-massaterkallar-kona-electric-globalt-aven-svenska-bilar-berors/",
+        "source": "Elbilen"
+      },
+      {
+        "title": "Hyundai recalls over 100,000 Kona Electric vehicles",
+        "url": "https://www.electrive.com/2026/03/20/hyundai-recalls-over-100000-kona-electric-vehicles/",
+        "source": "Electrive"
+      },
+      {
+        "title": "Ansökan till nya elbilspremien öppnar 18 mars",
+        "url": "https://www.naturvardsverket.se/om-oss/aktuellt/nyheter-och-pressmeddelanden/2026/mars/ansokan-till-nya-elbilspremien-oppnar-18-mars/",
+        "source": "Naturvårdsverket"
+      },
+      {
+        "title": "Volvo boosts EX60 electric SUV production as European orders outpace forecasts",
+        "url": "https://www.electrichybridvehicletechnology.com/news/volvo-boosts-ex60-electric-suv-production-as-european-orders-outpace-forecasts.html",
+        "source": "Electric & Hybrid Vehicle Technology"
+      },
+      {
+        "title": "Fem heta elbilar som kommer förändra 2026",
+        "url": "https://alltomelbil.se/fem-heta-elbilar-som-kommer-forandra-2026/",
+        "source": "Allt om Elbil"
+      }
+    ],
+    "generatedAt": "2026-03-21T13:40:25.064Z"
+  },
+  {
     "date": "2026-03-19",
     "title": "BMW visar nya i3 – Volvo ökar EX60-produktionen efter rekordefterfrågan",
     "summary": "BMW avtäckte igår sin nya i3, den andra modellen i Neue Klasse-familjen. Den eldrivna sedanen imponerar med en räckvidd på upp till 900 kilometer enligt WLTP och stöd för 400 kW snabbladdning som ger 400 kilometer på bara tio minuter. Bilen har testats vid BMW:s vinterprovningscenter i Arjeplog och produktionen startar i augusti vid fabriken i München, med europeiska leveranser i höst.\n\nVolvo Cars meddelar att man ökar produktionen av den helelektriska EX60 vid Torslandafabriken efter att europeiska beställningar kraftigt överträffat prognoserna. Enbart i Sverige har över 3 000 bilar beställts, betydligt fler än EX30 fick under motsvarande period efter sin lansering. Volvo förhandlar nu med fackförbunden om att hålla fabriken öppen en extra vecka i sommar för att möta efterfrågan.\n\nSveriges nya elbilspremie, som öppnade för ansökan igår den 18 mars, har väckt stort intresse. Stödet på upp till 46 800 kronor riktar sig till hushåll på landsbygden med lägre inkomster och finansieras till 75 procent av EU:s sociala klimatfond. Naturvårdsverket rekommenderar att man ansöker och får beslut innan man köper bilen, eftersom budgeten är begränsad till cirka 115 000 hushåll.",
@@ -875,38 +908,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:52:00.668Z"
-  },
-  {
-    "date": "2025-12-15",
-    "title": "Northvolt skrotar batterifabrik i Sverige – anställda i chock",
-    "summary": "Northvolt meddelade idag att företaget lägger ner delar av sin batteritillverkning i Skellefteå och säger upp 1600 anställda. Beslutet kommer efter månader av finansiella problem och minskad orderstock från europeiska biltillverkare. Regeringen kallar beskedet \"en tung dag för svensk industri\" och lovar stödåtgärder för drabbade regioner.\n\nVolvo Cars presenterade samtidigt sin nya elbilsstrategi där man nu öppnar för hybridmodeller även efter 2030. VD Jim Rowan säger att beslutet är en anpassning till marknadens verklighet där elbilsförsäljningen inte ökat i den takt man förväntat sig. Volvo bekräftar dock att man fortsätter utveckla sina eldrivna plattformar.\n\nNya siffror från Trafikanalys visar att laddinfrastrukturen i Sverige fortsätter att byggas ut, men i långsammare takt än 2024. Antalet publika laddpunkter uppgår nu till cirka 38 000, en ökning med 12 procent sedan årsskiftet. Särskilt glesbygdsområden halkar efter i utbyggnaden.\n\nTesla sänkte idag priserna på Model 3 och Model Y med upp till 25 000 kronor på den svenska marknaden. Prissänkningen ses som ett svar på hårdnande konkurrens från kinesiska tillverkare som BYD och Xpeng, som tagit stora marknadsandelar under hösten 2025.",
-    "sources": [
-      {
-        "title": "Northvolt lägger ner produktion – 1600 anställda varslas",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-varslar-skelleftea",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo backar från ren elsatsning – hybriderna stannar",
-        "url": "https://www.di.se/nyheter/volvo-andrar-elbilsstrategi-2025/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Laddutbyggnaden bromsar in kraftigt i Sverige",
-        "url": "https://www.nyteknik.se/fordon/laddinfrastruktur-sverige-2025/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Tesla sänker priserna med 25 000 kronor",
-        "url": "https://teknikensvarld.se/tesla-prissankning-december-2025/",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Regeringen lovar krispaket efter Northvolts besked",
-        "url": "https://www.dn.se/ekonomi/regeringen-northvolt-krispaket/",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:52:25.065Z"
   }
 ]

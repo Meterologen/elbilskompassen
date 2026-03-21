@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-21",
+    "title": "Elbilsmarknaden våren 2026: Prispress och utbyggd laddning",
+    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Med allt fler modeller på marknaden och ökad konkurrens ser vi en prispress på både nya och begagnade elbilar. Flera tillverkare har aviserat kampanjer inför sommarsäsongen, vilket kan vara en bra tidpunkt för den som funderar på att göra bytet.\n\nLaddinfrastrukturen i Sverige har förbättrats markant det senaste året. Antalet snabbladdare längs större vägar har ökat, och allt fler bostadsrättsföreningar och hyresvärdar installerar laddmöjligheter. Laddtiderna fortsätter att sjunka i takt med att nyare bilmodeller klarar högre effekter.\n\nPolitiskt är läget relativt stabilt med nuvarande skattefördelar för elbilar kvar till årsskiftet. För den som funderar på elbil just nu är det värt att jämföra räckviddsbehov mot pris – många nyare modeller erbjuder numera 50-60 mil verklig räckvidd till konkurrenskraftiga priser. Tänk också på att kontrollera laddmöjligheter hemma och på jobbet innan köp.",
+    "sources": [],
+    "generatedAt": "2026-03-21T06:30:02.818Z"
+  },
+  {
     "date": "2026-03-20",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att utvecklas under våren 2026. Laddinfrastrukturen expanderar stadigt med allt fler snabbladdare längs huvudvägarna, vilket gör långresor mer praktiska för fler bilägare. Samtidigt ser vi en ökad konkurrens mellan tillverkare som pressar priserna nedåt, särskilt i mellanklassegmentet.\n\nPolitiskt befinner vi oss i en intressant fas där tidigare beslut om bonus- och subventionssystem nu börjar få genomslag på marknaden. För den som funderar på att skaffa elbil är det värt att hålla koll på både kommande modelländringar och eventuella regionala stödprogram som kan variera mellan olika kommuner.\n\nLeasingmarknaden är fortsatt stark och många väljer denna väg för att hålla nere månadskostnaden. Med tanke på den snabba tekniska utvecklingen kan leasing vara ett smart alternativ för den som vill kunna byta till nyare teknik om några år. Experternas råd är att noga räkna på den totala kostnaden och jämföra olika finansieringsalternativ innan beslut.",
@@ -797,38 +804,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:51:17.322Z"
-  },
-  {
-    "date": "2025-12-22",
-    "title": "Northvolt ansöker om rekonstruktion – Sveriges elbilssatsning i kris",
-    "summary": "Northvolt ansökte i dag om företagsrekonstruktion enligt svensk lag, vilket skakar om den svenska elbilsindustrin. Batteritillverkaren, som varit en hörnsten i Sveriges elektrifieringsstrategi, har kämpat med produktionsproblem och förlorade kundorder under hösten. Beskedet kommer bara veckor efter att företaget ansökte om Chapter 11-skydd i USA.\n\nRegeringen håller krissamtal om hur den svenska batteriindustrin ska räddas. Näringsminister Ebba Busch betonar att Northvolt fortfarande är strategiskt viktigt för svensk industri, men avvisar direkta statliga räddningspaket. Fackförbundet IF Metall varnar för att tusentals jobb står på spel.\n\nTrots krisen fortsätter elbilsförsäljningen i Sverige att växa. Preliminära siffror från Bil Sweden visar att elbilar står för 64 procent av nyregistreringarna i december, drivet av julsemesterkampanjer och osäkerhet kring framtida bonus malus-nivåer.\n\nVolvo Cars meddelar samtidigt att företaget kommer att börja använda CATL-batterier i fler modeller under 2026, vilket ses som en direkt följd av Northvolts problem. Tesla har också öppnat ytterligare sex Supercharger-stationer i Sverige under veckan inför julrushen.",
-    "sources": [
-      {
-        "title": "Northvolt ansöker om rekonstruktion i Sverige",
-        "url": "https://www.dn.se/ekonomi/northvolt-ansoker-om-rekonstruktion",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Krisläge för svensk batteriindustri – regeringen samlas",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-kris-regeringen",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Elbilsförsäljningen rekordhög trots Northvolt-oro",
-        "url": "https://www.nyteknik.se/fordon/elbilsforsaljning-december-2025",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Volvo satsar mer på kinesiska batterier",
-        "url": "https://www.di.se/nyheter/volvo-cars-catl-batteri-avtal",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Tesla utökar laddnätet inför julen",
-        "url": "https://www.teknikensvarld.se/tesla-supercharger-expansion-sverige",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:51:39.443Z"
   }
 ]

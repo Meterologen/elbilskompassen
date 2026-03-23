@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-23",
+    "title": "Elbilspremien utökas med 100 miljoner kronor i vårbudgeten",
+    "summary": "Regeringen satsar ytterligare 100 miljoner kronor på elbilspremien i vårbudgeten. Det framgår av ett debattinlägg från Johan Britz, arbetsmarknadsminister och vikarierande klimat- och miljöminister (L), i Dagens Industri.\n\nUtökningen av elbilspremien är en del av regeringens arbete för att nå nettonollutsläpp till 2045. Britz understryker att omställningen ska genomföras genom att arbeta med folk, inte mot, och att förslagen tar Sverige ett steg närmare klimatneutralitet och en ren och giftfri miljö.\n\nElbilspremien har varit en viktig del av Sveriges strategi för att öka andelen elbilar på vägarna och minska transportutsläppen. Den utökade satsningen signalerar fortsatt politiskt stöd för elektrifiering av transportsektorn.",
+    "sources": [
+      {
+        "title": "Vårbudgeten: Elbilspremien utökas med 100 miljoner",
+        "url": "https://www.di.se/debatt/varbudgeten-elbilspremien-utokas-med-100-miljoner/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-03-23T06:57:19.784Z"
+  },
+  {
     "date": "2026-03-22",
     "title": "Musk fälls för att ha pressat Twitter-aktien",
     "summary": "Tesla-grundaren Elon Musk har fällts för att ha pressat Twitters aktiekurs i samband med sitt köp av plattformen. Enligt uppgifter från The Guardian kan domen komma att kosta Musk flera miljarder kronor, rapporterar Dagens Industri.\n\nRättsprocessen rör händelser kopplade till Musks förvärv av Twitter (numera X) och hur han hanterade köpet på ett sätt som påverkade aktiekursen negativt. Domen kan få betydande ekonomiska konsekvenser för Tesla-grundaren.",
@@ -756,33 +769,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:50:38.306Z"
-  },
-  {
-    "date": "2025-12-29",
-    "title": "Northvolt får nytt statligt stöd - Volvo EX90 leveranser ökar",
-    "summary": "Northvolt meddelar att bolaget har säkrat ytterligare statligt stöd från svenska staten för att fortsätta produktionen i Skellefteå under 2026. Efter rekonstruktionen i höstas fokuserar nu företaget på att öka produktionen av batterier till europeiska biltillverkare. Beskedet välkomnas av svensk elbilsindustri som ser batteritillverkning i Sverige som strategiskt viktigt.\n\nVolvo Cars rapporterar att leveranserna av den elektriska flaggskeppet EX90 nu har ökat markant under december efter produktionsutmaningar tidigare under hösten. Den stora SUV:en med upp till 614 kilometers räckvidd har rönt stort intresse på den svenska marknaden, och väntetiderna börjar nu kortas ned till 3-4 månader.\n\nNya siffror från Bil Sweden visar att elbilarnas andel av nyregistreringarna i Sverige under 2025 kommer att landa på cirka 38 procent, en viss nedgång jämfört med 2024. Branschorganisationen pekar på osäkerheten kring framtida bonus-malus-systemet och höga elpriser som förklaringar till den bromsade tillväxten.\n\nBYD fortsätter sin starka expansion i Sverige och meddelar att ytterligare 15 återförsäljare kommer att öppna under första kvartalet 2026. Den kinesiska jättem, som nu är en av de största elbilstillverkarna i Sverige, satsar särskilt på landsorten med nya anläggningar i Växjö, Karlstad och Sundsvall.",
-    "sources": [
-      {
-        "title": "Northvolt säkrar nytt statligt stöd för batteriproduktion",
-        "url": "https://www.di.se/nyheter/northvolt-statligt-stod-2025",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo EX90 leveranser tar fart efter produktionsproblem",
-        "url": "https://www.teknikensvarld.se/volvo-ex90-leveranser-december-2025",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Elbilarnas marknadsandel bromsar in i Sverige",
-        "url": "https://www.svt.se/nyheter/ekonomi/elbilsandel-sverige-2025",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "BYD öppnar 15 nya återförsäljare i Sverige",
-        "url": "https://www.nyteknik.se/fordon/byd-expansion-sverige-2026",
-        "source": "Ny Teknik"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:50:58.204Z"
   }
 ]

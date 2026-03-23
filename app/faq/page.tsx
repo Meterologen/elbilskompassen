@@ -95,17 +95,25 @@ export default function FaqPage() {
                     <p className="mt-3 text-sm text-slate-300">
                       Premien gäller rena elbilar med ett pris på max 450 000 kr – både nya, begagnade, köp och leasing.
                     </p>
-                    <a
-                      href="https://www.naturvardsverket.se/amnesomraden/klimatomstallningen/elbilspremien/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-400 transition"
-                    >
-                      Läs mer på Naturvårdsverket
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                      </svg>
-                    </a>
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      <Link
+                        href="/elbilspremie"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-400 transition"
+                      >
+                        Kolla om du har rätt till stödet
+                      </Link>
+                      <a
+                        href="https://www.naturvardsverket.se/amnesomraden/klimatomstallningen/elbilspremien/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/50 px-5 py-2 text-sm font-semibold text-emerald-300 hover:bg-emerald-500/20 transition"
+                      >
+                        Naturvårdsverket
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 )}
 

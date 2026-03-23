@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-22",
+    "title": "Elon Musk fälls för aktiemanipulation i Twitter-köpet",
+    "summary": "Tesla-grundaren Elon Musk har fällts för att ha pressat Twitters aktiekurs i samband med förvärvet av plattformen. Enligt The Guardian kan domen komma att kosta Musk flera miljarder kronor.\n\nDomen rör Musks agerande under uppköpsprocessen av Twitter, som numera har bytt namn till X. Fallet handlar om påstådd manipulation av aktiekursen under förhandlingarna.\n\nNyheten är relevant för elbilsvärlden eftersom Musk är grundare och vd för Tesla, världens ledande elbilstillverkare. Hur domen påverkar hans engagemang i Tesla återstår att se.",
+    "sources": [
+      {
+        "title": "Musk fälls för att ha pressat Twitter-aktien",
+        "url": "https://www.di.se/nyheter/musk-falls-for-att-ha-pressat-twitter-aktien/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-03-22T07:27:15.172Z"
+  },
+  {
     "date": "2026-03-21",
     "title": "Hyundai återkallar över 100 000 Kona Electric – brandrisk i batterisystemet",
     "summary": "Hyundai meddelade igår den 20 mars att man återkallar över 104 000 Kona Electric-bilar globalt, tillverkade mellan januari 2018 och juli 2023. Problemet gäller mjukvaran som övervakar högvoltsbatteriet, där systemet i vissa fall kan missa tecken på termisk instabilitet, vilket i värsta fall kan öka risken för brand. I Sverige berörs uppskattningsvis över 3 000 fordon. Åtgärden är i första hand en mjukvaruuppdatering som installeras på auktoriserad verkstad för att upptäcka avvikelser i battericellernas spänning tidigare. I sällsynta fall kan hela batteriet behöva bytas ut som en försiktighetsåtgärd.\n\nSveriges nya elbilspremie, som öppnade för ansökan den 18 mars, fortsätter att generera stort intresse. Premien på upp till 46 800 kronor riktar sig till hushåll på landsbygden med lägre inkomster och gäller både nya och begagnade elbilar med pris mellan 64 800 och 450 000 kronor. Hushåll med inkomster under 50 procent av medelinkomsten kan även få ett starttillägg på 18 000 kronor. Naturvårdsverket uppmanar intresserade att ansöka tidigt eftersom budgeten är begränsad till cirka 115 000 hushåll.\n\nPå modellsidan fortsätter Volvo Cars att öka produktionen av EX60 vid Torslandafabriken efter att europeiska beställningar kraftigt överträffat prognoserna, med över 3 000 ordrar enbart i Sverige. BMW:s nya i3 i Neue Klasse-familjen, som avtäcktes den 18 mars, har väckt uppmärksamhet med sin 800-voltarsarkitektur och räckvidd på upp till 900 kilometer enligt WLTP. Samtidigt stärker koreanska tillverkare sin ställning på den svenska marknaden, där Kia EV3 har blivit en storsäljare bland privatköpare.",
@@ -875,38 +888,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:51:39.443Z"
-  },
-  {
-    "date": "2025-12-18",
-    "title": "Northvolt skär ytterligare i personalen – konkurrensen från Asien hårdnar",
-    "summary": "Northvolt meddelade idag att ytterligare 300 tjänster försvinner från anläggningen i Skellefteå, vilket är en direkt följd av det pågående rekonstruktionsprogrammet. Företaget kämpar fortfarande med att hitta rätt balans mellan produktion och kostnadskontroll efter konkursen i höstas. Facken varnar för att kompetensflykten riskerar att permanent skada Sveriges batterisatsning.\n\nVolvo Cars rapporterade starkt elbilsintresse inför julhelgen, med XC40 Recharge och den nya EX30 som toppade registreringslistan för veckan. Samtidigt meddelade Volvo att de pausar leveranserna av EX90 till Sverige på grund av programvaruproblem som kräver uppdateringar.\n\nLaddoperatören Ionity höjde priserna med 15 öre per kWh från och med idag, vilket innebär att snabbladdning nu kostar i genomsnitt 6,45 kronor per kWh på deras stationer längs de svenska motorvägarna. Branschen pekar på höga elnätskostnader som huvudorsak till prishöjningarna.\n\nKinesiska BYD öppnade sin fjärde återförsäljare i Sverige, denna gång i Göteborg. Företaget uppger att de ligger bättre till än förväntat på den svenska marknaden trots tullar och hårdnande konkurrens, med Seal och Dolphin som särskilt populära modeller.",
-    "sources": [
-      {
-        "title": "Northvolt varslar ytterligare 300 anställda i Skellefteå",
-        "url": "https://www.svt.se/nyheter/inrikes/northvolt-varslar-ytterligare-300",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo pausar leveranser av EX90 på grund av mjukvaruproblem",
-        "url": "https://www.di.se/nyheter/volvo-pauser-ex90-leveranser/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Ionity höjer priserna inför julen – snabbladdning dyrare än någonsin",
-        "url": "https://www.nyteknik.se/energi/ionity-hojer-priserna-snabbladdning/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "BYD öppnar ny anläggning i Göteborg – fjärde återförsäljaren i Sverige",
-        "url": "https://www.teknikensvarld.se/nyheter/byd-goteborg-aterforsaljare/",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Elbilsförsäljningen i Sverige når rekordnivåer inför årsskiftet",
-        "url": "https://www.dn.se/ekonomi/elbilsforsaljning-rekord-december/",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:52:00.668Z"
   }
 ]

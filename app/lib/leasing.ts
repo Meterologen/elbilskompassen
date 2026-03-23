@@ -41,6 +41,12 @@ export function getLeasingPeriod(): string {
 export const LEASING_SOURCE_NOTE =
   "Priserna är hämtade direkt från tillverkarnas och återförsäljarnas officiella webbplatser. Alla priser avser privatleasing exkl. eventuell uppläggningsavgift och administrationsavgift om inget annat anges. Erbjudanden kan ha ändrats sedan senaste uppdateringen (17 mars 2026).";
 
+export function findAllLeasingForCar(car: { brand: string }): LeasingOffer[] {
+  return LEASING_OFFERS
+    .filter((o) => o.brand.toLowerCase() === car.brand.toLowerCase())
+    .sort((a, b) => a.monthlyPrice - b.monthlyPrice);
+}
+
 export const LEASING_OFFERS: LeasingOffer[] = [
   // ── Under 4 000 kr/mån ───────────────────────────────────────────────
   {

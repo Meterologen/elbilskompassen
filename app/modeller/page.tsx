@@ -268,8 +268,8 @@ export default function ModellerPage() {
         {/* Grid */}
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((car) => (
-            <div key={car.id} id={car.id} className="flex flex-col rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm">
-              <div className="flex flex-1 flex-col p-6">
+            <div key={car.id} id={car.id} className="flex flex-col rounded-2xl border border-sky-300/40 bg-white/10 backdrop-blur-sm transition hover:border-sky-300/70 hover:bg-white/15">
+              <Link href={`/modeller/${car.id}`} className="flex flex-1 flex-col p-6">
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-wider text-slate-400">{car.brand}</p>
@@ -293,7 +293,7 @@ export default function ModellerPage() {
                   {car.towbar && <span className="rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/30">Dragkrok</span>}
                   {car.awd && <span className="rounded-full bg-sky-500/20 px-2.5 py-0.5 text-xs font-medium text-sky-300 ring-1 ring-sky-500/30">4WD</span>}
                 </div>
-              </div>
+              </Link>
               <div className="border-t border-white/10 px-6 py-4">
                 <Link href={`/kalkyl?evPrice=${car.priceSek}&evModel=${encodeURIComponent(car.brand + " " + car.model)}&evKwhPerMile=${car.kwhPerMile}`} className="block rounded-full bg-sky-600 px-4 py-2 text-center text-sm font-medium text-white hover:bg-sky-500">Räkna på {car.model}</Link>
               </div>

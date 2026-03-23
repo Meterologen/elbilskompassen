@@ -1090,6 +1090,13 @@ export function brandFlag(brand: string): string {
   return BRAND_COUNTRY[brand] ?? "";
 }
 
+export const SIZE_LABEL: Record<CarSize, string> = {
+  compact: "Kompakt",
+  medium: "Mellanklass",
+  suv: "SUV",
+  premium: "Premium",
+};
+
 const COUNTRY_NAMES: Record<string, string> = {
   SE: "Sverige", DE: "Tyskland", GB: "Storbritannien", ES: "Spanien",
   CZ: "Tjeckien", KR: "Sydkorea", CN: "Kina", US: "USA",

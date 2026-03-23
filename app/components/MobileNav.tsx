@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { href: "/leasing", label: "Leasing" },
   { href: "/laddning", label: "Laddning" },
   { href: "/faq", label: "FAQ" },
-  { href: "/elbilspremie", label: "Elbilspremie" },
   { href: "/aktuellt", label: "Aktuellt" },
   { href: "/om-oss", label: "Om oss" },
 ];

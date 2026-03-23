@@ -848,6 +848,12 @@ function Inner() {
               Se alla modeller
             </Link>
           </div>
+          <p className="mt-5 text-sm text-white/85">
+            Visste du att du kan få upp till 64 800 kr i elbilspremie?{" "}
+            <Link href="/elbilspremie" className="font-semibold text-white underline hover:text-emerald-100">
+              Läs mer och se om du har rätt till stödet
+            </Link>
+          </p>
         </div>
       </div>
     </main>

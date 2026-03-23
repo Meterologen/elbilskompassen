@@ -5,14 +5,6 @@ import { DefaultChatTransport } from "ai";
 import { useRef, useEffect, useState, type FormEvent } from "react";
 import Link from "next/link";
 
-const SUGGESTIONS = [
-  "Vilken elbil passar mig?",
-  "Vad kostar det att ladda hemma?",
-  "Är elbil billigare än bensin?",
-  "Hur långt räcker en elbil?",
-  "Vilken elbil är bäst för en familj?",
-  "Tappar elbilar mycket i värde?",
-];
 
 const transport = new DefaultChatTransport({ api: "/api/chat" });
 
@@ -80,6 +72,29 @@ export default function HomeChat() {
           </>
         )}
 
+        {!hasMessages && (
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <Link
+              href="/kompassen"
+              className="rounded-full bg-emerald-500 px-10 py-5 text-xl font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400 hover:shadow-xl"
+            >
+              Starta Elbilskompassen
+            </Link>
+            <Link
+              href="/kalkyl"
+              className="rounded-full border-2 border-sky-300/80 bg-white/10 px-10 py-5 text-xl font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+            >
+              Räkna på ekonomin
+            </Link>
+          </div>
+        )}
+
+        {!hasMessages && (
+          <p className="text-sm text-slate-400">
+            2 minuter. Inga registreringar. Helt gratis.
+          </p>
+        )}
+
         {hasMessages && (
           <div className="mx-auto w-full max-w-2xl text-left">
             <div ref={scrollRef} className="max-h-[50vh] space-y-4 overflow-y-auto rounded-2xl border border-sky-300/30 bg-white/5 p-4 backdrop-blur-sm sm:p-6">
@@ -124,7 +139,6 @@ export default function HomeChat() {
               placeholder="Ställ din fråga här..."
               className="w-full rounded-full border-2 border-sky-300/50 bg-white/95 px-6 py-4 pr-14 text-base text-slate-900 shadow-lg shadow-sky-500/10 backdrop-blur-sm placeholder:text-slate-400 focus:border-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-400/20"
               disabled={busy}
-              autoFocus
             />
             <button
               type="submit"
@@ -138,38 +152,6 @@ export default function HomeChat() {
             </button>
           </div>
         </form>
-
-        {!hasMessages && (
-          <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2">
-            {SUGGESTIONS.map((s) => (
-              <button
-                key={s}
-                type="button"
-                onClick={() => send(s)}
-                className="rounded-full border border-sky-300/40 bg-white/10 px-4 py-2 text-sm text-slate-200 backdrop-blur-sm transition hover:border-sky-300/70 hover:bg-white/20 hover:text-white"
-              >
-                {s}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {!hasMessages && (
-          <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/kompassen"
-              className="rounded-full bg-emerald-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400 hover:shadow-xl"
-            >
-              Starta Elbilskompassen
-            </Link>
-            <Link
-              href="/kalkyl"
-              className="rounded-full border-2 border-sky-300/80 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
-            >
-              Räkna på ekonomin
-            </Link>
-          </div>
-        )}
 
         {hasMessages && (
           <div className="flex flex-wrap justify-center gap-2 pt-2">
@@ -188,10 +170,6 @@ export default function HomeChat() {
             )}
           </div>
         )}
-
-        <p className="text-sm text-slate-400">
-          {hasMessages ? "" : "2 minuter. Inga registreringar. Helt gratis."}
-        </p>
       </div>
     </section>
   );

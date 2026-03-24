@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-24",
+    "title": "Elbilsförsäljningen ökar i EU medan bensinbilar minskar",
+    "summary": "Nyregistreringarna av personbilar i EU ökade med 1,4 procent i februari 2026 jämfört med samma månad föregående år, till totalt 854 417 fordon. Bakom den totala ökningen döljer sig en tydlig förskjutning i bilparken där elbilar ökar i antal medan bensinbilar minskar, rapporterar Dagens Industri.\n\nUtvecklingen visar att elektrifieringen av Europas bilpark fortsätter, i linje med EU:s klimatmål och skärpta utsläppskrav för biltillverkare. Den fortsatta tillväxten för elbilar sker trots utmaningar som högre elpriser och osäkerhet kring laddinfrastruktur i vissa regioner.\n\nSifforna från februari indikerar att konsumenters preferenser alltmer skiftar mot eldrivna alternativ, samtidigt som utbudet av elbilar på marknaden fortsätter att växa med fler modeller i olika prisklasser.",
+    "sources": [
+      {
+        "title": "Fler elbilar – färre med bensin i EU",
+        "url": "https://www.di.se/live/fler-elbilar-farre-med-bensin-i-eu/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-03-24T06:51:58.819Z"
+  },
+  {
     "date": "2026-03-22",
     "title": "Elon Musk fälls för aktiemanipulation i Twitter-köpet",
     "summary": "Tesla-grundaren Elon Musk har fällts för att ha pressat Twitters aktiekurs i samband med förvärvet av plattformen. Enligt The Guardian kan domen komma att kosta Musk flera miljarder kronor.\n\nDomen rör Musks agerande under uppköpsprocessen av Twitter, som numera har bytt namn till X. Fallet handlar om påstådd manipulation av aktiekursen under förhandlingarna.\n\nNyheten är relevant för elbilsvärlden eftersom Musk är grundare och vd för Tesla, världens ledande elbilstillverkare. Hur domen påverkar hans engagemang i Tesla återstår att se.",
@@ -855,38 +868,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:51:17.322Z"
-  },
-  {
-    "date": "2025-12-22",
-    "title": "Northvolt ansöker om rekonstruktion – Sveriges elbilssatsning i kris",
-    "summary": "Northvolt ansökte i dag om företagsrekonstruktion enligt svensk lag, vilket skakar om den svenska elbilsindustrin. Batteritillverkaren, som varit en hörnsten i Sveriges elektrifieringsstrategi, har kämpat med produktionsproblem och förlorade kundorder under hösten. Beskedet kommer bara veckor efter att företaget ansökte om Chapter 11-skydd i USA.\n\nRegeringen håller krissamtal om hur den svenska batteriindustrin ska räddas. Näringsminister Ebba Busch betonar att Northvolt fortfarande är strategiskt viktigt för svensk industri, men avvisar direkta statliga räddningspaket. Fackförbundet IF Metall varnar för att tusentals jobb står på spel.\n\nTrots krisen fortsätter elbilsförsäljningen i Sverige att växa. Preliminära siffror från Bil Sweden visar att elbilar står för 64 procent av nyregistreringarna i december, drivet av julsemesterkampanjer och osäkerhet kring framtida bonus malus-nivåer.\n\nVolvo Cars meddelar samtidigt att företaget kommer att börja använda CATL-batterier i fler modeller under 2026, vilket ses som en direkt följd av Northvolts problem. Tesla har också öppnat ytterligare sex Supercharger-stationer i Sverige under veckan inför julrushen.",
-    "sources": [
-      {
-        "title": "Northvolt ansöker om rekonstruktion i Sverige",
-        "url": "https://www.dn.se/ekonomi/northvolt-ansoker-om-rekonstruktion",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Krisläge för svensk batteriindustri – regeringen samlas",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-kris-regeringen",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Elbilsförsäljningen rekordhög trots Northvolt-oro",
-        "url": "https://www.nyteknik.se/fordon/elbilsforsaljning-december-2025",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Volvo satsar mer på kinesiska batterier",
-        "url": "https://www.di.se/nyheter/volvo-cars-catl-batteri-avtal",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Tesla utökar laddnätet inför julen",
-        "url": "https://www.teknikensvarld.se/tesla-supercharger-expansion-sverige",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:51:39.443Z"
   }
 ]

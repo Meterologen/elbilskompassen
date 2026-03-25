@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-25",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att utvecklas under våren 2026. Laddinfrastrukturen har expanderat kraftigt det senaste året, med allt fler snabbladdare längs huvudvägarna och i tätorter. Samtidigt ser vi en fortsatt prispress på både nya och begagnade elbilar, vilket gör tekniken mer tillgänglig för fler svenskar.\n\nFör den som funderar på att köpa eller leasa elbil just nu är det värt att jämföra erbjudanden noga. Många tillverkare erbjuder konkurrenskraftiga leasingavtal inför sommarsäsongen, och begagnatmarknaden har mognat med ett större utbud av välskötta elbilar från 2022-2024.\n\nPå det politiska planet pågår fortsatta diskussioner om förmånsbeskattningen av elbilar och framtida incitament för privatpersoner. Samtidigt har EU:s nya regler för batteriåtervinning börjat få genomslag, vilket förväntas påverka både priser och miljöprofilen för elbilar framöver. Svenska elbilistföreningar uppmanar köpare att kolla på batterigarantierna noga vid köp av begagnade elbilar.",
+    "sources": [],
+    "generatedAt": "2026-03-25T06:50:32.825Z"
+  },
+  {
     "date": "2026-03-24",
     "title": "Elbilsförsäljningen ökar i EU medan bensinbilar minskar",
     "summary": "Nyregistreringarna av personbilar i EU ökade med 1,4 procent i februari 2026 jämfört med samma månad föregående år, till totalt 854 417 fordon. Bakom den totala ökningen döljer sig en tydlig förskjutning i bilparken där elbilar ökar i antal medan bensinbilar minskar, rapporterar Dagens Industri.\n\nUtvecklingen visar att elektrifieringen av Europas bilpark fortsätter, i linje med EU:s klimatmål och skärpta utsläppskrav för biltillverkare. Den fortsatta tillväxten för elbilar sker trots utmaningar som högre elpriser och osäkerhet kring laddinfrastruktur i vissa regioner.\n\nSifforna från februari indikerar att konsumenters preferenser alltmer skiftar mot eldrivna alternativ, samtidigt som utbudet av elbilar på marknaden fortsätter att växa med fler modeller i olika prisklasser.",
@@ -835,38 +842,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:50:58.204Z"
-  },
-  {
-    "date": "2025-12-25",
-    "title": "Jullugn på elbilsmarknaden - Northvolt i rekonstruktion",
-    "summary": "Juldagen 2025 präglas av lugn på elbilsmarknaden, men flera stora händelser från veckan före jul fortsätter att diskuteras. Northvolts rekonstruktionsprocess dominerar fortfarande nyhetsbild efter att bolaget ansökte om Chapter 11 i USA i november. Företaget arbetar nu med att säkra finansiering och omstrukturera verksamheten under den amerikanska konkursskyddslagen.\n\nDe preliminära registreringsstatistiken för december visar att elbilsförsäljningen i Sverige fortsätter att växa, om än i lugnare takt än tidigare år. Många bilköpare valde att slutföra sina köp innan jul för att säkra sista årets bonus malus-förmåner, vilket ledde till en uppgång i registreringarna under tredje veckan i december.\n\nVolvo Cars nya EX90 har börjat levereras till svenska kunder i mindre volymer, medan Tesla fortsätter att dominera registreringsstatistiken. BYD har under året etablerat sig som en allt starkare aktör på den svenska marknaden med modeller som Seal och Dolphin.\n\nLaddinfrastrukturen fortsätter att byggas ut, med flera nya snabbladdningsstationer som öppnats längs E4:an under hösten. Recharge Infra och Mer har varit särskilt aktiva med utbyggnad inför vintermånaderna.",
-    "sources": [
-      {
-        "title": "Northvolt fortsätter rekonstruktion under jul",
-        "url": "https://www.dn.se/ekonomi/northvolt-rekonstruktion-2025",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Elbilsförsäljningen ökar i december",
-        "url": "https://www.svt.se/nyheter/ekonomi/elbilsforsaljning-december-2025",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo EX90 börjar levereras till svenska kunder",
-        "url": "https://www.teknikensvarld.se/volvo-ex90-leveranser-sverige",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "BYD utmanar Tesla på svensk elbilsmarknad",
-        "url": "https://www.di.se/bild/byd-tesla-konkurrens-sverige-2025",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Nya snabbladdare längs E4:an",
-        "url": "https://www.nyteknik.se/laddinfrastruktur-e4-2025",
-        "source": "Ny Teknik"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:51:17.322Z"
   }
 ]

@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-26",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - Läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Andelen laddbara bilar bland nyregistreringarna håller sig stark, även om takten varierar månad för månad. Priserna på begagnade elbilar har stabiliserats efter flera års prisfall, vilket gör andrahandsmarknaden alltmer attraktiv för prismedvetna köpare.\n\nLaddinfrastrukturen i Sverige fortsätter att byggas ut, särskilt längs större vägar och i tätorter. Snabbladdningsnätverken har nu täckning på de flesta håll, även om landsbygden fortfarande har luckor. Ny laddningsteknik med ännu högre effekt börjar introduceras på utvalda platser.\n\nFör den som funderar på att köpa elbil just nu finns det flera saker att tänka på. Kontrollera vilka subventioner och skatteregler som gäller i år, då politiken kring klimatbonusar och förmånsvärden ändras regelbundet. Jämför också räckvidd och laddkapacitet utifrån dina faktiska körvanor - många upptäcker att de behöver mindre batteri än de först trodde, vilket kan spara pengar.",
+    "sources": [],
+    "generatedAt": "2026-03-26T06:56:44.344Z"
+  },
+  {
     "date": "2026-03-25",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att utvecklas under våren 2026. Laddinfrastrukturen har expanderat kraftigt det senaste året, med allt fler snabbladdare längs huvudvägarna och i tätorter. Samtidigt ser vi en fortsatt prispress på både nya och begagnade elbilar, vilket gör tekniken mer tillgänglig för fler svenskar.\n\nFör den som funderar på att köpa eller leasa elbil just nu är det värt att jämföra erbjudanden noga. Många tillverkare erbjuder konkurrenskraftiga leasingavtal inför sommarsäsongen, och begagnatmarknaden har mognat med ett större utbud av välskötta elbilar från 2022-2024.\n\nPå det politiska planet pågår fortsatta diskussioner om förmånsbeskattningen av elbilar och framtida incitament för privatpersoner. Samtidigt har EU:s nya regler för batteriåtervinning börjat få genomslag, vilket förväntas påverka både priser och miljöprofilen för elbilar framöver. Svenska elbilistföreningar uppmanar köpare att kolla på batterigarantierna noga vid köp av begagnade elbilar.",
@@ -814,33 +821,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:50:38.306Z"
-  },
-  {
-    "date": "2025-12-29",
-    "title": "Northvolt får nytt statligt stöd - Volvo EX90 leveranser ökar",
-    "summary": "Northvolt meddelar att bolaget har säkrat ytterligare statligt stöd från svenska staten för att fortsätta produktionen i Skellefteå under 2026. Efter rekonstruktionen i höstas fokuserar nu företaget på att öka produktionen av batterier till europeiska biltillverkare. Beskedet välkomnas av svensk elbilsindustri som ser batteritillverkning i Sverige som strategiskt viktigt.\n\nVolvo Cars rapporterar att leveranserna av den elektriska flaggskeppet EX90 nu har ökat markant under december efter produktionsutmaningar tidigare under hösten. Den stora SUV:en med upp till 614 kilometers räckvidd har rönt stort intresse på den svenska marknaden, och väntetiderna börjar nu kortas ned till 3-4 månader.\n\nNya siffror från Bil Sweden visar att elbilarnas andel av nyregistreringarna i Sverige under 2025 kommer att landa på cirka 38 procent, en viss nedgång jämfört med 2024. Branschorganisationen pekar på osäkerheten kring framtida bonus-malus-systemet och höga elpriser som förklaringar till den bromsade tillväxten.\n\nBYD fortsätter sin starka expansion i Sverige och meddelar att ytterligare 15 återförsäljare kommer att öppna under första kvartalet 2026. Den kinesiska jättem, som nu är en av de största elbilstillverkarna i Sverige, satsar särskilt på landsorten med nya anläggningar i Växjö, Karlstad och Sundsvall.",
-    "sources": [
-      {
-        "title": "Northvolt säkrar nytt statligt stöd för batteriproduktion",
-        "url": "https://www.di.se/nyheter/northvolt-statligt-stod-2025",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo EX90 leveranser tar fart efter produktionsproblem",
-        "url": "https://www.teknikensvarld.se/volvo-ex90-leveranser-december-2025",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Elbilarnas marknadsandel bromsar in i Sverige",
-        "url": "https://www.svt.se/nyheter/ekonomi/elbilsandel-sverige-2025",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "BYD öppnar 15 nya återförsäljare i Sverige",
-        "url": "https://www.nyteknik.se/fordon/byd-expansion-sverige-2026",
-        "source": "Ny Teknik"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:50:58.204Z"
   }
 ]

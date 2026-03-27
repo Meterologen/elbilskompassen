@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-27",
+    "title": "Elbilsmarknaden i Sverige våren 2026 – läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter sin utveckling under våren 2026. Laddinfrastrukturen expanderar stadigt med fler snabbladdare längs huvudvägarna, samtidigt som konkurrensen mellan laddoperatörer håller priserna i schack. För konsumenter innebär det allt fler alternativ och bättre tillgänglighet.\n\nPrismässigt ser vi en fortsatt normalisering där elbilarna hamnar i nivå med jämförbara fossildrivna bilar, särskilt när driftskostnader räknas in. Leasingmarknaden erbjuder attraktiva alternativ för den som vill köra elbil utan stora förskottskostnader. Många tillverkare satsar på mellansegmentet där efterfrågan är som störst.\n\nFör dig som funderar på att byta till elbil är detta en bra tidpunkt att utforska marknaden. Testa gärna olika modeller för att hitta rätt räckvidd och laddmöjligheter utifrån dina behov. Kolla även vilka förmåner som gäller i din kommun – många erbjuder fortfarande lokala incitament för miljöbilar.",
+    "sources": [],
+    "generatedAt": "2026-03-27T06:55:35.126Z"
+  },
+  {
     "date": "2026-03-26",
     "title": "Elbilsmarknaden i Sverige våren 2026 - Läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Andelen laddbara bilar bland nyregistreringarna håller sig stark, även om takten varierar månad för månad. Priserna på begagnade elbilar har stabiliserats efter flera års prisfall, vilket gör andrahandsmarknaden alltmer attraktiv för prismedvetna köpare.\n\nLaddinfrastrukturen i Sverige fortsätter att byggas ut, särskilt längs större vägar och i tätorter. Snabbladdningsnätverken har nu täckning på de flesta håll, även om landsbygden fortfarande har luckor. Ny laddningsteknik med ännu högre effekt börjar introduceras på utvalda platser.\n\nFör den som funderar på att köpa elbil just nu finns det flera saker att tänka på. Kontrollera vilka subventioner och skatteregler som gäller i år, då politiken kring klimatbonusar och förmånsvärden ändras regelbundet. Jämför också räckvidd och laddkapacitet utifrån dina faktiska körvanor - många upptäcker att de behöver mindre batteri än de först trodde, vilket kan spara pengar.",
@@ -788,38 +795,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:50:18.644Z"
-  },
-  {
-    "date": "2026-01-01",
-    "title": "Sänkt bonus malus och nya elbilsmodeller inleder 2026",
-    "summary": "Det nya året inleds med förändringar i det svenska bonus malus-systemet. Från och med 1 januari 2026 sänks bonusen för miljöbilar från maximalt 70 000 kronor till 50 000 kronor, samtidigt som malus-avgiften för bilar med höga utsläpp höjs. Förändringarna väntas påverka elbilsförsäljningen negativt under första kvartalet, enligt branschorganisationen Bil Sweden.\n\nVolvo Cars meddelar att produktionen av den helelektriska EX30 nu är i full gång i Gent, Belgien, efter tidigare förseningar. Modellen som introducerades 2023 har varit en av Europas mest sålda småsuvar i elbilssegmentet, och Volvo siktar på att leverera 100 000 enheter under 2026.\n\nNorthvolt fortsätter att kämpa med ekonomiska utmaningar trots rekonstruktionsprocessen under hösten 2025. Företaget meddelar att produktionen vid anläggningen i Skellefteå ligger efter plan, och leveranser till stora kunder som Volkswagen och BMW är försenade. Norska Freyr Battery överväger enligt uppgifter att lägga bud på delar av Northvolts verksamhet.\n\nLaddinfrastrukturen i Sverige fortsätter att expandera, med totalt över 15 000 publika laddpunkter vid årsskiftet enligtPower Circle. Samtidigt rapporterar flera laddoperatörer om ökade elkostnader som pressar lönsamheten, vilket kan leda till högre laddpriser under 2026.",
-    "sources": [
-      {
-        "title": "Bonus malus-systemet förändras från idag",
-        "url": "https://www.svt.se/nyheter/ekonomi/bonus-malus-forandringar-2026",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo EX30 produktionen i full gång i Belgien",
-        "url": "https://www.di.se/nyheter/volvo-ex30-produktion-gent/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Northvolt fortsatt under press trots rekonstruktion",
-        "url": "https://www.nyteknik.se/energi/northvolt-produktion-2026/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Laddpriserna väntas stiga under 2026",
-        "url": "https://www.teknikensvarld.se/laddpriser-hojs-2026/",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Över 15 000 publika laddpunkter i Sverige",
-        "url": "https://www.dn.se/ekonomi/laddinfrastruktur-sverige-2026/",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:50:38.306Z"
   }
 ]

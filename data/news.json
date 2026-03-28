@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-28",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter tidigare volatilitet, medan nya modeller i mellanklassen gör elbil mer tillgänglig för fler hushåll. Laddinfrastrukturen byggs ut stadigt, särskilt längs de större vägstråken där snabbladdare nu finns tillgängliga med allt kortare mellanrum.\n\nPolitiskt är läget något osäkert inför budgetförhandlingarna senare i år. Den nuvarande elbilfördelen i förmånsbeskattningen gäller till och med 2025, men diskussioner pågår om eventuella förändringar från 2027. Många företag väljer därför att teckna fleråriga leasingavtal nu för att säkra nuvarande villkor.\n\nFör privatpersoner som funderar på elbil är våren traditionellt en bra tid att handla, då många återförsäljare erbjuder kampanjer inför sommarsäsongen. Det lönar sig också att jämföra totalkostnaden över tid snarare än endast inköpspriset, då drift- och underhållskostnaderna för elbilar fortsatt är betydligt lägre än för fossildrivna fordon.",
+    "sources": [],
+    "generatedAt": "2026-03-28T06:44:28.692Z"
+  },
+  {
     "date": "2026-03-27",
     "title": "Elbilsmarknaden i Sverige våren 2026 – läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter sin utveckling under våren 2026. Laddinfrastrukturen expanderar stadigt med fler snabbladdare längs huvudvägarna, samtidigt som konkurrensen mellan laddoperatörer håller priserna i schack. För konsumenter innebär det allt fler alternativ och bättre tillgänglighet.\n\nPrismässigt ser vi en fortsatt normalisering där elbilarna hamnar i nivå med jämförbara fossildrivna bilar, särskilt när driftskostnader räknas in. Leasingmarknaden erbjuder attraktiva alternativ för den som vill köra elbil utan stora förskottskostnader. Många tillverkare satsar på mellansegmentet där efterfrågan är som störst.\n\nFör dig som funderar på att byta till elbil är detta en bra tidpunkt att utforska marknaden. Testa gärna olika modeller för att hitta rätt räckvidd och laddmöjligheter utifrån dina behov. Kolla även vilka förmåner som gäller i din kommun – många erbjuder fortfarande lokala incitament för miljöbilar.",
@@ -762,38 +769,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:49:56.100Z"
-  },
-  {
-    "date": "2026-01-04",
-    "title": "Northvolt pausar produktion i Skellefteå – nya omstruktureringsplaner",
-    "summary": "Northvolt meddelar att produktionen vid anläggningen i Skellefteå pausas tillfälligt för att genomföra en omfattande omstrukturering efter ekonomiska utmaningar under 2025. Företaget, som ansökte om konkursskydd i USA i november, fokuserar nu på att säkra ny finansiering och effektivisera verksamheten. Omkring 1 600 anställda berörs av produktionspausen som beräknas vara i minst sex veckor.\n\nDen svenska elbilsmarknaden avslutade 2025 med ett svagare sista kvartal än väntat, visar preliminär statistik från Bil Sweden. Trots detta nådde eldrivna bilar (helt eldrivna och laddhybrider) en andel på 59 procent av nyregistreringarna under hela året. Borttagandet av elbilsbonus i november påverkade försäljningen negativt i årets slutskede.\n\nVolvo Cars presenterar nya uppdateringar för EX90 som ska börja levereras till svenska kunder under januari. Den långväntade sjusitsiga el-SUV:en får förbättrad mjukvara och längre räckvidd än tidigare utlovat, upp till 614 kilometer enligt WLTP. Första kundleveranserna i Sverige väntas ske innan månadsskiftet.\n\nTesla rapporterar rekordleveranser globalt för fjärde kvartalet 2025, med över 495 000 fordon levererade. I Sverige fortsätter Model Y att vara den mest sålda elbilen, trots ökad konkurrens från kinesiska tillverkare som BYD och Xpeng som etablerar sig starkare på den nordiska marknaden.",
-    "sources": [
-      {
-        "title": "Northvolt pausar produktion i Skellefteå efter ekonomisk kris",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-pausar-produktion-skelleftea",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Svensk elbilsförsäljning 2025: 59 procent eldrivna bilar",
-        "url": "https://www.di.se/nyheter/elbilsforsaljning-2025-statistik/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo EX90 får längre räckvidd inför svenska leveranser",
-        "url": "https://www.nyteknik.se/fordon/volvo-ex90-rakvidd-uppdatering/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Tesla levererar rekordmånga bilar fjärde kvartalet",
-        "url": "https://www.dn.se/ekonomi/tesla-rekordleveranser-q4-2025/",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Kinesiska elbilstillverkare tar marknadsandelar i Sverige",
-        "url": "https://www.teknikensvarld.se/kinesiska-elbilar-sverige-2026/",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:50:18.644Z"
   }
 ]

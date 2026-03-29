@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-29",
+    "title": "Elbilsmarknaden i Sverige våren 2026 – läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter några års kraftiga svängningar, vilket gör det mer förutsägbart för köpare att planera sina investeringar. Samtidigt ser vi en ökad konkurrens i mellanklassens segment där fler tillverkare lanserar modeller till under 400 000 kronor.\n\nLaddinfrastrukturen i Sverige fortsätter att byggas ut, med fokus på snabbladdare längs större vägar och i tätorter. Bostadsrättsföreningar och hyresvärdar börjar i allt högre utsträckning erbjuda laddmöjligheter, vilket tidigare varit ett hinder för många potentiella elbilsköpare. Väntetiderna vid populära laddstationer har minskat tack vare den utökade kapaciteten.\n\nFör dig som funderar på att skaffa elbil just nu är det värt att jämföra både nya och begagnade alternativ. Fleråriga elbilar från 2023-2024 erbjuder ofta mycket bra värde, med beprövad teknik och längre räckvidd än tidigare generationer. Tänk också på att kontrollera vilka laddmöjligheter som finns på din arbetsplats och i ditt bostadsområde innan du bestämmer dig.",
+    "sources": [],
+    "generatedAt": "2026-03-29T06:52:19.366Z"
+  },
+  {
     "date": "2026-03-28",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter tidigare volatilitet, medan nya modeller i mellanklassen gör elbil mer tillgänglig för fler hushåll. Laddinfrastrukturen byggs ut stadigt, särskilt längs de större vägstråken där snabbladdare nu finns tillgängliga med allt kortare mellanrum.\n\nPolitiskt är läget något osäkert inför budgetförhandlingarna senare i år. Den nuvarande elbilfördelen i förmånsbeskattningen gäller till och med 2025, men diskussioner pågår om eventuella förändringar från 2027. Många företag väljer därför att teckna fleråriga leasingavtal nu för att säkra nuvarande villkor.\n\nFör privatpersoner som funderar på elbil är våren traditionellt en bra tid att handla, då många återförsäljare erbjuder kampanjer inför sommarsäsongen. Det lönar sig också att jämföra totalkostnaden över tid snarare än endast inköpspriset, då drift- och underhållskostnaderna för elbilar fortsatt är betydligt lägre än för fossildrivna fordon.",
@@ -736,38 +743,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:49:34.160Z"
-  },
-  {
-    "date": "2026-01-08",
-    "title": "Northvolt varslar ytterligare personal – osäkerhet kring svensk batteriproduktion",
-    "summary": "Northvolt meddelar nya varsel som drabbar produktionsanläggningen i Skellefteå. Totalt berörs nu över 1 600 anställda av de omfattande omstruktureringar som pågått sedan företagets rekonstruktion inleddes i höstas. Företaget hänvisar till försenade kundorder och behov av att anpassa produktionen till rådande marknadsläge.\n\nVolvo Cars rapporterar samtidigt om starka försäljningssiffror för sina laddhybrider och elbilar under december 2025, men konstaterar att den totala elbilsandelen planat ut på strax under 50 procent av försäljningen. Företaget pekar på vikten av fortsatta stöd för att nå klimatmålen och uttrycker oro över de sänkta svenska elbilspremierna.\n\nLaddoperatören Ionity inviger ytterligare en snabbladdningsstation längs E4:an, denna gång söder om Sundsvall. Stationen erbjuder åtta laddplatser med effekt upp till 350 kW och ingår i den fortsatta utbyggnaden av laddinfrastruktur längs svenska huvudvägar. Totalt planerar Ionity att öppna fem nya stationer i Sverige under första kvartalet 2026.\n\nTesla Model Y behåller sin position som Sveriges mest sålda bil under 2025 enligt preliminär statistik från Bil Sweden. Dock visar siffrorna en tydlig nedgång i december jämfört med föregående år, vilket branschexperter kopplar till minskade ekonomiska incitament och ökad konkurrens från kinesiska tillverkare.",
-    "sources": [
-      {
-        "title": "Northvolt varslar ytterligare hundratals anställda i Skellefteå",
-        "url": "https://www.svt.se/nyheter/lokalt/vasterbotten/northvolt-varslar-ytterligare",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo: Elbilsförsäljningen planar ut – kräver fortsatt stöd",
-        "url": "https://www.di.se/nyheter/volvo-elbilsforsaljning-platt/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Ionity öppnar ny snabbladdare på E4:an",
-        "url": "https://www.nyteknik.se/energi/ionity-ny-laddstation-e4/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Tesla Model Y behåller förstaplatsen – trots kraftig nedgång",
-        "url": "https://www.teknikensvarld.se/tesla-model-y-mest-salda-2025/",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Oro för svensk batteriindustri efter nya Northvolt-varsel",
-        "url": "https://www.dn.se/ekonomi/oro-svensk-batteriindustri-northvolt/",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:49:56.100Z"
   }
 ]

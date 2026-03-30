@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-30",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Trots att de statliga bonusarna försvann för några år sedan har priserna på elbilar sjunkit markant tack vare ökad konkurrens och fler modeller i mellanprissegmentet. Begagnatmarknaden för elbilar har också stabiliserats efter några turbulenta år, vilket gör det mer attraktivt för fler att köpa en äldre elbil.\n\nLaddinfrastrukturen i Sverige fortsätter att växa, särskilt längs större vägar och i tätorter. Snabbladdning har blivit mer tillgänglig och priserna har börjat normaliseras efter tidigare volatilitet. Många fastighetsägare installerar nu laddboxar som standard i nybyggda bostadsområden.\n\nFör dig som funderar på att köpa elbil är läget fortsatt gynnsamt. Med lägre priser, bättre räckvidder och fler modeller att välja mellan finns det alternativ för de flesta behov och budgetar. Tänk på att kontrollera vilka laddningsmöjligheter du har hemma och på jobbet innan du bestämmer dig, då det fortfarande är den mest ekonomiska laddningen.",
+    "sources": [],
+    "generatedAt": "2026-03-30T07:14:48.794Z"
+  },
+  {
     "date": "2026-03-29",
     "title": "Elbilsmarknaden i Sverige våren 2026 – läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter några års kraftiga svängningar, vilket gör det mer förutsägbart för köpare att planera sina investeringar. Samtidigt ser vi en ökad konkurrens i mellanklassens segment där fler tillverkare lanserar modeller till under 400 000 kronor.\n\nLaddinfrastrukturen i Sverige fortsätter att byggas ut, med fokus på snabbladdare längs större vägar och i tätorter. Bostadsrättsföreningar och hyresvärdar börjar i allt högre utsträckning erbjuda laddmöjligheter, vilket tidigare varit ett hinder för många potentiella elbilsköpare. Väntetiderna vid populära laddstationer har minskat tack vare den utökade kapaciteten.\n\nFör dig som funderar på att skaffa elbil just nu är det värt att jämföra både nya och begagnade alternativ. Fleråriga elbilar från 2023-2024 erbjuder ofta mycket bra värde, med beprövad teknik och längre räckvidd än tidigare generationer. Tänk också på att kontrollera vilka laddmöjligheter som finns på din arbetsplats och i ditt bostadsområde innan du bestämmer dig.",
@@ -710,38 +717,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:49:13.803Z"
-  },
-  {
-    "date": "2026-01-11",
-    "title": "Nya tvister om elbilsstöd och Northvolts svåra läge dominerar",
-    "summary": "Den politiska debatten om Sveriges elbilsstöd intensifieras efter att regeringen tidigare aviserat att avskaffa bonusen helt under 2026. Flera remissinstanser, däribland Bil Sweden och Energimyndigheten, har varnat för att ett abrupt stopp riskerar att kraftigt bromsa omställningen till fossilfria transporter. Oppositionen kräver nu en övergångsperiod för att undvika att bilköpare som planerat sina inköp hamnar i kläm.\n\nNorthvolts kris fortsätter att kasta långa skuggor över den svenska batterisatsningen. Företaget befinner sig fortfarande i rekonstruktion och det råder stor osäkerhet kring fabriken i Skellefteå. Fackförbund och lokala politiker uttrycker oro över arbetstillfällena i regionen, medan analytiker pekar på de globala utmaningar som drabbar europeisk batteriindustri i konkurrens med Asien.\n\nPå den internationella marknaden fortsätter kinesiska BYD att expandera i Europa med nya utleveranser av modellen Seal till svenska kunder. Samtidigt rapporterar Volvo Cars att man ser fortsatt stark efterfrågan på EX30 trots osäkerheten kring stödsystemen. Tesla håller låg profil efter årsskiftet men förväntas inom kort presentera uppdaterade leveranstider för Model Y.\n\nLaddinfrastrukturen utvecklas fortsatt med flera nya snabbladdare längs E4:an, men operatörer rapporterar om utmaningar med lönsamhet och vandalisering av laddstationer på landsbygden.",
-    "sources": [
-      {
-        "title": "Remissinstanser varnar för abrupt stopp av elbilsstöd",
-        "url": "https://www.svt.se/nyheter/inrikes/remissinstanser-varnar-elbilsstod",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Northvolt-krisen: Osäkerhet kring Skelleftefabriken",
-        "url": "https://www.dn.se/ekonomi/northvolt-krisen-osäkerhet-skelleftea",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "BYD utmanar svenska marknaden med nya leveranser",
-        "url": "https://www.di.se/naringsliv/byd-utmanar-svenska-marknaden/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo Cars: Stark efterfrågan på EX30 trots osäkerhet",
-        "url": "https://www.nyteknik.se/fordon/volvo-cars-stark-efterfragan-ex30/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Laddoperatörer kämpar med lönsamhet på landsbygden",
-        "url": "https://www.teknikensvarld.se/laddoperatorer-lonsamhet-problem/",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:49:34.160Z"
   }
 ]

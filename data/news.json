@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-31",
+    "title": "Volvo Cars fördubblar sitt ägande i Polestar till nästan 20 procent",
+    "summary": "Volvo Cars tar ett betydande steg i sitt samarbete med elbilsmärket Polestar genom att nästan fördubbla sitt ägarandel. Enligt Dagens Industri kommer Volvo Cars att öka sitt ägande från 9,8 procent till 19,9 procent genom att konvertera en del av sitt lån till Polestar till aktier med en rabatt på 5 procent.\n\nSamtidigt planerar de båda bolagen att slå ihop produktionen av Polestar 3 i Volvo Cars amerikanska bilfabrik. Detta strategiska drag förväntas effektivisera tillverkningen och stärka banden mellan moderbolaget och det elektriska prestationsmärket.\n\nDet ökade ägandet och den samordnade produktionen signalerar ett fördjupat samarbete mellan Volvo Cars och Polestar i en tid då elbilindustrin genomgår snabb utveckling och ökad konkurrens på marknaden.",
+    "sources": [
+      {
+        "title": "Volvo Cars ökar ägandet i Polestar genom nytt lånedrag",
+        "url": "https://www.di.se/live/volvo-cars-okar-agandet-i-polestar-genom-nytt-lanedrag/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-03-31T07:01:10.589Z"
+  },
+  {
     "date": "2026-03-30",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Trots att de statliga bonusarna försvann för några år sedan har priserna på elbilar sjunkit markant tack vare ökad konkurrens och fler modeller i mellanprissegmentet. Begagnatmarknaden för elbilar har också stabiliserats efter några turbulenta år, vilket gör det mer attraktivt för fler att köpa en äldre elbil.\n\nLaddinfrastrukturen i Sverige fortsätter att växa, särskilt längs större vägar och i tätorter. Snabbladdning har blivit mer tillgänglig och priserna har börjat normaliseras efter tidigare volatilitet. Många fastighetsägare installerar nu laddboxar som standard i nybyggda bostadsområden.\n\nFör dig som funderar på att köpa elbil är läget fortsatt gynnsamt. Med lägre priser, bättre räckvidder och fler modeller att välja mellan finns det alternativ för de flesta behov och budgetar. Tänk på att kontrollera vilka laddningsmöjligheter du har hemma och på jobbet innan du bestämmer dig, då det fortfarande är den mest ekonomiska laddningen.",
@@ -684,38 +697,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:48:54.675Z"
-  },
-  {
-    "date": "2026-01-15",
-    "title": "Northvolt pausar utbyggnad - svenska elnätet under press",
-    "summary": "Northvolt meddelade idag att man skjuter på planer för ytterligare expansion av batterifabriken i Skellefteå. Beslutet kommer efter ekonomiska utmaningar under 2025 och osäkerhet kring europeiska subventioner. Företaget fokuserar nu på att stabilisera produktionen och leverera till befintliga kunder, däribland Volvo och Scania.\n\nSvenska Kraftnät varnar samtidigt för att elnätet i norra Sverige närmar sig kapacitetstaket. Den snabba utbyggnaden av både batterifabriker och datacenter skapar en situation där elbehovet ökar snabbare än nätkapaciteten. Nya industrianläggningar kan behöva vänta flera år på nätanslutning.\n\nPå den svenska elbilsmarknaden fortsätter trenden med allt fler privatleasing-alternativ. Tesla Model Y och Volvo EX30 toppar statistiken för januari, medan kinesiska MG och BYD ökar sina marknadsandelar kraftigt jämfört med samma period förra året. Totalt visar preliminära siffror att elbilar och laddhybrider står för 64 procent av nyregistreringarna hittills i år.\n\nRedan i mars väntas besked om eventuella förändringar i bonus-malus-systemet. Flera remissinstanser har kritiserat det nuvarande systemet och efterfrågat justeringar för att gynna billigare elbilar och minska stödet till tunga laddhybrider.",
-    "sources": [
-      {
-        "title": "Northvolt pausar expansionsplaner i Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-pausar-expansion-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Svenska Kraftnät varnar: Elnätet räcker inte till",
-        "url": "https://www.svt.se/nyheter/inrikes/elnatet-norra-sverige-kapacitet",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Rekordstart för elbilar - 64 procent av nyregistreringarna",
-        "url": "https://www.nyteknik.se/elbilar-januari-2026-statistik",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Kinesiska elbilar tar marknadsandelar i Sverige",
-        "url": "https://www.teknikensvarld.se/kinesiska-elbilar-januari-2026",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Bonus-malus kan justeras i vår - besked väntas i mars",
-        "url": "https://www.dn.se/ekonomi/bonus-malus-forandring-2026",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:49:13.803Z"
   }
 ]

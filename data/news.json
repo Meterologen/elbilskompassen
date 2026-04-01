@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-01",
+    "title": "Inga större elbilsnyheter i svenska medier idag",
+    "summary": "Idag har inga betydande elbilsrelaterade nyheter publicerats i svenska medier. Den enda artikeln som inkommit handlar om fjällräddare och deras snöskotrar, vilket inte är direkt kopplat till elbilar eller elmobilitet.\n\nFjällräddare i Sverige måste själva bekosta de snöskotrar de använder i sitt räddningsarbete, rapporterar SVT Nyheter. Organisationen har länge önskat skattemässiga avdragsmöjligheter för att underlätta rekrytering, särskilt av yngre medlemmar. Justitieminister Gunnar Strömmer kunde dock inte lova några förändringar vid ett besök i Bydalsfjällen.\n\nDet är värt att notera att medan snöskotrar traditionellt drivs med förbränningsmotorer, pågår en utveckling mot elifierade terrängfordon och snöskotrar, men denna artikel berör inte den aspekten.",
+    "sources": [
+      {
+        "title": "Fjällräddare jobbar i väglöst land – bekostar själva skoter",
+        "url": "https://www.svt.se/nyheter/lokalt/jamtland/de-raddar-liv-i-fjallen-men-far-sjalva-bekosta-skotern",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-01T07:07:35.334Z"
+  },
+  {
     "date": "2026-03-31",
     "title": "Volvo Cars fördubblar sitt ägande i Polestar till nästan 20 procent",
     "summary": "Volvo Cars tar ett betydande steg i sitt samarbete med elbilsmärket Polestar genom att nästan fördubbla sitt ägarandel. Enligt Dagens Industri kommer Volvo Cars att öka sitt ägande från 9,8 procent till 19,9 procent genom att konvertera en del av sitt lån till Polestar till aktier med en rabatt på 5 procent.\n\nSamtidigt planerar de båda bolagen att slå ihop produktionen av Polestar 3 i Volvo Cars amerikanska bilfabrik. Detta strategiska drag förväntas effektivisera tillverkningen och stärka banden mellan moderbolaget och det elektriska prestationsmärket.\n\nDet ökade ägandet och den samordnade produktionen signalerar ett fördjupat samarbete mellan Volvo Cars och Polestar i en tid då elbilindustrin genomgår snabb utveckling och ökad konkurrens på marknaden.",
@@ -669,33 +682,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:48:38.016Z"
-  },
-  {
-    "date": "2026-01-18",
-    "title": "Northvolts produktion ökar - nya elbilsmodeller väntas under våren",
-    "summary": "Northvolt meddelade i veckan att produktionen vid anläggningen i Skellefteå har stabiliserats efter en turbulent höst 2025. Företaget räknar med att kunna leverera batterier till flera europeiska biltillverkare under första kvartalet 2026, vilket ses som avgörande för både företagets framtid och svensk batteriindustri.\n\nVolvo Cars bekräftade att nya EX30-varianter med längre räckvidd kommer att börja levereras till svenska kunder i mars. Den uppdaterade modellen har optimerats för vinterkörning och får en officiell räckvidd på upp till 480 kilometer enligt WLTP. Priset behålls på samma nivå som tidigare modeller tack vare effektivare produktion.\n\nLaddoperatören Mer fortsätter sin snabba expansion i Sverige och meddelade att ytterligare 150 snabbladdare ska installeras längs huvudvägarna under första halvåret 2026. Satsningen riktar sig särskilt mot landsbygden där laddinfrastrukturen fortfarande är begränsad.\n\nKinesiska BYD rapporterar stark tillväxt på den svenska marknaden med en fördubbling av försäljningen jämfört med samma period föregående år. Modellerna Seal och Dolphin är särskilt populära bland svenska köpare som söker prisvärda alternativ med lång räckvidd.",
-    "sources": [
-      {
-        "title": "Northvolt stabiliserar produktionen i Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-stabiliserar-produktionen",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo EX30 får längre räckvidd och bättre vinteregenskaper",
-        "url": "https://www.teknikensvarld.se/volvo-ex30-uppdatering-2026",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Mer satsar på 150 nya snabbladdare i Sverige",
-        "url": "https://www.nyteknik.se/energi/mer-utbyggnad-laddinfrastruktur",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "BYD fördubblar försäljningen i Sverige",
-        "url": "https://www.svt.se/nyheter/ekonomi/byd-framgang-sverige",
-        "source": "SVT Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:48:54.675Z"
   }
 ]

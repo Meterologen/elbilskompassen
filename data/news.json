@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-02",
+    "title": "Inga större elbilsnyheter idag från svenska medier",
+    "summary": "Inga relevanta elbilsnyheter har publicerats i svenska medier idag. Den tillhandahållna artikeln handlar om fjällräddare och deras skotrar, vilket inte är relaterat till elbilar eller elmobilitet.\n\nFör de senaste uppdateringarna om elbilar, laddinfrastruktur och elmobilitet rekommenderas att följa specialiserade elbilsmedier och nyhetskanaler.",
+    "sources": [],
+    "generatedAt": "2026-04-02T06:59:32.053Z"
+  },
+  {
     "date": "2026-04-01",
     "title": "Inga större elbilsnyheter i svenska medier idag",
     "summary": "Idag har inga betydande elbilsrelaterade nyheter publicerats i svenska medier. Den enda artikeln som inkommit handlar om fjällräddare och deras snöskotrar, vilket inte är direkt kopplat till elbilar eller elmobilitet.\n\nFjällräddare i Sverige måste själva bekosta de snöskotrar de använder i sitt räddningsarbete, rapporterar SVT Nyheter. Organisationen har länge önskat skattemässiga avdragsmöjligheter för att underlätta rekrytering, särskilt av yngre medlemmar. Justitieminister Gunnar Strömmer kunde dock inte lova några förändringar vid ett besök i Bydalsfjällen.\n\nDet är värt att notera att medan snöskotrar traditionellt drivs med förbränningsmotorer, pågår en utveckling mot elifierade terrängfordon och snöskotrar, men denna artikel berör inte den aspekten.",
@@ -654,33 +661,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:48:18.256Z"
-  },
-  {
-    "date": "2026-01-22",
-    "title": "Northvolt pausar Skellefteåexpansion – fokus på kostnadsbesparingar",
-    "summary": "Northvolt meddelar att bolaget tillfälligt pausar planerad expansion av fabriken i Skellefteå för att fokusera på att stabilisera produktionen och minska kostnaderna. Beslutet kommer efter en turbulent period där batteritillverkaren kämpat med produktionsutmaningar och ekonomiska svårigheter. Omkring 300 tillfälliga anställningar kommer inte att förlängas, medan kärnverksamheten fortsätter enligt plan.\n\nVolvo Cars rapporterar stark tillväxt för sina laddbara modeller i januari 2026, med EX30 och EX90 som de mest sålda modellerna i Sverige. Bolaget meddelar samtidigt att prisjusteringar kommer att ske under februari på grund av förändrade batteripriser och valutakursförändringar. Väntetiden för populära modeller ligger nu på 4-6 månader.\n\nLaddoperatören Recharge öppnar Sveriges största snabbladdningsstation utanför Jönköping med totalt 24 laddplatser, varav 16 med effekt över 300 kW. Satsningen är en del av bolagets plan att bygga ut 50 nya snabbladdningshubbar längs svenska huvudvägar under 2026. Priserna sätts till 6,95 kr/kWh för tillfällig laddning.\n\nBYD bekräftar att det nya batterifabriken i Ungern börjar leverera battericeller till den europeiska marknaden under första kvartalet. Detta väntas påverka leveranstiderna positivt för flera av bolagets modeller som säljs i Sverige, inklusive BYD Seal och Dolphin.",
-    "sources": [
-      {
-        "title": "Northvolt pausar expansion i Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-pausar-expansion-skelleftea-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo Cars: Stark start på 2026 för elbilar",
-        "url": "https://www.svt.se/nyheter/ekonomi/volvo-elbilar-januari-2026",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Sveriges största snabbladdningsstation invigs",
-        "url": "https://www.nyteknik.se/fordon/recharge-jonkoping-laddstation-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "BYD:s ungerskfabrik börjar leverera",
-        "url": "https://www.teknikensvarld.se/byd-batterifabrik-ungern-produktion-2026",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:48:38.016Z"
   }
 ]

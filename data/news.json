@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-04",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter att utvecklas under våren 2026, med en allt tätare laddinfrastruktur längs huvudvägarna. Flera operatörer har utökat sina snabbladdningsnätverk under första kvartalet, vilket gör långresor med elbil alltmer problemfritt.\n\nPrismässigt ser vi en fortsatt stabilisering på både nya och begagnade elbilar. Konkurrensen mellan tillverkare har ökat utbudet i mellanklassen, vilket gynnar konsumenter som letar efter prisvärt alternativ. Leasingmarknaden är fortsatt stark, med förmånliga erbjudanden på flera populära modeller.\n\nFör dig som funderar på att byta till elbil är våren en bra tid att jämföra alternativ. Tänk på din körsträcka och laddmöjligheter hemma eller på jobbet. Med dagens räckvidder på 40-60 mil för många mittensegmentbilar räcker det för de flesta vardagsbehov. Kolla även upp vilka kommunala förmåner som kan finnas, då vissa kommuner fortfarande erbjuder förmåner som gratis parkering för elbilar.",
+    "sources": [],
+    "generatedAt": "2026-04-04T06:45:58.284Z"
+  },
+  {
     "date": "2026-04-03",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter sin utveckling under våren 2026. Laddinfrastrukturen byggs ut stadigt med allt fler snabbladdare längs huvudvägarna, vilket gör långresor mer bekväma för elbilister. Samtidigt ser vi att priserna på begagnade elbilar från 2022-2023 har stabiliserats, vilket gör det mer attraktivt för fler att ta steget över till eldrift.\n\nFlera tillverkare har aviserat nya modeller under 2026, särskilt i mellanklassen där konkurrensen hårdnar. För den som funderar på elbil just nu kan det vara värt att jämföra både leasing- och köpalternativ, då räntorna påverkar finansieringskostnaderna betydligt. Tänk också på att kontrollera vilken hemmaladdningslösning som passar din boendesituation.\n\nEn viktig faktor att hålla koll på är de eventuella förändringar i bonus- och skattesubventioner som kan komma under året. För privatpersoner är förmånsvärdet för elbilar fortfarande gynnsamt, medan företag fortsätter att se elbilar som ett konkurrenskraftigt alternativ i bilparken. Räckvidden på nya modeller fortsätter att förbättras, och de flesta nyare elbilar klarar enkelt över 40 mil på en laddning.",
@@ -602,38 +609,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:47:35.523Z"
-  },
-  {
-    "date": "2026-01-29",
-    "title": "Volvo EX90 börjar levereras i Sverige – Northvolt pausar expansion",
-    "summary": "Volvo Cars meddelade idag att de första exemplaren av den efterlängtade helelektriska SUV:en EX90 nu börjar levereras till svenska kunder. Bilen, som försenades flera gånger under 2024 och 2025, har fått positiva mottaganden för sin avancerade säkerhetsutrustning och långa räckvidd på upp till 60 mil. Priset startar på 879 000 kronor.\n\nNorthvolt bekräftade samtidigt att man pausar planerna på ytterligare expansion i Skellefteå under 2026. Bolaget fokuserar nu på att optimera befintlig produktion och förbättra lönsamheten efter en turbulent period med förseningar och ekonomiska utmaningar. Beslutet påverkar dock inte leveranserna till Volvo och andra europeiska biltillverkare.\n\nLaddoperatören Ionity meddelade en stor satsning på svensk laddinfrastruktur med planer på att bygga ut minst 15 nya snabbladdningsstationer längs E4 och E6 under 2026. Satsningen är en direkt reaktion på den kraftiga ökningen av elbilar på svenska vägar, där andelen nyregistrerade elbilar nu uppgår till över 45 procent.\n\nI Kina fortsätter BYD sin expansion och passerade under januari månad 500 000 sålda elbilar globalt, vilket sätter press på europeiska tillverkare. Analyser visar att kinesiska elbilstillverkare nu står för nästan 30 procent av den europeiska elbilsmarknaden.",
-    "sources": [
-      {
-        "title": "Volvo EX90 börjar äntligen levereras till svenska kunder",
-        "url": "https://www.di.se/nyheter/volvo-ex90-leveranser-sverige",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Northvolt pausar expansion – fokuserar på lönsamhet",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-pausar-expansion",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Ionity satsar miljardbelopp på svensk laddinfrastruktur",
-        "url": "https://www.nyteknik.se/energi/ionity-utbyggnad-sverige",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "BYD passerar halv miljon sålda elbilar på en månad",
-        "url": "https://www.dn.se/ekonomi/byd-rekordfordjningar-elbilar",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Elbilar tar över – nu nästan hälften av nyregistreringarna",
-        "url": "https://www.teknikensvarld.se/elbilar-marknadsandel-sverige-2026",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:47:55.911Z"
   }
 ]

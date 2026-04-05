@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-05",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter sin utveckling våren 2026, även om takten har stabiliserats jämfört med de explosiva tillväxtåren. Laddinfrastrukturen expanderar stadigt med allt fler snabbladdare längs huvudvägarna, samtidigt som konkurrensen mellan laddoperatörer håller priserna i schack. Många bostadsrättsföreningar och villaägare investerar nu i egna laddlösningar.\n\nPå prisfronten ser vi fortsatt press nedåt, särskilt på begagnade elbilar från 2022-2023 som nu erbjuds till betydligt lägre priser än för ett år sedan. Det gör elbil mer tillgängligt för fler svenskar. Samtidigt lanserar flera tillverkare nya modeller i mellanklassen under våren, vilket ökar valmöjligheterna för den som funderar på att byta.\n\nFör den som överväger elbil just nu är det värt att kolla läget kring både nya och begagnade alternativ. Räkna på din egen laddmöjlighet - tillgång till hemmaladdning gör stor skillnad för ekonomin. Tänk också på att våren traditionellt är en bra tid för bilköp, med många kampanjer och erbjudanden från återförsäljare som vill komma igång efter vinterhalvåret.",
+    "sources": [],
+    "generatedAt": "2026-04-05T06:53:49.510Z"
+  },
+  {
     "date": "2026-04-04",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att utvecklas under våren 2026, med en allt tätare laddinfrastruktur längs huvudvägarna. Flera operatörer har utökat sina snabbladdningsnätverk under första kvartalet, vilket gör långresor med elbil alltmer problemfritt.\n\nPrismässigt ser vi en fortsatt stabilisering på både nya och begagnade elbilar. Konkurrensen mellan tillverkare har ökat utbudet i mellanklassen, vilket gynnar konsumenter som letar efter prisvärt alternativ. Leasingmarknaden är fortsatt stark, med förmånliga erbjudanden på flera populära modeller.\n\nFör dig som funderar på att byta till elbil är våren en bra tid att jämföra alternativ. Tänk på din körsträcka och laddmöjligheter hemma eller på jobbet. Med dagens räckvidder på 40-60 mil för många mittensegmentbilar räcker det för de flesta vardagsbehov. Kolla även upp vilka kommunala förmåner som kan finnas, då vissa kommuner fortfarande erbjuder förmåner som gratis parkering för elbilar.",
@@ -581,33 +588,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:47:14.402Z"
-  },
-  {
-    "date": "2026-02-01",
-    "title": "Northvolt pausar produktion i Skellefteå – osäkerhet kring statsstöd",
-    "summary": "Northvolt meddelade i fredags att produktionen vid fabriken i Skellefteå tillfälligt pausas under februari för underhåll och omstrukturering. Beskedet kommer efter månader av produktionsproblem och försenade leveranser till bland annat Volvo och BMW. Företaget betonar att pausen är planerad, men svenska leverantörer och underleverantörer uttrycker oro för sina kontrakt.\n\nVolkswagengruppen, som är storägare i Northvolt, ska enligt uppgifter i tyska medier ha begärt tydligare besked om när storskalig produktion kan återupptas. Diskussioner pågår även med svenska myndigheter om ytterligare statligt stöd för att säkra batteriproduktionen i Sverige.\n\nPå laddinfrastruktursidan rapporterar Bee Charging om rekordmånga nya snabbladdare installerade under januari 2026, totalt 247 nya laddpunkter. Störst tillväxt ses längs E4:an och E20, där Ionity och Mer har utökat sina stationer.\n\nPå bilmarknaden fortsätter trenden med ökad andel laddbara bilar. Preliminära siffror från Bil Sweden visar att elbilar och laddhybrider tillsammans stod för 68 procent av nyregistreringarna i januari, en uppgång från 61 procent samma månad 2025.",
-    "sources": [
-      {
-        "title": "Northvolt pausar produktion i Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-pausar-produktion-skelleftea",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "VW kräver besked från Northvolt",
-        "url": "https://www.svt.se/nyheter/ekonomi/vw-kraver-besked-northvolt",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Rekordtillväxt för snabbladdare i januari",
-        "url": "https://www.nyteknik.se/energi/rekordtillvaxt-snabbladdare-januari-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Laddbara bilar dominerar nybilsmarknaden",
-        "url": "https://www.teknikensvarld.se/nyheter/laddbara-bilar-68-procent-januari",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:47:35.523Z"
   }
 ]

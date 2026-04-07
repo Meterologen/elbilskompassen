@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-07",
+    "title": "Elbilsmarknaden våren 2026: Stabilt läge med nya utmaningar",
+    "summary": "Den svenska elbilsmarknaden befinner sig i en fas av mognad våren 2026. Efter de rekordstarka åren 2023-2024 har försäljningstakten stabiliserats, och andelen elbilar av nyregistrerade personbilar ligger kring 60 procent. Priserna på både nya och begagnade elbilar har jämnat ut sig efter tidigare volatilitet, vilket gör marknaden mer förutsägbar för konsumenter.\n\nLaddinfrastrukturen fortsätter att byggas ut över hela landet, med särskilt fokus på snabbladdare längs riksvägarna och i glesbygd. Flera aktörer satsar nu på ultrasnadd laddning som kan ladda de senaste bilmodellerna till 80 procent på under 15 minuter. Samtidigt diskuteras frågan om laddpriser och behovet av bättre transparens kring kostnader vid olika laddoperatörer.\n\nFör den som funderar på elbil just nu är det ett bra läge att jämföra erbjudanden. Leasingpriserna har blivit mer konkurrenskraftiga, och det finns ett växande utbud av begagnade elbilar från 2022-2024 till attraktiva priser. Tänk på att kontrollera batteriets hälsa vid köp av begagnad elbil och räkna på din verkliga laddkostnad baserat på dina körmönster.",
+    "sources": [],
+    "generatedAt": "2026-04-07T07:03:38.058Z"
+  },
+  {
     "date": "2026-04-06",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Laddinfrastrukturen expanderar stadigt med allt fler snabbladdare längs huvudvägarna, samtidigt som konkurrensen mellan olika laddoperatörer håller priserna relativt stabila. För den som funderar på elbil är det värt att notera att många tillverkare nu erbjuder förbättrade garantier på batterierna, ofta upp till 8-10 år.\n\nPrismässigt ser vi en fortsatt stabilisering efter de senaste årens variationer. Begagnatmarknaden för elbilar har mognat betydligt, vilket gör det lättare att hitta prisvärda alternativ för den som inte vill köpa nytt. Flera leasingbolag erbjuder nu mer flexibla avtal med kortare bindningstider, vilket lockar fler att prova elbil.\n\nFör den som funderar på att byta till elbil just nu kan det vara smart att jämföra totalekonomin över hela ägandet - inte bara inköpspriset. Lägre driftskostnader, färre servicebehov och förmånligare förmånsbeskattning gör att många elbilar blir billigare i längden jämfört med fossilbilar, trots eventuellt högre inköpspris.",
@@ -534,33 +541,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:46:32.644Z"
-  },
-  {
-    "date": "2026-02-08",
-    "title": "Northvolt pausar planerad expansion – fokuserar på kärnverksamhet",
-    "summary": "Northvolt meddelade i veckan att bolaget skjuter upp planerna på ytterligare fabriksexpansion i Skellefteå för att istället fokusera på att optimera nuvarande produktion. Beslutet kommer efter ett utmanande 2025 där batteritillverkaren kämpat med lönsamhet och ökad konkurrens från asiatiska aktörer. Analyser pekar på att den europeiska batteriindustrin generellt står inför utmaningar med överkapacitet och prispress.\n\nVolvo Cars rapporterar samtidigt rekordstarka siffror för sina eldrivna modeller i januari 2026. EX30 och EX90 fortsätter att dominera registreringsstatistiken, och bolaget meddelar att över 45 procent av alla sålda Volvo i Sverige nu är helelektriska. Den nya generationen av Volvo-batterier med förbättrad laddkapacitet väntas introduceras under våren.\n\nLaddinfrastrukturen i Sverige fortsätter att expandera trots oro för lönsamheten bland operatörer. Recharge och Ionity rapporterar om ökad användning av snabbladdare längs E4:an, men varnar samtidigt för att höga elnätskostnader hotar fortsatt utbyggnad i glesbygd. Energimyndigheten utreder nya stödformer för att säkerställa geografisk täckning.\n\nInternt diskuteras fortsatt osäkerhet kring EU:s plannerade skärpning av utsläppskrav 2026-2027. Svenska biltillverkare lobbyer för mer flexibla övergångsregler medan miljöorganisationer kräver hårdare klimatmål. Diskussionen väntas intensifieras under våren inför EU-parlamentets beslut.",
-    "sources": [
-      {
-        "title": "Northvolt bromsar expansion – satsar på lönsamhet",
-        "url": "https://www.di.se/nyheter/northvolt-expansion-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo EX30 och EX90 tangerar försäljningsrekord",
-        "url": "https://www.nyteknik.se/fordon/volvo-elbilar-januari-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Laddoperatörer varnar för utbyggnadsstopp",
-        "url": "https://www.svt.se/nyheter/ekonomi/laddinfrastruktur-2026",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "EU:s utsläppskrav skapar oro i svensk bilindustri",
-        "url": "https://www.dn.se/ekonomi/eu-utslappskrav-bilindustrin",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:46:53.637Z"
   }
 ]

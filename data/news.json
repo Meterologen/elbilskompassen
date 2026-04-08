@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-04-08",
+    "title": "Elbilar ökar globalt – Sverige behöver fler laddplatser",
+    "summary": "Elbilar blir allt vanligare i världen och på vissa marknader drevs mer än varannan nyregistrerad bil av batteri under förra året. Trenden visar en fortsatt stark tillväxt för elektrifierad transport globalt, rapporterar Aftonbladet.\n\nI en debattartikel i Dagens Industri lyfts vikten av parkering med laddning fram som en avgörande faktor för elektrifieringen av svenska bilflottan. Artikeln framhåller att tillgång till laddinfrastruktur vid bostäder är en aspekt som ofta glöms bort i debatten om elbilspremier och andra subventioner.\n\nFrågan om laddinfrastruktur blir allt viktigare i takt med att fler elbilar rullar ut på vägarna. För att elektrifieringen ska lyckas krävs inte bara ekonomiska incitament utan också praktiska lösningar för vardagsladdning där bilarna står parkerade.",
+    "sources": [
+      {
+        "title": "Fler elbilar på världens vägar – de går i täten",
+        "url": "https://www.aftonbladet.se/nyheter/a/k0vWpA/fler-elbilar-pa-varldens-vagar-de-gar-i-taten?utm_medium=rss",
+        "source": "Aftonbladet"
+      },
+      {
+        "title": "Replik: Glöm ej parkering med laddning",
+        "url": "https://www.di.se/debatt/replik-glom-ej-parkering-med-laddning/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-04-08T07:05:46.418Z"
+  },
+  {
     "date": "2026-04-07",
     "title": "Elbilsmarknaden våren 2026: Stabilt läge med nya utmaningar",
     "summary": "Den svenska elbilsmarknaden befinner sig i en fas av mognad våren 2026. Efter de rekordstarka åren 2023-2024 har försäljningstakten stabiliserats, och andelen elbilar av nyregistrerade personbilar ligger kring 60 procent. Priserna på både nya och begagnade elbilar har jämnat ut sig efter tidigare volatilitet, vilket gör marknaden mer förutsägbar för konsumenter.\n\nLaddinfrastrukturen fortsätter att byggas ut över hela landet, med särskilt fokus på snabbladdare längs riksvägarna och i glesbygd. Flera aktörer satsar nu på ultrasnadd laddning som kan ladda de senaste bilmodellerna till 80 procent på under 15 minuter. Samtidigt diskuteras frågan om laddpriser och behovet av bättre transparens kring kostnader vid olika laddoperatörer.\n\nFör den som funderar på elbil just nu är det ett bra läge att jämföra erbjudanden. Leasingpriserna har blivit mer konkurrenskraftiga, och det finns ett växande utbud av begagnade elbilar från 2022-2024 till attraktiva priser. Tänk på att kontrollera batteriets hälsa vid köp av begagnad elbil och räkna på din verkliga laddkostnad baserat på dina körmönster.",
@@ -513,33 +531,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:46:14.364Z"
-  },
-  {
-    "date": "2026-02-11",
-    "title": "Northvolt startar batterileveranser till Volvo från Skellefteå",
-    "summary": "Northvolt meddelade idag att man påbörjat de första fullskaliga leveranserna av batterier till Volvo Cars från fabriken i Skellefteå. Detta markerar en viktig milstolpe för den svenska batteritillverkaren efter den ekonomiska turbulensen under 2025. Leveranserna omfattar batterier till Volvos kommande EX60-modell som planeras lanseras senare i år.\n\nVolvo Cars bekräftade samtidigt att man utökar sin beställning av Northvolts batterier med ytterligare 15 procent jämfört med ursprunglig ordervolym. Detta ses som ett förtroende för Northvolts produktionskapacitet och kvalitet efter de problem som präglade företaget under förra året.\n\nPå laddinfrastruktursidan rapporterar Laddinfra.se att antalet publika snabbladdare i Sverige nu passerat 4 200 stycken, en ökning med 18 procent sedan årsskiftet. Ökningen drivs framför allt av privata aktörer längs större vägar och vid köpcentrum.\n\nTesla har samtidigt sänkt priserna på Model Y med 25 000 kronor i Sverige som ett tidsbegränsat erbjudande. Rabatten gäller till slutet av februari och ses som en reaktion på det ökade trycket från kinesiska konkurrenter som BYD och Xpeng som kraftigt expanderar på den svenska marknaden.",
-    "sources": [
-      {
-        "title": "Northvolt levererar första batterierna till Volvo från Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-levererar-forsta-batterierna-volvo",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo utökar batterileveranser från Northvolt",
-        "url": "https://www.nyteknik.se/fordon/volvo-utokar-northvolt-order",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Över 4 200 snabbladdare i Sverige – rekordökning",
-        "url": "https://www.svt.se/nyheter/inrikes/snabbladdare-rekordsiffror-sverige",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Tesla sänker priserna kraftigt på Model Y",
-        "url": "https://www.teknikensvarld.se/tesla-prisratt-model-y-sverige",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:46:32.644Z"
   }
 ]

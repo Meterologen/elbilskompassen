@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-09",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter sin tillväxt under våren 2026, även om takten har mattats av jämfört med rekordåren. Priserna på nya elbilar har stabiliserats efter flera års volatilitet, och konkurrensen mellan tillverkare håller priserna på rimliga nivåer. Särskilt i mellanklassen finns nu ett brett utbud av modeller till omkring 400 000-500 000 kronor.\n\nLaddinfrastrukturen i Sverige har förbättrats markant de senaste åren. Antalet snabbladdare längs huvudvägarna har ökat, och allt fler bostadsrättsföreningar och hyresvärdar installerar laddmöjligheter. Fortfarande råder det dock brist på laddplatser i vissa tätorter och äldre bostadsområden.\n\nFör dig som funderar på att skaffa elbil just nu kan det vara värt att bevaka vårens leasingerbjudanden, som brukar vara förmånliga. Tänk också på att kolla vilka laddmöjligheter som finns där du bor och arbetar - det är fortfarande den viktigaste faktorn för en smidig elbilsvardag. Begagnatmarknaden för elbilar har också mognat, med stabilare andrahandsvärden än för några år sedan.",
+    "sources": [],
+    "generatedAt": "2026-04-09T07:09:46.458Z"
+  },
+  {
     "date": "2026-04-08",
     "title": "Elbilar ökar globalt – Sverige behöver fler laddplatser",
     "summary": "Elbilar blir allt vanligare i världen och på vissa marknader drevs mer än varannan nyregistrerad bil av batteri under förra året. Trenden visar en fortsatt stark tillväxt för elektrifierad transport globalt, rapporterar Aftonbladet.\n\nI en debattartikel i Dagens Industri lyfts vikten av parkering med laddning fram som en avgörande faktor för elektrifieringen av svenska bilflottan. Artikeln framhåller att tillgång till laddinfrastruktur vid bostäder är en aspekt som ofta glöms bort i debatten om elbilspremier och andra subventioner.\n\nFrågan om laddinfrastruktur blir allt viktigare i takt med att fler elbilar rullar ut på vägarna. För att elektrifieringen ska lyckas krävs inte bara ekonomiska incitament utan också praktiska lösningar för vardagsladdning där bilarna står parkerade.",
@@ -498,38 +505,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:45:54.171Z"
-  },
-  {
-    "date": "2026-02-15",
-    "title": "Northvolt Ett pausar produktion – svensk elbilsmarknad väntar på besked",
-    "summary": "Northvolt meddelade på fredagen att produktionen vid fabriken Ett i Skellefteå tillfälligt pausas för underhåll och omstrukturering. Beskedet kommer efter flera månaders turbulens för det svenska batterijätten, som kämpat med ekonomiska utmaningar och försenade leveranser till europeiska biltillverkare. Facket IF Metall efterlyser nu tydlighet kring hur många anställda som berörs av nedstängningen.\n\nVolkswagenägda Scout Motors bekräftade under veckan att man söker alternativa batterileverantörer efter Northvolts svårigheter att möta produktionsmålen. Detta sätter ytterligare press på den svenska batteriindustrin och väcker frågor om Sveriges position i den europeiska batteriförsörjningskedjan.\n\nPå den svenska elbilsmarknaden fortsätter försäljningen att växa trots vinterkylan. Preliminära siffror från Bil Sweden visar att elbilarnas andel av nyregistreringarna i februari ligger på drygt 28 procent, vilket är en ökning jämfört med samma månad förra året. Tesla Model Y och Volvo EX30 toppar fortfarande försäljningslistorna.\n\nLaddinfrastrukturen i Sverige fortsätter att expandera, med flera nya snabbladdningsstationer invigda längs E4:an under den senaste veckan. Energibolaget Ionity meddelar att man nu har över 150 laddpunkter i drift i Sverige, med fler stationer planerade till sommaren 2026.",
-    "sources": [
-      {
-        "title": "Northvolt pausar produktion i Skellefteå",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-pausar-produktion",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Scout Motors söker nya batterileverantörer efter Northvolt-problem",
-        "url": "https://www.di.se/nyheter/scout-motors-soker-nya-leverantorer/",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Elbilsförsäljningen ökar trots vinterkyla",
-        "url": "https://www.nyteknik.se/fordon/elbilsforsaljningen-okar-i-februari/",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "IF Metall kräver besked om Northvolt-anställda",
-        "url": "https://www.dn.se/ekonomi/if-metall-kraver-besked-northvolt/",
-        "source": "Dagens Nyheter"
-      },
-      {
-        "title": "Ionity expanderar snabbladdning längs E4:an",
-        "url": "https://www.teknikensvarld.se/ionity-expanderar-e4an/",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:46:14.364Z"
   }
 ]

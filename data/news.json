@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-04-10",
+    "title": "Snabbladdare står tomma 92 procent av tiden – elbilsboomen uteblev",
+    "summary": "Svenska snabbladdplatser för elbilar används endast 8 procent av tiden i genomsnitt, visar nya siffror från Energimyndigheten som SVT tagit del av. Bensinmackskedjor och andra aktörer satsade hårt på utbyggnad av laddinfrastruktur när elbilsförsäljningen steg kraftigt, men den förväntade boomen har uteblivit och laddplatserna står nu mestadels tomma.\n\nTrots den låga användningen av befintlig laddinfrastruktur pågår en debatt om hur elektrifieringen av transportsektorn ska påskyndas. Mattias Goldmann, VD för 2030-sekretariatet, och Joel Graffman, VD för Ziklo Bank, skriver i Dagens Industri att Sveriges omställning till eldrivna fordon har stannat av jämfört med grannländerna.\n\nI sin debattartikel menar Goldmann och Graffman att nyckeln till en snabbare omställning inte är mer infrastruktur, utan trovärdiga och långsiktiga spelregler som gör det ekonomiskt lönsamt att välja eldrift på kort sikt. Alla aktörer är överens om att framtidens mobilitet ska vara eldriven, men bristen på stabila ramvillkor bromsar utvecklingen i Sverige.",
+    "sources": [
+      {
+        "title": "Laddplatser står tomma efter utebliven elbilsboom",
+        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
+        "source": "SVT Nyheter"
+      },
+      {
+        "title": "Slutreplik: Nyckeln till omställning är trovärdighet – inte mer asfalt",
+        "url": "https://www.di.se/debatt/slutreplik-nyckeln-till-omstallning-ar-trovardighet-inte-mer-asfalt/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-04-10T07:14:30.833Z"
+  },
+  {
     "date": "2026-04-09",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter sin tillväxt under våren 2026, även om takten har mattats av jämfört med rekordåren. Priserna på nya elbilar har stabiliserats efter flera års volatilitet, och konkurrensen mellan tillverkare håller priserna på rimliga nivåer. Särskilt i mellanklassen finns nu ett brett utbud av modeller till omkring 400 000-500 000 kronor.\n\nLaddinfrastrukturen i Sverige har förbättrats markant de senaste åren. Antalet snabbladdare längs huvudvägarna har ökat, och allt fler bostadsrättsföreningar och hyresvärdar installerar laddmöjligheter. Fortfarande råder det dock brist på laddplatser i vissa tätorter och äldre bostadsområden.\n\nFör dig som funderar på att skaffa elbil just nu kan det vara värt att bevaka vårens leasingerbjudanden, som brukar vara förmånliga. Tänk också på att kolla vilka laddmöjligheter som finns där du bor och arbetar - det är fortfarande den viktigaste faktorn för en smidig elbilsvardag. Begagnatmarknaden för elbilar har också mognat, med stabilare andrahandsvärden än för några år sedan.",
@@ -472,38 +490,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:45:34.784Z"
-  },
-  {
-    "date": "2026-02-18",
-    "title": "Volvo EX90 börjar levereras – Northvolt förhandlar om kinesisk räddning",
-    "summary": "Volvo Cars inleder äntligen leveranser av sin efterlängtade elsuv EX90 till svenska kunder efter månaders förseningar. De första kunderna får nu sina bilar som ursprungligen var planerade till 2024, med uppgraderad mjukvara och LiDAR-teknologi för avancerad säkerhetsassistans.\n\nNorthvolt befinner sig i intensiva förhandlingar med kinesiska batteriproducenter om strategiska investeringar som kan rädda företaget från den krisläge som uppstått efter produktionsstopp och permitteringar. Flera potentiella köpare har visat intresse för Northvolts teknik och produktionsanläggningar, medan svenska staten följer utvecklingen noggrant.\n\nLaddoperatören Mer (tidigare Fortum Charge & Drive) meddelar kraftiga prishöjningar för snabbladdning från mars, med nya priser upp mot 7-8 kronor per kWh. Prisökningen motiveras med höga elnätskostnader och investeringar i nya laddstationer.\n\nNya siffror från Bil Sweden visar att elbilarnas andel av nyregistreringarna i januari 2026 landade på 42 procent, en minskning från rekordåret 2025. Analyser pekar på att osäkerheten kring framtida elbilsstöd och höga räntor påverkar privatpersoners köpbeslut.",
-    "sources": [
-      {
-        "title": "Volvo EX90 börjar äntligen levereras till svenska kunder",
-        "url": "https://www.di.se/nyheter/volvo-ex90-leveranser-sverige",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Kinesiska jättar i förhandlingar om Northvolt",
-        "url": "https://www.svt.se/nyheter/ekonomi/northvolt-kinesiska-investerare",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Mer höjer priserna kraftigt på snabbladdning",
-        "url": "https://www.nyteknik.se/fordon/mer-hojer-laddpriser-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Elbilarnas marknadsandel sjönk i januari",
-        "url": "https://www.teknikensvarld.se/elbilsstatistik-januari-2026",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Osäkerhet om elbilsstöd bromsar privatköpen",
-        "url": "https://www.dn.se/ekonomi/elbilsstod-paverkar-forsaljning",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:45:54.171Z"
   }
 ]

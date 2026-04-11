@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-11",
+    "title": "Snabbladdare står tomma 92 procent av tiden",
+    "summary": "Svenska snabbladdplatser för elbilar används i mycket lägre utsträckning än förväntat. Enligt siffror som Energimyndigheten tagit fram åt SVT står laddplatserna tomma i snitt 92 procent av tiden. Detta trots att bensinmackskedjor och andra aktörer satsat hårt på utbyggnad av laddinfrastruktur.\n\nBakgrunden är att elbilsförsäljningen inte fortsatte att växa i den takt som prognostiserades. När elbilsförsäljningen steg kraftigt under tidigare år byggdes det ut omfattande laddnätverk för att möta den förväntade efterfrågan. Nu visar det sig att investeringarna blev större än vad som behövdes.\n\nDet låga utnyttjandet av snabbladdarna väcker frågor om lönsamheten för de företag som investerat i laddinfrastruktur. Samtidigt kan det för elbilsägare innebära god tillgång till lediga laddplatser, även om det ekonomiska läget för laddoperatörerna kan påverka framtida utbyggnad och underhåll av nätverken.",
+    "sources": [
+      {
+        "title": "Laddplatser står tomma efter utebliven elbilsboom",
+        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-11T06:47:45.816Z"
+  },
+  {
     "date": "2026-04-10",
     "title": "Snabbladdare står tomma 92 procent av tiden – elbilsboomen uteblev",
     "summary": "Svenska snabbladdplatser för elbilar används endast 8 procent av tiden i genomsnitt, visar nya siffror från Energimyndigheten som SVT tagit del av. Bensinmackskedjor och andra aktörer satsade hårt på utbyggnad av laddinfrastruktur när elbilsförsäljningen steg kraftigt, men den förväntade boomen har uteblivit och laddplatserna står nu mestadels tomma.\n\nTrots den låga användningen av befintlig laddinfrastruktur pågår en debatt om hur elektrifieringen av transportsektorn ska påskyndas. Mattias Goldmann, VD för 2030-sekretariatet, och Joel Graffman, VD för Ziklo Bank, skriver i Dagens Industri att Sveriges omställning till eldrivna fordon har stannat av jämfört med grannländerna.\n\nI sin debattartikel menar Goldmann och Graffman att nyckeln till en snabbare omställning inte är mer infrastruktur, utan trovärdiga och långsiktiga spelregler som gör det ekonomiskt lönsamt att välja eldrift på kort sikt. Alla aktörer är överens om att framtidens mobilitet ska vara eldriven, men bristen på stabila ramvillkor bromsar utvecklingen i Sverige.",
@@ -457,38 +470,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:45:13.549Z"
-  },
-  {
-    "date": "2026-02-22",
-    "title": "Northvolt Ett ökar produktionen - nya laddstolpar utmed E4:an",
-    "summary": "Northvolt meddelar i veckan att produktionen vid anläggningen i Skellefteå nu når 80 procent av planerad kapacitet efter flera månaders utmaningar. Bolaget levererar batterier till Volvo Cars och Polestar i ökande takt, vilket ses som ett genombrott för svensk batteriproduktion. Samtidigt pågår rekrytering av ytterligare 300 medarbetare under våren 2026.\n\nE.ON och Ionity inviger tillsammans 12 nya snabbladdningsstationer längs E4:an mellan Stockholm och Sundsvall. Satsningen är del av en större utbyggnad av laddinfrastruktur längs svenska huvudvägar. Varje station är utrustad med minst fyra laddare om 350 kW, vilket möjliggör laddning på under 20 minutor för många moderna elbilar.\n\nVolvo Cars rapporterar att eldriften nu står för 45 procent av bolagets totala försäljning i Sverige under januari 2026. Den nya EX90 är särskilt populär och har över 8000 beställningar i Sverige. Samtidigt meddelar BYD att man planerar att öppna ytterligare 15 återförsäljare i Sverige under 2026 för att möta ökad efterfrågan.\n\nRegeringen bekräftar att elbilspremien på 50 000 kronor för privatpersoner förlängs till och med december 2026, dock med skärpta krav på batterikapacitet och ursprung. Premien för begagnade elbilar förblir oförändrad på 10 000 kronor.",
-    "sources": [
-      {
-        "title": "Northvolt når 80 procent av produktionsmålet i Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-produktion-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Stor satsning på snabbladdare längs E4:an",
-        "url": "https://www.svt.se/nyheter/laddinfrastruktur-e4",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo: Elbilar står för nästan hälften av försäljningen",
-        "url": "https://www.nyteknik.se/fordon/volvo-elbilsstatistik-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "BYD expanderar kraftigt i Sverige",
-        "url": "https://www.teknikensvarld.se/byd-expansion-sverige",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Elbilspremien förlängs med nya villkor",
-        "url": "https://www.dn.se/ekonomi/elbilspremie-forlangning-2026",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:45:34.784Z"
   }
 ]

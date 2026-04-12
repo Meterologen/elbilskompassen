@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-04-12",
+    "title": "Laddplatser står tomma 92% av tiden – Tesla godkänd i Nederländerna",
+    "summary": "Svenska snabbladdplatser står tomma i snitt 92 procent av tiden, visar nya siffror från Energimyndigheten som SVT tagit del av. Efter den kraftiga ökningen av elbilsförsäljningen satsade bensinmackskedjor och andra aktörer hårt på att bygga ut laddinfrastrukturen, men den förväntade elbilsboomen har uteblivit vilket lett till låg användning av laddstationerna.\n\nI europeisk teknikutveckling rapporterar Dagens Industri att Tesla fått grönt ljus från det nederländska vägverket för sitt delvis självkörande system FSD Supervised. Det är första gången ett sådant certifikat utfärdas i Europa, vilket kan bana väg för bredare införande av självkörande teknik på den europeiska marknaden.",
+    "sources": [
+      {
+        "title": "Laddplatser står tomma efter utebliven elbilsboom",
+        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
+        "source": "SVT Nyheter"
+      },
+      {
+        "title": "Självkörande Tesla får grönt ljus i Nederländerna",
+        "url": "https://www.di.se/nyheter/sjalvkorande-tesla-far-gront-ljus-i-nederlanderna/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-04-12T07:02:24.908Z"
+  },
+  {
     "date": "2026-04-11",
     "title": "Snabbladdare står tomma 92 procent av tiden",
     "summary": "Svenska snabbladdplatser för elbilar används i mycket lägre utsträckning än förväntat. Enligt siffror som Energimyndigheten tagit fram åt SVT står laddplatserna tomma i snitt 92 procent av tiden. Detta trots att bensinmackskedjor och andra aktörer satsat hårt på utbyggnad av laddinfrastruktur.\n\nBakgrunden är att elbilsförsäljningen inte fortsatte att växa i den takt som prognostiserades. När elbilsförsäljningen steg kraftigt under tidigare år byggdes det ut omfattande laddnätverk för att möta den förväntade efterfrågan. Nu visar det sig att investeringarna blev större än vad som behövdes.\n\nDet låga utnyttjandet av snabbladdarna väcker frågor om lönsamheten för de företag som investerat i laddinfrastruktur. Samtidigt kan det för elbilsägare innebära god tillgång till lediga laddplatser, även om det ekonomiska läget för laddoperatörerna kan påverka framtida utbyggnad och underhåll av nätverken.",
@@ -442,33 +460,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:44:55.114Z"
-  },
-  {
-    "date": "2026-02-25",
-    "title": "Northvolt ansöker om rekonstruktion – svenska elbilsmarknaden orolig",
-    "summary": "Northvolt meddelade idag att bolaget ansöker om företagsrekonstruktion efter förlorade kontrakt och förseningar i produktionen. Beskedet skakar den svenska elbilsindustrin då batteriproducenten varit en hörnsten i EU:s planer på batterisjälvförsörjning. BMW:s beslut att avsluta sitt samarbete i januari har förvärrat läget ytterligare.\n\nVolvo Cars bekräftar att man följer situationen noga men har diversifierat sina batterileverantörer. Biltillverkaren har parallella avtal med kinesiska CATL och sydkoreanska LG Energy Solution, vilket minskar sårbarheten. Polestar 4 och den kommande elektriska EX90 påverkas inte i nuläget.\n\nPå den svenska marknaden fortsätter elbilsförsäljningen att växa trots osäkerheten kring Northvolt. Preliminära siffror för februari visar att elbilar står för 62 procent av nyregistreringarna, en ökning från 58 procent samma månad förra året. BYD och Tesla fortsätter att ta marknadsandelar.\n\nEnergiminister Ebba Busch kommenterade situationen och betonade vikten av att stödja svensk batteriindustri, men att statliga garantier måste utvärderas noggrant. Oppositionen kräver att regeringen presenterar en tydlig strategi för Sveriges roll i den gröna omställningen.",
-    "sources": [
-      {
-        "title": "Northvolt ansöker om rekonstruktion efter BMW-exit",
-        "url": "https://www.di.se/nyheter/northvolt-ansoker-rekonstruktion-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo: Northvolts kris påverkar inte vår produktion",
-        "url": "https://www.svt.se/nyheter/ekonomi/volvo-northvolt-kris",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Rekordfebruari för svenska elbilar trots Northvolt-oro",
-        "url": "https://www.nyteknik.se/fordon/elbilar-rekord-februari-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Busch om Northvolt: Staten måste vara försiktig med garantier",
-        "url": "https://www.dn.se/ekonomi/busch-northvolt-statliga-garantier",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:45:13.549Z"
   }
 ]

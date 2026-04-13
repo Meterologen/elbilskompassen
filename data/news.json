@@ -1,5 +1,28 @@
 [
   {
+    "date": "2026-04-13",
+    "title": "Förstärkt elbilspremie i vårbudget – laddplatser står tomma 92%",
+    "summary": "Regeringen presenterar en förstärkt elbilspremie i vårbudgeten för 2026, samtidigt som skatten på bensin och diesel sänks. Detta är några av de ekonomiska åtgärderna som påverkar bilister, rapporterar SVT Nyheter.\n\nEn ny kartläggning från Energimyndigheten visar att snabbladdplatser för elbilar står tomma i genomsnitt 92 procent av tiden. Bensinmackskedjor och andra aktörer satsade hårt på utbyggnad när elbilsförsäljningen steg kraftigt, men den förväntade elbilsboomen har uteblivit. Siffrorna väcker frågor om lönsamheten i de stora investeringar som gjorts i laddinfrastruktur, enligt SVT Nyheter.\n\nPå det internationella planet har nederländska myndigheter godkänt Teslas förarstödssystem Full Self-Driving Supervised efter över 18 månaders tester. Systemet kan styra, bromsa och accelerera men kräver mänsklig övervakning och klassas inte som helt självkörande, rapporterar Dagens Industri. Föraren behåller fullt ansvar vid användning av tekniken.",
+    "sources": [
+      {
+        "title": "Så påverkas du av regeringens vårbudget",
+        "url": "https://www.svt.se/nyheter/inrikes/sa-paverkas-du-av-regeringens-varbudget",
+        "source": "SVT Nyheter"
+      },
+      {
+        "title": "Laddplatser står tomma efter utebliven elbilsboom",
+        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
+        "source": "SVT Nyheter"
+      },
+      {
+        "title": "Nederländerna godkänner Teslas FSD Supervised",
+        "url": "https://www.di.se/nyheter/nederlanderna-godkanner-teslas-fsd-supervised/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-04-13T07:46:50.032Z"
+  },
+  {
     "date": "2026-04-12",
     "title": "Laddplatser står tomma 92% av tiden – Tesla godkänd i Nederländerna",
     "summary": "Svenska snabbladdplatser står tomma i snitt 92 procent av tiden, visar nya siffror från Energimyndigheten som SVT tagit del av. Efter den kraftiga ökningen av elbilsförsäljningen satsade bensinmackskedjor och andra aktörer hårt på att bygga ut laddinfrastrukturen, men den förväntade elbilsboomen har uteblivit vilket lett till låg användning av laddstationerna.\n\nI europeisk teknikutveckling rapporterar Dagens Industri att Tesla fått grönt ljus från det nederländska vägverket för sitt delvis självkörande system FSD Supervised. Det är första gången ett sådant certifikat utfärdas i Europa, vilket kan bana väg för bredare införande av självkörande teknik på den europeiska marknaden.",
@@ -432,33 +455,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:44:36.648Z"
-  },
-  {
-    "date": "2026-03-01",
-    "title": "Northvolt Ett ökar produktionen – nya laddstationer längs E4:an",
-    "summary": "Northvolt meddelar att produktionen vid anläggningen Ett i Skellefteå nu når 80 procent av planerad kapacitet efter flera månaders upptrappning. Företaget levererar nu battericeller till både Volvo Cars och Polestar i ökande volymer, vilket ses som ett viktigt steg mot att möta den växande efterfrågan på europeiskt producerade batterier.\n\nLängs E4:an mellan Stockholm och Sundsvall invigs under mars 15 nya snabbladdningsstationer i ett samarbete mellan Vattenfall och Circle K. Stationerna erbjuder laddeffekter upp till 350 kW och är strategiskt placerade med max 70 kilometers mellanrum för att underlätta långfärder.\n\nVolvo Cars rapporterar att eldrivna modeller nu står för 65 procent av den totala försäljningen i Sverige under februari 2026. EX30 fortsätter att vara den mest sålda elbilen, följt av Tesla Model Y och nya EX90. Samtidigt väntas regeringens besked om förlängning av det reducerade förmånsvärdet för elbilar komma under våren.\n\nBYD öppnar sitt andra svenska servicecenter i Göteborg och planerar ytterligare etableringar i Malmö och Uppsala under 2026. Den kinesiska tillverkaren har ökat sin marknadsandel kraftigt i Sverige och satsar nu på att bygga ut servicenätverket för att möta den växande kundbasen.",
-    "sources": [
-      {
-        "title": "Northvolt Ett når 80 procent av produktionskapacitet",
-        "url": "https://www.di.se/nyheter/northvolt-ett-produktion-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "15 nya snabbladdare längs E4:an invigs i mars",
-        "url": "https://www.nyteknik.se/energi/laddinfrastruktur-e4-vattenfall-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Volvo: Elbilar står för 65 procent av svensk försäljning",
-        "url": "https://www.svt.se/nyheter/ekonomi/volvo-elbilsforsaljning-februari-2026",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "BYD öppnar andra servicecentret i Sverige",
-        "url": "https://www.teknikensvarld.se/byd-servicecenter-goteborg-2026",
-        "source": "Teknikens Värld"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:44:55.114Z"
   }
 ]

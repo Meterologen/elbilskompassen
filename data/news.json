@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-14",
+    "title": "Förstärkt elbilspremie i vårbudgeten – sänkt skatt på bensin och diesel",
+    "summary": "Regeringen presenterar sin vårbudget för 2026 med flera åtgärder som påverkar bilister. Bland förslagen finns en förstärkt elbilspremie, vilket kan göra det mer ekonomiskt fördelaktigt att köpa elbilar framöver, rapporterar SVT Nyheter.\n\nSamtidigt sänks skatten på bensin och diesel, en åtgärd som kan ses som motsägelsefull i förhållande till satsningen på elbilar. Detta speglar regeringens balansgång mellan klimatmål och ekonomisk lättnad för hushållen.\n\nDetaljerna kring hur mycket elbilspremien förstärks och när förändringarna träder i kraft väntas presenteras närmare i budgetprocessen. Åtgärderna är en del av regeringens ekonomiska politik inför 2026.",
+    "sources": [
+      {
+        "title": "Så påverkas du av regeringens vårbudget",
+        "url": "https://www.svt.se/nyheter/inrikes/sa-paverkas-du-av-regeringens-varbudget",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-14T07:16:41.738Z"
+  },
+  {
     "date": "2026-04-13",
     "title": "Förstärkt elbilspremie i vårbudget – laddplatser står tomma 92%",
     "summary": "Regeringen presenterar en förstärkt elbilspremie i vårbudgeten för 2026, samtidigt som skatten på bensin och diesel sänks. Detta är några av de ekonomiska åtgärderna som påverkar bilister, rapporterar SVT Nyheter.\n\nEn ny kartläggning från Energimyndigheten visar att snabbladdplatser för elbilar står tomma i genomsnitt 92 procent av tiden. Bensinmackskedjor och andra aktörer satsade hårt på utbyggnad när elbilsförsäljningen steg kraftigt, men den förväntade elbilsboomen har uteblivit. Siffrorna väcker frågor om lönsamheten i de stora investeringar som gjorts i laddinfrastruktur, enligt SVT Nyheter.\n\nPå det internationella planet har nederländska myndigheter godkänt Teslas förarstödssystem Full Self-Driving Supervised efter över 18 månaders tester. Systemet kan styra, bromsa och accelerera men kräver mänsklig övervakning och klassas inte som helt självkörande, rapporterar Dagens Industri. Föraren behåller fullt ansvar vid användning av tekniken.",
@@ -422,38 +435,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:44:14.352Z"
-  },
-  {
-    "date": "2026-03-04",
-    "title": "Northvolt pausar expansion – fokuserar på befintlig produktion",
-    "summary": "Northvolt meddelade idag att bolaget tillfälligt pausar planerna på ytterligare expansion i Skellefteå för att istället fokusera på att stabilisera och optimera den befintliga produktionen. Beslutet kommer efter flera månaders utmaningar med att nå full produktionskapacitet och hålla kostnaderna nere i den tuffa konkurrensen från asiatiska batteritillverkare.\n\nVolkswagenkoncernen, som är en av Northvolts största ägare och kunder, bekräftade samtidigt sitt långsiktiga stöd men meddelade att man diversifierar batterileverantörerna ytterligare. Detta innebär ökade order från sydkoreanska LG Energy Solution och kinesiska CATL, vilket sätter press på Northvolt att leverera enligt plan.\n\nPå den svenska elbilsmarknaden fortsätter försäljningen att växa, om än i lugnare takt än tidigare år. Enligt Mobility Sweden ökade nyregistreringarna av elbilar med 12 procent i februari jämfört med samma månad förra året. Populäraste modellerna var Tesla Model Y, Volvo EX30 och Volkswagen ID.4.\n\nRedan nu börjar spekulationerna om hur regeringens kommande budgetproposition kan påverka elbilsstöden. Flera remissinstanser har varnat för att ett borttagande av bonus-malus-systemet skulle kunna bromsa omställningen till fossilfri fordonsflotta, medan andra menar att marknaden nu är mogen nog att klara sig utan subventioner.",
-    "sources": [
-      {
-        "title": "Northvolt pausar expansion – fokuserar på stabilitet",
-        "url": "https://www.di.se/nyheter/northvolt-pausar-expansion",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volkswagen diversifierar batterileverantörer",
-        "url": "https://www.nyteknik.se/fordon/volkswagen-diversifierar-batterileverantorer",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Elbilsförsäljningen ökar med 12 procent i februari",
-        "url": "https://www.svt.se/nyheter/inrikes/elbilsforsaljningen-okar",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Tesla Model Y fortsatt mest sålda elbilen",
-        "url": "https://www.teknikensvarld.se/tesla-model-y-mest-salda",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Osäkerhet kring framtiden för bonus-malus",
-        "url": "https://www.dn.se/ekonomi/osakerhet-bonus-malus-systemet",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:44:36.648Z"
   }
 ]

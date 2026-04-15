@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-15",
+    "title": "Regeringen förstärker elbilspremien i vårbudgeten för 2026",
+    "summary": "Regeringen presenterar i sin vårbudget för 2026 en förstärkt elbilspremie, vilket är en av flera satsningar som ska påverka svenska folkets ekonomi. Samtidigt sänks skatten på bensin och diesel, rapporterar SVT Nyheter.\n\nDen förstärkta elbilspremien kommer som en del av budgetförslaget där regeringen vill stimulera övergången till elbilar. Detaljerna kring hur mycket premien höjs och vilka fordon som omfattas har ännu inte presenterats fullt ut.\n\nBeslutet att samtidigt sänka skatten på fossila bränslen och höja elbilspremien signalerar en blandad strategi där regeringen försöker balansera omställningen till elektrifierad transport med lättnader för bensin- och dieselförare.",
+    "sources": [
+      {
+        "title": "Så påverkas du av regeringens vårbudget",
+        "url": "https://www.svt.se/nyheter/inrikes/sa-paverkas-du-av-regeringens-varbudget",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-15T07:17:04.133Z"
+  },
+  {
     "date": "2026-04-14",
     "title": "Förstärkt elbilspremie i vårbudgeten – sänkt skatt på bensin och diesel",
     "summary": "Regeringen presenterar sin vårbudget för 2026 med flera åtgärder som påverkar bilister. Bland förslagen finns en förstärkt elbilspremie, vilket kan göra det mer ekonomiskt fördelaktigt att köpa elbilar framöver, rapporterar SVT Nyheter.\n\nSamtidigt sänks skatten på bensin och diesel, en åtgärd som kan ses som motsägelsefull i förhållande till satsningen på elbilar. Detta speglar regeringens balansgång mellan klimatmål och ekonomisk lättnad för hushållen.\n\nDetaljerna kring hur mycket elbilspremien förstärks och när förändringarna träder i kraft väntas presenteras närmare i budgetprocessen. Åtgärderna är en del av regeringens ekonomiska politik inför 2026.",
@@ -402,38 +415,5 @@
       }
     ],
     "generatedAt": "2026-03-11T10:43:52.054Z"
-  },
-  {
-    "date": "2026-03-08",
-    "title": "Northvolt pausar expansion medan Volvo EX90 blir storförsäljare",
-    "summary": "Northvolt meddelade i veckan att man tillfälligt pausar planerna på att utöka produktionen i Skellefteå med ytterligare en fabrikslinje. Beslutet kommer efter att flera europeiska biltillverkare senarelägger sina elektrifieringsplaner på grund av svagare efterfrågan än förväntat. Företaget betonar dock att den nuvarande produktionen fortsätter som planerat och att man fortfarande är på väg mot full kapacitet under 2026.\n\nVolvo Cars rapporterar rekordintresse för nya EX90, där den svenska versionen nu har över 8 000 förbeställningar. Leveranserna som startade i februari har fått positiva omdömen, särskilt för räckvidden som i praktiska tester landar kring 55-60 mil under svenska vinterförhållanden. Volvos fabrik i Torslanda arbetar nu i full kapacitet för att möta efterfrågan.\n\nLaddoperatören Ionity höjer priserna i Sverige från och med 15 mars, där snabbladdning utan abonnemang kommer att kosta 9,95 kr/kWh jämfört med nuvarande 8,95 kr/kWh. Prisökningen motiveras med höjda elnätskostnader och inflation. Samtidigt lanserar Recharge flera nya laddstationer längs E4:an mellan Stockholm och Sundsvall med totalt 48 nya snabbladdare.\n\nBYD:s marknadsandel i Sverige fortsätter att växa och nådde 6,2 procent i februari enligt Bil Sweden. Den kinesiska tillverkaren har nu passerat både Nissan och Hyundai i försäljningsstatistiken, drivet främst av framgångarna för modellerna Seal och Dolphin.",
-    "sources": [
-      {
-        "title": "Northvolt pausar expansionsplaner i Skellefteå",
-        "url": "https://www.di.se/nyheter/northvolt-pausar-expansion-skelleftea-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Volvo EX90 når 8 000 förbeställningar i Sverige",
-        "url": "https://www.nyteknik.se/fordon/volvo-ex90-storsaljare-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Ionity höjer priserna för snabbladdning",
-        "url": "https://www.svt.se/nyheter/ekonomi/ionity-hojer-laddpriser-mars-2026",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "BYD växer kraftigt på svensk marknad",
-        "url": "https://www.teknikensvarld.se/byd-passerar-hyundai-sverige-2026",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Recharge expanderar längs E4:an",
-        "url": "https://www.dn.se/ekonomi/recharge-nya-laddstationer-e4-2026",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:44:14.352Z"
   }
 ]

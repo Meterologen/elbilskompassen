@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-16",
+    "title": "Stark politisk debatt efter SVT-dokumentär om elbilar och bränslepriser",
+    "summary": "SVT:s nyhetsdokumentär \"Vid pump\" om bensin- och dieselpriser samt omställningen till elbilar har utlöst en intensiv politisk debatt. Programmet har fått starka reaktioner från olika politiska håll.\n\nCenterpartiet beskriver regeringens politik som en \"total katastrof\" efter dokumentären. Samtidigt kallar Sverigedemokraterna Norges elbilspolitik för ett \"skräckexempel\". De kraftigt divergerande reaktionerna visar på den polariserade synen på hur Sverige bör hantera transportsektorns omställning.\n\nDokumentären har tydligt blottlagt de politiska motsättningarna kring elbilsfrågan och hur snabbt Sverige ska gå från fossila bränslen till eldrift. Debatten berör både privatekonomi för bilister och de långsiktiga klimatmålen.",
+    "sources": [
+      {
+        "title": "Debatten efter Vid pump: \"Katastrof\" och \"skräckexempel\"",
+        "url": "https://www.svt.se/nyheter/inrikes/debatten-efter-vid-pump-katastrof-och-skrackexempel",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-16T07:18:00.863Z"
+  },
+  {
     "date": "2026-04-15",
     "title": "Regeringen förstärker elbilspremien i vårbudgeten för 2026",
     "summary": "Regeringen presenterar i sin vårbudget för 2026 en förstärkt elbilspremie, vilket är en av flera satsningar som ska påverka svenska folkets ekonomi. Samtidigt sänks skatten på bensin och diesel, rapporterar SVT Nyheter.\n\nDen förstärkta elbilspremien kommer som en del av budgetförslaget där regeringen vill stimulera övergången till elbilar. Detaljerna kring hur mycket premien höjs och vilka fordon som omfattas har ännu inte presenterats fullt ut.\n\nBeslutet att samtidigt sänka skatten på fossila bränslen och höja elbilspremien signalerar en blandad strategi där regeringen försöker balansera omställningen till elektrifierad transport med lättnader för bensin- och dieselförare.",
@@ -382,38 +395,5 @@
       }
     ],
     "generatedAt": "2026-03-12T06:40:14.675Z"
-  },
-  {
-    "date": "2026-03-11",
-    "title": "Northvolt pausar expansion – Tesla sänker priser igen i Sverige",
-    "summary": "Northvolt meddelar idag att bolaget skjuter på planerna för ytterligare expansion av batterifabriken i Skellefteå. Beslutet motiveras med behov av att konsolidera nuvarande produktion och fokusera på lönsamhet. Samtidigt har flera stora europeiska bilkunder förhandlat om försenade leveranser, vilket skapar osäkerhet kring den svenska batterijättens framtid.\n\nTesla sänker återigen priserna på Model 3 och Model Y på den svenska marknaden, tredje gången sedan årsskiftet. Den billigaste Model 3 kostar nu strax under 400 000 kronor efter avdragen miljöbonus. Prissänkningarna ses som ett svar på hårdnande konkurrens från kinesiska tillverkare som BYD och Nio, som aggressivt etablerar sig på den europeiska marknaden.\n\nVolvo Cars rapporterar att elbilsförsäljningen i Sverige ökade med 18 procent i februari jämfört med samma period förra året. EX30 fortsätter att vara en storsäljare, medan den nya EX90 börjar levereras till de första svenska kunderna. Totalt utgjorde elbilar 64 procent av alla nyregistrerade personbilar i Sverige under februari månad.\n\nLaddoperatören Ionity presenterar planer för att bygga ut minst 25 nya snabbladdningsstationer längs svenska huvudvägar under 2026. Satsningen är en del av en större nordisk expansion och ska minska köbildningen vid befintliga laddplatser under högtrafik.",
-    "sources": [
-      {
-        "title": "Northvolt pausar expansionsplaner – fokuserar på lönsamhet",
-        "url": "https://www.di.se/nyheter/northvolt-pausar-expansion-2026",
-        "source": "Dagens Industri"
-      },
-      {
-        "title": "Tesla sänker priserna igen – Model 3 under 400 000 kronor",
-        "url": "https://www.nyteknik.se/fordon/tesla-prissankning-mars-2026",
-        "source": "Ny Teknik"
-      },
-      {
-        "title": "Rekordandel elbilar i Sverige – 64 procent i februari",
-        "url": "https://www.svt.se/nyheter/ekonomi/elbilsandel-rekord-februari-2026",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Volvo EX90 börjar levereras till svenska kunder",
-        "url": "https://www.teknikensvarld.se/volvo-ex90-leveranser-sverige",
-        "source": "Teknikens Värld"
-      },
-      {
-        "title": "Ionity bygger ut snabbladdning kraftigt i Sverige",
-        "url": "https://www.dn.se/ekonomi/ionity-utbyggnad-sverige-2026",
-        "source": "Dagens Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-11T10:43:52.054Z"
   }
 ]

@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-17",
+    "title": "Politisk debatt efter SVT-dokumentär om bensinpriser och elbilar",
+    "summary": "SVT:s nyhetsdokumentär \"Vid pump\" om bensin- och dieselpriser samt omställningen till elbilar har väckt stark politisk debatt. Dokumentären har lett till tydligt delade meningar bland riksdagspartierna.\n\nCenterpartiet kallar regeringens politik för en \"total katastrof\" som reaktion på dokumentären. Samtidigt uttrycker Sverigedemokraterna sig kritiskt mot Norges elbilspolitik, som de beskriver som ett \"skräckexempel\".\n\nDebatten belyser de djupa politiska skillnaderna kring hur Sverige ska hantera drivmedelspriser och övergången till elektrifierad transport. Dokumentären har tydligt träffat en känslig politisk nerve i frågan om transportomställningen.",
+    "sources": [
+      {
+        "title": "Debatten efter Vid pump: \"Katastrof\" och \"skräckexempel\"",
+        "url": "https://www.svt.se/nyheter/inrikes/debatten-efter-vid-pump-katastrof-och-skrackexempel",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-17T07:18:18.622Z"
+  },
+  {
     "date": "2026-04-16",
     "title": "Stark politisk debatt efter SVT-dokumentär om elbilar och bränslepriser",
     "summary": "SVT:s nyhetsdokumentär \"Vid pump\" om bensin- och dieselpriser samt omställningen till elbilar har utlöst en intensiv politisk debatt. Programmet har fått starka reaktioner från olika politiska håll.\n\nCenterpartiet beskriver regeringens politik som en \"total katastrof\" efter dokumentären. Samtidigt kallar Sverigedemokraterna Norges elbilspolitik för ett \"skräckexempel\". De kraftigt divergerande reaktionerna visar på den polariserade synen på hur Sverige bör hantera transportsektorns omställning.\n\nDokumentären har tydligt blottlagt de politiska motsättningarna kring elbilsfrågan och hur snabbt Sverige ska gå från fossila bränslen till eldrift. Debatten berör både privatekonomi för bilister och de långsiktiga klimatmålen.",
@@ -382,18 +395,5 @@
       }
     ],
     "generatedAt": "2026-03-13T06:38:36.023Z"
-  },
-  {
-    "date": "2026-03-12",
-    "title": "Northvolts ingenjörer har fått nya jobb – 'exceptionellt' snabb återhämtning",
-    "summary": "Ett år efter Northvolts konkurs har de flesta av de drabbade ingenjörerna i Västerbotten fått nya jobb. Arbetslösheten bland ingenjörer i regionen steg kraftigt efter konkursen, från den lägsta till den högsta i landet. Men återhämtningen har gått mycket snabbare än väntat.\n\nJohan Kreicbergs vid fackförbundet Sveriges Ingenjörer beskriver utvecklingen som 'exceptionell'. Att det skulle gå så fort trodde varken facket eller de drabbade själva när konkursen var ett faktum, enligt SVT Nyheter.\n\nDen snabba återhämtningen visar på en fortsatt stark efterfrågan på ingenjörskompetens i Sverige, trots batteritillverkarens kollaps. Northvolts konkurs blev en stor smäll för den svenska elbilsindustrin, men arbetsmarknaden för kvalificerad teknisk personal verkar ha kunnat absorbera de uppsagda relativt snabbt.",
-    "sources": [
-      {
-        "title": "Ett år efter Northvolts konkurs – så gick det för ingenjörerna: 'Exceptionellt'",
-        "url": "https://www.svt.se/nyheter/lokalt/vasterbotten/ett-ar-efter-northvolts-konkurs-sa-gick-det-for-ingenjorerna-exceptionellt",
-        "source": "SVT Nyheter"
-      }
-    ],
-    "generatedAt": "2026-03-12T06:40:14.675Z"
   }
 ]

@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-18",
+    "title": "Trendbrott: Begagnade elbilar säljer bättre när bensinpriset stiger",
+    "summary": "Försäljningen av begagnade elbilar ökade kraftigt i mars, vilket beskrivs som ett trendbrott av bilanalysföretag. Utvecklingen bekräftas av bilhandlare i Växjö och Alvesta som ser ett ökat intresse.\n\nDe höga bränslepriserna pekas ut som den främsta drivkraften bakom den ökade efterfrågan på begagnade elbilar. När dieseln och bensinens pris stiger blir eldrift ett allt mer attraktivt alternativ för svenska bilköpare.\n\nTrenden visar att begagnatmarknaden för elbilar nu tar fart på allvar, vilket kan vara en viktig pusselbit för att få fler svenskar att byta till fossilfria fordon. Lägre inköpspriser på begagnatmarknaden i kombination med höga driftskostnader för fossila bränslen gör att fler vågar ta steget över till elbil.",
+    "sources": [
+      {
+        "title": "Höga bränslepriser – då säljs fler begagnade elbilar",
+        "url": "https://www.svt.se/nyheter/lokalt/smaland/hoga-branslepriser-da-saljs-fler-begagnade-elbilar",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-04-18T06:55:45.042Z"
+  },
+  {
     "date": "2026-04-17",
     "title": "Politisk debatt efter SVT-dokumentär om bensinpriser och elbilar",
     "summary": "SVT:s nyhetsdokumentär \"Vid pump\" om bensin- och dieselpriser samt omställningen till elbilar har väckt stark politisk debatt. Dokumentären har lett till tydligt delade meningar bland riksdagspartierna.\n\nCenterpartiet kallar regeringens politik för en \"total katastrof\" som reaktion på dokumentären. Samtidigt uttrycker Sverigedemokraterna sig kritiskt mot Norges elbilspolitik, som de beskriver som ett \"skräckexempel\".\n\nDebatten belyser de djupa politiska skillnaderna kring hur Sverige ska hantera drivmedelspriser och övergången till elektrifierad transport. Dokumentären har tydligt träffat en känslig politisk nerve i frågan om transportomställningen.",
@@ -382,18 +395,5 @@
       }
     ],
     "generatedAt": "2026-03-17T07:41:17.357Z"
-  },
-  {
-    "date": "2026-03-13",
-    "title": "Honda mot historisk förlust efter elbilsfiasko",
-    "summary": "Honda står inför sin första helårsförlust i sin nästan 70-åriga börshistoria. Den japanska biltillverkaren drabbas av en massiv kostnadssmäll på närmare 150 miljarder kronor, vilket är direkt kopplat till skrotade elbilsmodeller, rapporterar Dagens Industri.\n\nFiaskot illustrerar de stora utmaningar som traditionella biltillverkare möter i omställningen till eldrift. Honda har tydligen satsat stort på elbilsmodeller som inte fått den förväntade mottagningen på marknaden, vilket nu resulterar i omfattande nedskrivningar.\n\nDen historiska förlusten markerar en vändpunkt för Honda och visar hur kostsamt det kan vara att misslyckas med elektrifieringen. För en biltillverkare med Hondas anrika historia är detta en ovanlig och allvarlig situation som speglar de turbulenta tiderna inom bilindustrin.",
-    "sources": [
-      {
-        "title": "Biltillverkaren mot historisk förlust efter elbilsfiasko",
-        "url": "https://www.di.se/live/biltillverkaren-mot-historisk-forlust-efter-elbilsfiasko/",
-        "source": "Dagens Industri"
-      }
-    ],
-    "generatedAt": "2026-03-13T06:38:36.023Z"
   }
 ]

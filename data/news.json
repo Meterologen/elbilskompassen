@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-19",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - Läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter sin tillväxt under våren 2026, med allt fler modeller i mellanklassen som pressas i pris. Flera tillverkare har anpassat sina priser nedåt för att möta ökad konkurrens, särskilt från kinesiska märken som etablerat sig starkare på den svenska marknaden.\n\nLaddinfrastrukturen fortsätter att byggas ut längs svenska vägar, med särskilt fokus på snabbladdare vid rastplatser utmed E4 och E6. Samtidigt diskuteras fortfarande förändringar i bonus-malus-systemet som kan påverka incitamenten för elbilsköp framöver.\n\nFör dig som funderar på att köpa elbil nu i vår är det ett bra tillfälle att jämföra leasingerbjudanden, då många återförsäljare kör kampanjer inför sommarsäsongen. Räckvidden på nya modeller ligger nu rutinmässigt över 50 mil för mellanklassbilarna, vilket gör elbil till ett alltmer praktiskt alternativ även för längre resor.",
+    "sources": [],
+    "generatedAt": "2026-04-19T07:06:04.087Z"
+  },
+  {
     "date": "2026-04-18",
     "title": "Trendbrott: Begagnade elbilar säljer bättre när bensinpriset stiger",
     "summary": "Försäljningen av begagnade elbilar ökade kraftigt i mars, vilket beskrivs som ett trendbrott av bilanalysföretag. Utvecklingen bekräftas av bilhandlare i Växjö och Alvesta som ser ett ökat intresse.\n\nDe höga bränslepriserna pekas ut som den främsta drivkraften bakom den ökade efterfrågan på begagnade elbilar. När dieseln och bensinens pris stiger blir eldrift ett allt mer attraktivt alternativ för svenska bilköpare.\n\nTrenden visar att begagnatmarknaden för elbilar nu tar fart på allvar, vilket kan vara en viktig pusselbit för att få fler svenskar att byta till fossilfria fordon. Lägre inköpspriser på begagnatmarknaden i kombination med höga driftskostnader för fossila bränslen gör att fler vågar ta steget över till elbil.",
@@ -362,38 +369,5 @@
       }
     ],
     "generatedAt": "2026-03-19T07:00:00.000Z"
-  },
-  {
-    "date": "2026-03-17",
-    "title": "Elbilspremien öppnar imorgon – upp till 46 800 kronor i stöd",
-    "summary": "Den nya elbilspremien öppnar för ansökan den 18 mars 2026. Stödet riktar sig till hushåll på landsbygden med inkomster lägre än medelinkomsten och ger 1 300 kronor per månad i upp till 36 månader, totalt upp till 46 800 kronor. Ett extra starttillägg på 18 000 kronor kan beviljas för hushåll med inkomster under 50 procent av medelinkomsten. Premien finansieras till 75 procent av EU:s sociala klimatfond.\n\nPremien gäller både nya och begagnade elbilar som kostar mellan 64 800 och 450 000 kronor. Ingen i hushållet får ha ägt eller leasat en elbil eller laddhybrid under de senaste 12 månaderna. Budgeten beräknas räcka till ungefär 115 000 fordon, rapporterar Naturvårdsverket.\n\nSamtidigt fortsätter Sveriges laddinfrastruktur att växa. Landet har nu över 9 000 publika laddstationer med nästan 60 000 laddpunkter, varav drygt 10 500 erbjuder snabbladdning. Under 2025 ökade antalet laddstationer med 38 procent. OKQ8 och Skellefteå Kraft siktar på att etablera 800 supersnabbladdpunkter på över 300 stationer under 2026.\n\nPå elbilsmarknaden väntas flera nya modeller under året, bland annat Volvo EX60 med längre räckvidd, en uppgraderad Volvo EX90 med 800-voltssystem samt Mercedes helt eldrivna CLA kombi med räckvidd upp till 761 kilometer.",
-    "sources": [
-      {
-        "title": "Ansökan till nya elbilspremien öppnar 18 mars",
-        "url": "https://www.naturvardsverket.se/om-oss/aktuellt/nyheter-och-pressmeddelanden/2026/mars/ansokan-till-nya-elbilspremien-oppnar-18-mars/",
-        "source": "Naturvårdsverket"
-      },
-      {
-        "title": "Nya bilstödet 2026 – då har du rätt till 18 000 kronor",
-        "url": "https://nyheter24.se/nyheter/motor/1466513-nya-bilstodet-2026-da-har-du-ratt-till-18-000-kronor",
-        "source": "Nyheter24"
-      },
-      {
-        "title": "Ny elbilspremie införs i Sverige 18 mars",
-        "url": "https://www.grontsamhallsbyggande.se/2026/03/10/ny-elbilspremie-infors-i-sverige-18-mars-hushall-kan-fa-upp-till-46-800-kronor-i-stod/",
-        "source": "Grönt Samhällsbyggande"
-      },
-      {
-        "title": "Elbilsmarknaden vände uppåt igen under 2025",
-        "url": "https://www.energi.se/artiklar/2026/januari-2026/elbilsmarknaden-vande-uppat-igen-under-2025/",
-        "source": "Energi"
-      },
-      {
-        "title": "Kommande 19 elbilar 2026 i Sverige",
-        "url": "https://www.santanderleasing.se/magasinet/kommande-elbilar-2026",
-        "source": "Santander Leasing"
-      }
-    ],
-    "generatedAt": "2026-03-17T07:41:17.357Z"
   }
 ]

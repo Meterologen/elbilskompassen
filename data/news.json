@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-04-21",
+    "title": "Elbilsmarknaden i Sverige våren 2026 - Läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter sin omställning under våren 2026. Laddinfrastrukturen expanderar stadigt med fler snabbladdare längs större vägar, vilket gör längre resor allt smidigare. Samtidigt har priserna på begagnade elbilar stabiliserats efter tidigare volatilitet, vilket gör det mer överkomligt för fler svenskar att göra omställningen.\n\nPå den politiska fronten fortsätter diskussionen om framtida stödsystem och beskattning av elbilar. Den tidigare bonusmalus-modellen har fasats ut, men vissa kommuner erbjuder fortfarande lokala incitament som gratis parkering och reducerade avgifter. Det är värt att kolla vad som gäller i din hemkommun.\n\nFör dig som funderar på att skaffa elbil just nu kan det vara värt att jämföra både köp och leasing noggrant. Räckvidden på nya modeller fortsätter att förbättras och många bilar klarar nu bekvämt 40-50 mil på en laddning, vilket täcker de flesta svenskars dagliga behov med god marginal.",
+    "sources": [],
+    "generatedAt": "2026-04-21T07:20:40.153Z"
+  },
+  {
     "date": "2026-04-19",
     "title": "Elbilsmarknaden i Sverige våren 2026 - Läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter sin tillväxt under våren 2026, med allt fler modeller i mellanklassen som pressas i pris. Flera tillverkare har anpassat sina priser nedåt för att möta ökad konkurrens, särskilt från kinesiska märken som etablerat sig starkare på den svenska marknaden.\n\nLaddinfrastrukturen fortsätter att byggas ut längs svenska vägar, med särskilt fokus på snabbladdare vid rastplatser utmed E4 och E6. Samtidigt diskuteras fortfarande förändringar i bonus-malus-systemet som kan påverka incitamenten för elbilsköp framöver.\n\nFör dig som funderar på att köpa elbil nu i vår är det ett bra tillfälle att jämföra leasingerbjudanden, då många återförsäljare kör kampanjer inför sommarsäsongen. Räckvidden på nya modeller ligger nu rutinmässigt över 50 mil för mellanklassbilarna, vilket gör elbil till ett alltmer praktiskt alternativ även för längre resor.",
@@ -336,38 +343,5 @@
       }
     ],
     "generatedAt": "2026-03-21T13:40:25.064Z"
-  },
-  {
-    "date": "2026-03-19",
-    "title": "BMW visar nya i3 – Volvo ökar EX60-produktionen efter rekordefterfrågan",
-    "summary": "BMW avtäckte igår sin nya i3, den andra modellen i Neue Klasse-familjen. Den eldrivna sedanen imponerar med en räckvidd på upp till 900 kilometer enligt WLTP och stöd för 400 kW snabbladdning som ger 400 kilometer på bara tio minuter. Bilen har testats vid BMW:s vinterprovningscenter i Arjeplog och produktionen startar i augusti vid fabriken i München, med europeiska leveranser i höst.\n\nVolvo Cars meddelar att man ökar produktionen av den helelektriska EX60 vid Torslandafabriken efter att europeiska beställningar kraftigt överträffat prognoserna. Enbart i Sverige har över 3 000 bilar beställts, betydligt fler än EX30 fick under motsvarande period efter sin lansering. Volvo förhandlar nu med fackförbunden om att hålla fabriken öppen en extra vecka i sommar för att möta efterfrågan.\n\nSveriges nya elbilspremie, som öppnade för ansökan igår den 18 mars, har väckt stort intresse. Stödet på upp till 46 800 kronor riktar sig till hushåll på landsbygden med lägre inkomster och finansieras till 75 procent av EU:s sociala klimatfond. Naturvårdsverket rekommenderar att man ansöker och får beslut innan man köper bilen, eftersom budgeten är begränsad till cirka 115 000 hushåll.",
-    "sources": [
-      {
-        "title": "BMW avtäcker nya i3 – så ser den eldrivna 3-serien ut",
-        "url": "https://www.electrive.com/2026/03/18/bmw-unveils-i3-design-this-is-what-the-electric-3-series-looks-like/",
-        "source": "Electrive"
-      },
-      {
-        "title": "Volvo ökar EX60-produktionen efter stark efterfrågan",
-        "url": "https://www.volvocars.com/intl/media/press-releases/44CDFC8814BA3CE7/",
-        "source": "Volvo Cars"
-      },
-      {
-        "title": "Volvo to Boost Output of Electric SUV After Orders Top Forecasts",
-        "url": "https://www.bloomberg.com/news/articles/2026-03-04/volvo-to-boost-output-of-electric-suv-after-orders-top-forecasts",
-        "source": "Bloomberg"
-      },
-      {
-        "title": "Ansökan till nya elbilspremien öppnar 18 mars",
-        "url": "https://www.naturvardsverket.se/om-oss/aktuellt/nyheter-och-pressmeddelanden/2026/mars/ansokan-till-nya-elbilspremien-oppnar-18-mars/",
-        "source": "Naturvårdsverket"
-      },
-      {
-        "title": "BMW i3 – andra Neue Klasse-modellen med vintertester i Arjeplog",
-        "url": "https://www.press.bmwgroup.com/global/article/detail/T0455888EN/",
-        "source": "BMW Group"
-      }
-    ],
-    "generatedAt": "2026-03-19T07:00:00.000Z"
   }
 ]

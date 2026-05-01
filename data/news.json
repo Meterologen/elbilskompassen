@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-05-01",
+    "title": "Tesla testar självkörning i Strängnäs – elbil för 200 kronor med premie",
+    "summary": "Strängnäs kommun har gett grönt ljus för Tesla att testa självkörande bilar på kommunala vägar. Syftet är att prova tekniken i verklig trafik, och nu inväntas Transportstyrelsens godkännande. Stadsmiljöchef Anders Ekman menar att Strängnäs blir en del av det framtida trafiksäkerhetsarbetet, enligt SVT Nyheter.\n\nDen nya elbilspremien har gjort det möjligt för Erik Lange i Gripenberg utanför Tranås att köpa en begagnad elbil för 65 000 kronor med en slutlig kostnad på endast 200 kronor. Miljöminister Johan Britz (L) gratulerar och betonar att detta är precis hur premien är tänkt att fungera – att göra elbilar tillgängliga för fler på glesbygden, rapporterar SVT Nyheter.",
+    "sources": [
+      {
+        "title": "Tesla vill testa självkörande bilar i Strängnäs – kommunen ger grönt ljus",
+        "url": "https://www.svt.se/nyheter/lokalt/sormland/tesla-vill-testa-sjalvkorande-bilar-i-strangnas-kommunen-ger-gront-ljus",
+        "source": "SVT Nyheter"
+      },
+      {
+        "title": "Erik köpte bil för 200 kronor – ministern gratulerar",
+        "url": "https://www.svt.se/nyheter/lokalt/jonkoping/erik-kopte-bil-for-200-kronor-ministern-gratulerar",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-05-01T07:59:35.708Z"
+  },
+  {
     "date": "2026-04-30",
     "title": "Elbilspremie gör succé – glesbygdsbor köper bil för 200 kronor",
     "summary": "Den nya elbilspremien visar sig fungera enligt planerna när Erik Lange i Gripenberg utanför Tranås köper en begagnad elbil för 65 000 kronor men bara betalar 200 kronor efter avdraget. Vikarierende miljöminister Johan Britz (L) gratulerar och menar att det är precis så premien ska fungera – fler på glesbygden ska ha råd att köpa elbil, rapporterar SVT Nyheter.\n\nElbilar har blivit en av få gemensamma nämnare i oppositionspartiernas skuggbudgetar inför våren 2026. Partierna förespråkar ökat stöd för elbilsköp och riktar samtidigt kraftig kritik mot regeringens politik. Miljöpartiets språkrör Daniel Helldén menar att regeringen låser fast det svenska folket i ett djupare fossilberoende som skapat den kris vi befinner oss i, enligt SVT Nyheter.\n\nDen nya elbilspremien verkar ha fått genomslag och visar på bred politisk enighet om vikten av att underlätta övergången till elbilar, särskilt för människor på landsbygden där avstånden är längre och alternativ kollektivtrafik ofta saknas.",
@@ -315,12 +333,5 @@
     "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter några års kraftiga svängningar, vilket gör det mer förutsägbart för köpare att planera sina investeringar. Samtidigt ser vi en ökad konkurrens i mellanklassens segment där fler tillverkare lanserar modeller till under 400 000 kronor.\n\nLaddinfrastrukturen i Sverige fortsätter att byggas ut, med fokus på snabbladdare längs större vägar och i tätorter. Bostadsrättsföreningar och hyresvärdar börjar i allt högre utsträckning erbjuda laddmöjligheter, vilket tidigare varit ett hinder för många potentiella elbilsköpare. Väntetiderna vid populära laddstationer har minskat tack vare den utökade kapaciteten.\n\nFör dig som funderar på att skaffa elbil just nu är det värt att jämföra både nya och begagnade alternativ. Fleråriga elbilar från 2023-2024 erbjuder ofta mycket bra värde, med beprövad teknik och längre räckvidd än tidigare generationer. Tänk också på att kontrollera vilka laddmöjligheter som finns på din arbetsplats och i ditt bostadsområde innan du bestämmer dig.",
     "sources": [],
     "generatedAt": "2026-03-29T06:52:19.366Z"
-  },
-  {
-    "date": "2026-03-28",
-    "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
-    "summary": "Den svenska elbilsmarknaden fortsätter att mogna under våren 2026. Priserna på begagnade elbilar har stabiliserats efter tidigare volatilitet, medan nya modeller i mellanklassen gör elbil mer tillgänglig för fler hushåll. Laddinfrastrukturen byggs ut stadigt, särskilt längs de större vägstråken där snabbladdare nu finns tillgängliga med allt kortare mellanrum.\n\nPolitiskt är läget något osäkert inför budgetförhandlingarna senare i år. Den nuvarande elbilfördelen i förmånsbeskattningen gäller till och med 2025, men diskussioner pågår om eventuella förändringar från 2027. Många företag väljer därför att teckna fleråriga leasingavtal nu för att säkra nuvarande villkor.\n\nFör privatpersoner som funderar på elbil är våren traditionellt en bra tid att handla, då många återförsäljare erbjuder kampanjer inför sommarsäsongen. Det lönar sig också att jämföra totalkostnaden över tid snarare än endast inköpspriset, då drift- och underhållskostnaderna för elbilar fortsatt är betydligt lägre än för fossildrivna fordon.",
-    "sources": [],
-    "generatedAt": "2026-03-28T06:44:28.692Z"
   }
 ]

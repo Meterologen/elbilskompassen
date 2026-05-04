@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-05-04",
+    "title": "Elbilsmarknaden i Sverige maj 2026: Läget just nu",
+    "summary": "Den svenska elbilsmarknaden fortsätter sin omställning under våren 2026. Priserna på begagnade elbilar har stabiliserats efter de senaste årens volatilitet, vilket gör det mer förutsägbart för köpare att planera sina inköp. Samtidigt ser vi en fortsatt utbyggnad av snabbladdningsnätet längs svenska huvudvägar, med allt fler laddplatser över 150 kW.\n\nLaddinfrastrukturen i bostadsområden är fortfarande en utmaning för många som bor i lägenhet. Flera kommuner arbetar dock med pilotprojekt för att underlätta installation av laddboxar i flerfamiljshus. För den som funderar på elbil just nu kan det vara värt att jämföra olika leasingalternativ, då konkurrensen mellan återförsäljare är hög.\n\nInför sommaren är det också ett bra tillfälle att planera längre resor med elbil. Med den utökade laddinfrastrukturen är det numera möjligt att ta sig till de flesta semestermål i Sverige utan större problem. Tänk på att kontrollera laddningstider och planera stopp i förväg för en smidig resa.",
+    "sources": [],
+    "generatedAt": "2026-05-04T08:14:27.000Z"
+  },
+  {
     "date": "2026-05-03",
     "title": "Tesla kan få testa självkörande bilar i Strängnäs",
     "summary": "Strängnäs kommun har gett grönt ljus för Tesla att testa självkörande bilar på kommunala vägar. Syftet är att prova tekniken i verklig trafik under kontrollerade former. Nu väntar beslutet på godkännande från Transportstyrelsen innan testerna kan påbörjas.\n\nAnders Ekman, stadsmiljöchef i Strängnäs, säger enligt SVT Nyheter att kommunen är stolt över att kunna vara en del av det framtida trafiksäkerhetsarbetet. Testerna skulle ge värdefull erfarenhet av hur självkörande fordon fungerar i svensk trafikmiljö.\n\nOm Transportstyrelsen ger klartecken blir Strängnäs en av de första svenska kommunerna där Tesla testar sin självkörande teknologi på allmänna vägar. Detta är ett viktigt steg i utvecklingen av autonom körteknik i Sverige.",
@@ -332,18 +339,5 @@
       }
     ],
     "generatedAt": "2026-04-01T07:07:35.334Z"
-  },
-  {
-    "date": "2026-03-31",
-    "title": "Volvo Cars fördubblar sitt ägande i Polestar till nästan 20 procent",
-    "summary": "Volvo Cars tar ett betydande steg i sitt samarbete med elbilsmärket Polestar genom att nästan fördubbla sitt ägarandel. Enligt Dagens Industri kommer Volvo Cars att öka sitt ägande från 9,8 procent till 19,9 procent genom att konvertera en del av sitt lån till Polestar till aktier med en rabatt på 5 procent.\n\nSamtidigt planerar de båda bolagen att slå ihop produktionen av Polestar 3 i Volvo Cars amerikanska bilfabrik. Detta strategiska drag förväntas effektivisera tillverkningen och stärka banden mellan moderbolaget och det elektriska prestationsmärket.\n\nDet ökade ägandet och den samordnade produktionen signalerar ett fördjupat samarbete mellan Volvo Cars och Polestar i en tid då elbilindustrin genomgår snabb utveckling och ökad konkurrens på marknaden.",
-    "sources": [
-      {
-        "title": "Volvo Cars ökar ägandet i Polestar genom nytt lånedrag",
-        "url": "https://www.di.se/live/volvo-cars-okar-agandet-i-polestar-genom-nytt-lanedrag/",
-        "source": "Dagens Industri"
-      }
-    ],
-    "generatedAt": "2026-03-31T07:01:10.589Z"
   }
 ]

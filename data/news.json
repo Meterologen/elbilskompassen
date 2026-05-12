@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-05-12",
+    "title": "Nytt testcenter i Linköping ska minska mikroplaster från elbilsdäck",
+    "summary": "Slitage från bildäck är en av de största källorna till utsläpp av mikroplaster, ett problem som förvärras i takt med att fler tunga elbilar kommer ut på vägarna. När elbilar generellt väger mer än motsvarande bensin- och dieselbilar ökar slitaget på däcken, vilket leder till större partikelutsläpp.\n\nFör att möta denna utmaning testas nu flera olika bildäck i Linköping med målet att utveckla däck som orsakar mindre utsläpp av mikroplaster. Testcentret ska bidra till att ta fram bättre däcklösningar som kan minska den miljöpåverkan som följer med den växande elbilsflottan, rapporterar SVT Nyheter.\n\nProblemet med däckslitage blir allt mer aktuellt när elektrifieringen av fordonsflottan accelererar. Samtidigt som elbilar minskar koldioxidutsläppen skapar deras högre vikt nya miljöutmaningar som fordons- och däckindustrin nu aktivt arbetar med att lösa.",
+    "sources": [
+      {
+        "title": "Här mäts slitaget från bildäck – ska minska utsläpp av mikroplaster",
+        "url": "https://www.svt.se/nyheter/lokalt/ost/har-mats-slitaget-fran-bildack-ska-minska-utslapp-av-mikroplaster",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-05-12T08:22:35.197Z"
+  },
+  {
     "date": "2026-05-11",
     "title": "Elbilsmarknaden i Sverige våren 2026 - läget just nu",
     "summary": "Den svenska elbilsmarknaden fortsätter sin tillväxt under våren 2026, med allt fler modeller i budgetsegmentet som gör elbil tillgängligt för fler hushåll. Laddinfrastrukturen expanderar stadigt, särskilt längs större vägar och i tätorter, vilket minskar räckviddsoron för många som tidigare tvekade.\n\nPrismässigt ser vi en fortsatt normalisering efter de senaste årens volatilitet. Batteripriser har stabiliserats och flera tillverkare har lanserat eller planerar att lansera nya modeller i mellanklassen under 2026. Leasingmarknaden är fortsatt stark med konkurrenskraftiga erbjudanden för både privatpersoner och företag.\n\nFör dig som funderar på att byta till elbil är läget gynnsamt. Begagnatmarknaden har mognat med bredare utbud och tydligare prissättning, samtidigt som nya modeller erbjuder längre räckvidd och snabbare laddning än tidigare generationer. Det kan vara värt att jämföra både köp och leasing samt undersöka vilka laddmöjligheter som finns vid din bostad och arbetsplats innan du bestämmer dig.",
@@ -321,23 +334,5 @@
     "summary": "Den svenska elbilsmarknaden fortsätter sin tillväxt under våren 2026, även om takten har mattats av jämfört med rekordåren. Priserna på nya elbilar har stabiliserats efter flera års volatilitet, och konkurrensen mellan tillverkare håller priserna på rimliga nivåer. Särskilt i mellanklassen finns nu ett brett utbud av modeller till omkring 400 000-500 000 kronor.\n\nLaddinfrastrukturen i Sverige har förbättrats markant de senaste åren. Antalet snabbladdare längs huvudvägarna har ökat, och allt fler bostadsrättsföreningar och hyresvärdar installerar laddmöjligheter. Fortfarande råder det dock brist på laddplatser i vissa tätorter och äldre bostadsområden.\n\nFör dig som funderar på att skaffa elbil just nu kan det vara värt att bevaka vårens leasingerbjudanden, som brukar vara förmånliga. Tänk också på att kolla vilka laddmöjligheter som finns där du bor och arbetar - det är fortfarande den viktigaste faktorn för en smidig elbilsvardag. Begagnatmarknaden för elbilar har också mognat, med stabilare andrahandsvärden än för några år sedan.",
     "sources": [],
     "generatedAt": "2026-04-09T07:09:46.458Z"
-  },
-  {
-    "date": "2026-04-08",
-    "title": "Elbilar ökar globalt – Sverige behöver fler laddplatser",
-    "summary": "Elbilar blir allt vanligare i världen och på vissa marknader drevs mer än varannan nyregistrerad bil av batteri under förra året. Trenden visar en fortsatt stark tillväxt för elektrifierad transport globalt, rapporterar Aftonbladet.\n\nI en debattartikel i Dagens Industri lyfts vikten av parkering med laddning fram som en avgörande faktor för elektrifieringen av svenska bilflottan. Artikeln framhåller att tillgång till laddinfrastruktur vid bostäder är en aspekt som ofta glöms bort i debatten om elbilspremier och andra subventioner.\n\nFrågan om laddinfrastruktur blir allt viktigare i takt med att fler elbilar rullar ut på vägarna. För att elektrifieringen ska lyckas krävs inte bara ekonomiska incitament utan också praktiska lösningar för vardagsladdning där bilarna står parkerade.",
-    "sources": [
-      {
-        "title": "Fler elbilar på världens vägar – de går i täten",
-        "url": "https://www.aftonbladet.se/nyheter/a/k0vWpA/fler-elbilar-pa-varldens-vagar-de-gar-i-taten?utm_medium=rss",
-        "source": "Aftonbladet"
-      },
-      {
-        "title": "Replik: Glöm ej parkering med laddning",
-        "url": "https://www.di.se/debatt/replik-glom-ej-parkering-med-laddning/",
-        "source": "Dagens Industri"
-      }
-    ],
-    "generatedAt": "2026-04-08T07:05:46.418Z"
   }
 ]

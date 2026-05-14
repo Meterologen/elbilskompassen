@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-05-14",
+    "title": "Trump i Kina med Tesla och teknikjättar – militärlista skapar osäkerhet",
+    "summary": "Donald Trump har anlänt till Kina med en tung delegation bestående av ledare från några av USA:s största teknikföretag, däribland Tesla, Nvidia och Apple. Besöket sker samtidigt som Peking uttrycker förhoppningar om ett ökat tekniksamarbete mellan länderna, rapporterar Dagens Industri.\n\nTrots de positiva signalerna från besöket råder det osäkerhet kring framtiden för det tekniska samarbetet. USA har nyligen presenterat en ny lista över kinesiska företag med kopplingar till militären, vilket skapar förvirring och kan komplicera möjligheterna till fördjupat samarbete.\n\nBesöket kommer vid en tidpunkt då Kina fortsätter att stärka sin position inom flera tekniksektorer, inklusive elbilsindustrin där kinesiska tillverkare har gjort stora framsteg de senaste åren. Hur mötet mellan de amerikanska teknikjättarna och kinesiska myndigheter utvecklas kan få betydelse för den globala teknologiutvecklingen och elbilsmarknaden.",
+    "sources": [
+      {
+        "title": "Varningen: Kina drar ifrån – \"raderar ut försprång\"",
+        "url": "https://www.di.se/nyheter/varningen-kina-drar-ifran-raderar-ut-forsprang/",
+        "source": "Dagens Industri"
+      }
+    ],
+    "generatedAt": "2026-05-14T08:26:07.984Z"
+  },
+  {
     "date": "2026-05-13",
     "title": "Nytt test i Linköping ska minska mikroplaster från elbilars däck",
     "summary": "Slitage från bildäck är en av de största källorna till utsläpp av mikroplaster i miljön. Problemet förvärras när allt fler ställer om till elbilar, som ofta är tyngre än konventionella bilar och därmed orsakar mer däckslitage. Samtidigt ökar också den totala trafiken, vilket bidrar till ökade partikelutsläpp.\n\nI Linköping pågår nu tester av flera olika bildäck i syfte att utveckla bättre däck som orsakar mindre mikroplastutsläpp. Genom att mäta och analysera slitaget från olika däcktyper hoppas forskarna kunna bidra till att minska denna miljöpåverkan, rapporterar SVT Nyheter.\n\nÖvergången till elbilar löser visserligen problemet med avgasutsläpp, men skapar samtidigt nya utmaningar när det gäller däckslitage och mikroplaster. De nya testerna är därför en viktig del i arbetet med att göra elbilsomställningen mer hållbar även ur detta perspektiv.",
@@ -322,23 +335,5 @@
       }
     ],
     "generatedAt": "2026-04-11T06:47:45.816Z"
-  },
-  {
-    "date": "2026-04-10",
-    "title": "Snabbladdare står tomma 92 procent av tiden – elbilsboomen uteblev",
-    "summary": "Svenska snabbladdplatser för elbilar används endast 8 procent av tiden i genomsnitt, visar nya siffror från Energimyndigheten som SVT tagit del av. Bensinmackskedjor och andra aktörer satsade hårt på utbyggnad av laddinfrastruktur när elbilsförsäljningen steg kraftigt, men den förväntade boomen har uteblivit och laddplatserna står nu mestadels tomma.\n\nTrots den låga användningen av befintlig laddinfrastruktur pågår en debatt om hur elektrifieringen av transportsektorn ska påskyndas. Mattias Goldmann, VD för 2030-sekretariatet, och Joel Graffman, VD för Ziklo Bank, skriver i Dagens Industri att Sveriges omställning till eldrivna fordon har stannat av jämfört med grannländerna.\n\nI sin debattartikel menar Goldmann och Graffman att nyckeln till en snabbare omställning inte är mer infrastruktur, utan trovärdiga och långsiktiga spelregler som gör det ekonomiskt lönsamt att välja eldrift på kort sikt. Alla aktörer är överens om att framtidens mobilitet ska vara eldriven, men bristen på stabila ramvillkor bromsar utvecklingen i Sverige.",
-    "sources": [
-      {
-        "title": "Laddplatser står tomma efter utebliven elbilsboom",
-        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Slutreplik: Nyckeln till omställning är trovärdighet – inte mer asfalt",
-        "url": "https://www.di.se/debatt/slutreplik-nyckeln-till-omstallning-ar-trovardighet-inte-mer-asfalt/",
-        "source": "Dagens Industri"
-      }
-    ],
-    "generatedAt": "2026-04-10T07:14:30.833Z"
   }
 ]

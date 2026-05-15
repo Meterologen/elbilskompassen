@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-05-15",
+    "title": "Sveriges nordligaste eldrivna timmerbil kör nu i Kalix",
+    "summary": "I Norrbotten har eldrift nått skogsindustrin. Timmerbilsföraren Emil Mäki Taavola har sedan en månad tillbaka kört Sveriges nordligaste eldrivna timmerbil, enligt SVT Nyheter. Han fraktar timmer från skogarna i Luleå till pappersbruket i Karlsborg utanför Kalix.\n\nFöraren beskriver upplevelsen positivt och framhåller att det är \"tyst och skönt\" att köra den elektriska timmerbilen. Detta är ett exempel på hur tunga transportfordon elektrifieras även i Sveriges nordligaste regioner, där klimatet och avstånden traditionellt sett ansetts vara utmanande för eldrift.\n\nElektrifieringen av tung trafik är en viktig del i omställningen till fossilfria transporter. Att eldrivna timmerbila nu rullar i norra Sverige visar att tekniken mognat även för krävande arbetsuppgifter i kallt klimat.",
+    "sources": [
+      {
+        "title": "Emil kör Sveriges nordligaste eldrivna timmerbil i Kalix",
+        "url": "https://www.svt.se/nyheter/lokalt/norrbotten/emil-kor-sveriges-nordligaste-eldrivna-timmerbil-i-kalix",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-05-15T08:37:14.705Z"
+  },
+  {
     "date": "2026-05-14",
     "title": "Trump i Kina med Tesla och teknikjättar – militärlista skapar osäkerhet",
     "summary": "Donald Trump har anlänt till Kina med en tung delegation bestående av ledare från några av USA:s största teknikföretag, däribland Tesla, Nvidia och Apple. Besöket sker samtidigt som Peking uttrycker förhoppningar om ett ökat tekniksamarbete mellan länderna, rapporterar Dagens Industri.\n\nTrots de positiva signalerna från besöket råder det osäkerhet kring framtiden för det tekniska samarbetet. USA har nyligen presenterat en ny lista över kinesiska företag med kopplingar till militären, vilket skapar förvirring och kan komplicera möjligheterna till fördjupat samarbete.\n\nBesöket kommer vid en tidpunkt då Kina fortsätter att stärka sin position inom flera tekniksektorer, inklusive elbilsindustrin där kinesiska tillverkare har gjort stora framsteg de senaste åren. Hur mötet mellan de amerikanska teknikjättarna och kinesiska myndigheter utvecklas kan få betydelse för den globala teknologiutvecklingen och elbilsmarknaden.",
@@ -322,18 +335,5 @@
       }
     ],
     "generatedAt": "2026-04-12T07:02:24.908Z"
-  },
-  {
-    "date": "2026-04-11",
-    "title": "Snabbladdare står tomma 92 procent av tiden",
-    "summary": "Svenska snabbladdplatser för elbilar används i mycket lägre utsträckning än förväntat. Enligt siffror som Energimyndigheten tagit fram åt SVT står laddplatserna tomma i snitt 92 procent av tiden. Detta trots att bensinmackskedjor och andra aktörer satsat hårt på utbyggnad av laddinfrastruktur.\n\nBakgrunden är att elbilsförsäljningen inte fortsatte att växa i den takt som prognostiserades. När elbilsförsäljningen steg kraftigt under tidigare år byggdes det ut omfattande laddnätverk för att möta den förväntade efterfrågan. Nu visar det sig att investeringarna blev större än vad som behövdes.\n\nDet låga utnyttjandet av snabbladdarna väcker frågor om lönsamheten för de företag som investerat i laddinfrastruktur. Samtidigt kan det för elbilsägare innebära god tillgång till lediga laddplatser, även om det ekonomiska läget för laddoperatörerna kan påverka framtida utbyggnad och underhåll av nätverken.",
-    "sources": [
-      {
-        "title": "Laddplatser står tomma efter utebliven elbilsboom",
-        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
-        "source": "SVT Nyheter"
-      }
-    ],
-    "generatedAt": "2026-04-11T06:47:45.816Z"
   }
 ]

@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-05-16",
+    "title": "Sveriges nordligaste eldrivna timmerbil kör nu i Kalix",
+    "summary": "I Norrbotten har timmerbilsföraren Emil Mäki Taavola börjat köra Sveriges nordligaste eldrivna timmerbil. Sedan en månad tillbaka fraktar han timmer elektriskt från skogarna i Luleå till pappersbruket i Karlsborg utanför Kalix, rapporterar SVT Nyheter.\n\nEmil beskriver upplevelsen som tyst och skön jämfört med traditionella dieseldrivna timmertransporter. Satsningen visar att eldrift blir allt mer praktiskt även för tunga transporter i norra Sverige, trots kyliga temperaturer och långa avstånd.\n\nAtt eldrivna lastbilar nu når upp till Norrbotten och används för krävande arbetsuppgifter som timmertransporter är ett tecken på att elektrifieringen av tunga fordon går framåt även under utmanande förhållanden.",
+    "sources": [
+      {
+        "title": "Emil kör Sveriges nordligaste eldrivna timmerbil i Kalix",
+        "url": "https://www.svt.se/nyheter/lokalt/norrbotten/emil-kor-sveriges-nordligaste-eldrivna-timmerbil-i-kalix",
+        "source": "SVT Nyheter"
+      }
+    ],
+    "generatedAt": "2026-05-16T07:47:19.374Z"
+  },
+  {
     "date": "2026-05-15",
     "title": "Sveriges nordligaste eldrivna timmerbil kör nu i Kalix",
     "summary": "I Norrbotten har eldrift nått skogsindustrin. Timmerbilsföraren Emil Mäki Taavola har sedan en månad tillbaka kört Sveriges nordligaste eldrivna timmerbil, enligt SVT Nyheter. Han fraktar timmer från skogarna i Luleå till pappersbruket i Karlsborg utanför Kalix.\n\nFöraren beskriver upplevelsen positivt och framhåller att det är \"tyst och skönt\" att köra den elektriska timmerbilen. Detta är ett exempel på hur tunga transportfordon elektrifieras även i Sveriges nordligaste regioner, där klimatet och avstånden traditionellt sett ansetts vara utmanande för eldrift.\n\nElektrifieringen av tung trafik är en viktig del i omställningen till fossilfria transporter. Att eldrivna timmerbila nu rullar i norra Sverige visar att tekniken mognat även för krävande arbetsuppgifter i kallt klimat.",
@@ -317,23 +330,5 @@
       }
     ],
     "generatedAt": "2026-04-13T07:46:50.032Z"
-  },
-  {
-    "date": "2026-04-12",
-    "title": "Laddplatser står tomma 92% av tiden – Tesla godkänd i Nederländerna",
-    "summary": "Svenska snabbladdplatser står tomma i snitt 92 procent av tiden, visar nya siffror från Energimyndigheten som SVT tagit del av. Efter den kraftiga ökningen av elbilsförsäljningen satsade bensinmackskedjor och andra aktörer hårt på att bygga ut laddinfrastrukturen, men den förväntade elbilsboomen har uteblivit vilket lett till låg användning av laddstationerna.\n\nI europeisk teknikutveckling rapporterar Dagens Industri att Tesla fått grönt ljus från det nederländska vägverket för sitt delvis självkörande system FSD Supervised. Det är första gången ett sådant certifikat utfärdas i Europa, vilket kan bana väg för bredare införande av självkörande teknik på den europeiska marknaden.",
-    "sources": [
-      {
-        "title": "Laddplatser står tomma efter utebliven elbilsboom",
-        "url": "https://www.svt.se/nyheter/inrikes/laddplatser-star-tomma-efter-utebliven-elbilsboom",
-        "source": "SVT Nyheter"
-      },
-      {
-        "title": "Självkörande Tesla får grönt ljus i Nederländerna",
-        "url": "https://www.di.se/nyheter/sjalvkorande-tesla-far-gront-ljus-i-nederlanderna/",
-        "source": "Dagens Industri"
-      }
-    ],
-    "generatedAt": "2026-04-12T07:02:24.908Z"
   }
 ]
